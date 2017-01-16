@@ -1,3 +1,54 @@
+body {
+	width: 100%;
+}
+.clearfix::before, .clearfix::after {
+    content: " ";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.sample-container {
+	width: 64rem;
+	margin: auto;
+}
+.sample {
+	float: left;
+	width: calc(42% - 4rem);
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+.good-sample {
+	border: 2px solid #008200;
+}
+.good-sample span {
+	background: url('img/valid.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    float: right;
+    height: 4rem;
+    position: relative;
+    right: -50px;
+    top: -4rem;
+    width: 4rem;
+}
+.bad-sample {
+	border: 2px solid #e60000;
+}
+.bad-sample span {
+	background: url('img/false.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    float: right;
+    height: 4rem;
+    position: relative;
+    right: -50px;
+    top: -4rem;
+    width: 4rem;
+}
+
 .px {
 	font-size:15px;
 }
