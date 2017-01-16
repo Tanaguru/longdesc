@@ -1,0 +1,36 @@
+.px {
+	font-size:15px;
+}
+
+.relativeUnitesPt {
+	width:12pt;
+}
+
+.relativeUnitesPc {
+	width:12pc;
+}
+
+.relativeUnitesMm {
+	width:12mm;
+}
+
+.relativeUnitesCm {
+	width:12cm;
+}
+
+.relativeUnitesIm {
+	width:12im;
+}
+
+.contrastKo {
+	color:#FFF;
+	background-color:#f47920;
+}
+
+.noFocus {
+	outline:none;
+}
+
+.justify {
+	text-align:justify;
+}
