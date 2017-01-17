@@ -7,26 +7,35 @@
 	   .px_html{ 
 	      font-size:12px; 
 	   }
+	   .pourcent_html{ 
+	      font-size:100%; 
+	   }
+	   .em_html{ 
+	      font-size:1em; 
+	   }
+	   .relativeUnitesPx_html {
+		  width:260px;
+	   }
 	   .relativeUnitesPt_html {
-		  width:12pt;
+		  width:200pt;
 	   }
 	    .relativeUnitesMm_html {
-		  width:12mm;
+		  width:80mm;
 		  }
 	      .relativeUnitesCm_html {
-		  width:12cm;
+		  width:8cm;
 	   }
 	       .relativeUnitesPc_html {
-		  width:12pc;
+		  width:20pc;
 	   }
 	      .relativeUnitesIm_html {
-		  width:12im;
+		  width:3in;
 	   }
 	       .relativeUnitesPourcent_html {
-		  width:12%;
+		  width:80%;
 	   }
 	      .relativeUnitesEm_html {
-		  width:1.2em;
+		  width:12em;
 	   }
 	    .justify_html{ 
 	      text-align:justify; 
@@ -35,359 +44,387 @@
    <title>Site Longdesc</title>
 </head>
 <body>
-	<div id="crit-10-4" class="sample-container">
+	<main class="sample-container">
+		<div id="crit-10-4">
 
-		<h2>Critère 10.4 - Relative size of texts and containers</h2>
+			<h2>Criterion 10.4 - Relative size of texts and containers</h2>
+			<div id="test-10-4-1">
 
-		<div class="sample test_true">
-			<span></span>
-			<h3>Good samples</h3>
-			<p class="relativeUnitesPourcent">Paragraph with relative units %</p>
-			<p class="relativeUnitesEm">Paragraph with relative units em</p>
-			<p class="relativeUnitesPourcent_html">Paragraph with relative units % - tag style</p>
-			<p class="relativeUnitesEm_html">Paragraph with relative units em - tag style</p>
-			<p style="width:12%">Paragraph with relative units %</p>
-			<p style="width:1.2em">Paragraph with relative units em</p>
+				<h3>Test 10.4.1 - Relative size of containers</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p class="relativeUnitesPourcent">Paragraph with relative units %</p>
+					<p class="relativeUnitesEm">Paragraph with relative units em</p>
+					<p class="relativeUnitesPourcent_html">Paragraph with relative units % - tag style</p>
+					<p class="relativeUnitesEm_html">Paragraph with relative units em - tag style</p>
+					<p style="width:80%">Paragraph with relative units %</p>
+					<p style="width:12em">Paragraph with relative units em</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p class="relativeUnitesPx">Paragraph with non relative units px</p>
+					<p class="relativeUnitesPt">Paragraph with non relative units pt</p>
+					<p class="relativeUnitesPc">Paragraph with non relative units pc</p>
+					<p class="relativeUnitesMm">Paragraph with non relative units mm</p>
+					<p class="relativeUnitesCm">Paragraph with non relative units cm</p>
+					<p class="relativeUnitesIm">Paragraph with non relative units im</p>
+					<p class="relativeUnitesPx_html">Paragraph with non relative units px - tag style</p>
+					<p class="relativeUnitesPt_html">Paragraph with non relative units pt - tag style</p>
+					<p class="relativeUnitesPc_html">Paragraph with non relative units pc - tag style</p>
+					<p class="relativeUnitesMm_html">Paragraph with non relative units mm - tag style</p>
+					<p class="relativeUnitesCm_html">Paragraph with non relative units cm - tag style</p>
+					<p class="relativeUnitesIm_html">Paragraph with non relative units im - tag style</p>
+					<p style="width:260px">Paragraph with non relative units px</p>
+					<p style="width:200pt">Paragraph with non relative units pt</p>
+					<p style="width:20pc">Paragraph with non relative units pc</p>
+					<p style="width:80mm">Paragraph with non relative units mm</p>
+					<p style="width:8cm">Paragraph with non relative units cm</p>
+					<p style="width:3in">Paragraph with non relative units im</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div id="test-10-4-2">
+
+				<h3>Test 10.4.1 - Relative size of texts</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p class="pourcent">Paragraph with % fontsize - extern CSS</p>
+					<p class="em">Paragraph with em fontsize - extern CSS</p>
+					<p class="pourcent_html">Paragraph with % fontsize - tag style</p>
+					<p class="em_html">Paragraph with em fontsize - tag style</p>
+					<p style="font-size:1em">Paragraph with % fontsize - attr style</p>
+					<p style="font-size:100%">Paragraph with em fontsize - attr style</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p class="px">Paragraph with px fontsize - extern CSS</p>
+					<p class="px_html">Paragraph with px fontsize - tag style</p>
+					<p style="font-size:12px">Paragraph with px fontsize - attr style</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 		</div>
-		<div class="sample test_false">
-			<span></span>
-			<h3>Bad samples</h3>
-			<p class="px">Paragraph with px fontsize - extern CSS</p>
-			<p class="px_html">Paragraph with px fontsize - tag style</p>
-			<p style="font-size:12px">Paragraph with px fontsize - attr style</p>
-			<p class="relativeUnitesPt">Paragraph with non relative units pt</p>
-			<p class="relativeUnitesPc">Paragraph with non relative units pc</p>
-			<p class="relativeUnitesMm">Paragraph with non relative units mm</p>
-			<p class="relativeUnitesCm">Paragraph with non relative units cm</p>
-			<p class="relativeUnitesIm">Paragraph with non relative units im</p>
-			<p class="relativeUnitesPt_html">Paragraph with non relative units pt - tag style</p>
-			<p class="relativeUnitesPc_html">Paragraph with non relative units pc - tag style</p>
-			<p class="relativeUnitesMm_html">Paragraph with non relative units mm - tag style</p>
-			<p class="relativeUnitesCm_html">Paragraph with non relative units cm - tag style</p>
-			<p class="relativeUnitesIm_html">Paragraph with non relative units im - tag style</p>
-			<p style="width:12pxt">Paragraph with non relative units pt</p>
-			<p style="width:12pc">Paragraph with non relative units pc</p>
-			<p style="width:12mm">Paragraph with non relative units mm</p>
-			<p style="width:12cm">Paragraph with non relative units cm</p>
-			<p style="width:12im">Paragraph with non relative units im</p>
+		<p style="color:red; background-color:none;">Test</p>
+		<p style="background-color:red; ">Test</p>
+		<p class="justify_html">
+		<p style="color:red; background-color:red">Text red and backgroud - red attr style</p>
+		<p class="contrastKO">Text red and backgroud red - extern CSS</p>
+		<a href="http://www.google.fr" class="noFocus">Google with a display none focus</a>
+		<p class="justify">text justify - extern CSS</p>
+		<p class="justify_html">text justify - tag style</p>
+		<p style="text-align:justify">texte justify - attr style </p>
+		<h2>Critère 1.1</h2>
+		<div id="test-1-1-1" class="test_false">
+			<h3>Img tag without alternative</h3>
+			<img src="img/Image_without_alternative.png"/>
 		</div>
-		<div class="clearfix"></div>
-	</div>
-
-	<p style="color:red; background-color:none;">Test</p>
-	<p style="background-color:red; ">Test</p>
-	<p class="justify_html">
-	<p style="color:red; background-color:red">Text red and backgroud - red attr style</p>
-	<p class="contrastKO">Text red and backgroud red - extern CSS</p>
-	<a href="http://www.google.fr" class="noFocus">Google with a display none focus</a>
-	<p class="justify">text justify - extern CSS</p>
-	<p class="justify_html">text justify - tag style</p>
-	<p style="text-align:justify">texte justify - attr style </p>
-	<h2>Critère 1.1</h2>
-	<div id="test-1-1-1" class="test_false">
-		<h3>Img tag without alternative</h3>
-		<img src="img/Image_without_alternative.png"/>
-	</div>
-	<div class="test_true">
-		<h3>Image with empty alternative</h3>
-		<img src="img/Image_with_empty_alternative.png" alt="" class="decorative"/>
-		<h3>Image with alternative</h3>
-		<img src="img/Image_with_alternative.png" alt="toto" class="informative"/>
-		<h3>Image with alternative equal to src</h3>
-		<img src="img/Image_with_alternative_equal_to_src.png" alt="img/Image with alternative equal to src.png"/>
-	</div>
-	<div id="test-1-1-2" class="test_false">
-		<h3>Area tag without alternative</h3>
-		<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
-		<map name="planetmap">
-		  <area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm"/>
-			<area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" />
-		</map>
-	</div>
-	<div class="test_true">
-		<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
-		<map name="planetmap">
-			<area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm" alt=""/>
-			<area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" alt="Venus"/>
-		</map>
-	<div id="test-1-1-3" class="test_false">
-		<h3>input type image without alternative</h3>
-		<input type="image">
-	</div>
-	<div class="test_true">
-		<input type="image" name="image" src="/files/2917/fxlogo.png" width="50">
-	</div>
-	<div id="test-1-1-4" class="test_preq">
-		<p>possible to invalidate this test ? no link with href equal to area ?</p>
-		<h3>Area tag without alternative</h3>
+		<div class="test_true">
+			<h3>Image with empty alternative</h3>
+			<img src="img/Image_with_empty_alternative.png" alt="" class="decorative"/>
+			<h3>Image with alternative</h3>
+			<img src="img/Image_with_alternative.png" alt="toto" class="informative"/>
+			<h3>Image with alternative equal to src</h3>
+			<img src="img/Image_with_alternative_equal_to_src.png" alt="img/Image with alternative equal to src.png"/>
+		</div>
+		<div id="test-1-1-2" class="test_false">
+			<h3>Area tag without alternative</h3>
+			<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
+			<map name="planetmap">
+			  <area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm"/>
+				<area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" />
+			</map>
+		</div>
+		<div class="test_true">
+			<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
+			<map name="planetmap">
+				<area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm" alt=""/>
+				<area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" alt="Venus"/>
+			</map>
+		</div>
+		<div id="test-1-1-3" class="test_false">
+			<h3>input type image without alternative</h3>
+			<input type="image">
+		</div>
+		<div class="test_true">
+			<input type="image" name="image" src="/files/2917/fxlogo.png" width="50">
+		</div>
+		<div id="test-1-1-4" class="test_preq">
+			<p>possible to invalidate this test ? no link with href equal to area ?</p>
+			<h3>Area tag without alternative</h3>
+				<MAP name="mymap"> 
+				<AREA shape="rect" coords="25,180,125,280" href="http://www.december.com/html/"/> 
+				<AREA shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="http://www.december.com/works/tour.html"/> 
+				</MAP>
+				<IMG Src="http://www.december.com/html/images/imagemap.gif" width="500" height="300" alt="Image Map" usemap="#mymap" ismap />
+		</div>
+		<div class="test_true">
 			<MAP name="mymap"> 
-			<AREA shape="rect" coords="25,180,125,280" href="http://www.december.com/html/"/> 
-			<AREA shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="http://www.december.com/works/tour.html"/> 
-			</MAP>
-			<IMG Src="http://www.december.com/html/images/imagemap.gif" width="500" height="300" alt="Image Map" usemap="#mymap" ismap />
-	</div>
-	<div class="test_true">
-		<MAP name="mymap"> 
-			<AREA shape="rect" coords="25,180,125,280" href="http://www.december.com/html/"/> 
-			<AREA shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="http://www.december.com/works/tour.html"/> 
-			</MAP>
-			<IMG Src="http://www.december.com/html/images/imagemap.gif" width="500" height="300" alt="Image Map" usemap="#mymap" ismap />
-			<a href="http://www.december.com/html/">december</a>
-			<a href="http://www.december.com/works/tour.html">tour</a>
-	</div>
-	<h2>Critère 1.2</h2>
-	<div id="test-1-2-1" class="test_preq">	
-	<h3>Image Link without alternative</h3>
-	<a href="http://www.google.fr"><img src="img/test.img"></a>
-	<h3>Image Link with empty alternative</h3>
-	<a href="#"><img src="test.img" alt=""></a>
-	<h3>Image link with alternative</h3>
-	<a href="#"><img src="test.img" alt="toto" /></a>
-	<h3>Image link with alternative equal to src</h3>
-	<a href="#"><img src="test.img" alt="test.img"></a>
-	<h3>input type image with empty alternative</h3>
-	<input type="image" alt="">
-	<h3>input type Image with alternative</h3>
-	<input type="image" alt="toto">	
-	<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
-	<map name="planetmap">
-	  <area shape="rect" coords="0,0,82,126" href="http://www.w3schools.com/tags/sun.htm" />
-	  <area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm" alt="" />
-	  <area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" alt="Venus" />
-	</map>
-	<table class="presentation"> 
-		<tr> 
-			<td width="25%" >Ce tableau de mise en page pose des</td> 
-			<td width="25%" >problèmes quand il est linéarisé. </td> 
-		</tr> 
-		<tr> 
-			<td width="25%">Le contenu n'est donc pas cohérent</td> 
-			<td width="25%">pour certains utilisateurs.</td> 
-		</tr> 
-	</table>
-	<table class="data" summary="température des 5 premiers jours de la semaine pour 3 villes"> 
-		<caption>températures de la semaine en fonction de la ville</caption> 
-		<!-- ligne 1: entête des colonnes, ville + les 5 premiers jours --> 
-		<thead> 
+				<AREA shape="rect" coords="25,180,125,280" href="http://www.december.com/html/"/> 
+				<AREA shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="http://www.december.com/works/tour.html"/> 
+				</MAP>
+				<IMG Src="http://www.december.com/html/images/imagemap.gif" width="500" height="300" alt="Image Map" usemap="#mymap" ismap />
+				<a href="http://www.december.com/html/">december</a>
+				<a href="http://www.december.com/works/tour.html">tour</a>
+		</div>
+		<h2>Critère 1.2</h2>
+		<div id="test-1-2-1" class="test_preq">	
+		<h3>Image Link without alternative</h3>
+		<a href="http://www.google.fr"><img src="img/test.img"></a>
+		<h3>Image Link with empty alternative</h3>
+		<a href="#"><img src="test.img" alt=""></a>
+		<h3>Image link with alternative</h3>
+		<a href="#"><img src="test.img" alt="toto" /></a>
+		<h3>Image link with alternative equal to src</h3>
+		<a href="#"><img src="test.img" alt="test.img"></a>
+		<h3>input type image with empty alternative</h3>
+		<input type="image" alt="">
+		<h3>input type Image with alternative</h3>
+		<input type="image" alt="toto">	
+		<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
+		<map name="planetmap">
+		  <area shape="rect" coords="0,0,82,126" href="http://www.w3schools.com/tags/sun.htm" />
+		  <area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm" alt="" />
+		  <area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" alt="Venus" />
+		</map>
+		<table class="presentation"> 
 			<tr> 
-				<th id="ville">ville</th> 
-				<th id="lundi">lundi</th> 
-				<th id="mardi">mardi</th> 
-				<th id="mercredi">mercredi</th> 
-				<th id="jeudi">jeudi</th> 
-				<th id="vendredi">vendredi</th> 
+				<td width="25%" >Ce tableau de mise en page pose des</td> 
+				<td width="25%" >problèmes quand il est linéarisé. </td> 
 			</tr> 
-		</thead> 
-		<tbody> 
-			<!-- ligne 2: nom de la ville, données corespondantes --> 
 			<tr> 
-				<td>paris</td> 
-				<td>10c°</td> 
-				<td>8c°</td> 
-				<td>10c°</td> 
-				<td>12c°</td> 
-				<td>10c°</td> 
+				<td width="25%">Le contenu n'est donc pas cohérent</td> 
+				<td width="25%">pour certains utilisateurs.</td> 
 			</tr> 
-			<!-- ligne 3: nom de la ville, données corespondantes --> 
-			<tr> 
-				<td headers="ville" id="toulouse">toulouse</td> 
-				<td headers="toulouse lundi">13c°</td> 
-				<td headers="toulouse mardi">11c°</td> 
-				<td headers="toulouse mercredi">12c°</td> 
-				<td headers="toulouse jeudi">14c°</td> 
-				<td headers="toulouse vendredi">12c°</td> 
-			</tr> 
-			<!-- ligne 4: nom de la ville, données corespondantes --> 
-			<tr> 
-				<td headers="ville" id="strasbourg">strasbourg</td> 
-				<td headers="strasbourg lundi">7c°</td> 
-				<td headers="strasbourg mardi">5c°</td> 
-				<td headers="strasbourg mercredi">6c°</td> 
-				<td headers="strasbourg jeudi">8c°</td> 
-				<td headers="strasbourg vendredi">7c°</td> 
-			</tr> 
-		</tbody> 
-	</table>
-	<table class="complexe	" summary="température des 5 premiers jours de la semaine pour 3 villes"> 
-		<caption>températures de la semaine en fonction de la ville</caption> 
-		<!-- ligne 1: entête des colonnes, ville + les 5 premiers jours --> 
-		<thead> 
-			<tr> 
-				<th id="ville">ville</th> 
-				<th id="lundi">lundi</th> 
-				<th id="mardi">mardi</th> 
-				<th id="mercredi">mercredi</th> 
-				<th id="jeudi">jeudi</th> 
-				<th id="vendredi">vendredi</th> 
-			</tr> 
-		</thead> 
-		<tbody> 
-			<!-- ligne 2: nom de la ville, données corespondantes --> 
-			<tr> 
-				<td>paris</td> 
-				<td>10c°</td> 
-				<td>8c°</td> 
-				<td>10c°</td> 
-				<td>12c°</td> 
-				<td>10c°</td> 
-			</tr> 
-			<!-- ligne 3: nom de la ville, données corespondantes --> 
-			<tr> 
-				<td headers="ville" id="toulouse">toulouse</td> 
-				<td headers="toulouse lundi">13c°</td> 
-				<td headers="toulouse mardi">11c°</td> 
-				<td headers="toulouse mercredi">12c°</td> 
-				<td headers="toulouse jeudi">14c°</td> 
-				<td headers="toulouse vendredi">12c°</td> 
-			</tr> 
-			<!-- ligne 4: nom de la ville, données corespondantes --> 
-			<tr> 
-				<td headers="ville" id="strasbourg">strasbourg</td> 
-				<td headers="strasbourg lundi">7c°</td> 
-				<td headers="strasbourg mardi">5c°</td> 
-				<td headers="strasbourg mercredi">6c°</td> 
-				<td headers="strasbourg jeudi">8c°</td> 
-				<td headers="strasbourg vendredi">7c°</td> 
-			</tr> 
-		</tbody> 
-	</table>
-	<object data="TheEarth.gif" type="image/gif"></object>
-	<h3>SVG with marker decorative</h3>
-	<svg role="img" class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-	<svg role="img" class="decorative"></svg>
-	<svg role="img" aria-label="toto" class="decorative"></svg>
-	<svg role="img" aria-describedby="toto" class="decorative"></svg>
-	<svg role="img" aria-labelledby="toto" class="decorative"></svg>
-	<svg title="title" role="img" class="decorative">
-		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
-	</svg>
-	<svg role="img" class="decorative">
-		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
-	</svg>
-	<svg desc="" role="img" class="decorative"></svg>	
-	<svg role="img" class="decorative">
-		<desc></desc>
-	</svg>
-	<svg role="img" class="decorative">
-		<title></title>
-	</svg>
-	<svg role="img" class="decorative">
-		<desc>desc</desc>
-	</svg>
-	<svg role="img" class="decorative">
-		<title>title</title>
-	</svg>
-	<svg class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-	<svg desc="toto" class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
-	<h3>SVG without marker</h3>	
-	<svg role="img"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-	<svg role="img"></svg>
-	<svg role="img" aria-label="toto"></svg>
-	<svg role="img" aria-describedby="toto"></svg>
-	<svg role="img" aria-labelledby="toto"></svg>
-	<svg title="title" role="img">
-		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
-	</svg>
-	<svg role="img">
-		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
-	</svg>
-	<svg desc="" role="img"></svg>	
-	<svg role="img">
-		<desc></desc>
-	</svg>
-	<svg role="img">
-		<title></title>
-	</svg>
+		</table>
+		<table class="data" summary="température des 5 premiers jours de la semaine pour 3 villes"> 
+			<caption>températures de la semaine en fonction de la ville</caption> 
+			<!-- ligne 1: entête des colonnes, ville + les 5 premiers jours --> 
+			<thead> 
+				<tr> 
+					<th id="ville">ville</th> 
+					<th id="lundi">lundi</th> 
+					<th id="mardi">mardi</th> 
+					<th id="mercredi">mercredi</th> 
+					<th id="jeudi">jeudi</th> 
+					<th id="vendredi">vendredi</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				<!-- ligne 2: nom de la ville, données corespondantes --> 
+				<tr> 
+					<td>paris</td> 
+					<td>10c°</td> 
+					<td>8c°</td> 
+					<td>10c°</td> 
+					<td>12c°</td> 
+					<td>10c°</td> 
+				</tr> 
+				<!-- ligne 3: nom de la ville, données corespondantes --> 
+				<tr> 
+					<td headers="ville" id="toulouse">toulouse</td> 
+					<td headers="toulouse lundi">13c°</td> 
+					<td headers="toulouse mardi">11c°</td> 
+					<td headers="toulouse mercredi">12c°</td> 
+					<td headers="toulouse jeudi">14c°</td> 
+					<td headers="toulouse vendredi">12c°</td> 
+				</tr> 
+				<!-- ligne 4: nom de la ville, données corespondantes --> 
+				<tr> 
+					<td headers="ville" id="strasbourg">strasbourg</td> 
+					<td headers="strasbourg lundi">7c°</td> 
+					<td headers="strasbourg mardi">5c°</td> 
+					<td headers="strasbourg mercredi">6c°</td> 
+					<td headers="strasbourg jeudi">8c°</td> 
+					<td headers="strasbourg vendredi">7c°</td> 
+				</tr> 
+			</tbody> 
+		</table>
+		<table class="complexe	" summary="température des 5 premiers jours de la semaine pour 3 villes"> 
+			<caption>températures de la semaine en fonction de la ville</caption> 
+			<!-- ligne 1: entête des colonnes, ville + les 5 premiers jours --> 
+			<thead> 
+				<tr> 
+					<th id="ville">ville</th> 
+					<th id="lundi">lundi</th> 
+					<th id="mardi">mardi</th> 
+					<th id="mercredi">mercredi</th> 
+					<th id="jeudi">jeudi</th> 
+					<th id="vendredi">vendredi</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				<!-- ligne 2: nom de la ville, données corespondantes --> 
+				<tr> 
+					<td>paris</td> 
+					<td>10c°</td> 
+					<td>8c°</td> 
+					<td>10c°</td> 
+					<td>12c°</td> 
+					<td>10c°</td> 
+				</tr> 
+				<!-- ligne 3: nom de la ville, données corespondantes --> 
+				<tr> 
+					<td headers="ville" id="toulouse">toulouse</td> 
+					<td headers="toulouse lundi">13c°</td> 
+					<td headers="toulouse mardi">11c°</td> 
+					<td headers="toulouse mercredi">12c°</td> 
+					<td headers="toulouse jeudi">14c°</td> 
+					<td headers="toulouse vendredi">12c°</td> 
+				</tr> 
+				<!-- ligne 4: nom de la ville, données corespondantes --> 
+				<tr> 
+					<td headers="ville" id="strasbourg">strasbourg</td> 
+					<td headers="strasbourg lundi">7c°</td> 
+					<td headers="strasbourg mardi">5c°</td> 
+					<td headers="strasbourg mercredi">6c°</td> 
+					<td headers="strasbourg jeudi">8c°</td> 
+					<td headers="strasbourg vendredi">7c°</td> 
+				</tr> 
+			</tbody> 
+		</table>
+		<object data="TheEarth.gif" type="image/gif"></object>
+		<h3>SVG with marker decorative</h3>
+		<svg role="img" class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
+		<svg role="img" class="decorative"></svg>
+		<svg role="img" aria-label="toto" class="decorative"></svg>
+		<svg role="img" aria-describedby="toto" class="decorative"></svg>
+		<svg role="img" aria-labelledby="toto" class="decorative"></svg>
+		<svg title="title" role="img" class="decorative">
+			<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
+		</svg>
+		<svg role="img" class="decorative">
+			<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
+		</svg>
+		<svg desc="" role="img" class="decorative"></svg>	
+		<svg role="img" class="decorative">
+			<desc></desc>
+		</svg>
+		<svg role="img" class="decorative">
+			<title></title>
+		</svg>
+		<svg role="img" class="decorative">
+			<desc>desc</desc>
+		</svg>
+		<svg role="img" class="decorative">
+			<title>title</title>
+		</svg>
+		<svg class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
+		<svg desc="toto" class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
+		<h3>SVG without marker</h3>	
+		<svg role="img"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
+		<svg role="img"></svg>
+		<svg role="img" aria-label="toto"></svg>
+		<svg role="img" aria-describedby="toto"></svg>
+		<svg role="img" aria-labelledby="toto"></svg>
+		<svg title="title" role="img">
+			<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
+		</svg>
 		<svg role="img">
-		<desc>desc</desc>
-	</svg>
-	<svg role="img">
-		<title>title</title>
-	</svg>
-	<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-	<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
-	<h3>SVG with marker informative</h3>	
-	<svg role="img" class="informative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-	<svg role="img" class="informative"></svg>
-	<svg role="img" aria-label="toto" class="informative"></svg>
-	<svg role="img" aria-describedby="toto" class="informative"></svg>
-	<svg role="img" aria-labelledby="toto" class="informative"></svg>
-	<svg title="title" role="img" class="informative">
-		<svg class="informative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
-	</svg>
-	<svg role="img" class="informative">
-		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
-	</svg>
-	<svg desc="" role="img" class="informative"></svg>	
-	<svg role="img" class="informative">
-		<desc></desc>
-	</svg>
-	<svg role="img" class="informative">
-		<title></title>
-	</svg>
-	<svg role="img" class="informative">
-		<desc>desc</desc>
-	</svg>
-	<svg role="img" class="informative">
-		<title>title</title>
-	</svg>
-	<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-	<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
+			<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
+		</svg>
+		<svg desc="" role="img"></svg>	
+		<svg role="img">
+			<desc></desc>
+		</svg>
+		<svg role="img">
+			<title></title>
+		</svg>
+			<svg role="img">
+			<desc>desc</desc>
+		</svg>
+		<svg role="img">
+			<title>title</title>
+		</svg>
+		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
+		<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
+		<h3>SVG with marker informative</h3>	
+		<svg role="img" class="informative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
+		<svg role="img" class="informative"></svg>
+		<svg role="img" aria-label="toto" class="informative"></svg>
+		<svg role="img" aria-describedby="toto" class="informative"></svg>
+		<svg role="img" aria-labelledby="toto" class="informative"></svg>
+		<svg title="title" role="img" class="informative">
+			<svg class="informative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
+		</svg>
+		<svg role="img" class="informative">
+			<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
+		</svg>
+		<svg desc="" role="img" class="informative"></svg>	
+		<svg role="img" class="informative">
+			<desc></desc>
+		</svg>
+		<svg role="img" class="informative">
+			<title></title>
+		</svg>
+		<svg role="img" class="informative">
+			<desc>desc</desc>
+		</svg>
+		<svg role="img" class="informative">
+			<title>title</title>
+		</svg>
+		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
+		<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
 
-	<div id="crit-11-10" class="sample-container">
+		<div id="crit-11-10">
 
-		<h2>Critère 11.10 - Mandatory fields</h2>
+			<h2>Critère 11.10 - Mandatory fields</h2>
 
-		<div class="sample test_true">
-			<span></span>
-			<h3>Good samples</h3>
-			<form>
-				<p>Fields marked with (*) are mandatory.</p>
-				<p>For each field, a mention of the obligatory character of the field is made visually and textually with the mention (*).</p>
-				<p>
-					<label for="crit1110-good-test1">Field with aria-required attribut *</label>
-					<input id="crit1110-good-test1" type="text" value="" aria-required="true" />
-				</p>
-				<p>
-					<label for="crit1110-good-test2">Field with required attribut *</label>
-					<input id="crit1110-good-test2" type="text" value="" required="true" />
-				</p>
-			</form>
+			<div class="sample test_true">
+				<span></span>
+				<h3>Good samples</h3>
+				<form>
+					<p>Fields marked with (*) are mandatory.</p>
+					<p>For each field, a mention of the obligatory character of the field is made visually and textually with the mention (*).</p>
+					<p>
+						<label for="crit1110-good-test1">Field with aria-required attribut *</label>
+						<input id="crit1110-good-test1" type="text" value="" aria-required="true" />
+					</p>
+					<p>
+						<label for="crit1110-good-test2">Field with required attribut *</label>
+						<input id="crit1110-good-test2" type="text" value="" required="true" />
+					</p>
+				</form>
+			</div>
+			<div class="sample test_false">
+				<span></span>
+				<h3>Bad samples</h3>
+				<form>
+					<p>
+						<label for="crit1110-bad-test1">Field with bad</label>
+						<input id="crit1110-bad-test1" type="text" value="" aria-required />
+					</p>
+					<p>
+						<label for="crit1110-bad-test2">Field without visually indication</label>
+						<input id="crit1110-bad-test2" type="text" value="" required />
+					</p>
+				</form>
+			</div>
+			<div class="clearfix"></div>
 		</div>
-		<div class="sample test_false">
-			<span></span>
-			<h3>Bad samples</h3>
-			<form>
-				<p>
-					<label for="crit1110-bad-test1">Field with bad</label>
-					<input id="crit1110-bad-test1" type="text" value="" aria-required />
-				</p>
-				<p>
-					<label for="crit1110-bad-test2">Field without visually indication</label>
-					<input id="crit1110-bad-test2" type="text" value="" required />
-				</p>
-			</form>
+
+		<div id="crit-13-1">
+
+			<h2>Critère 13.1 - Refresh</h2>
+
+			<div class="sample test_true">
+				<span></span>
+				<h3>Good samples</h3>
+				<a href="Passed-refresh.html">Link to a page with a good refresh</a>
+			</div>
+			<div class="sample test_false">
+				<span></span>
+				<h3>Bad samples</h3>
+				<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
+			</div>
+			<div class="clearfix"></div>
 		</div>
-		<div class="clearfix"></div>
-	</div>
-
-	<div id="crit-13-1" class="sample-container">
-
-		<h2>Critère 13.1 - Refresh</h2>
-
-		<div class="sample test_true">
-			<span></span>
-			<h3>Good samples</h3>
-			<a href="Passed-refresh.html">Link to a page with a good refresh</a>
-		</div>
-		<div class="sample test_false">
-			<span></span>
-			<h3>Bad samples</h3>
-			<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-
+	</main>
 	
 </body>
 </html>

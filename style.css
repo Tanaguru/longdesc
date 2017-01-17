@@ -1,5 +1,6 @@
 body {
 	width: 100%;
+	margin:0;
 }
 .clearfix::before, .clearfix::after {
     content: " ";
@@ -9,7 +10,7 @@ body {
     clear: both;
 }
 .sample-container {
-	width: 64rem;
+	width: 1024px;
 	margin: auto;
 }
 .sample {
@@ -53,30 +54,42 @@ body {
 	font-size:15px;
 }
 
+.pourcent {
+	font-size:100%;
+}
+
+.em {
+	font-size:1em;
+}
+
+.relativeUnitesPx {
+	width:260px;
+}
+
 .relativeUnitesPt {
-	width:12pt;
+	width:200pt;
 }
 
 .relativeUnitesPc {
-	width:12pc;
+	width:20pc;
 }
 
 .relativeUnitesMm {
-	width:12mm;
+	width:80mm;
 }
 
 .relativeUnitesCm {
-	width:12cm;
+	width:8cm;
 }
 
 .relativeUnitesIm {
-	width:12im;
+	width:3in;
 }
 .relativeUnitesPourcent {
-	width:12%;
+	width:80%;
 }
 .relativeUnitesEm {
-	width:1.2em;
+	width:12em;
 }
 
 .contrastKo {
