@@ -20,10 +20,10 @@ body {
 	padding: 2rem;
 	margin-bottom: 2rem;
 }
-.good-sample {
+.test_true {
 	border: 2px solid #008200;
 }
-.good-sample span {
+.test_true span {
 	background: url('img/valid.png') transparent no-repeat;
 	background-size: 100%;
 	display: block;
@@ -34,10 +34,10 @@ body {
     top: -4rem;
     width: 4rem;
 }
-.bad-sample {
+.test_false {
 	border: 2px solid #e60000;
 }
-.bad-sample span {
+.test_false span {
 	background: url('img/false.png') transparent no-repeat;
 	background-size: 100%;
 	display: block;
