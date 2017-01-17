@@ -72,6 +72,12 @@ body {
 .relativeUnitesIm {
 	width:12im;
 }
+.relativeUnitesPourcent {
+	width:12%;
+}
+.relativeUnitesEm {
+	width:1.2em;
+}
 
 .contrastKo {
 	color:#FFF;

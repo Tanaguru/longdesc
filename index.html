@@ -4,50 +4,76 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <style type="text/css"> 
-   .px_html{ 
-      font-size:12px; 
-   }
-   .relativeUnitesPt_html {
-	  width:12pt;
-   }
-    .relativeUnitesMm_html {
-	  width:12mm;
-	  }
-      .relativeUnitesCm_html {
-	  width:12cm;
-   }
-       .relativeUnitesPc_html {
-	  width:12pc;
-   }
-      .relativeUnitesIm_html {
-	  width:12im;
-   }
-    .justify_html{ 
-      text-align:justify; 
-   }
+	   .px_html{ 
+	      font-size:12px; 
+	   }
+	   .relativeUnitesPt_html {
+		  width:12pt;
+	   }
+	    .relativeUnitesMm_html {
+		  width:12mm;
+		  }
+	      .relativeUnitesCm_html {
+		  width:12cm;
+	   }
+	       .relativeUnitesPc_html {
+		  width:12pc;
+	   }
+	      .relativeUnitesIm_html {
+		  width:12im;
+	   }
+	       .relativeUnitesPourcent_html {
+		  width:12%;
+	   }
+	      .relativeUnitesEm_html {
+		  width:1.2em;
+	   }
+	    .justify_html{ 
+	      text-align:justify; 
+	   }
    </style> 
-   <title>test</title>
+   <title>Site Longdesc</title>
 </head>
 <body>
-	<h2>Présentation</h2>
-	<p class="px">Paragraph with px fontsize - extern CSS</p>
-	<p class="px_html">Paragraph with px fontsize - tag style</p>
-	<p style="font-size:12px">Paragraph with px fontsize - attr style</p>
-	<p class="relativeUnitesPt">Paragraph with non relative units pt</p>
-	<p class="relativeUnitesPc">Paragraph with non relative units pc</p>
-	<p class="relativeUnitesMm">Paragraph with non relative units mm</p>
-	<p class="relativeUnitesCm">Paragraph with non relative units cm</p>
-	<p class="relativeUnitesIm">Paragraph with non relative units im</p>
-	<p class="relativeUnitesPt_html">Paragraph with non relative units pt - tag style</p>
-	<p class="relativeUnitesPc_html">Paragraph with non relative units pc - tag style</p>
-	<p class="relativeUnitesMm_html">Paragraph with non relative units mm - tag style</p>
-	<p class="relativeUnitesCm_html">Paragraph with non relative units cm - tag style</p>
-	<p class="relativeUnitesIm_html">Paragraph with non relative units im - tag style</p>
-	<p style="width:12pxt">Paragraph with non relative units pt</p>
-	<p style="width:12pc">Paragraph with non relative units pc</p>
-	<p style="width:12mm">Paragraph with non relative units mm</p>
-	<p style="width:12cm">Paragraph with non relative units cm</p>
-	<p style="width:12im">Paragraph with non relative units im</p>
+	<div id="crit-10-4" class="sample-container">
+
+		<h2>Critère 10.4 - Relative size of texts and containers</h2>
+
+		<div class="sample test_true">
+			<span></span>
+			<h3>Good samples</h3>
+			<p class="relativeUnitesPourcent">Paragraph with relative units %</p>
+			<p class="relativeUnitesEm">Paragraph with relative units em</p>
+			<p class="relativeUnitesPourcent_html">Paragraph with relative units % - tag style</p>
+			<p class="relativeUnitesEm_html">Paragraph with relative units em - tag style</p>
+			<p style="width:12%">Paragraph with relative units %</p>
+			<p style="width:1.2em">Paragraph with relative units em</p>
+		</div>
+		<div class="sample test_false">
+			<span></span>
+			<h3>Bad samples</h3>
+			<p class="px">Paragraph with px fontsize - extern CSS</p>
+			<p class="px_html">Paragraph with px fontsize - tag style</p>
+			<p style="font-size:12px">Paragraph with px fontsize - attr style</p>
+			<p class="relativeUnitesPt">Paragraph with non relative units pt</p>
+			<p class="relativeUnitesPc">Paragraph with non relative units pc</p>
+			<p class="relativeUnitesMm">Paragraph with non relative units mm</p>
+			<p class="relativeUnitesCm">Paragraph with non relative units cm</p>
+			<p class="relativeUnitesIm">Paragraph with non relative units im</p>
+			<p class="relativeUnitesPt_html">Paragraph with non relative units pt - tag style</p>
+			<p class="relativeUnitesPc_html">Paragraph with non relative units pc - tag style</p>
+			<p class="relativeUnitesMm_html">Paragraph with non relative units mm - tag style</p>
+			<p class="relativeUnitesCm_html">Paragraph with non relative units cm - tag style</p>
+			<p class="relativeUnitesIm_html">Paragraph with non relative units im - tag style</p>
+			<p style="width:12pxt">Paragraph with non relative units pt</p>
+			<p style="width:12pc">Paragraph with non relative units pc</p>
+			<p style="width:12mm">Paragraph with non relative units mm</p>
+			<p style="width:12cm">Paragraph with non relative units cm</p>
+			<p style="width:12im">Paragraph with non relative units im</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
 	<p style="color:red; background-color:none;">Test</p>
 	<p style="background-color:red; ">Test</p>
 	<p class="justify_html">
@@ -308,11 +334,11 @@
 	<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
 	<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
 
-	<div class="sample-container">
+	<div id="crit-11-10" class="sample-container">
 
-		<h2>Critère 11.10 Mandatory fields</h2>
+		<h2>Critère 11.10 - Mandatory fields</h2>
 
-		<div class="sample good-sample">
+		<div class="sample test_true">
 			<span></span>
 			<h3>Good samples</h3>
 			<form>
@@ -328,7 +354,7 @@
 				</p>
 			</form>
 		</div>
-		<div class="sample bad-sample">
+		<div class="sample test_false">
 			<span></span>
 			<h3>Bad samples</h3>
 			<form>
@@ -347,7 +373,7 @@
 
 	<div id="crit-13-1" class="sample-container">
 
-		<h2>Critère 13.1 Refresh</h2>
+		<h2>Critère 13.1 - Refresh</h2>
 
 		<div class="sample test_true">
 			<span></span>
