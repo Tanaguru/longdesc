@@ -370,6 +370,57 @@
 
 		</div>
 
+		<div id="crit-8-10">
+
+			<h2>Criterion 8.10 - On each web page, are changes in reading direction identified?</h2>
+			
+			<div id="test-8-10-1">
+
+				<h3>Test 8.10.1 - On each web page, does each text for which the reading direction is different from the default reading direction meet the following conditions: </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					
+                	<p dir="rtl"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
+
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples without information</h3>
+					<p><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
+					<h3>Bad samples with a "dir" attribute whose value is "auto"</h3>
+					<p dir="auto"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
+					<h3>Bad samples with a "dir" attribute whose value is different from that expected</h3>
+					<p dir="ltr"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			
+			<div id="test-8-10-2">
+
+				<h3>Test 8.10.2 - On each Web page, does each change reading direction (dir attribute) meet the following conditions:</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>The following link provides access to a page that has no obsolete element : </p>
+					<a href="http://www.longdesc.fr/Passed-8-2-2.html">The page that has no obsolete element</a> and 
+					<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.longdesc.fr%2FPassed-8-2-2.html">W3C validator of this page</a>
+
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>The following link provides access to a page that has obsolete elements : </p>
+					<a href="http://www.longdesc.fr/Failed-8-2-2.html">The page that has no obsolete element</a> and 
+					<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.longdesc.fr%2FFailed-8-2-2.html">W3C validator of this page</a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+
 		<div id="crit-10-4">
 
 			<h2>Criterion 10.4 - On each web page, is text still readable when character size is increased until at least 200%?</h2>
