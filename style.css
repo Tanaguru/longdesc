@@ -148,3 +148,14 @@ table.support td {
 .justify {
 	text-align:justify;
 }
+
+#hidden_content_02_test-10-13-1:focus {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: auto;
+    margin: 0;
+    overflow: none;
+    padding: 0;
+    position: inherit;
+    width: auto;	
+}
