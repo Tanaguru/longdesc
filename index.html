@@ -47,10 +47,10 @@
 	<main class="sample-container">
 		<div id="crit-10-4">
 
-			<h2>Criterion 10.4 - Relative size of texts and containers</h2>
+			<h2>Criterion 10.4 - On each web page, is text still readable when character size is increased until at least 200%?</h2>
 			<div id="test-10-4-1">
 
-				<h3>Test 10.4.1 - Relative size of containers</h3>
+				<h3>Test 10.4.1 - In the style sheets of the website, non relative units (pt, pc, mm, cm, in) must not be used for the media types screen, tv, handheld, projection. Has this rule been followed? </h3>
 
 				<div class="sample test_true">
 					<span></span>
@@ -88,7 +88,7 @@
 			</div>
 			<div id="test-10-4-2">
 
-				<h3>Test 10.4.1 - Relative size of texts</h3>
+				<h3>Test 10.4.2 - In the style sheets of the website, for the media types screen, tv, handheld, projection, do font sizes use relative units only?</h3>
 
 				<div class="sample test_true">
 					<span></span>
@@ -110,6 +110,72 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+
+		<div id="crit-11-10">
+
+			<h2>Critère 11.10 - In each form, is the input control used in a relevant way?</h2>
+			
+			<div id="test-11-10-1">
+				<h3>Test 11.10.1 - For each form, do mandatory fields indications meet one of the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<form>
+						<p>Fields marked with (*) are mandatory.</p>
+						<p>For each field, a mention of the obligatory character of the field is made visually and textually with the mention (*).</p>
+						<p>
+							<label for="crit1110-good-test1">Field with aria-required attribut *</label>
+							<input id="crit1110-good-test1" type="text" value="" aria-required="true" />
+						</p>
+						<p>
+							<label for="crit1110-good-test2">Field with required attribut *</label>
+							<input id="crit1110-good-test2" type="text" value="" required="true" />
+						</p>
+					</form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<form>
+						<p>
+							<label for="crit1110-bad-test1">Field with bad</label>
+							<input id="crit1110-bad-test1" type="text" value="" aria-required />
+						</p>
+						<p>
+							<label for="crit1110-bad-test2">Field without visually indication</label>
+							<input id="crit1110-bad-test2" type="text" value="" required />
+						</p>
+					</form>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
+		<div id="crit-13-1">
+
+			<h2>Critère 13.1 - For each web page, can the user control each time limit that modifies content (except in particular cases)?</h2>
+			
+			<div id="test-13-1-1">
+
+				<h3>Test 13.1.1 - For each web page, does each refresh process or automatic redirection (code, script, object tag, applet tag, meta tag) meet one of the following conditions (except in particular cases)?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<a href="Passed-refresh.html">Link to a page with a good refresh</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
 		<p style="color:red; background-color:none;">Test</p>
 		<p style="background-color:red; ">Test</p>
 		<p class="justify_html">
@@ -370,60 +436,6 @@
 		</svg>
 		<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
 		<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
-
-		<div id="crit-11-10">
-
-			<h2>Critère 11.10 - Mandatory fields</h2>
-
-			<div class="sample test_true">
-				<span></span>
-				<h3>Good samples</h3>
-				<form>
-					<p>Fields marked with (*) are mandatory.</p>
-					<p>For each field, a mention of the obligatory character of the field is made visually and textually with the mention (*).</p>
-					<p>
-						<label for="crit1110-good-test1">Field with aria-required attribut *</label>
-						<input id="crit1110-good-test1" type="text" value="" aria-required="true" />
-					</p>
-					<p>
-						<label for="crit1110-good-test2">Field with required attribut *</label>
-						<input id="crit1110-good-test2" type="text" value="" required="true" />
-					</p>
-				</form>
-			</div>
-			<div class="sample test_false">
-				<span></span>
-				<h3>Bad samples</h3>
-				<form>
-					<p>
-						<label for="crit1110-bad-test1">Field with bad</label>
-						<input id="crit1110-bad-test1" type="text" value="" aria-required />
-					</p>
-					<p>
-						<label for="crit1110-bad-test2">Field without visually indication</label>
-						<input id="crit1110-bad-test2" type="text" value="" required />
-					</p>
-				</form>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-
-		<div id="crit-13-1">
-
-			<h2>Critère 13.1 - Refresh</h2>
-
-			<div class="sample test_true">
-				<span></span>
-				<h3>Good samples</h3>
-				<a href="Passed-refresh.html">Link to a page with a good refresh</a>
-			</div>
-			<div class="sample test_false">
-				<span></span>
-				<h3>Bad samples</h3>
-				<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
-			</div>
-			<div class="clearfix"></div>
-		</div>
 	</main>
 	
 </body>
