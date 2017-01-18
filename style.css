@@ -53,7 +53,47 @@ h3 {
     top: -4rem;
     width: 4rem;
 }
-
+table.support {
+	border: 1px solid #00437b;
+	min-width: 50%;
+	margin-bottom: 1rem;
+}
+table.support th {
+	border: 1px solid #00437b;
+	background: #d2eaff;
+	padding:0.5rem;
+	text-align: center;
+}
+table.support td {
+	border: 1px solid #00437b;
+	padding:0.5rem;
+	text-align: center;
+}
+.sr-only {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.good-support {
+	background: url('img/valid.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    height: 2rem;
+    width: 2rem;
+}
+.bad-support {
+	background: url('img/false.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    height: 2rem;
+    width: 2rem;
+}
+	
 .px {
 	font-size:15px;
 }

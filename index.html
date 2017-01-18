@@ -380,14 +380,14 @@
 
 				<div class="sample test_true">
 					<span></span>
-					<h3>Good samples</h3>
+					<h4>Good samples</h4>
 					
                 	<p dir="rtl"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
 
 				</div>
 				<div class="sample test_false">
 					<span></span>
-					<h3>Bad samples without information</h3>
+					<h4>Bad samples without information</h4>
 					<p><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
 				</div>
 			</div>
@@ -399,20 +399,42 @@
 
 				<div class="sample test_true">
 					<span></span>
-					<h3>Good samples</h3>
+					<h4>Good samples</h4>
 					
                 	<p dir="rtl"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
 
 				</div>
 				<div class="sample test_false">
 					<span></span>
-					<h3>Bad samples with a "dir" attribute whose value is "auto"</h3>
+					<h4>Bad samples with a "dir" attribute whose value is "auto"</h4>
 					<p dir="auto"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
 					<h3>Bad samples with a "dir" attribute whose value is different from that expected</h3>
 					<p dir="ltr"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
 				</div>
 			</div>
 			<div class="clearfix"></div>
+
+			<div id="support-crit-8-10">
+				<h3>Support of the criterion 8.10 by assistive technologies</h3>
+				<table class="support">
+					<caption>Support of the "dir" attribute with the "ltr | rtl" value</caption>
+					<tr><td></td><th scope="col">Jaws 18</th><th scope="col">NVDA 2016</th></tr>
+					<tr>
+						<th scope="row">IE 11</th>
+						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
+						<td><span class="good-support"></span><span class="sr-only">Non supporté</span></td>
+					</tr>
+				</table>
+				<table class="support">
+					<caption>Support of the "dir" attribute with the "auto" value</caption>
+					<tr><td></td><th scope="col">Jaws 18</th><th scope="col">NVDA 2016</th></tr>
+					<tr>
+						<th scope="row">IE 11</th>
+						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
+						<td><span class="good-support"></span><span class="sr-only">Non supporté</span></td>
+					</tr>
+				</table>
+			</div>
 
 		</div>
 
@@ -495,9 +517,25 @@
 
 		<div id="crit-10-7">
 
-			<h2>Critère 10.7 - </h2>
+			<h2>Critère 10.7 - On each web page, is the focus visible for each element that receives focus? </h2>
 
-			<a href="http://www.google.fr" class="noFocus">Google with a display none focus</a>
+			<div id="test-10-7-1">
+
+				<h3>Test 10.7.1 - For each element receiving focus, the browser default visual cue must not be removed (CSS property outline, outline-color, outline-width, outline-style). Has this rule been followed?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<a href="http://www.google.fr">Google with a display can focus</a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<a href="http://www.google.fr" class="noFocus">Google with a display with "outline:none"</a> <br />
+					<a href="http://www.google.fr" style="outline-color:transparent;">Google with a display with "outline-color:transparent"</a><br />
+					<a href="http://www.google.fr" style="outline-width:0;">Google with a display with "outline-width:0"</a><br />
+					<a href="http://www.google.fr" style="outline-style:none;">Google with a display with "outline-style:none"</a>
+				</div>
+
 				<div class="clearfix"></div>
 
 		</div>
