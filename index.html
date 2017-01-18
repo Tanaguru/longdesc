@@ -616,7 +616,7 @@
 		            </p> 
 
 			        <p>
-			        	The following input a label correctly associated with it, but anybody can read it :<br />
+			        	The following input has a label correctly associated with it, but anybody can read it :<br />
 		                <label style="display:none;" for="input_08_test-10-13-1">  
 		                        Some hidden label
 		                </label> 
@@ -626,6 +626,115 @@
 
 			</div>
 			<div class="clearfix"></div>
+		</div>
+
+		<div id="crit-11-1">
+
+			<h2>Critère 11.1 - Does each form field have a label?</h2>
+			
+			<div id="test-11-1-3">
+
+				<h3>Test 11.1.3 - Does each form field associated with a label, via the ARIA aria-labelledby property, meet the following conditions?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-labelledby" attribute :<br />
+		                <strong id="label_01_test-11-1-3">  
+		                        Some hidden label
+		                </strong> 
+		                <input id="input_01_test-11-1-3" name="input_01_test-11-1-3" aria-labelledby="label_01_test-11-1-3" />
+		            </p>
+
+			        <p>
+			        	The following input has labels associated with it by the "aria-labelledby" attribute :<br />
+		                <strong id="label_02_test-11-1-3">  
+		                        Some 
+		                </strong> 
+		                <strong id="label_03_test-11-1-3">  
+		                         hidden label
+		                </strong> 
+		                <input id="input_02_test-11-1-3" name="input_02_test-11-1-3" aria-labelledby="label_02_test-11-1-3 label_03_test-11-1-3" />
+		            </p>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-labelledby" attribute and show on focus :<br />
+		                <strong id="label_04_test-11-1-3" class="sr-only">  
+		                        Some hidden label
+		                </strong> 
+		                <input id="input_04_test-11-1-3" onfocus="javascript:document.getElementById('label_04_test-11-1-3').setAttribute('class', '');" name="input_04_test-11-1-3" aria-labelledby="label_04_test-11-1-3" />
+		            </p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-labelledby" attribute, but two contains have the same "id":<br />
+		                <strong id="label_05_test-11-1-3">  
+		                        Some hidden label
+		                </strong> 
+		                <input id="input_05_test-11-1-3" name="input_05_test-11-1-3" aria-labelledby="label_05_test-11-1-3" />
+		            </p>
+
+			        <p>
+			        	The following input has labels associated with it by the "aria-labelledby" attribute. Some part of the label not has an "id" attribute :<br />
+		                <strong id="label_05_test-11-1-3">  
+		                        Some 
+		                </strong> 
+		                <strong id="">  
+		                         hidden label
+		                </strong> 
+		                <input id="input_06_test-11-1-3" name="input_06_test-11-1-3" aria-labelledby="label_06_test-11-1-3" />
+		            </p>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-labelledby" attribute, but only the user use an assistive technology can read it :<br />
+		                <strong id="label_07_test-11-1-3" class="sr-only">  
+		                        Some hidden label
+		                </strong> 
+		                <input id="input_07_test-11-1-3" name="input_07_test-11-1-3" aria-labelledby="label_07_test-11-1-3" />
+		            </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-11-1-4">
+
+				<h3>Test 11.1.4 - Does each form field that uses a property ARIA aria-label must be accompanied by a visible text passage and attached to the field to understand the nature of the expected input. Does this rule is respected?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<a href="Passed-refresh.html">Link to a page with a good refresh</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-11-1-5">
+
+				<h3>Test 11.1.5 - Does each form field that uses a title attribute, meet the following conditions: </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<a href="Passed-refresh.html">Link to a page with a good refresh</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
 		</div>
 
 		<div id="crit-11-10">
