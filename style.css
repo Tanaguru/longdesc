@@ -2,6 +2,9 @@ body {
 	width: 100%;
 	margin:0;
 }
+h3 {
+	padding-left: 1rem;
+}
 .clearfix::before, .clearfix::after {
     content: " ";
     display: table;
