@@ -790,6 +790,96 @@
 			<div class="clearfix"></div>
 		</div>
 
+		<div id="crit-11-9">
+
+			<h2>Critère 11.9 - In each form, is the text of each button relevant?</h2>
+			
+			<div id="test-11-9-1">
+				<h3>Test 11.9.1 - In each form, does the text of each button meet one of the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+	                <form action="mock_action" method="get"> 
+	                    <div id="selectElement">
+	                    	<label for="select">Sélection</label> 
+	                        <select id="select"> 
+	                        	<option value="Value1">Value1</option> 
+	                        	<option value="Value2">Value2</option> 
+	                        	<option value="Value3">Value3</option> 
+	                        	<option value="Value4">Value4</option> 
+	                        </select> 
+	                    </div> 
+	                    <div id="submitElement"> 
+                        	<input type="reset" value="Reset" /> 
+	                        <input type="submit" value="Submit" /> 
+                       	 	<input type="button" value="Send" /> 
+                        	<input type="image" alt="Submit" src="img/send.png" /> 
+                        	<button type="button">Send</button> 
+	                    </div> 
+	                </form>  
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+	                <form action="mock_action" method="get"> 
+	                    <div id="selectElement">
+	                    	<label for="select">Sélection</label> 
+	                        <select id="select"> 
+	                        	<option value="Value1">Value1</option> 
+	                        	<option value="Value2">Value2</option> 
+	                        	<option value="Value3">Value3</option> 
+	                        	<option value="Value4">Value4</option> 
+	                        </select> 
+	                    </div> 
+	                    <div id="submitElement"> 
+                        	<input type="reset" value="" /> 
+	                        <input type="submit" value="" /> 
+                       	 	<input type="button" value="" /> 
+                        	<input type="image" alt="" src="img/send.png" /> 
+                        	<button type="button"></button> 
+	                    </div> 
+	                </form> 
+				</div>
+			</div>
+			
+			<div id="test-11-9-2">
+				<h3>Test 11.9.2 - In each form, does the text of each button implemented via an ARIA property aria-labelledby meet the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+	                <form action="mock_action"> 
+	                    <label for="field1">Field1</label> <input type="text" name="field1" id="field1" /> <br /> 
+	                    <label for="field2">Field2</label> <input type="text" name="field2" id="field2" />
+
+	                    <input type="submit" aria-labelledby="button-label" value="" />
+
+	                    <p id="button-label">Send</p>
+	                </form> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+	                <form action="mock_action" method="get"> 
+	                    <label for="field1">Field1</label> <input type="text" name="field1" id="field1" /> <br /> 
+	                    <label for="field2">Field2</label> <input type="text" name="field2" id="field2" />
+
+	                    <input type="submit" aria-labelledby="" value="" />
+
+	                    <input type="submit" aria-labelledby="submit-label" value="" />
+
+	                    <input type="submit" aria-labelledby="button-label" value="" />
+
+	                    <p id="button-label">Send</p>
+	                    <p id="button-label">Other send</p>
+	                </form> 
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
 		<div id="crit-11-10">
 
 			<h2>Critère 11.10 - In each form, is the input control used in a relevant way?</h2>
