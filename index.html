@@ -761,6 +761,35 @@
 
 		</div>
 
+		<div id="crit-11-5">
+
+			<h2>Critère 11.5 - In each form, is the information of same nature grouped together, if necessary?</h2>
+			
+			<div id="test-11-5-1">
+				<h3>Test 11.5.1 - In each form, is the information of same nature grouped together via a fieldset tag, if necessary?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+	                <form action="mock_action"> 
+	                    <fieldset> 
+	                        <legend>Gender</legend>
+	                        <label for="field1">Male</label> <input type="radio" name="gender" id="field1" /> <br /> 
+	                        <label for="field2">Female</label> <input type="radio" name="gender" id="field2" /> 
+	                    </fieldset> 
+	                </form> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+                    <label for="field1">Male</label> <input type="radio" name="gender" id="field1" /> <br /> 
+                    <label for="field2">Female</label> <input type="radio" name="gender" id="field2" /> 
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
 		<div id="crit-11-10">
 
 			<h2>Critère 11.10 - In each form, is the input control used in a relevant way?</h2>
