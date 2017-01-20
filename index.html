@@ -842,6 +842,7 @@
 	                </form> 
 				</div>
 			</div>
+			<div class="clearfix"></div>
 			
 			<div id="test-11-9-2">
 				<h3>Test 11.9.2 - In each form, does the text of each button implemented via an ARIA property aria-labelledby meet the following conditions? </h3>
@@ -918,6 +919,95 @@
 					</form>
 				</div>
 			</div>
+			<div class="clearfix"></div>
+			
+			<div id="test-11-10-2">
+				<h3>Test 11.10.2 - Each mandatory field indication based on the ARIA properties aria-label, aria-required, or the "required" attribute, must have an explicit visual cue in its label (label tag) or in a chunk of text tied to the form field via the ARIA property aria-describedby or aria-labelledby. Has this rule been followed?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<form>	
+						<p>Fields marked with (*) are mandatory.</p>			
+	                    <p> 
+	                        <label for="field1">Field1 * : </label> <input required type="text" name="field1" id="field1" /> <br /> 
+	                        <label for="field2">Field2 * : </label> <input aria-required="true" type="text" name="field2" id="field2" /> <br />
+	                        <label id="field3">Field3 (mandatory) : </label> <input type="text" name="field3" aria-labelledby="field3" /> <br />
+	                        <label id="field4">Field4 (required) : </label> <input type="text" name="field4" aria-describedby="field4" /> <br />
+	                    </p> 
+					</form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<form>				
+	                    <p> 
+	                        <label for="field5">Field5: </label> <input required type="text" name="field5" id="field5" /> <br /> 
+	                        <label for="field6">Field6: </label> <input aria-required="true" type="text" name="field6" id="field6" /> <br />
+	                        <label id="field7">Field7: </label> <input type="text" name="field7" aria-labelledby="field7" /> <br />
+	                        <label id="field8">Field8: </label> <input type="text" name="field8" aria-describedby="field8" /> <br />
+	                    </p> 
+					</form>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			
+			<div id="test-11-10-3">
+				<h3>Test 11.10.3 - Does each mandatory field indication provided via a chunk of text tied by an ARIA property aria-describedby or aria-labelledby meet the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<form>			
+	                    <p> 
+	                        <label id="field1">Field1 (mandatory) : </label> <input type="text" name="field1" aria-labelledby="field1" /> <br />
+	                        <label id="field2">Field2 (required) : </label> <input type="text" name="field2" aria-describedby="field2" /> <br />
+	                    </p> 
+					</form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<form>					
+	                    <p> 
+	                        <label>Field3: </label> <input type="text" name="field3" aria-labelledby="" /> <br />
+	                        <label id="field4">Field4: </label> <input type="text" name="field4" aria-describedby="field4" /> <br />
+	                        <label id="field4">Field5: </label> <input type="text" name="field5" aria-labelledby="field5" /> <br />
+	                    </p> 
+					</form>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			
+			<div id="test-11-10-10">
+				<h3>Test 11.10.10 - Does each form field that uses a title attribute as input help, meet the following conditions:</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+			        <p>
+			        	The following input has a label with the "title" attribute and has no "placeholder" attribute :<br />
+		                <input id="input_01_test-11-1-4" type="email" name="input_01_test-11-1-4" title="Some label (sample@mail.com)" />
+		            </p>
+
+			        <p>
+			        	The following input has a label with the "title" attribute and its "placeholder" attribute is equal to the "title" attribute :<br />
+		                <input id="input_01_test-11-1-4" type="email" name="input_01_test-11-1-4" title="Some label (sample@mail.com)" placeholder="Some label (sample@mail.com)" />
+		            </p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+			        <p>
+			        	The following input has a label with the "title" attribute and its "placeholder" attribute is not equal to the "title" attribute :<br />
+		                <input id="input_01_test-11-1-4" type="email" name="input_01_test-11-1-4" title="Some label (sample@mail.com)" placeholder="sample@mail.com" />
+		            </p>
+				</div>
+			</div>
 
 			<div class="clearfix"></div>
 		</div>
@@ -929,6 +1019,23 @@
 			<div id="test-13-1-1">
 
 				<h3>Test 13.1.1 - For each web page, does each refresh process or automatic redirection (code, script, object tag, applet tag, meta tag) meet one of the following conditions (except in particular cases)?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<a href="Passed-refresh.html">Link to a page with a good refresh</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-13-1-2">
+
+				<h3>Test 13.1.2 - For each web page, is each redirection initiated via the meta tag immediate (except in particular cases)?</h3>
 
 				<div class="sample test_true">
 					<span></span>
