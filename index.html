@@ -708,12 +708,23 @@
 				<div class="sample test_true">
 					<span></span>
 					<h3>Good samples</h3>
-					<a href="Passed-refresh.html">Link to a page with a good refresh</a>
+
+			        <p>
+			        	The following input has a label with the "aria-label" attribute and has a text passage just behind :<br />
+		                <strong id="label_01_test-11-1-4">  
+		                        Some label
+		                </strong> 
+		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" aria-label="Some label" />
+		            </p>
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h3>Bad samples</h3>
-					<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
+
+			        <p>
+			        	The following input has a label with the "aria-label" attribute, but it has not a text passage just behind :<br />
+		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" aria-label="Some label" />
+		            </p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -725,12 +736,25 @@
 				<div class="sample test_true">
 					<span></span>
 					<h3>Good samples</h3>
-					<a href="Passed-refresh.html">Link to a page with a good refresh</a>
+
+			        <p>
+			        	The following input has a label with the "title" attribute and has no "placeholder" attribute :<br />
+		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" title="Some label" />
+		            </p>
+
+			        <p>
+			        	The following input has a label with the "title" attribute and its "placeholder" attribute is equal to the "title" attribute :<br />
+		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" title="Some label" placeholder="Some label" />
+		            </p>
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h3>Bad samples</h3>
-					<a href="Failed-refresh.html">Link to a page with a bad refresh</a>
+
+			        <p>
+			        	The following input has a label with the "title" attribute and its "placeholder" attribute is not equal to the "title" attribute :<br />
+		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" title="Some label" placeholder="Sample" />
+		            </p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
