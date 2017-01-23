@@ -86,39 +86,38 @@
 					<span></span>
 					<h3>Good samples</h3>
 					<p>Area tag Image non clickable with empty alternative</p>
-	                <img src="right.jpg" alt="" usemap="#map" /> 
+	                <img src="img/imagemap.gif" alt="" usemap="#map" /> 
 	                <map id="mymap" name="map"> 
-	                	<area alt="" shape="circle" coords="90,58,3" /> 
-	                	<area alt="" shape="circle" coords="124,58,8" /> 
+	                	<area alt="" shape="rect" coords="25,180,125,280" /> 
+	                	<area alt="" shape="poly" coords="153,106,186,225,340,193,315,81,304,167" /> 
 	                </map> 
 					<p>Area tag Image non clickable with not empty alternative</p>
-	                <img src="right.jpg" alt="" usemap="#map" /> 
+	                <img src="img/imagemap.gif" alt="" usemap="#map" /> 
 	                <map id="mymap" name="map"> 
-	                	<area alt="Not empty alt" shape="circle" coords="90,58,3" href="#" /> 
-	                	<area alt="Not empty alt" shape="circle" coords="124,58,8" href="#" /> 
+	                	<area alt="Not empty alt" shape="rect" coords="25,180,125,280" /> 
+	                	<area alt="Not empty alt" shape="poly" coords="153,106,186,225,340,193,315,81,304,167" /> 
 	                </map> 
 					<p>Area tag Image clickable with not empty alternative</p>
-	                <img src="right.jpg" alt="" usemap="#map" /> 
+	                <img src="img/imagemap.gif" alt="" usemap="#map" /> 
 	                <map id="mymap" name="map"> 
-	                	<area alt="Not empty alt" shape="circle" coords="90,58,3" href="#" /> 
-	                	<area alt="Not empty alt" shape="circle" coords="124,58,8" href="#" /> 
+	                	<area alt="Premier lien" shape="rect" coords="25,180,125,280" href="#" /> 
+	                	<area alt="Deuxième lien" shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="#" /> 
 	                </map> 
-
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h3>Bad samples</h3>
 					<p>Area tag Image non clickable without alternative</p>
-	                <img src="wrong.jpg" alt="" usemap="#map" /> 
+	                <img src="img/imagemap.gif" alt="" usemap="#map" /> 
 	                <map id="mymap" name="map"> 
-	                	<area shape="circle" coords="90,58,3" /> 
-	                	<area shape="circle" coords="124,58,8" /> 
+	                	<area shape="rect" coords="25,180,125,280" /> 
+	                	<area shape="poly" coords="153,106,186,225,340,193,315,81,304,167" /> 
 	                </map> 
 					<p>Area tag Image clickable without alternative</p>
-	                <img src="wrong.jpg" alt="" usemap="#map" /> 
+	                <img src="img/imagemap.gif" alt="" usemap="#map" /> 
 	                <map id="mymap" name="map"> 
-	                	<area shape="circle" coords="90,58,3" href="#" /> 
-	                	<area shape="circle" coords="124,58,8" href="#" /> 
+	                	<area shape="rect" coords="25,180,125,280" href="#" /> 
+	                	<area shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="#" /> 
 	                </map> 
 				</div>
 			</div>
@@ -132,13 +131,13 @@
 					<span></span>
 					<h3>Good samples</h3>
 					<p>Input type image with alternative</p>
-                	<input type="image" value="Send" alt="Send" src="img/right.jpg" /> 
+                	<input type="image" value="Send" alt="Send" src="img/send.png" /> 
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h3>Bad samples</h3>
 					<p>Input type image without alternative</p>
-                	<input type="image" value="Send" src="img/wrong.jpg" /> 
+                	<input type="image" value="Send" src="img/send.png" /> 
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -149,38 +148,26 @@
 
 				<div class="sample test_true">
 					<span></span>
-					<h3>Good samples</h3>
-					<p>Input type image with alternative</p>
-                	<a href="ismap.map" target="_self"> 
-					   <img ismap src="img/right.jpg" alt="Not empty alt"/> 
-					</a>
+					<h3>Good samples</h3> 
+					<p>Area tag Image clickable of a server-side with link alternative</p>
+	                <img src="img/imagemap.gif" alt="" usemap="#map" ismap /> 
+	                <map id="mymap" name="map"> 
+	                	<area alt="Premier lien" shape="rect" coords="25,180,125,280" href="#" /> 
+	                	<area alt="Deuxième lien" shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="#" /> 
+	                </map> 
+					<a href="#">First alternative link</a>
+					<a href="#">Second alternative link</a>
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h3>Bad samples</h3>
-					<p>Input type image without alternative</p>
-                	<input type="image" value="Send" src="img/wrong.jpg" /> 
+					<p>Area tag Image clickable of a server-side without link alternative</p>
+	                <img src="img/imagemap.gif" alt="" usemap="#map" ismap /> 
+	                <map id="mymap" name="map"> 
+	                	<area shape="rect" coords="25,180,125,280" href="#" /> 
+	                	<area shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="#" /> 
+	                </map>
 				</div>
-			</div>
-			<div class="clearfix"></div>
-
-			<div id="test-1-1-4" class="test_preq">
-				<p>possible to invalidate this test ? no link with href equal to area ?</p>
-				<h3>Area tag without alternative</h3>
-					<MAP name="mymap"> 
-					<AREA shape="rect" coords="25,180,125,280" href="http://www.december.com/html/"/> 
-					<AREA shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="http://www.december.com/works/tour.html"/> 
-					</MAP>
-					<IMG Src="http://www.december.com/html/images/imagemap.gif" width="500" height="300" alt="Image Map" usemap="#mymap" ismap />
-			</div>
-			<div class="test_true">
-				<MAP name="mymap"> 
-					<AREA shape="rect" coords="25,180,125,280" href="http://www.december.com/html/"/> 
-					<AREA shape="poly" coords="153,106,186,225,340,193,315,81,304,167" href="http://www.december.com/works/tour.html"/> 
-					</MAP>
-					<IMG Src="http://www.december.com/html/images/imagemap.gif" width="500" height="300" alt="Image Map" usemap="#mymap" ismap />
-					<a href="http://www.december.com/html/">december</a>
-					<a href="http://www.december.com/works/tour.html">tour</a>
 			</div>
 			<div class="clearfix"></div>
 		</div>
