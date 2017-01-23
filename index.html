@@ -50,43 +50,120 @@
 		<p>Good and bad samples of implementation of the rules of the RGAA 3</p>
 
 		<div id="crit-1-1">
-			<h2>Critère 1.1</h2>
-			<div id="test-1-1-1" class="test_false">
-				<h3>Img tag without alternative</h3>
-				<img src="img/Image_without_alternative.png"/>
-				<h3>Image Link without alternative</h3>
-				<a href="http://www.google.fr"><img src="img/test.img"></a>
+			<h2>Critère 1.1 - Does each image have a text alternative?</h2>
+
+			<div id="test-1-1-1">
+
+				<h3>Test 1.1.1 - Does each image (img tag) have an alt attribute?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Image with empty alternative</p>
+                	<img src="img/Image_with_empty_alternative.png" alt="" /> 
+					<p>Image with not empty alternative</p>
+                	<img src="img/Image_with_not_empty_alternative.png" alt="Not empty alt" /> 
+					<p>Image with an alternative equal to src</p>
+                	<img src="img/Image_with_alternative_equal_to_src.png" alt="img/Image_with_alternative_equal_to_src.png" /> 
+
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Image without alternative</p>
+                	<img src="img/Image_without_alternative.png" /> 
+					<p>Image link without alternative</p>
+                	<a href="#"><img src="img/Image_Link_without_alternative.png" /> </a>
+				</div>
 			</div>
-			<div class="test_true">
-				<h3>Image with empty alternative</h3>
-				<img src="img/Image_with_empty_alternative.png" alt="" class="decorative"/>
-				<h3>Image with alternative</h3>
-				<img src="img/Image_with_alternative.png" alt="toto" class="informative"/>
-				<h3>Image with alternative equal to src</h3>
-				<img src="img/Image_with_alternative_equal_to_src.png" alt="img/Image with alternative equal to src.png"/>
+			<div class="clearfix"></div>
+
+			<div id="test-1-1-2">
+
+				<h3>Test 1.1.2 - Does each area (area tag) of an image map have an alt attribute?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Area tag Image non clickable with empty alternative</p>
+	                <img src="right.jpg" alt="" usemap="#map" /> 
+	                <map id="mymap" name="map"> 
+	                	<area alt="" shape="circle" coords="90,58,3" /> 
+	                	<area alt="" shape="circle" coords="124,58,8" /> 
+	                </map> 
+					<p>Area tag Image non clickable with not empty alternative</p>
+	                <img src="right.jpg" alt="" usemap="#map" /> 
+	                <map id="mymap" name="map"> 
+	                	<area alt="Not empty alt" shape="circle" coords="90,58,3" href="#" /> 
+	                	<area alt="Not empty alt" shape="circle" coords="124,58,8" href="#" /> 
+	                </map> 
+					<p>Area tag Image clickable with not empty alternative</p>
+	                <img src="right.jpg" alt="" usemap="#map" /> 
+	                <map id="mymap" name="map"> 
+	                	<area alt="Not empty alt" shape="circle" coords="90,58,3" href="#" /> 
+	                	<area alt="Not empty alt" shape="circle" coords="124,58,8" href="#" /> 
+	                </map> 
+
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Area tag Image non clickable without alternative</p>
+	                <img src="wrong.jpg" alt="" usemap="#map" /> 
+	                <map id="mymap" name="map"> 
+	                	<area shape="circle" coords="90,58,3" /> 
+	                	<area shape="circle" coords="124,58,8" /> 
+	                </map> 
+					<p>Area tag Image clickable without alternative</p>
+	                <img src="wrong.jpg" alt="" usemap="#map" /> 
+	                <map id="mymap" name="map"> 
+	                	<area shape="circle" coords="90,58,3" href="#" /> 
+	                	<area shape="circle" coords="124,58,8" href="#" /> 
+	                </map> 
+				</div>
 			</div>
-			<div id="test-1-1-2" class="test_false">
-				<h3>Area tag without alternative</h3>
-				<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
-				<map name="planetmap">
-				  <area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm"/>
-					<area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" />
-				</map>
+			<div class="clearfix"></div>
+
+			<div id="test-1-1-3">
+
+				<h3>Test 1.1.3 - Does each form button (input tag with the type="image" attribute) have an alt attribute?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Input type image with alternative</p>
+                	<input type="image" value="Send" alt="Send" src="img/right.jpg" /> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Input type image without alternative</p>
+                	<input type="image" value="Send" src="img/wrong.jpg" /> 
+				</div>
 			</div>
-			<div class="test_true">
-				<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
-				<map name="planetmap">
-					<area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm" alt=""/>
-					<area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" alt="Venus"/>
-				</map>
+			<div class="clearfix"></div>
+
+			<div id="test-1-1-4">
+
+				<h3>Test 1.1.4 - Does each clickable area (area tag) of a server-side image map have an equivalent link in the page?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Input type image with alternative</p>
+                	<a href="ismap.map" target="_self"> 
+					   <img ismap src="img/right.jpg" alt="Not empty alt"/> 
+					</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Input type image without alternative</p>
+                	<input type="image" value="Send" src="img/wrong.jpg" /> 
+				</div>
 			</div>
-			<div id="test-1-1-3" class="test_false">
-				<h3>input type image without alternative</h3>
-				<input type="image">
-			</div>
-			<div class="test_true">
-				<input type="image" name="image" src="/files/2917/fxlogo.png" width="50">
-			</div>
+			<div class="clearfix"></div>
+
 			<div id="test-1-1-4" class="test_preq">
 				<p>possible to invalidate this test ? no link with href equal to area ?</p>
 				<h3>Area tag without alternative</h3>

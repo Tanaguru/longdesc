@@ -5,6 +5,9 @@ body {
 h3 {
 	padding-left: 1rem;
 }
+img {
+	max-width: 80%;
+}
 .clearfix::before, .clearfix::after {
     content: " ";
     display: table;
