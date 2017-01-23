@@ -121,15 +121,34 @@
 				<div class="sample test_true">
 					<span></span>
 					<h3>Good samples</h3>
-					<p>Image Link without alternative</p>
-                	<img id="id-decorative-image" src="img/right.jpg" alt="" /> 
+					<p>Image with empty alternative</p>
+                	<img src="img/right.jpg" alt="" /> 
+					<p>Image indentified as decorative (the "id" attribute has value "decorative-image") with empty alternative</p>
+                	<img id="decorative-image" src="img/right.jpg" alt="" /> 
+					<p>Image indentified as decorative (the "class" attribute has value "decorative-image") with empty alternative</p>
+                	<img id="decorative-image" src="img/right.jpg" alt="" /> 
+					<p>Image with empty alternative and a role="presentation" attribute</p>
+                	<img src="img/right.jpg" alt="" role="presentation" />
 
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h3>Bad samples</h3>
-					<p>Image Link without alternative</p>
-                	<img id="id-decorative-image" src="img/wrong.jpg" alt="" /> 
+					<p>Image with not empty alternative</p>
+                	<img src="img/wrong.jpg" alt="Not empty alt" /> 
+					<p>Image indentified as decorative (the "id" attribute has value "decorative-image") with not empty alternative</p>
+                	<img id="decorative-image" src="img/wrong.jpg" alt="Not empty alt" /> 
+					<p>Image with not empty alternative and a role="presentation" attribute</p>
+                	<img src="img/right.jpg" alt="Not empty alt" role="presentation" />
+					<p>Image with empty alternative, but a not empty "title" attribute</p>
+                	<img src="img/right.jpg" alt="" title="Not empty title" />
+					<p>Image with empty alternative, but a not empty "aria-label" attribute</p>
+                	<img src="img/right.jpg" alt="" aria-label="Not empty aria-label" />
+					<p>Image with empty alternative, but a not empty "aria-describedby" attribute</p>
+                	<img src="img/right.jpg" alt="" aria-describedby="test1-2-1_not_empty_alt" />
+					<p>Image with empty alternative, but a not empty "aria-labelledby" attribute</p>
+                	<img src="img/right.jpg" alt="" aria-labelledby="test1-2-1_not_empty_alt" />
+                	<p id="test1-2-1_not_empty_alt">Not empty alternative</p>
 				</div>
 			</div>
 			<div class="clearfix"></div>
