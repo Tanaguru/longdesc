@@ -54,6 +54,8 @@
 			<div id="test-1-1-1" class="test_false">
 				<h3>Img tag without alternative</h3>
 				<img src="img/Image_without_alternative.png"/>
+				<h3>Image Link without alternative</h3>
+				<a href="http://www.google.fr"><img src="img/test.img"></a>
 			</div>
 			<div class="test_true">
 				<h3>Image with empty alternative</h3>
@@ -110,20 +112,28 @@
 
 		<div id="crit-1-2">
 
-			<h2>Critère 1.2</h2>
-			<div id="test-1-2-1" class="test_preq">	
-			<h3>Image Link without alternative</h3>
-			<a href="http://www.google.fr"><img src="img/test.img"></a>
-			<h3>Image Link with empty alternative</h3>
-			<a href="#"><img src="test.img" alt=""></a>
-			<h3>Image link with alternative</h3>
-			<a href="#"><img src="test.img" alt="toto" /></a>
-			<h3>Image link with alternative equal to src</h3>
-			<a href="#"><img src="test.img" alt="test.img"></a>
-			<h3>input type image with empty alternative</h3>
-			<input type="image" alt="">
-			<h3>input type Image with alternative</h3>
-			<input type="image" alt="toto">	
+			<h2>Critère 1.2 - For each decorative image with a text alternative, is this alternative empty?</h2>
+
+			<div id="test-1-2-1">
+
+				<h3>Test 1.2.1 - Does each decorative image (img tag), without caption and with an alt attribute, meet the following conditions:</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Image Link without alternative</p>
+                	<img id="id-decorative-image" src="img/right.jpg" alt="" /> 
+
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Image Link without alternative</p>
+                	<img id="id-decorative-image" src="img/wrong.jpg" alt="" /> 
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
 			<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
 			<map name="planetmap">
 			  <area shape="rect" coords="0,0,82,126" href="http://www.w3schools.com/tags/sun.htm" />
