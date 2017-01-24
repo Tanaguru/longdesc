@@ -88,8 +88,8 @@
 					<p>Area tag Image non clickable with empty alternative</p>
 	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-1-2_01" /> 
 	                <map id="map_test1-1-2_01" name="map_test1-1-2_01"> 
-	                	<area alt="Not empty alt" shape="rect" coords="0,0,150,80">
-						<area alt="Not empty alt" shape="rect" coords="150,0,300,80">
+	                	<area alt="" shape="rect" coords="0,0,150,80">
+						<area alt="" shape="rect" coords="150,0,300,80">
 	                </map> 
 					<p>Area tag Image non clickable with not empty alternative</p>
 	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-1-2_02" /> 
@@ -213,6 +213,79 @@
 					<p>Image with empty alternative, but a not empty "aria-labelledby" attribute</p>
                 	<img src="img/Image_with_empty_alternative_and_aria_describedby_attribute.png" alt="" aria-labelledby="test1-2-1_not_empty_alt" />
                 	<p id="test1-2-1_not_empty_alt">Not empty alternative</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="test-1-2-2">
+
+				<h3>Test 1.2.2 - Does each non clickable area (area tag with no href attribute), not conveying any information, and with an alt attribute, meet the following conditions:</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Area tag Image non clickable with empty alternative</p>
+	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-2-2_01" /> 
+	                <map id="map_test1-2-2_01" name="map_test1-2-2_01"> 
+	                	<area alt="" shape="rect" coords="0,0,150,80">
+						<area alt="" shape="rect" coords="150,0,300,80">
+	                </map> 
+					<p>Area tag Image non clickable identified as decorative with empty alternative</p>
+	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-2-2_02" /> 
+	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                	<area class="decorative-image" alt="" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" alt="" shape="rect" coords="150,0,300,80">
+	                </map> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Area tag Image non clickable identified as decorative with not empty alternative</p>
+	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-2-2_03" /> 
+	                <map id="map_test1-2-2_03" name="map_test1-2-2_03"> 
+	                	<area class="decorative-image" alt="Not empty alt" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" alt="Not empty alt" shape="rect" coords="150,0,300,80">
+	                </map> 
+					<p>Area tag Image non clickable identified as decorative with title attribute</p>
+	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-2-2_04" /> 
+	                <map id="map_test1-2-2_04" name="map_test1-2-2_04"> 
+	                	<area class="decorative-image" title="" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" title="Not empty title" shape="rect" coords="150,0,300,80">
+	                </map> 
+					<p>Area tag Image non clickable identified as decorative with aria-label attribute</p>
+	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-2-2_05" /> 
+	                <map id="map_test1-2-2_05" name="map_test1-2-2_05"> 
+	                	<area class="decorative-image" aria-label="Not empty aria-label" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" aria-label="Not empty aria-label" shape="rect" coords="150,0,300,80">
+	                </map> 
+					<p>Area tag Image non clickable identified as decorative with aria-labelledby attribute</p>
+	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-2-2_06" /> 
+	                <map id="map_test1-2-2_06" name="map_test1-2-2_06"> 
+	                	<area class="decorative-image" aria-labelledby="test1-2-2_not_empty_alt" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" aria-labelledby="test1-2-2_not_empty_alt" shape="rect" coords="150,0,300,80">
+	                </map>
+					<p>Area tag Image non clickable identified as decorative with aria-describedby attribute</p>
+	                <img src="img/right-wrong.png" alt="" usemap="#map_test1-2-2_07" /> 
+	                <map id="map_test1-2-2_07" name="map_test1-2-2_07"> 
+	                	<area class="decorative-image" aria-describedby="test1-2-2_not_empty_alt" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" aria-describedby="test1-2-2_not_empty_alt" shape="rect" coords="150,0,300,80">
+	                </map>
+                	<p id="test1-2-2_not_empty_alt">Not empty alternative</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="test-1-2-3">
+
+				<h3>Test 1.2.3 - For each image object without caption (object tag with the attribute type="image/"), not conveying any information, meet the following conditions:</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
 				</div>
 			</div>
 			<div class="clearfix"></div>
