@@ -407,6 +407,98 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
+
+			<div id="test-1-2-5">
+
+				<h3>Test 1.2.5 - Chaque image bitmap (balise canvas) de décoration, sans légende, vérifie-t-elle ces conditions ?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Image canvas</p>
+					<canvas aria-hidden="true" id="test_canvas_01" class="test_canvas">
+			            <!-- Else render the text -->
+			        </canvas>
+					<p>Image canvas identified as decorative</p>
+					<canvas aria-hidden="true" id="test_canvas_02" class="test_canvas decorative-image">
+			            <!-- Else render the text -->
+			        </canvas>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Image canvas identified as decorative and with some text between canvas tags</p>
+					<canvas aria-hidden="true" id="test_canvas_03" class="test_canvas decorative-image">
+			            <!-- Else render the text -->
+			            Illustration of diversity.
+			        </canvas>
+					<p>Image canvas identified as decorative and without "aria-hidden" attribute</p>
+					<canvas id="test_canvas_04" class="test_canvas decorative-image">
+			            <!-- Else render the text -->
+			        </canvas>
+					<p>Image canvas identified as decorative and with an aria-label attribute</p>
+					<canvas aria-hidden="true" id="test_canvas_05" class="test_canvas decorative-image" aria-label="Illustration of diversity">
+			            <!-- Else render the text -->
+			        </canvas>
+					<p>Image canvas identified as decorative and with an aria-labelledby attribute</p>
+					<canvas aria-hidden="true" id="test_canvas_06" class="test_canvas decorative-image" aria-labelledby="test1-2-5_not_empty_alt">
+			            <!-- Else render the text -->
+			        </canvas>
+					<p>Image canvas identified as decorative and with an aria-describedby attribute</p>
+					<canvas aria-hidden="true" id="test_canvas_07" class="test_canvas decorative-image" aria-describedby="test1-2-5_not_empty_alt">
+			            <!-- Else render the text -->
+			        </canvas>
+					<p>Image canvas identified as decorative and with an aria-describedby attribute in a child tag</p>
+					<canvas aria-hidden="true" id="test_canvas_08" class="test_canvas decorative-image">
+			            <!-- Else render the text -->
+			            <span aria-describedby="test1-2-5_not_empty_alt"></span>
+			        </canvas>
+			        <caption id="test1-2-5_not_empty_alt">Illustration of diversity</caption>
+				</div>
+			</div>
+			<script type="text/javascript">
+				var c = document.getElementsByClassName('test_canvas');
+				cLen = c.length;
+				for (i = 0; i < cLen; i++) {
+					var ctx = c[i].getContext("2d");
+
+					// Cette fois on ajoute les deux propriétés pour le style de ligne
+					// et qui prévalent pour tous les tracés
+					ctx.lineJoin = "round";
+					ctx.lineCap = "round";
+
+					// Voile du bateau
+					ctx.beginPath();      // Début du chemin
+					ctx.moveTo(150,80);   // Le tracé part du point 150,80
+					ctx.lineTo(300,230);  // Un segment est ajouté vers 300,230
+					ctx.lineTo(150,230);  // Un segment est ajouté vers 150,230
+					ctx.closePath();      // Fermeture du chemin
+					ctx.fillStyle = "lightblue"; // Définition de la couleur de remplissage
+					ctx.fill();           // Remplissage du dernier chemin tracé
+
+					// Coque du bâteau
+					ctx.beginPath();      // Début d'un autre chemin
+					ctx.moveTo(50,250);
+					ctx.lineTo(100,300);
+					ctx.lineTo(250,300);
+					ctx.lineTo(300,250);
+					ctx.fillStyle = "peru";
+					ctx.strokeStyle = "sienna"; // Définition de la couleur de contour
+					ctx.lineWidth = 5;         // Définition de la largeur de ligne
+					ctx.fill();            // Application du remplissage
+					ctx.stroke();          // Application du contour
+
+					// Mât
+					ctx.beginPath();
+					ctx.moveTo(140,50);
+					ctx.lineTo(140,250);
+					ctx.lineWidth = 10;
+					ctx.stroke();
+				}
+			</script>
+
+			<div class="clearfix"></div>
+
 		</div>
 
 		<div id="crit-1-3">
