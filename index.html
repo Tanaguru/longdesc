@@ -325,68 +325,108 @@
 			</div>
 			<div class="clearfix"></div>
 
-			<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap"/>
-			<map name="planetmap">
-			  <area shape="rect" coords="0,0,82,126" href="http://www.w3schools.com/tags/sun.htm" />
-			  <area shape="circle" coords="90,58,3" href="http://www.w3schools.com/tags/mercur.htm" alt="" />
-			  <area shape="circle" coords="124,58,8" href="http://www.w3schools.com/tags/venus.htm" alt="Venus" />
-			</map>
+			<div id="test-1-2-4">
 
-			<object data="TheEarth.gif" type="image/gif"></object>
-			<h3>SVG with marker decorative</h3>
-			<svg role="img" class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-			<svg role="img" class="decorative"></svg>
-			<svg role="img" aria-label="toto" class="decorative"></svg>
-			<svg role="img" aria-describedby="toto" class="decorative"></svg>
-			<svg role="img" aria-labelledby="toto" class="decorative"></svg>
-			<svg title="title" role="img" class="decorative">
-				<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
-			</svg>
-			<svg role="img" class="decorative">
-				<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
-			</svg>
-			<svg desc="" role="img" class="decorative"></svg>	
-			<svg role="img" class="decorative">
-				<desc></desc>
-			</svg>
-			<svg role="img" class="decorative">
-				<title></title>
-			</svg>
-			<svg role="img" class="decorative">
-				<desc>desc</desc>
-			</svg>
-			<svg role="img" class="decorative">
-				<title>title</title>
-			</svg>
-			<svg class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-			<svg desc="toto" class="decorative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
-			<h3>SVG without marker</h3>	
-			<svg role="img"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-			<svg role="img"></svg>
-			<svg role="img" aria-label="toto"></svg>
-			<svg role="img" aria-describedby="toto"></svg>
-			<svg role="img" aria-labelledby="toto"></svg>
-			<svg title="title" role="img">
-				<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red"/></svg>
-			</svg>
-			<svg role="img">
-				<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="test"/></svg>
-			</svg>
-			<svg desc="" role="img"></svg>	
-			<svg role="img">
-				<desc></desc>
-			</svg>
-			<svg role="img">
-				<title></title>
-			</svg>
-				<svg role="img">
-				<desc>desc</desc>
-			</svg>
-			<svg role="img">
-				<title>title</title>
-			</svg>
-			<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
-			<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
+				<h3>Test 1.2.4 - Does each decorative vector image (svg tag), not conveying any information, meet the following conditions: </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>SVG image</p>
+					<svg aria-hidden="true">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>Empty SVG image identified as decorative</p>
+					<svg aria-hidden="true" class="decorative-image"></svg>
+					<p>SVG image identified as decorative</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with an empty desc tag</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<desc></desc>
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with an empty title tag</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<title></title>
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>SVG image identified as decorative and without an aria-hidden attribute</p>
+					<svg class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with an empty desc tag</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<desc>description</desc>
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with an empty title tag</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<title>title</title>
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with a title attribute</p>
+					<svg aria-hidden="true" title="Some text" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with a title attribute on one child</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" title="Some text" />
+					</svg>
+					<p>SVG image identified as decorative and with an aria-label attribute</p>
+					<svg aria-hidden="true" aria-label="Some text" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with an aria-label attribute on one child</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" aria-label="Some text" />
+					</svg>
+					<p>SVG image identified as decorative and with an aria-labelledby attribute</p>
+					<svg aria-hidden="true" aria-labelledby="test1-2-4_not_empty_alt" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with an aria-labelledby attribute on one child</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" aria-labelledby="test1-2-4_not_empty_alt" />
+					</svg>
+					<p>SVG image identified as decorative and with an aria-describedby attribute</p>
+					<svg aria-hidden="true" aria-describedby="test1-2-4_not_empty_alt" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p>SVG image identified as decorative and with an aria-describedby attribute on one child</p>
+					<svg aria-hidden="true" class="decorative-image">
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" aria-describedby="test1-2-4_not_empty_alt" />
+					</svg>
+					<div class="clearfix"></div>
+			        <caption id="test1-2-4_not_empty_alt">Some text</caption>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		<div id="crit-1-3">
+			<h2>Critère 1.3 - </h2>
+
+			<div id="test-1-3-1">
+
+				<h3>Test 1.3.1 - </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
 			<h3>SVG with marker informative</h3>	
 			<svg role="img" class="informative"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
 			<svg role="img" class="informative"></svg>
@@ -414,9 +454,6 @@
 			</svg>
 			<svg><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /></svg>
 			<svg desc="toto"><circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /></svg>
-					
-
-			<div class="clearfix"></div>
 		</div>
 
 		<div id="crit-5-1">
