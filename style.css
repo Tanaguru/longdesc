@@ -5,7 +5,7 @@ body {
 h3 {
 	padding-left: 1rem;
 }
-img, object, canvas {
+img, object, canvas, embed {
 	max-width: 80%;
 }
 .clearfix::before, .clearfix::after {

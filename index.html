@@ -499,6 +499,51 @@
 
 			<div class="clearfix"></div>
 
+			<div id="test-1-2-6">
+
+				<h3>Test 1.2.6 - Chaque image embarquée (balise embed avec l’attribut type="image/…") de décoration, sans légende, vérifie-t-elle ces conditions ?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Image embed</p>
+					<embed src="img/diversite_embed_001.png" aria-hidden="true" type="image/gif">
+			            <!-- Else render the text -->
+			        </embed>
+					<p>Image embed identified as decorative</p>
+					<embed src="img/diversite_embed_002.png" class="decorative-image" aria-hidden="true" type="image/gif">
+			            <!-- Else render the text -->
+			        </embed>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Image embed identified as decorative and without "aria-hidden" attribute</p>
+					<embed src="img/diversite_embed_004.png" class="decorative-image" type="image/gif">
+			            <!-- Else render the text -->
+			        </embed>
+					<p>Image embed identified as decorative and with an aria-label attribute</p>
+					<embed src="img/diversite_embed_005.png" class="decorative-image" aria-hidden="true" aria-label="Illustration of diversity" type="image/gif">
+			            <!-- Else render the text -->
+			        </embed>
+					<p>Image embed identified as decorative and with an aria-labelledby attribute</p>
+					<embed src="img/diversite_embed_007.png" class="decorative-image" aria-hidden="true" aria-labelledby="test1-2-6_not_empty_alt" type="image/gif">
+			            <!-- Else render the text -->
+			        </embed>
+					<p>Image embed identified as decorative and with an aria-describedby attribute</p>
+					<embed src="img/diversite_embed_008.png" class="decorative-image" aria-hidden="true" aria-describedby="test1-2-6_not_empty_alt" type="image/gif">
+			            <!-- Else render the text -->
+			        </embed>
+					<p>Image embed identified as decorative and with an aria-describedby attribute in a child tag</p>
+					<embed src="img/diversite_embed_009.png" class="decorative-image" aria-hidden="true" type="image/gif">
+			            <!-- Else render the text -->
+			            <param name="" value="" aria-describedby="test1-2-6_not_empty_alt">
+			        </embed>
+			        <caption id="test1-2-6_not_empty_alt">Illustration of diversity</caption>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
 		</div>
 
 		<div id="crit-1-3">
