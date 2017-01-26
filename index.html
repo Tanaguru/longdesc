@@ -249,26 +249,26 @@
 					<p>Area tag Image non clickable identified as decorative with title attribute</p>
 	                <img src="img/right-wrong_010.png" alt="" usemap="#map_test1-2-2_04" /> 
 	                <map id="map_test1-2-2_04" name="map_test1-2-2_04"> 
-	                	<area class="decorative-image" title="" shape="rect" coords="0,0,150,80">
-						<area class="decorative-image" title="Not empty title" shape="rect" coords="150,0,300,80">
+	                	<area class="decorative-image" alt="" title="" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" alt="" title="Not empty title" shape="rect" coords="150,0,300,80">
 	                </map> 
 					<p>Area tag Image non clickable identified as decorative with aria-label attribute</p>
 	                <img src="img/right-wrong_011.png" alt="" usemap="#map_test1-2-2_05" /> 
 	                <map id="map_test1-2-2_05" name="map_test1-2-2_05"> 
-	                	<area class="decorative-image" aria-label="Not empty aria-label" shape="rect" coords="0,0,150,80">
-						<area class="decorative-image" aria-label="Not empty aria-label" shape="rect" coords="150,0,300,80">
+	                	<area class="decorative-image" alt="" aria-label="Not empty aria-label" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" alt="" aria-label="Not empty aria-label" shape="rect" coords="150,0,300,80">
 	                </map> 
 					<p>Area tag Image non clickable identified as decorative with aria-labelledby attribute</p>
 	                <img src="img/right-wrong_012.png" alt="" usemap="#map_test1-2-2_06" /> 
 	                <map id="map_test1-2-2_06" name="map_test1-2-2_06"> 
-	                	<area class="decorative-image" aria-labelledby="test1-2-2_not_empty_alt" shape="rect" coords="0,0,150,80">
-						<area class="decorative-image" aria-labelledby="test1-2-2_not_empty_alt" shape="rect" coords="150,0,300,80">
+	                	<area class="decorative-image" alt="" aria-labelledby="test1-2-2_not_empty_alt" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" alt="" aria-labelledby="test1-2-2_not_empty_alt" shape="rect" coords="150,0,300,80">
 	                </map>
 					<p>Area tag Image non clickable identified as decorative with aria-describedby attribute</p>
 	                <img src="img/right-wrong_013.png" alt="" usemap="#map_test1-2-2_07" /> 
 	                <map id="map_test1-2-2_07" name="map_test1-2-2_07"> 
-	                	<area class="decorative-image" aria-describedby="test1-2-2_not_empty_alt" shape="rect" coords="0,0,150,80">
-						<area class="decorative-image" aria-describedby="test1-2-2_not_empty_alt" shape="rect" coords="150,0,300,80">
+	                	<area class="decorative-image" alt="" aria-describedby="test1-2-2_not_empty_alt" shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" alt="" aria-describedby="test1-2-2_not_empty_alt" shape="rect" coords="150,0,300,80">
 	                </map>
                 	<p id="test1-2-2_not_empty_alt">Not empty alternative</p>
 				</div>
@@ -410,7 +410,7 @@
 
 			<div id="test-1-2-5">
 
-				<h3>Test 1.2.5 - Chaque image bitmap (balise canvas) de décoration, sans légende, vérifie-t-elle ces conditions ?</h3>
+				<h3>Test 1.2.5 - For each decorative bitmap image (canvas tag), without caption, meet the following conditions:</h3>
 
 				<div class="sample test_true">
 					<span></span>
@@ -501,7 +501,7 @@
 
 			<div id="test-1-2-6">
 
-				<h3>Test 1.2.6 - Chaque image embarquée (balise embed avec l’attribut type="image/…") de décoration, sans légende, vérifie-t-elle ces conditions ?</h3>
+				<h3>Test 1.2.6 - Does each decorative embedded image (embed tag with attribute type="image/..."), not conveying any information, meet the following conditions:</h3>
 
 				<div class="sample test_true">
 					<span></span>
@@ -547,11 +547,11 @@
 		</div>
 
 		<div id="crit-1-3">
-			<h2>Criterion 1.3 - Pour chaque image porteuse d’information ayant une alternative textuelle, cette alternative est-elle pertinente (hors cas particuliers) ?</h2>
+			<h2>Criterion 1.3 - For each image conveying information with a text alternative, is this alternative relevant (except in particular cases)?</h2>
 
 			<div id="test-1-3-1">
 
-				<h3>Test 1.3.1 - Chaque image (balise img) porteuse d’information, ayant un attribut alt, vérifie-t-elle ces conditions (hors cas particuliers) ?</h3>
+				<h3>Test 1.3.1 - Does each image (img tag), with an alt attribute, conveying information, with an alt attribute, meet the following conditions (except in particular cases)?</h3>
 
 				<div class="sample test_true">
 					<span></span>
@@ -590,6 +590,77 @@
                 		<img src="img/informative_011.png" class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-1_alt_02" />
                 		<caption id="test_1-3-1_alt_01">a other text</caption>
                 	</figure>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="test-1-3-2">
+
+				<h3>Test 1.3.2 - Does each area (area tag), conveying information, and with an alt attribute, meet the following conditions (except in particular cases)?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Area tag Image clickable with not empty alternative</p>
+	                <img src="img/informative_012.png" alt="Not empty alt" usemap="#map_test1-2-2_01" /> 
+	                <map id="map_test1-2-2_01" name="map_test1-2-2_01"> 
+	                	<area alt="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area alt="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map> 
+					<p>Area tag Image clickable identified as informative with empty alternative</p>
+	                <img src="img/informative_013.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
+	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                	<area class="informative-image" alt="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map> 
+					<p>Area tag Image clickable identified as informative that title is equal to the alt</p>
+	                <img src="img/informative_014.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
+	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                	<area class="informative-image" alt="Not empty alt" title="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="Not empty alt" title="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map> 
+					<p>Area tag Image clickable identified as informative that aria-label is equal to the alt</p>
+	                <img src="img/informative_015.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
+	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                	<area class="informative-image" alt="Not empty alt" aria-label="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="Not empty alt" aria-label="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map> 
+					<p>Area tag Image clickable identified as informative that aria-labelledby is equal to the alt</p>
+	                <img src="img/informative_016.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
+	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                	<area class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-2_alt_01" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-2_alt_01" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map>
+                	<span id="test_1-3-2_alt_01">Not empty alt</span>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Area tag Image clickable identified as informative with empty alternative</p>
+	                <img src="img/informative_017.png" alt="" usemap="#map_test1-2-2_03" /> 
+	                <map id="map_test1-2-2_03" name="map_test1-2-2_03"> 
+	                	<area class="informative-image" alt="" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map> 
+					<p>Area tag Image clickable identified as informative with title attribute different than alt attribute</p>
+	                <img src="img/informative_018.png" alt="Not empty alt" usemap="#map_test1-2-2_04" /> 
+	                <map id="map_test1-2-2_04" name="map_test1-2-2_04"> 
+	                	<area class="informative-image" alt="Not empty alt" title="" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="Not empty alt" title="Not empty title" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map> 
+					<p>Area tag Image clickable identified as informative with aria-label attribute different than alt attribute</p>
+	                <img src="img/informative_019.png" alt="Not empty alt" usemap="#map_test1-2-2_05" /> 
+	                <map id="map_test1-2-2_05" name="map_test1-2-2_05"> 
+	                	<area class="informative-image" alt="Not empty alt" aria-label="Not empty aria-label" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="Not empty alt" aria-label="Not empty aria-label" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map> 
+					<p>Area tag Image clickable identified as informative with aria-labelledby attribute different than alt attribute</p>
+	                <img src="img/informative_020.png" alt="Not empty alt" usemap="#map_test1-2-2_06" /> 
+	                <map id="map_test1-2-2_06" name="map_test1-2-2_06"> 
+	                	<area class="informative-image" alt="Not empty alt" aria-labelledby="test1-3-2_not_empty_alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
+						<area class="informative-image" alt="Not empty alt" aria-labelledby="test1-3-2_not_empty_alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
+	                </map>
+                	<p id="test1-3-2_not_empty_alt">Not empty alternative</p>
 				</div>
 			</div>
 			<div class="clearfix"></div>
