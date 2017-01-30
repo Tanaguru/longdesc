@@ -96,6 +96,13 @@ table.support td {
     height: 2rem;
     width: 2rem;
 }
+.na-support {
+	background: url('img/na.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    height: 2rem;
+    width: 2rem;
+}
 	
 .px {
 	font-size:15px;
