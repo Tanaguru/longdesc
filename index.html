@@ -1280,13 +1280,60 @@
 
 		<div id="crit-10-5">
 
-			<h2>Criterion 10.5 - </h2>
+			<h2>Criterion 10.5 - On each web page, are CSS declarations for background and foreground colors appropriate?</h2>
 
-			<p style="color:red; background-color:none;">Test</p>
-			<p style="background-color:red; ">Test</p>
-			<p style="color:red; background-color:red">Text red and backgroud - red attr style</p>
-			<p class="contrastKO">Text red and backgroud red - extern CSS</p>
+			<div id="test-10-5-1">
+				<h3>Test 10.5.1: On each web page, for each element that may contain text, is the CSS declaration for foreground color accompanied by a background color declaration at least, inherited from a parent element?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<p style="color: green; background-color: transparent;">Element with text color and background color declared inline</p>
+					<div style="background-color: green;">
+						<p style="color: white; ">Element with background color inherited from the parent element</p>
+					</div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p style="color: red;">Element without any background color inherited from a parent element</p>
+				</div>
 				<div class="clearfix"></div>
+			</div>
+			<div id="test-10-5-2">
+				<h3>Test 10.5.2: On each web page, for each element that may contain text, is the CSS declaration for background color accompanied by a foreground color declaration at least, inherited from a parent element?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<div style="color: white">
+						<p style="background-color: green;">Element with text color inherited at least from the parent element</p>
+					</div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p style="background-color: red;">Element without any text color inherited from a parent element</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div id="test-10-5-3">
+				<h3>Test 10.5.3: On each web page, for each element that may contain text, if an image is used to provide a background color via CSS, is there a corresponding background color declaration, at least, inherited from a parent element?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<div style="background-color: green;">
+						<div style="background-image: url(img/green_background.gif)"><p>Element with a background image with an inherited background color from the parent element</p></div>
+					</div>
+
+					<div style="background: url(img/green_background.gif) green"><p>Element with a background image with and a background color</p></div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<div style="background-image: url(img/red_background.jpg)"><p>Element with a background image but no background color, at least inherited from a parent element</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 		</div>
 
 		<div id="crit-10-7">
