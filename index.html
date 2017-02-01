@@ -1363,13 +1363,29 @@
 
 		<div id="crit-10-9">
 
-			<h2>Criterion 10.9 - </h2>
+			<h2>Criterion 10.9 - For each web page, text must not be fully justified. Has this rule been followed?</h2>
+			
+			<div id="test-10-9-1">
+				<h3>Test 10.9.1: Does each web page meet one of the following conditions?<br>• The text is not fully justified<br>• The user can remove the full justification of text, via a provided mechanism</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>Text partially justified: <br>
+						<p class="justify">lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam ad in, soluta numquam, possimus fuga beatae velit consectetur aliquam laborum facere.</p>Liquam laborum facere debitis iste voluptatem aliquid molestiae aperiam ex eos.
+					</p>
+					<div>
+						<button type="button" onclick="document.getElementById('justified-text').className = ''">Remove justification of the text below</button><br>
+						<p id="justified-text" class="justify">Text whose justification can be removed by user by clicking the button above : lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam ad in, soluta numquam, possimus fuga beatae velit consectetur aliquam laborum facere</p>
+					</div>
+				</div>
 
-			<p class="justify">text justify - extern CSS</p>
-			<p class="justify_html">text justify - tag style</p>
-			<p style="text-align:justify">texte justify - attr style </p>
+				<div class="sample test_false">
+					<span></span>
+					<p class="justify">Justified text: lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam ad in, soluta numquam, possimus fuga beatae velit consectetur aliquam laborum facere debitis iste voluptatem aliquid molestiae aperiam ex eos.</p>
+				</div>
+
 				<div class="clearfix"></div>
-
+			</div>
 		</div>
 
 		<div id="crit-10-13">
