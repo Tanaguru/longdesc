@@ -910,7 +910,7 @@
 				<h3>Test 1.3.9 - For each vector image (svg tag), conveying information, and with an alternative, is this alternative correctly rendered by assistive technologies?</h3>
 
 				<table class="support">
-					<caption>Support of the only "desc" tag in svg</caption>
+					<caption>Support of the vector image (svg tag) with an "aria-label" attribute and a "desc" child tag</caption>
 					<tr><td></td><th scope="col">Jaws 18</th><th scope="col">NVDA 2016</th></tr>
 					<tr>
 						<th scope="row">Firefox</th>
@@ -929,26 +929,7 @@
 					</tr>
 				</table>
 				<table class="support">
-					<caption>Support of the only "aria-label" attribute in svg</caption>
-					<tr><td></td><th scope="col">Jaws 18</th><th scope="col">NVDA 2016</th></tr>
-					<tr>
-						<th scope="row">Firefox</th>
-						<td><span class="na-support"></span><span class="sr-only">Non applicable</span></td>
-						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
-					</tr>
-					<tr>
-						<th scope="row">IE 11</th>
-						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
-						<td><span class="bad-support"></span><span class="sr-only">Non supporté</span></td>
-					</tr>
-					<tr>
-						<th scope="row">IE 10</th>
-						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
-						<td><span class="bad-support"></span><span class="sr-only">Non supporté</span></td>
-					</tr>
-				</table>
-				<table class="support">
-					<caption>Support of the "desc" tag with a title attribute in svg</caption>
+					<caption>Support of the vector image (svg tag) with an "aria-label" attribute, a "desc" child tag and an identical "title" attribute</caption>
 					<tr><td></td><th scope="col">Jaws 18</th><th scope="col">NVDA 2016</th></tr>
 					<tr>
 						<th scope="row">Firefox</th>
@@ -967,7 +948,7 @@
 					</tr>
 				</table>
 				<table class="support">
-					<caption>Support of the "aria-label" attribute with a title attribute in svg</caption>
+					<caption>Support of the vector image (svg tag) with only "aria-label" attribute (Failed test 1.3.8)</caption>
 					<tr><td></td><th scope="col">Jaws 18</th><th scope="col">NVDA 2016</th></tr>
 					<tr>
 						<th scope="row">Firefox</th>
@@ -977,14 +958,35 @@
 					<tr>
 						<th scope="row">IE 11</th>
 						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
-						<td><span class="bad-support"></span><span class="sr-only">Non supporté</span></td>
+						<td><span class="bad-support"></span><span class="sr-only">Non Supporté</span></td>
 					</tr>
 					<tr>
 						<th scope="row">IE 10</th>
 						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
-						<td><span class="bad-support"></span><span class="sr-only">Non supporté</span></td>
+						<td><span class="bad-support"></span><span class="sr-only">Non Supporté</span></td>
 					</tr>
 				</table>
+				<table class="support">
+					<caption>Support of the vector image (svg tag) with only "desc" child tag (Failed test 1.3.8)</caption>
+					<tr><td></td><th scope="col">Jaws 18</th><th scope="col">NVDA 2016</th></tr>
+					<tr>
+						<th scope="row">Firefox</th>
+						<td><span class="na-support"></span><span class="sr-only">Non applicable</span></td>
+						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
+					</tr>
+					<tr>
+						<th scope="row">IE 11</th>
+						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
+						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
+					</tr>
+					<tr>
+						<th scope="row">IE 10</th>
+						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
+						<td><span class="good-support"></span><span class="sr-only">Supporté</span></td>
+					</tr>
+				</table>
+
+				<p>No double restitution detected during these tests</p>
 
 			</div>
 		</div>
