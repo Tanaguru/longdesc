@@ -456,46 +456,6 @@
 			        <caption id="test1-2-5_not_empty_alt">Illustration of diversity</caption>
 				</div>
 			</div>
-			<script type="text/javascript">
-				var c = document.getElementsByClassName('test_canvas');
-				cLen = c.length;
-				for (i = 0; i < cLen; i++) {
-					var ctx = c[i].getContext("2d");
-
-					// Cette fois on ajoute les deux propriétés pour le style de ligne
-					// et qui prévalent pour tous les tracés
-					ctx.lineJoin = "round";
-					ctx.lineCap = "round";
-
-					// Voile du bateau
-					ctx.beginPath();      // Début du chemin
-					ctx.moveTo(150,80);   // Le tracé part du point 150,80
-					ctx.lineTo(300,230);  // Un segment est ajouté vers 300,230
-					ctx.lineTo(150,230);  // Un segment est ajouté vers 150,230
-					ctx.closePath();      // Fermeture du chemin
-					ctx.fillStyle = "lightblue"; // Définition de la couleur de remplissage
-					ctx.fill();           // Remplissage du dernier chemin tracé
-
-					// Coque du bâteau
-					ctx.beginPath();      // Début d'un autre chemin
-					ctx.moveTo(50,250);
-					ctx.lineTo(100,300);
-					ctx.lineTo(250,300);
-					ctx.lineTo(300,250);
-					ctx.fillStyle = "peru";
-					ctx.strokeStyle = "sienna"; // Définition de la couleur de contour
-					ctx.lineWidth = 5;         // Définition de la largeur de ligne
-					ctx.fill();            // Application du remplissage
-					ctx.stroke();          // Application du contour
-
-					// Mât
-					ctx.beginPath();
-					ctx.moveTo(140,50);
-					ctx.lineTo(140,250);
-					ctx.lineWidth = 10;
-					ctx.stroke();
-				}
-			</script>
 
 			<div class="clearfix"></div>
 
@@ -989,6 +949,52 @@
 				<p>No double restitution detected during these tests</p>
 
 			</div>
+
+			<div id="test-1-3-10">
+
+				<h3>Test 1.3.10 - For each bitmap image (canvas tag), conveying information, meet one of the following conditions (except in particular cases)? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>Image canvas</p>
+					<canvas id="test_canvas_01" class="test_canvas">
+			            <!-- Else render the text -->
+						Illustration of diversity.
+			        </canvas>
+					<p>Image canvas identified as informative with content between canvas tags</p>
+					<canvas id="test-1-3-10_canvas_02" class="test_canvas informative-image">
+			            <!-- Else render the text -->
+			            Illustration of diversity.
+			        </canvas>
+					<p>Image canvas identified as informative with an alternative access by link</p>
+					<canvas id="test-1-3-10_canvas_03" class="test_canvas informative-image">
+			            <!-- Else render the text -->
+			        </canvas>
+			        <p id="hidden_test-1-3-10_not_empty_alt_01" style="display:none;">Illustration of diversity.</p>
+			        <p><a href="#hidden_test-1-3-10_not_empty_alt_01" onclick="javascript:document.getElementById('hidden_test-1-3-10_not_empty_alt_01').style.display='block';javascript:document.getElementById('test-1-3-10_canvas_03').style.display='none';">Show alternative</a></p>
+					<p>Image canvas identified as informative with an image alternative access by link</p>
+					<canvas id="test-1-3-10_canvas_04" class="test_canvas informative-image">
+			            <!-- Else render the text -->
+			        </canvas>
+			        <p id="hidden_test-1-3-10_not_empty_alt_02" style="display:none;"><img src="img/diversite_012.png" alt="Illustration of diversity." /></p>
+			        <p><a href="#hidden_test-1-3-10_not_empty_alt_02" onclick="javascript:document.getElementById('hidden_test-1-3-10_not_empty_alt_02').style.display='block';javascript:document.getElementById('test-1-3-10_canvas_04').style.display='none';">Show alternative</a></p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>Image canvas identified as informative, with some text between canvas tags and with an aria-hidden attribute</p>
+					<canvas aria-hidden="true" id="test_canvas_05" class="test_canvas informative-image">
+			            <!-- Else render the text -->
+			            Illustration of diversity.
+			        </canvas>
+					<p>Image canvas identified as informative and without alternative</p>
+					<canvas id="test_canvas_06" class="test_canvas informative-image">
+			            <!-- Else render the text -->
+			        </canvas>
+				</div>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 
 		<div id="crit-5-1">
@@ -1976,6 +1982,48 @@
 		</div>
 		
 	</main>
+
+
+	<script type="text/javascript">
+		var c = document.getElementsByClassName('test_canvas');
+		cLen = c.length;
+		for (i = 0; i < cLen; i++) {
+			var ctx = c[i].getContext("2d");
+
+			// Cette fois on ajoute les deux propriétés pour le style de ligne
+			// et qui prévalent pour tous les tracés
+			ctx.lineJoin = "round";
+			ctx.lineCap = "round";
+
+			// Voile du bateau
+			ctx.beginPath();      // Début du chemin
+			ctx.moveTo(150,80);   // Le tracé part du point 150,80
+			ctx.lineTo(300,230);  // Un segment est ajouté vers 300,230
+			ctx.lineTo(150,230);  // Un segment est ajouté vers 150,230
+			ctx.closePath();      // Fermeture du chemin
+			ctx.fillStyle = "lightblue"; // Définition de la couleur de remplissage
+			ctx.fill();           // Remplissage du dernier chemin tracé
+
+			// Coque du bâteau
+			ctx.beginPath();      // Début d'un autre chemin
+			ctx.moveTo(50,250);
+			ctx.lineTo(100,300);
+			ctx.lineTo(250,300);
+			ctx.lineTo(300,250);
+			ctx.fillStyle = "peru";
+			ctx.strokeStyle = "sienna"; // Définition de la couleur de contour
+			ctx.lineWidth = 5;         // Définition de la largeur de ligne
+			ctx.fill();            // Application du remplissage
+			ctx.stroke();          // Application du contour
+
+			// Mât
+			ctx.beginPath();
+			ctx.moveTo(140,50);
+			ctx.lineTo(140,250);
+			ctx.lineWidth = 10;
+			ctx.stroke();
+		}
+	</script>
 	
 </body>
 </html>
