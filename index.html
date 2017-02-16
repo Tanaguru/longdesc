@@ -2591,6 +2591,39 @@
 			</div>
 		</div>
 
+		<div id="crit-12-10">
+
+			<h2>Criterion 12.10 - On each web page, are groups of important links (menu, navigation bar) and the main content area identified (except in particular cases)?</h2>
+
+			<div id="test-12-10-1">
+				<h3>Test 12.10.1: On each web page, is each group of important links implemented in a single tag? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>A menu of navigation</p>
+					<nav id="menu" role="navigation">
+	                    <ul>
+	                        <li><a href="http://www.longdesc.fr/">Home</a></li>
+	                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+	                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+	                    </ul>
+	                </nav>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>Some links that follow</p>
+	                <a href="#">Home</a>
+	                <a href="#">Rubrique</a>
+	                <a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a> 
+	                <a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
+                	</div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-13-1">
 
 			<h2>Criterion 13.1 - For each web page, can the user control each time limit that modifies content (except in particular cases)?</h2>
