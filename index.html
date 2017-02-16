@@ -2622,6 +2622,54 @@
 
 				<div class="clearfix"></div>
 			</div>
+
+			<div id="test-12-10-2">
+				<h3>Test 12.10.2: On each web page, is each group of important links implemented in a single tag? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>A menu of navigation that the tag that groups the links is implemented with an id</p>
+					<nav id="menu" role="navigation">
+	                    <ul>
+	                        <li><a href="http://www.longdesc.fr/">Home</a></li>
+	                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+	                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+	                    </ul>
+	                </nav>
+					<p>A group of links that the tag that groups the links is preceded by an anchor</p>
+					<a name="group-links" id="group-links"></a>
+                    <ul>
+                        <li><a href="http://www.longdesc.fr/">Home</a></li>
+                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+                    </ul>
+                    <p>A group of links that the first tag is an anchor</p>
+                    <div class="group-links">
+						<a name="group-links" id="group-links"></a>
+                        <a href="http://www.longdesc.fr/">Home</a>
+                        <a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a>
+                        <a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
+                    </div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>Some links that follow</p>
+	                <a href="#">Home</a>
+	                <a href="#">Rubrique</a>
+	                <a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a> 
+	                <a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
+                	</div>
+					<p>A group of links</p>
+                    <ul>
+                        <li><a href="http://www.longdesc.fr/">Home</a></li>
+                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+                    </ul>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
 		</div>
 
 		<div id="crit-13-1">
