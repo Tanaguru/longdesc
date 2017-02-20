@@ -2737,6 +2737,25 @@
 
 				<div class="clearfix"></div>
 			</div>
+
+			<div id="test-12-11-2">
+				<h3>Test 12.11.2: On each web page, is there a link to bypass, or skip to, the identified content area or to access it?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>This page has no skip link, but this may be correct since there is no menu</p>
+					<p>This following link brings you to a structured page, that has skip links</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+                	<p>This following link brings you to a page that has a main content, but no skip link</p>
+					<a href="http://www.longdesc.fr/noskiplink-page.html">Page without skip link</a>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
 		</div>
 
 		<div id="crit-13-1">
