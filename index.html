@@ -2696,7 +2696,6 @@
 
 				<div class="clearfix"></div>
 			</div>
-		</div>
 
 			<div id="test-12-10-4">
 				<h3>Test 12.10.4: On each web page, does the document outline meet the following conditions: </h3>
@@ -2710,6 +2709,30 @@
 				<div class="sample test_false">
 					<span></span>
 					<p>This page is structured with tags but no structured role is present in this structured elements</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-12-11">
+
+			<h2>Criterion 12.11 - On each web page, are bypass or skip links to groups of important links and to the main content area available (except in particular cases)?</h2>
+
+			<div id="test-12-11-1">
+				<h3>Test 12.11.1: On each web page, is there a link to bypass, or skip to, each identified group of important links?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>This page has no skip link, but this may be correct since there is no menu</p>
+					<p>This following link brings you to a structured page, that has skip links</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+                	<p>This following link brings you to a page that has a navigation, but no skip link</p>
+					<a href="http://www.longdesc.fr/noskiplink-page.html">Page without skip link</a>
 				</div>
 
 				<div class="clearfix"></div>
