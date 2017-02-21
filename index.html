@@ -2815,6 +2815,35 @@
 			</div>
 		</div>
 
+		<div id="crit-12-13">
+
+			<h2>Criterion 12.13 - On each web page, is tabbing order consistent?</h2>
+
+			<div id="test-12-13-1">
+				<h3>Test 12.13.1: On each web page, is the tabbing order through the content consistent? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>This following link brings you to a structured page, that has no tabindex attribute or element with float:right property</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+                	<p>The followings elements disturb the tabbing order</p>
+                	<div tabindex="2">
+                		First content
+                	</div>
+                	<div style="float:right">
+                		second content
+                		<a href="#">A link</a>
+                	</div>		
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-13-1">
 
 			<h2>Criterion 13.1 - For each web page, can the user control each time limit that modifies content (except in particular cases)?</h2>
