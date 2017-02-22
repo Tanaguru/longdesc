@@ -2844,6 +2844,32 @@
 			</div>
 		</div>
 
+		<div id="crit-12-14">
+
+			<h2>Criterion 12.14 - On each web page, navigation must not contain keyboard trap. Has this rule been followed?</h2>
+
+			<div id="test-12-14-1">
+				<h3>Test 12.14.1: On each web page, does each element that receives focus meet one of the following conditions?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>This following link brings you to a structured page, which it is possible to reach all the interactive elements in the order expected</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+                	<p>It is not possible to reach the following elements</p>
+                	<div onclick="javascript:someAction();">Some action</div><br />
+					<div onclick="javascript:someAction();" tabindex="-1">Some action</div><br />
+					<button onclick="javascript:someAction();" tabindex="-1">Some action</button><br />
+					<a href="#" tabindex="-1">Some action</a><br />
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-13-1">
 
 			<h2>Criterion 13.1 - For each web page, can the user control each time limit that modifies content (except in particular cases)?</h2>
