@@ -2020,6 +2020,35 @@
 				<div class="clearfix"></div>
 			</div>
 
+			<div id="test-11-2-2">
+				<h3>Test 11.2.2 - Does each title attribute describe the exact function of the associated form field? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+			        <p>
+			        	The title attribute on the input has an explicite content:<br>
+		                <input id="input_01_test-11-2-2" name="input_01_test-11-2-2" title="Your name" />
+		            </p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+			        <p>
+			        	The title attribute on the input has a content empty:<br>
+		                <input id="input_02_test-11-2-1" name="input_02_test-11-2-1" title="" />
+		            </p>
+
+			        <p>
+			        	The title attribute on the input has a content not explicite:<br>
+		                <input id="input_03_test-11-2-1" name="input_03_test-11-2-1" title=";-) <3" />
+		            </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
 		</div>
 
 		<div id="crit-11-5">
