@@ -2038,12 +2038,12 @@
 
 			        <p>
 			        	The title attribute on the input has a content empty:<br>
-		                <input id="input_02_test-11-2-1" name="input_02_test-11-2-1" title="" />
+		                <input id="input_02_test-11-2-2" name="input_02_test-11-2-2" title="" />
 		            </p>
 
 			        <p>
 			        	The title attribute on the input has a content not explicite:<br>
-		                <input id="input_03_test-11-2-1" name="input_03_test-11-2-1" title=";-) <3" />
+		                <input id="input_03_test-11-2-2" name="input_03_test-11-2-2" title=";-) <3" />
 		            </p>
 				</div>
 				<div class="clearfix"></div>
@@ -2058,7 +2058,7 @@
 
 			        <p>
 			        	The aria-label attribute on the input has an explicite content:<br>
-		                <input id="input_01_test-11-2-2" name="input_01_test-11-2-2" aria-label="Your name" />
+		                <input id="input_01_test-11-2-3" name="input_01_test-11-2-3" aria-label="Your name" />
 		            </p>
 				</div>
 				<div class="sample test_false">
@@ -2067,12 +2067,45 @@
 
 			        <p>
 			        	The aria-label attribute on the input has a content empty:<br>
-		                <input id="input_02_test-11-2-1" name="input_02_test-11-2-1" aria-label="" />
+		                <input id="input_02_test-11-2-3" name="input_02_test-11-2-3" aria-label="" />
 		            </p>
 
 			        <p>
 			        	The aria-label attribute on the input has a content not explicite:<br>
-		                <input id="input_03_test-11-2-1" name="input_03_test-11-2-1" aria-label=";-) <3" />
+		                <input id="input_03_test-11-2-3" name="input_03_test-11-2-3" aria-label=";-) <3" />
+		            </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-11-2-4">
+				<h3>Test 11.2.4 - Does each label implemented via the ARIA aria-labelledby property describe the exact function of the associated form field?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+			        <p>
+			        	The text associated with aria-labelledby attribute on the input has an explicite content:<br>
+		                <span id="text_01_test-11-2-4">Your name :</span><br />
+		                <input id="input_01_test-11-2-4" name="input_01_test-11-2-4" aria-labelledby="text_01_test-11-2-4" />
+
+		            </p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+			        <p>
+			        	The text associated with aria-labelledby attribute on the input has a content empty:<br>
+		                <span id="text_02_test-11-2-4"></span><br />
+		                <input id="input_02_test-11-2-4" name="input_02_test-11-2-4" aria-labelledby="text_02_test-11-2-4" />
+		            </p>
+
+			        <p>
+			        	The text associated with aria-labelledby attribute on the input has a content not explicite:<br>
+		                <span id="text_03_test-11-2-4">;-) <3 :</span><br />
+		                <input id="input_03_test-11-2-4" name="input_03_test-11-2-4" aria-labelledby="text_03_test-11-2-4" />
 		            </p>
 				</div>
 				<div class="clearfix"></div>
