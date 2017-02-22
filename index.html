@@ -2049,6 +2049,35 @@
 				<div class="clearfix"></div>
 			</div>
 
+			<div id="test-11-2-3">
+				<h3>Test 11.2.3 - Does each label implemented via the ARIA aria-label property describe the exact function of the associated form field?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+			        <p>
+			        	The aria-label attribute on the input has an explicite content:<br>
+		                <input id="input_01_test-11-2-2" name="input_01_test-11-2-2" aria-label="Your name" />
+		            </p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+			        <p>
+			        	The aria-label attribute on the input has a content empty:<br>
+		                <input id="input_02_test-11-2-1" name="input_02_test-11-2-1" aria-label="" />
+		            </p>
+
+			        <p>
+			        	The aria-label attribute on the input has a content not explicite:<br>
+		                <input id="input_03_test-11-2-1" name="input_03_test-11-2-1" aria-label=";-) <3" />
+		            </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
 		</div>
 
 		<div id="crit-11-5">
