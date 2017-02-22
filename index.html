@@ -1363,6 +1363,32 @@
 			<div class="clearfix"></div>
 		</div>
 
+		<div id="crit-7-3">
+
+			<h2>Criterion 7.3 - Can each script be controlled by keyboard and mouse (except in particular cases)?</h2>
+
+			<div id="test-7-3-1">
+				<h3>Test 7.3.1: Does each element with an event handler controlled by a script meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>This following link brings you to a structured page, which it is possible to reach all the interactive elements in the order expected</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+                	<p>It is not possible to reach the following elements</p>
+                	<div onclick="javascript:someAction();">Some action</div><br />
+					<div onclick="javascript:someAction();" tabindex="-1">Some action</div><br />
+					<button onclick="javascript:someAction();" tabindex="-1">Some action</button><br />
+					<a href="#" tabindex="-1">Some action</a><br />
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-8-2">
 
 			<h2>Criterion 8.2 - For each web page, is the source code valid according to the specified document type (except in particular cases)?</h2>
@@ -2838,32 +2864,6 @@
                 		second content
                 		<a href="#">A link</a>
                 	</div>		
-				</div>
-
-				<div class="clearfix"></div>
-			</div>
-		</div>
-
-		<div id="crit-12-14">
-
-			<h2>Criterion 12.14 - On each web page, navigation must not contain keyboard trap. Has this rule been followed?</h2>
-
-			<div id="test-12-14-1">
-				<h3>Test 12.14.1: On each web page, does each element that receives focus meet one of the following conditions?</h3>
-				
-				<div class="sample test_true">
-					<span></span>
-					<p>This following link brings you to a structured page, which it is possible to reach all the interactive elements in the order expected</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
-				</div>
-
-				<div class="sample test_false">
-					<span></span>
-                	<p>It is not possible to reach the following elements</p>
-                	<div onclick="javascript:someAction();">Some action</div><br />
-					<div onclick="javascript:someAction();" tabindex="-1">Some action</div><br />
-					<button onclick="javascript:someAction();" tabindex="-1">Some action</button><br />
-					<a href="#" tabindex="-1">Some action</a><br />
 				</div>
 
 				<div class="clearfix"></div>
