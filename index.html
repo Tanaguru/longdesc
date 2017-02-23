@@ -2216,19 +2216,64 @@
 				<div class="sample test_true">
 					<span></span>
 					<h3>Good samples</h3>
+	                <p>The following fields are grouped with the fieldset tag</p>
 	                <form action="mock_action"> 
 	                    <fieldset> 
 	                        <legend>Gender</legend>
-	                        <label for="field1">Male</label> <input type="radio" name="gender" id="field1" /> <br /> 
-	                        <label for="field2">Female</label> <input type="radio" name="gender" id="field2" /> 
+	                        <label for="test-11-5-1_field1">Male</label> <input type="radio" name="gender" id="test-11-5-1_field1" /> <br /> 
+	                        <label for="test-11-5-1_field2">Female</label> <input type="radio" name="gender" id="test-11-5-1_field2" /> 
 	                    </fieldset> 
 	                </form> 
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h3>Bad samples</h3>
-                    <label for="field1">Male</label> <input type="radio" name="gender" id="field1" /> <br /> 
-                    <label for="field2">Female</label> <input type="radio" name="gender" id="field2" /> 
+	                <p>The following fields are not grouped</p>
+                    <label for="test-11-5-1_field3">Male</label> <input type="radio" name="gender" id="test-11-5-1_field3" /> <br /> 
+                    <label for="test-11-5-1_field4">Female</label> <input type="radio" name="gender" id="test-11-5-1_field4" /> 
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
+		<div id="crit-11-6">
+
+			<h2>Criterion 11.6 - In each form, does each form field grouping have a legend?</h2>
+			
+			<div id="test-11-6-1">
+				<h3>Test 11.6.1 - Is each form field grouping (fieldset tag) followed by a legend (legend tag) in the source code? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+	                <p>The following fields are grouped with the fieldset tag and the first child is a legend tag</p>
+	                <form action="mock_action"> 
+	                    <fieldset> 
+	                        <legend>Gender</legend>
+	                        <label for="test-11-6-1_field1">Male</label> <input type="radio" name="gender" id="test-11-6-1_field1" /> <br /> 
+	                        <label for="test-11-6-1_field2">Female</label> <input type="radio" name="gender" id="test-11-6-1_field2" /> 
+	                    </fieldset> 
+	                </form> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+	                <p>The following fields are grouped with the fieldset tag but without legend tag</p>
+	                <form action="mock_action"> 
+	                    <fieldset> 
+	                        <label for="test-11-6-1_field3">Male</label> <input type="radio" name="gender" id="test-11-6-1_field3" /> <br /> 
+	                        <label for="test-11-6-1_field4">Female</label> <input type="radio" name="gender" id="test-11-6-1_field4" /> 
+	                    </fieldset> 
+	                </form> 
+	                <p>The following fields are grouped with the fieldset tag but the legend tag is not the first child</p>
+	                <form action="mock_action"> 
+	                    <fieldset> 
+	                        <label for="test-11-6-1_field5">Male</label> <input type="radio" name="gender" id="test-11-6-1_field5" /> <br /> 
+	                        <label for="test-11-6-1_field6">Female</label> <input type="radio" name="gender" id="test-11-6-1_field6" /> 
+	                        <legend>Gender</legend>
+	                    </fieldset> 
+	                </form> 
 				</div>
 			</div>
 
