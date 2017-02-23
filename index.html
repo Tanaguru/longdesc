@@ -2170,6 +2170,39 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+		</div>
+
+		<div id="crit-11-4">
+
+			<h2>Criterion 11.4 - In each form, are each label and its related control positioned next to each other?</h2>
+
+			<div id="test-11-4-1">
+				<h3>Test 11.4.1 - In each form, are each label and its related control positioned next to each other? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+	                <p>The following input has a label is next to the field</p>
+	                <form> 
+		                    <label for="test-11-4-1_field1">A field</label> 
+		                    <input type="text" name="test-11-4-1_field1" id="test-11-4-1_field1" />                    
+	                </form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+	                <p>The following input has a label is not next to the field</p>
+	                <form> 
+	                	<p>
+	                		<label for="test-11-4-1_field3">A other field</label> 
+	                    	<input style="float:right;" type="text" name="test-11-4-1_field3" id="test-11-4-1_field3" />
+	                    </p>
+	                </form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 
 		</div>
 
