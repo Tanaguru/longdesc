@@ -2110,6 +2110,47 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+		</div>
+
+		<div id="crit-11-3">
+
+			<h2>Criterion 11.3 - On a given page, or set of pages, all form fields with similar functions must have consistent labels. Has this rule been followed?</h2>
+
+			<div id="test-11-3-1">
+				<h3>Test 11.3.1 - On a given page, all form fields with similar functions must have consistent labels. Has this rule been followed?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+	                <p>The following input have the same label with a different context</p>
+	                <form> 
+	                	<fieldset>
+	                		<caption>First person</caption>
+		                    <label for="test-11-3-1_field1">Name</label> 
+		                    <input type="radio" name="test-11-3-1_field1" id="test-11-3-1_field1" />
+	                	</fieldset>
+	                	<fieldset>
+	                		<caption>Second person</caption>
+		                    <label for="test-11-3-1_field2">Name</label>
+	                      	<input type="radio" name="test-11-3-1_field2" id="test-11-3-1_field2" />
+	                	</fieldset>	                     
+	                </form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+	                <p>The following input have the same label without a different context</p>
+	                <form> 
+	                    <label for="test-11-3-1_field3">Name</label> 
+	                    <input type="radio" name="test-11-3-1_field3" id="test-11-3-1_field3" />
+	                    <label for="test-11-3-1_field4">Name</label>
+                      	<input type="radio" name="test-11-3-1_field4" id="test-11-3-1_field4" />                   
+	                </form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 
 		</div>
 
