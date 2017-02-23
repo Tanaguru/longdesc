@@ -2280,6 +2280,50 @@
 			<div class="clearfix"></div>
 		</div>
 
+		<div id="crit-11-7">
+
+			<h2>Criterion 11.7 - In each form, is each legend, related to a form field grouping, relevant?</h2>
+			
+			<div id="test-11-7-1">
+				<h3>Test 11.7.1 - In each form, is each legend (legend tag), related to a form field grouping (fieldset tag), relevant?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+	                <p>The following group of fields has a relevant legend tag</p>
+	                <form action="mock_action"> 
+	                    <fieldset> 
+	                        <legend>Gender</legend>
+	                        <label for="test-11-6-1_field1">Male</label> <input type="radio" name="gender" id="test-11-6-1_field1" /> <br /> 
+	                        <label for="test-11-6-1_field2">Female</label> <input type="radio" name="gender" id="test-11-6-1_field2" /> 
+	                    </fieldset> 
+	                </form> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+	                <p>The following group of fields has an empty legend tag</p>
+	                <form action="mock_action"> 
+	                    <fieldset> 
+	                        <legend></legend>
+	                        <label for="test-11-6-1_field3">Male</label> <input type="radio" name="gender" id="test-11-6-1_field3" /> <br /> 
+	                        <label for="test-11-6-1_field4">Female</label> <input type="radio" name="gender" id="test-11-6-1_field4" /> 
+	                    </fieldset> 
+	                </form> 
+	                <p>The following group of fields has a not relevant legend tag</p>
+	                <form action="mock_action"> 
+	                    <fieldset> 
+	                        <legend>;-) <3</legend>
+	                        <label for="test-11-6-1_field5">Male</label> <input type="radio" name="gender" id="test-11-6-1_field5" /> <br /> 
+	                        <label for="test-11-6-1_field6">Female</label> <input type="radio" name="gender" id="test-11-6-1_field6" /> 
+	                    </fieldset> 
+	                </form> 
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
 		<div id="crit-11-9">
 
 			<h2>Criterion 11.9 - In each form, is the text of each button relevant?</h2>
