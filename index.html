@@ -2354,14 +2354,55 @@
 					<h3>Bad samples</h3>
 	                <p>The following select field has options not correctly grouped with optgroup tag</p>
 	                <form action="mock_action"> 
-                        <label for="test-11-8-1_field1">Gender</label> 
-                        <select name="gender" id="test-11-8-1_field1"> 
+                        <label for="test-11-8-1_field2">Gender</label> 
+                        <select name="gender" id="test-11-8-1_field2"> 
                         	<option role="separator">classic</option>
                         		<option value="male">Male</option>
                         		<option value="femele">Female</option>
                         	<option role="separator">other</option>
                         		<option value="trans">Transsexual</option>
                         		<option value="intersex">Intersex</option>
+	                    </select> 
+	                </form>
+				</div>
+			</div>
+			
+			<div id="test-11-8-2">
+				<h3>Test 11.8.2 - In each selection list (select tag), does each list item grouping (optgroup tag) have a label attribute? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+	                <p>The following select field has grouped options correctly implemented with label</p>
+	                <form action="mock_action"> 
+                        <label for="test-11-8-2_field1">Gender</label> 
+                        <select name="gender" id="test-11-8-2_field1"> 
+                        	<optgroup label="classic">
+                        		<option value="male">Male</option>
+                        		<option value="femele">Female</option>
+                        	</optgroup>
+                        	<optgroup label="other">
+                        		<option value="trans">Transsexual</option>
+                        		<option value="intersex">Intersex</option>
+                        	</optgroup>
+	                    </select> 
+	                </form> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+	                <p>The following select field has grouped options not correctly implemented with label</p>
+	                <form action="mock_action"> 
+                        <label for="test-11-8-2_field2">Gender</label> 
+                        <select name="gender" id="test-11-8-2_field2"> 
+                        	<optgroup>
+                        		<option value="male">Male</option>
+                        		<option value="femele">Female</option>
+                        	</optgroup>
+                        	<optgroup>
+                        		<option value="trans">Transsexual</option>
+                        		<option value="intersex">Intersex</option>
+                        	</optgroup>
 	                    </select> 
 	                </form>
 				</div>
