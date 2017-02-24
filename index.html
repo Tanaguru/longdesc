@@ -2668,8 +2668,8 @@
 					<h3>Good samples</h3>
 					<form>			
 	                    <p> 
-	                        <label id="test-11-10-4_field1">Your name * <span class="error">(this field is mandatory)</span>: </label> <input required type="text" name="test-11-10-4_field1" /> <br />
-	                        <label id="test-11-10-4_field2">Field2 : </label> <input type="email" name="test-11-10-4_field2" value="mymail.com" aria-describedby="test-11-10-4_error2" /><span role="log" id="test-11-10-4_error2">(This is not correct. The value expected is seems like "example@mail.com")</span> <br />
+	                        <label id="test-11-10-4_field1">Your name * <em class="error">(this field is mandatory)</em>: </label> <input required type="text" name="test-11-10-4_field1" /> <br />
+	                        <label id="test-11-10-4_field2">Field2 : </label> <input type="email" name="test-11-10-4_field2" value="mymail.com" aria-describedby="test-11-10-4_error2" /><em role="log" id="test-11-10-4_error2">(This is not correct. The value expected is seems like "example@mail.com")</em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -2678,8 +2678,33 @@
 					<h3>Bad samples</h3>
 					<form>					
 	                    <p> 
-	                        <label id="test-11-10-4_field3">Your name * <span class="error"></span>: </label> <input required type="text" name="test-11-10-4_field3" /> <br />
-	                        <label id="test-11-10-4_field4">Field2 : </label> <input type="email" name="test-11-10-4_field4" value="mymail.com" aria-describedby="test-11-10-4_error2" /><span role="log" id="test-11-10-4_error2"></span> <br />
+	                        <label id="test-11-10-4_field3">Your name * <em class="error"></em>: </label> <input required type="text" name="test-11-10-4_field3" /> <br />
+	                        <label id="test-11-10-4_field4">Field2 : </label> <input type="email" name="test-11-10-4_field4" value="mymail.com" aria-describedby="test-11-10-4_error2" /><em role="log" id="test-11-10-4_error2"></em> <br />
+	                    </p> 
+					</form>
+				</div>
+			</div>
+			
+			<div id="test-11-10-5">
+				<h3>Test 11.10.5 - Each input error indication based on the ARIA properties aria-label or aria-invalid must have an explicit visual cue in the label (label tag) or in a chunk of text tied to the form field via the ARIA property aria-describedby or aria-labelledby. Has this rule been followed?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<form>			
+	                    <p> 
+	                        <label id="test-11-10-5_field1">Your name * : <img style="width:20px;height:20px;" src="img/false.png" alt="invalid"></label> <input aria-invalid="true" required type="text" name="test-11-10-5_field1" /> <br />
+	                        <input aria-label="Your email" type="email" name="test-11-10-5_field2" value="" aria-describedby="test-11-10-5_erreur2" /><img style="width:20px;height:20px;" src="img/false.png" id="test-11-10-5_erreur2" alt="invalid"> <br />
+	                    </p> 
+					</form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<form>					
+	                    <p> 
+	                        <label id="test-11-10-5_field1">Your name * : </label> <input aria-invalid="true" required type="text" name="test-11-10-5_field1" /> <br />
+	                        <input aria-label="Your email" type="email" name="test-11-10-5_field2" value="mymail.com" /> <br />
 	                    </p> 
 					</form>
 				</div>
