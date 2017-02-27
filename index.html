@@ -2843,6 +2843,74 @@
 				<div class="clearfix"></div>
 			</div>
 			
+			<div id="test-11-10-9">
+				<h3>Test 11.10.9 - Does each data type and/or format indication provided via a chunk of text tied by an ARIA property aria-describedby or aria-labelledby meet the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-describedby" attribute :<br />
+		                <strong id="label_01_test-11-10-9">  
+		                        Some hidden label (ex: example@email.com)
+		                </strong> 
+		                <input type="email" id="input_01_test-11-10-9" name="input_01_test-11-10-9" aria-describedby="label_01_test-11-10-9" />
+		            </p>
+
+			        <p>
+			        	The following input has labels associated with it by the "aria-describedby" attribute :<br />
+		                <strong id="label_02_test-11-10-9">  
+		                        Some 
+		                </strong> 
+		                <strong id="label_03_test-11-10-9">  
+		                         hidden label (ex: example@email.com)
+		                </strong> 
+		                <input type="email" id="input_02_test-11-10-9" name="input_02_test-11-10-9" aria-describedby="label_02_test-11-10-9 label_03_test-11-10-9" />
+		            </p>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-describedby" attribute and show on focus :<br />
+		                <strong id="label_04_test-11-10-9" class="sr-only">  
+		                        Some hidden label (ex: example@email.com)
+		                </strong> 
+		                <input type="email" id="input_04_test-11-10-9" onfocus="javascript:document.getElementById('label_04_test-11-10-9').setAttribute('class', '');" name="input_04_test-11-10-9" aria-describedby="label_04_test-11-10-9" />
+		            </p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-describedby" attribute, but two contains have the same "id":<br />
+		                <strong id="label_05_test-11-10-9">  
+		                        Some hidden label
+		                </strong> 
+		                <input type="email" id="input_05_test-11-10-9" name="input_05_test-11-10-9" aria-describedby="label_05_test-11-10-9" />
+		            </p>
+
+			        <p>
+			        	The following input has labels associated with it by the "aria-describedby" attribute. Some part of the label not has an "id" attribute :<br />
+		                <strong id="label_05_test-11-10-9">  
+		                        Some 
+		                </strong> 
+		                <strong id="">  
+		                         hidden label
+		                </strong> 
+		                <input type="email" id="input_06_test-11-10-9" name="input_06_test-11-10-9" aria-describedby="label_06_test-11-10-9" />
+		            </p>
+
+			        <p>
+			        	The following input has a label associated with it by the "aria-describedby" attribute, but only the user use an assistive technology can read it :<br />
+		                <strong id="label_07_test-11-10-9" class="sr-only">  
+		                        Some hidden label
+		                </strong> 
+		                <input type="email" id="input_07_test-11-10-9" name="input_07_test-11-10-9" aria-describedby="label_07_test-11-10-9" />
+		            </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
 			<div id="test-11-10-10">
 				<h3>Test 11.10.10 - Does each form field that uses a title attribute as input help, meet the following conditions:</h3>
 
