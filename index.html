@@ -2942,6 +2942,35 @@
 			<div class="clearfix"></div>
 		</div>
 
+		<div id="crit-11-11">
+
+			<h2>Criterion 11.11 - In each form, is input control accompanied, if necessary, by suggestions helping with the correction of input errors?</h2>
+			
+			<div id="test-11-11-1">
+				<h3>Test 11.11.1 - For each form, for each input error, are each data types and formats suggested, if necessary?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<form>			
+	                    <p> 
+	                        <label id="test-11-11-1_field2">Field2 : </label> <input type="email" name="test-11-11-1_field2" value="mymail.com" aria-describedby="test-11-11-1_error2" /><em role="log" id="test-11-11-1_error2">(This is not correct. The value expected is seems like "example@mail.com")</em> <br />
+	                    </p> 
+					</form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<form>					
+	                    <p> 
+	                        <label id="test-11-11-1_field4">Field2 : </label> <input type="email" name="test-11-11-1_field4" value="mymail.com" aria-describedby="test-11-11-1_error2" /><em role="log" id="test-11-11-1_error2"></em> <br />
+	                    </p> 
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-12-1">
 
 			<h2>Criterion 12.1 - Does each set of pages have at least two different navigation systems (except in particular cases)?</h2>
