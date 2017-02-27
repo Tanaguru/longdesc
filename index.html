@@ -2590,7 +2590,7 @@
 					<h3>Bad samples</h3>
 					<form>
 						<p>
-							<label for="crit1110-bad-test1">Field with bad</label>
+							<label for="crit1110-bad-test1">Field with bad implementation</label>
 							<input id="crit1110-bad-test1" type="text" value="" aria-required />
 						</p>
 						<p>
@@ -2774,6 +2774,42 @@
 		                </strong> 
 		                <input id="input_07_test-11-10-6" name="input_07_test-11-10-6" aria-describedby="label_07_test-11-10-6" />
 		            </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-11-10-7">
+				<h3>Test 11.10.7 - For each form, does each mandatory field meet one of the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<form>
+						<p>Fields marked with (*) are mandatory.</p>
+						<p>For each mandatory field, a mention of the data type of the field is made visually and textually.</p>
+						<p>
+							<label for="crit1110-good-test1">Field with aria-required attribut * and an example (ex: example@mail.com)</label>
+							<input id="crit1110-good-test1" type="email" value="" aria-required="true" />
+						</p>
+						<p>
+							<label for="crit1110-good-test2">Field with required attribut * and an example (ex: 0123456789)</label>
+							<input id="crit1110-good-test2" type="tel" value="" required="true" />
+						</p>
+					</form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<form>
+						<p>
+							<label for="crit1110-bad-test1">Mandatory field without data type</label>
+							<input id="crit1110-bad-test1" type="email" value="" aria-required="true" />
+						</p>
+						<p>
+							<label for="crit1110-bad-test2">Mandatory field without data type</label>
+							<input id="crit1110-bad-test2" type="tel" value="" required />
+						</p>
+					</form>
 				</div>
 				<div class="clearfix"></div>
 			</div>
