@@ -2995,6 +2995,87 @@
 			</div>
 		</div>
 
+		<div id="crit-11-14">
+
+			<h2>Criterion 11.14 - For each form, is input assistance available?</h2>
+			
+			<div id="test-11-14-1">
+				<h3>Test 11.14.1 - Does each form meet one of the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>The following form has in first a passage of text to indicate the mandatories fields</p>
+					<form>	
+						<p>The following fields that have the mention (*) are mandatories</p>		
+	                    <p> 
+	                        <label id="test-11-14-1_field1">Name * : </label> 
+	                        <input type="text" name="test-11-14-1_field1" value="" /><br />
+	                        <label id="test-11-14-1_field2">email : </label> 
+	                        <input type="email" name="test-11-14-1_field2" value="" /> <br />
+	                    </p> 
+					</form>
+
+					<p>The following form mention in first a link for an help page</p>
+					<form>	
+						<p>You can have an help to answers this form in the following page : <a href="#">Help to this page</a></p>		
+	                    <p> 
+	                        <label id="test-11-14-1_field3">Name * : </label> 
+	                        <input type="text" name="test-11-14-1_field3" value="" /><br />
+	                        <label id="test-11-14-1_field4">email : </label> 
+	                        <input type="email" name="test-11-14-1_field4" value="" /> <br />
+	                    </p> 
+					</form>
+
+					<p>The following form the field of email has example of the data expected before the label</p>
+					<form>			
+	                    <p> 
+	                        <label id="test-11-14-1_field5">Name * : </label> 
+	                        <input type="text" name="test-11-14-1_field5" value="" /><br />
+	                        <em>ex: example@mail.com</em>
+	                        <label id="test-11-14-1_field6">email : </label> 
+	                        <input type="email" name="test-11-14-1_field6" value="" /> <br />
+	                    </p> 
+					</form>
+
+					<p>The following form the field of email has example of the data expected in the label</p>
+					<form>			
+	                    <p> 
+	                        <label id="test-11-14-1_field7">Name * : </label> 
+	                        <input type="text" name="test-11-14-1_field7" value="" /><br />
+	                        <label id="test-11-14-1_field8">email (ex: example@mail.com): </label> 
+	                        <input type="email" name="test-11-14-1_field8" value="" /> <br />
+	                    </p> 
+					</form>
+
+					<p>The following form the field of email has example of the data expected in a description associated with aria-describedby attribute</p>
+					<form>			
+	                    <p> 
+	                        <label id="test-11-14-1_field9">Name * : </label> 
+	                        <input type="text" name="test-11-14-1_field9" value="" /><br />
+	                        <label id="test-11-14-1_field10">email: </label> 
+	                        <input type="email" name="test-11-14-1_field10" value="" aria-describedby="test-11-14-1_field10_desc" /> <br />
+	                        <em id="test-11-14-1_field10_desc">(ex: example@mail.com)</em>
+	                    </p> 
+					</form>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>The following form has no indication to help users</p>
+					<form>			
+	                    <p> 
+	                        <label id="test-11-14-1_field1">Name * : </label> 
+	                        <input type="text" name="test-11-14-1_field1" value="" /><br />
+	                        <label id="test-11-14-1_field2">email : </label> 
+	                        <input type="email" name="test-11-14-1_field2" value="" /> <br />
+	                    </p> 
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-12-1">
 
 			<h2>Criterion 12.1 - Does each set of pages have at least two different navigation systems (except in particular cases)?</h2>
