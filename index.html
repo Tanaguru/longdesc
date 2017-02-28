@@ -1282,6 +1282,29 @@
 
 		</div>
 
+		<div id="crit-2-2">
+
+			<h2>Criterion 2.2 - For each iframe with a frame title, is this frame title relevant?</h2>
+
+			<div id="test-2-2-1">
+				<h3>Test 2.2.1: For each iframe (iframe tag) with a title attribute, is the content of this attribute relevant? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>the following iframe is a frame of the Oceane Consulting Web site with a relevante title </p>
+					<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px" title="Océane Consulting Web site"></iframe>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>the following iframe is a frame of the Oceane Consulting Web site with a title not relevante</p>
+					<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px" title="http://www.oceaneconsulting.com/"></iframe>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-5-1">
 
 			<h2>Criterion 5.1 - </h2>
