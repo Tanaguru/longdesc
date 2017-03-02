@@ -1344,8 +1344,8 @@
 	                <video controls style="width:200px;">
 						<source src="tanaguru_sans_son.ogv" type="video/ogg">
 					</video>
-					<div class="transcription" lang="fr">
 		                <h4>Text transcription</h4>
+					<div class="transcription" lang="fr">
 		                <p>Tanaguru</p>
 
 		                <p>Votre accessibilité numérique, simplement.</p>
@@ -1403,8 +1403,8 @@
 	                <video controls style="width:200px;">
 						<source src="tanaguru.ogv" type="video/ogg">
 					</video>
+		            <h4>Text transcription</h4>
 					<div class="transcription" lang="fr">
-		                <h4>Text transcription</h4>
 		                <p>Tanaguru</p>
 
 		                <p>Votre accessibilité numérique, simplement.</p>
@@ -1448,6 +1448,39 @@
 	                <video controls style="width:200px;">
 						<source src="tanaguru.ogv" type="video/ogg">
 					</video>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-4-2">
+
+			<h2>Criterion 4.2 - For each prerecorded time-based media with a text transcript or a synchronized audio description, are these relevant (except in particular cases)?</h2>
+
+			<div id="test-4-2-1">
+				<h3>Test 4.2.1: For each prerecorded audio-only time-based media with a text transcript, is this transcript relevant (except in particular cases)? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>the following audio element has a relevant text transcription</p>
+	                <audio controls>
+	                  <source src="voix1.mp3" type="audio/mpeg" />
+	                    <p>Fallback en cas d'incompatibilité du browser</p>
+	                </audio>
+	                <h4>Text transcription</h4>
+	                <p>You did accessible content</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>the following audio element has a not relevant text transcription</p>
+	                <audio controls>
+	                  <source src="voix1.mp3" type="audio/mpeg" />
+	                    <p>Fallback en cas d'incompatibilité du browser</p>
+	                </audio>
+	                <h4>Text transcription</h4>
+	                <p>Not the good transcription</p>
 				</div>
 
 				<div class="clearfix"></div>
