@@ -1694,6 +1694,7 @@
 	                  <source src="voix3.mp3" type="audio/mpeg" />
 	                    <p>Fallback en cas d'incompatibilité du browser</p>
 	                </audio>
+
 				</div>
 
 				<div class="sample test_false">
@@ -1706,6 +1707,34 @@
 					<div class="transcription" lang="fr">
 		                <p>Not the good transcription</p>
 		            </div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-4-3">
+
+			<h2>Criterion 4.3 - Does each prerecorded synchronized time-based media have synchronized captions if necessary (except in particular cases)?</h2>
+
+			<div id="test-4-3-1">
+				<h3>Test 4.3.1: Does each prerecorded synchronized time-based media meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>the following audio element has synchronized captions</p>
+	                <br />
+	                <div style="position:relative;height:0;padding-bottom:56.25%;">
+	                	<iframe src="https://www.youtube.com/embed/3y1smOLp1t0?ecver=2" style="width:320px;height:180;position:absolute;left:0;"></iframe>
+	                </div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>the following video element has no synchronized captions</p>
+	                <video controls style="width:200px;">
+						<source src="tanaguru_sans_son.ogv" type="video/ogg">
+					</video>
 				</div>
 
 				<div class="clearfix"></div>
