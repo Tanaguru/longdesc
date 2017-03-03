@@ -1739,6 +1739,30 @@
 
 				<div class="clearfix"></div>
 			</div>
+
+			<div id="test-4-3-2">
+				<h3>Test 4.3.2: For each prerecorded synchronized time-based media with synchronized captions provided through a track tag, does the track tag have an attribute kind="captions"?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>the following audio element has synchronized captions with kind="captions" attribute</p>
+	                <video controls style="width:200px;">
+						<source src="tanaguru.ogv" type="video/ogg">
+						<track kind="captions" src="tanaguru.vtt" srclang="fr">
+					</video>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>the following audio element has synchronized captions without kind="captions" attribute</p>
+	                <video controls style="width:200px;">
+						<source src="tanaguru.ogv" type="video/ogg">
+						<track src="tanaguru.vtt" srclang="fr">
+					</video>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
 		</div>
 
 		<div id="crit-5-1">
