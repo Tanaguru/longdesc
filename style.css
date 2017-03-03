@@ -31,7 +31,7 @@ img, object, canvas, embed {
 .test_true {
 	border: 2px solid #008200;
 }
-.test_true span:first-child {
+.test_true > span:first-child {
 	background: url('img/valid.png') transparent no-repeat;
 	background-size: 100%;
 	display: block;
@@ -45,7 +45,7 @@ img, object, canvas, embed {
 .test_false {
 	border: 2px solid #e60000;
 }
-.test_false span:first-child {
+.test_false > span:first-child {
 	background: url('img/false.png') transparent no-repeat;
 	background-size: 100%;
 	display: block;

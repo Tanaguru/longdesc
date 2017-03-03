@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="video.css">
   <style type="text/css"> 
 	   .px_html{ 
 	      font-size:12px; 
@@ -1542,6 +1543,84 @@
 	                  <source src="voix3.mp3" type="audio/mpeg" />
 	                    <p>Fallback en cas d'incompatibilité du browser</p>
 	                </audio>
+
+					<p>the following video element has a relevant audio description</p>
+					<video id="video-js" class="video-js" controls="controls">
+					    <source src="tanaguru_sans_son_2.ogv" type="video/ogg" />
+					</video>
+					<audio id="audiodescription" preload="auto">
+					    <source src="voix3.mp3" type="audio/mp3" />
+					</audio>
+
+					<script type="text/javascript" src="video.js"></script>
+
+					<script type="text/javascript">
+						var video = document.getElementById('video-js');
+						//on inialise le player
+						videojs('video-js', {}, function() {
+								//on défini la différence entre les deux volumes
+								var ratioVolume = 0.3;
+						    //on verifie si il y a bien un fichier d'audio-description
+						    var audioDescription = document.getElementById('audiodescription');
+						    if ( audioDescription ) {
+						        //on ajoute le bouton
+						        //(this = le player videojs)
+						        var ADButton = this.controlBar.addChild('button');
+						        ADButton.el_.classList.add('vjs-icon-audio-description');
+
+						        //on redéfini les volumes
+						        audioDescription.volume = 0;
+						        this.volume( ratioVolume );
+						        
+						        //toggle sur le bouton pour "mute" l'audio-description ou non
+						        ADButton.on('click', function( e ) {
+						        		if( audioDescription.volume ){
+						            		audioDescription.volume = 0;
+						            } else {
+						            		audioDescription.volume = Math.min( video.volume + ratioVolume , 1);
+						            }
+						        });
+						      
+						      console.info(audioDescription.volume);
+
+						        //play de la video => play sur l'AD
+						        this.on('play', function() {
+						            if ( audioDescription.paused ) {
+						                audioDescription.play();
+						            }
+						        });
+
+						        //pour sur la video => pause sur l'AD
+						        this.on('pause', function() {
+						            if ( !audioDescription.paused ) {
+						                audioDescription.pause();
+						            }
+						        });
+
+						        //fin de la video => pause sur l'AD
+						        this.on('ended', function() {
+						            this.pause();
+						            audioDescription.pause();
+						        });
+						      
+						        //synchro sur le volume
+						        this.on('volumechange', function() {
+						          if( audioDescription.volume ) {
+						            audioDescription.volume = Math.min( video.volume + ratioVolume , 1);
+						          }
+						        });
+						      
+						        //synchro sur le seek
+						        this.on('timeupdate', function() {
+						            if ( audioDescription.readyState >= 4 ) {
+						                if( Math.ceil(audioDescription.currentTime) != Math.ceil(this.currentTime()) ) {
+						                    audioDescription.currentTime = this.currentTime();
+						                }
+						            }
+						        });
+						    }
+						});
+					</script>
 				</div>
 
 				<div class="sample test_false">
