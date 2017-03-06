@@ -1766,6 +1766,35 @@
 			</div>
 		</div>
 
+		<div id="crit-4-4">
+
+			<h2>Criterion 4.4 - For each prerecorded synchronized time-based media with synchronized captions, are these captions relevant?</h2>
+
+			<div id="test-4-4-1">
+				<h3>Test 4.4.1: For each prerecorded synchronized time-based media with synchronized captions, are these captions relevant? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>the following audio element has relevant synchronized captions</p>
+	                <video controls style="width:200px;">
+						<source src="tanaguru.ogv" type="video/ogg">
+						<track kind="captions" src="tanaguru.vtt" srclang="fr">
+					</video>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>the following video element has not relevant synchronized captions</p>
+	                <video controls style="width:200px;">
+						<source src="tanaguru.ogv" type="video/ogg">
+						<track kind="captions" src="tanaguru_not_relevant.vtt" srclang="fr">
+					</video>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-5-1">
 
 			<h2>Criterion 5.1 - </h2>
