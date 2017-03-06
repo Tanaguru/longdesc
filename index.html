@@ -1566,6 +1566,7 @@
 						        //on ajoute le bouton
 						        //(this = le player videojs)
 						        var ADButton = this.controlBar.addChild('button');
+						        ADButton.el_.querySelector('.vjs-control-text').appendChild(document.createTextNode('Audio-description'));
 						        ADButton.el_.classList.add('vjs-icon-audio-description');
 
 						        //on redéfini les volumes
