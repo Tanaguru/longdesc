@@ -1973,6 +1973,31 @@
 
 		</div>
 
+		<div id="crit-8-8">
+
+			<h2>Criterion 8.8 - On each web page, is each change in human language relevant?</h2>
+			
+			<div id="test-8-8-1">
+
+				<h3>Test 8.8.1 - On each web page, is each change in human language identification (lang and/or xml:lang attribute) technically valid?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					
+                	<p dir="rtl" lang="ar"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
+
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples without information</h4>
+					<p dir="rtl" lang="en"><strong>يا ظالمني</strong> غناء أُم كلثوم - تأليف أحمد رامي<br />وقلبي من رضاك محروم يا ظالمني يا هجرني<br />تحيرني وتضنيني تلوعني وتكويني<br />وتغضب لما أقولك يوم ولما أشكي تخاصمني<br />يا ظالمني<br />وتنسى كل ما جرى لي حرام تهجر وتتجنى<br />يصادف يوم وتصفى لي وأقضي العمر أتمنى<br />وقاسيت الضنى في بعدك صبرت سنين على صدك</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+
 		<div id="crit-8-10">
 
 			<h2>Criterion 8.10 - On each web page, are changes in reading direction identified?</h2>
@@ -2313,6 +2338,31 @@
 
 			</div>
 			<div class="clearfix"></div>
+		</div>
+
+		<div id="crit-10-14">
+
+			<h2>Criterion 10.14 - On each web page, information must not be conveyed by shape, size or location alone. Has this rule been followed?</h2>
+			
+			<div id="test-10-14-1">
+				<h3>Test 10.14.1: On each web page, for each text or set of text, information must not be conveyed by shape, size or location alone. Has this rule been followed?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>In the following text, an indication of position is present with an anchor link to access to the element indicate</p>
+					<p>Hello students, we are happy to tell you that we started a new project. It is called People in Levels. This project is made from stories from News in Levels students. People can write about their lives. They can write about their feelings, the most interesting moments in their lives, dreams, favorite foods, favorite places or favorite activities. find the <a href="#test-10-14-1_indication-1">link to this projet below on right</a></p>
+					<p style="align:right;"><a href="#">The new project</a></p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>In the following text, an indication of position is present without other means to access to the element indicate</p>
+					<p>Hello students, we are happy to tell you that we started a new project. It is called People in Levels. This project is made from stories from News in Levels students. People can write about their lives. They can write about their feelings, the most interesting moments in their lives, dreams, favorite foods, favorite places or favorite activities. find the link to this projet below on right</p>
+					<p style="align:right;"><a href="#">The new project</a></p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
 		</div>
 
 		<div id="crit-11-1">
