@@ -2087,6 +2087,31 @@
 
 		</div>
 
+		<div id="crit-10-3">
+
+			<h2>Criterion 10.3 - On each web page, is information still understandable when style sheets are disabled?</h2>
+			
+			<div id="test-10-3-1">
+
+				<h3>Test 10.3.1 - On each web page, is information still understandable when style sheets are disabled?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p><span>Text</span><span> with a different position</span><span style="float:right;"> for each word</span></p>
+					<p style="position:relative;"><span>Text</span><span> with a different position</span><span style="position:absolute;right:0;"> for each word</span></p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p><span>Text</span><span style="float:right;"> for each word</span><span> with a different position</span></p>
+					<p style="position:relative;"><span>Text</span><span style="position:absolute;right:0;"> for each word</span><span> with a different position</span></p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
 		<div id="crit-10-4">
 
 			<h2>Criterion 10.4 - On each web page, is text still readable when character size is increased until at least 200%?</h2>
