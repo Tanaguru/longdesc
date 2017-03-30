@@ -60,6 +60,7 @@ table.support {
 	border: 1px solid #00437b;
 	min-width: 50%;
 	margin-bottom: 1rem;
+	max-width: 100%;
 }
 table.support th {
 	border: 1px solid #00437b;

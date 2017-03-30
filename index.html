@@ -1797,7 +1797,81 @@
 
 		<div id="crit-5-1">
 
-			<h2>Criterion 5.1 - </h2>
+			<h2>Criterion 5.1 - Does each complex data table have a summary?</h2>
+
+			<div id="test-5-1-1">
+				<h3>Test 5.1.1: Does each complex data table (table tag) have a summary, provided through the caption tag?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>the following board has a caption</p>
+	                <table class="support">
+						<caption>Opening hours of the communal house and the CPAS</caption>
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="mc mc-am lu">8h-12h</td>
+							<td headers="mc mc-pm lu">Close</td>
+							<td headers="cp cp-am lu">Close</td>
+							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>the following board has no caption</p>
+	                <table class="support">
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="mc mc-am lu">8h-12h</td>
+							<td headers="mc mc-pm lu">Close</td>
+							<td headers="cp cp-am lu">Close</td>
+							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<table> 
+				<tr> 
+					<th scope="col" width="25%">Ce tableau de mise en page pose des</th> 
+					<th scope="col" width="25%">problèmes quand il est linéarisé. </th>  
+					<th scope="col" width="25%">problèmes. </th>  
+					<th scope="col" width="25%">linéarisé. </th> 
+				</tr> 
+				<tr> 
+					<th scope="row" width="25%">Le contenu n'est donc pas cohérent</th> 
+					<th scope="row" width="25%">pour certains utilisateurs.</th> 
+					<td width="25%">test 1.</td> 
+					<td width="25%">test 2.</td> 
+				</tr> 
+			</table>
 
 			<table class="presentation"> 
 				<tr> 
