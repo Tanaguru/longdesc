@@ -2150,6 +2150,33 @@
 				<div class="clearfix"></div>
 			</div>
 
+			<div id="test-9-3-3">
+
+				<h3>Test 9.3.3 - On each web page, does information grouped in definition lists use the dl and dt/dd tags? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h3>Good samples</h3>
+					<p>The following element is a definition list of fruit correctly implemented</p>
+					<dl>
+						<dt>Strawberry : </dt><dd>Small red fruit</dd>
+						<dt>Raspberry : </dt><dd>Small red fruit</dd>
+						<dt>Banana : </dt><dd>long yellow fruit</dd>
+						<dt>Kiwi : </dt><dd>small green fruit</dd>
+					</dl>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h3>Bad samples</h3>
+					<p>The following list of elements is a definition list of fruit but not implemented in definition list</p>
+					Strawberry : Small red fruit <br />
+					Raspberry : Small red fruit <br />
+					Banana : long yellow fruit <br />
+					Kiwi : small green fruit <br />
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
 		</div>
 
 		<div id="crit-10-1">
