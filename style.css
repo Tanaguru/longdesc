@@ -65,13 +65,38 @@ table.support {
 table.support th {
 	border: 1px solid #00437b;
 	background: #d2eaff;
-	padding:0.5rem;
+	padding:0.3rem;
 	text-align: center;
 }
 table.support td {
 	border: 1px solid #00437b;
-	padding:0.5rem;
+	padding:0.3rem;
 	text-align: center;
+}
+table.occurrences {
+	border: 1px solid #00437b;
+	min-width: 50%;
+	margin-bottom: 1rem;
+	max-width: 100%;
+	border-collapse: collapse;
+	border-spacing : 0;
+}
+table.occurrences th {
+	border: 1px solid #00437b;
+	background: #d2eaff;
+	padding:0.3rem;
+	text-align: center;
+}
+table.occurrences td {
+	border: 1px solid #00437b;
+	padding:0.3rem;
+	text-align: center;
+}
+table.occurrences tr:nth-child(odd){
+  background-color:#EFF8FF;
+}
+table.occurrences tfoot tr {
+  background-color:#d2eaff !important;
 }
 .sr-only {
     border: 0 none;
