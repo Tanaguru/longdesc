@@ -42,7 +42,7 @@
 	   }
    </style> 
 </head>
-<body>
+<body onload="DrawCaptcha();">
 	<header>
 
 	</header>
@@ -1256,6 +1256,291 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
+
+		</div>
+
+		<div id="crit-1-4">
+
+			<h2>Criterion 1.4 - For each image used as CAPTCHA or as test image, with a text alternative, does this alternative describe the nature and the purpose of the image?</h2>
+
+			<div id="test-1-4-1">
+				<h3>Test 1.4.1: Does each image (img tag) used as a CAPTCHA or test image, with an alt attribute, meet the following conditions: </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>Captha image</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="CAPTCHA Image for identify robot, audio version nearby">
+						<div id="captcha_image_audio_div">
+							<audio id="captcha_image_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript" src="/securimage/securimage.js"></script>
+						<script type="text/javascript">
+						captcha_image_audioObj = new SecurimageAudio({ audioElement: 'captcha_image_audio', controlsElement: 'captcha_image_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code">Type the captha code:</label>
+						<input type="text" name="captcha_code" id="captcha_code">
+					</div>
+
+					<p>Captha image with a title attribute matches the value of the alt attribute</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image2" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="CAPTCHA Image for identify robot, audio version nearby" title="CAPTCHA Image for identify robot, audio version nearby">
+						<div id="captcha_image_audio_div2">
+							<audio id="captcha_image2_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image2_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image2_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image2_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image2').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image2_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript">
+						captcha_image2_audioObj = new SecurimageAudio({ audioElement: 'captcha_image2_audio', controlsElement: 'captcha_image2_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code2">Type the captha code:</label>
+						<input type="text" name="captcha_code2" id="captcha_code2">
+					</div>
+
+					<p>Captha image with an aria-label attribute matches the value of the alt attribute</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image3" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="CAPTCHA Image for identify robot, audio version nearby" aria-label="CAPTCHA Image for identify robot, audio version nearby">
+						<div id="captcha_image_audio_div3">
+							<audio id="captcha_image3_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image3_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image3_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image3_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image3').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image3_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript">
+						captcha_image3_audioObj = new SecurimageAudio({ audioElement: 'captcha_image3_audio', controlsElement: 'captcha_image3_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code3">Type the captha code:</label>
+						<input type="text" name="captcha_code3" id="captcha_code3">
+					</div>
+
+					<p>Captha image with text associate with the aria-labelledby attribute matches the value of the alt attribute</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image4" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="CAPTCHA Image for identify robot, audio version nearby" aria-labelledby="test-1-4-1_captcha1">
+						<div id="captcha_image_audio_div4">
+							<audio id="captcha_image4_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image4_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image4_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image4_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image4').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image4_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript">
+						captcha_image4_audioObj = new SecurimageAudio({ audioElement: 'captcha_image4_audio', controlsElement: 'captcha_image4_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code4">Type the captha code:</label>
+						<input type="text" name="captcha_code4" id="captcha_code4">
+						<p id="test-1-4-1_captcha1">CAPTCHA Image for identify robot, audio version nearby</p>
+					</div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>Captha image with an alt attribute not describes the nature and purpose of the image</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image5" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="">
+						<div id="captcha_image_audio_div5">
+							<audio id="captcha_image5_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image5_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image5_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image5_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image5').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image5_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript">
+						captcha_image5_audioObj = new SecurimageAudio({ audioElement: 'captcha_image5_audio', controlsElement: 'captcha_image5_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code5">Type the captha code:</label>
+						<input type="text" name="captcha_code5" id="captcha_code5">
+					</div>
+
+					<p>Captha image with a title attribute not matches the value of the alt attribute</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image6" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="CAPTCHA Image for identify robot, audio version nearby" title="CAPTCHA">
+						<div id="captcha_image_audio_div6">
+							<audio id="captcha_image6_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image6_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image6_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image6_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image6').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image6_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript">
+						captcha_image6_audioObj = new SecurimageAudio({ audioElement: 'captcha_image6_audio', controlsElement: 'captcha_image6_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code6">Type the captha code:</label>
+						<input type="text" name="captcha_code6" id="captcha_code6">
+					</div>
+
+					<p>Captha image with an aria-label attribute not matches the value of the alt attribute</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image7" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="CAPTCHA Image for identify robot, audio version nearby" aria-label="CAPTCHA">
+						<div id="captcha_image_audio_div7">
+							<audio id="captcha_image7_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image7_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image7_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image7_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image7').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image7_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript">
+						captcha_image7_audioObj = new SecurimageAudio({ audioElement: 'captcha_image7_audio', controlsElement: 'captcha_image7_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code7">Type the captha code:</label>
+						<input type="text" name="captcha_code7" id="captcha_code7">
+					</div>
+
+					<p>Captha image with text associate with the aria-labelledby attribute not matches the value of the alt attribute</p>
+					<div>
+						<img style="float: left; padding: 1rem" id="captcha_image8" src="/securimage/securimage_show.php?<?php echo md5(uniqid(time)) ?>" alt="CAPTCHA Image for identify robot, audio version nearby" aria-labelledby="test-1-4-1_captcha2">
+						<div id="captcha_image_audio_div8">
+							<audio id="captcha_image8_audio" preload="none" style="display: none">
+							<!-- <source id="captcha_image8_source_mp3" src="securimage_play.php?id=1234&amp;format=mp3" type="audio/mpeg"> -->
+								<source id="captcha_image8_source_wav" src="/securimage/securimage_play.php?id=1234" type="audio/wav">
+								<object type="application/x-shockwave-flash" data="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" height="32" width="32">
+									<param name="movie" value="/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=securimage_play.php" />
+								</object>
+							</audio>
+						</div>
+						<div id="captcha_image8_audio_controls">
+							<a role="button" class="captcha_play_button" href="/securimage/securimage_play.php?id=1234" onclick="return false">
+								<img class="captcha_play_image" height="32" width="32" src="/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+								<img class="captcha_loading_image rotating" height="32" width="32" src="/securimage/images/loading.png" alt="Loading audio" style="display: none">
+							</a>
+						</div>
+
+						<a role="button" style="border: 0" href="javascript:void(0)" title="Refresh Image" onclick="document.getElementById('captcha_image8').src = '/securimage/securimage_show.php?' + Math.random(); captcha_image8_audioObj.refresh(); this.blur(); return false">
+							<img height="32" width="32" src="/securimage/images/refresh.png" alt="Refresh Image" onclick="this.blur()" style="border: 0px; vertical-align: bottom" />
+						</a>
+						<br>
+
+						<script type="text/javascript">
+						captcha_image8_audioObj = new SecurimageAudio({ audioElement: 'captcha_image8_audio', controlsElement: 'captcha_image8_audio_controls' });
+						</script>
+						<div style="clear: both"></div>
+
+						<label for="captcha_code8">Type the captha code:</label>
+						<input type="text" name="captcha_code8" id="captcha_code8">
+						<p id="test-1-4-1_captcha2">CAPTCHA</p>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
 
 		</div>
 
