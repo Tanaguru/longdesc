@@ -1025,9 +1025,7 @@
 					<span></span>
 					<h3>Bad samples</h3>
 					<p>Image canvas identified as informative with a title not equal to the aria-label attribute</p>
-					<canvas id="test-1-3-11_canvas_04" class="test_canvas informative-image" aria-label="Alternative" title="Some other alternative">
-			            <!-- Else render the text -->
-			        </canvas>
+					c
 					<p>Image canvas identified as informative with a title not equal to the passage of text associated with the aria-labelledby attribute</p>
 					<canvas id="test-1-3-11_canvas_05" class="test_canvas informative-image" aria-labelledby="test-1-3-11_alternative" title="Some other alternative">
 			            <!-- Else render the text -->
@@ -3173,12 +3171,18 @@
 				
 				<div class="sample test_true">
 					<span></span>
-					<h4>SVG media element with adjacent alternative</p>
+					<h4>SVG media element with adjacent alternative</h4>
 					<svg>
 						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
 					</svg>
 					<p id="test-4-16-1_alt01" style="display:none;">Red circle</p>
 					<p><a href="#test-4-16-1" onclick="javascript:document.getElementById('test-4-16-1_alt01').style.display='block';">show alternative</a></p>
+					<h4>Canvas media element with adjacent alternative</h4>
+					<canvas class="test_canvas">
+			            <!-- Else render the text -->
+			        </canvas>
+					<p id="test-4-16-1_alt02" style="display:none;">drawing image</p>
+					<p><a href="#test-4-16-1" onclick="javascript:document.getElementById('test-4-16-1_alt02').style.display='block';">show alternative</a></p>
 				</div>
 
 				<div class="sample test_false">
@@ -3187,6 +3191,10 @@
 					<svg>
 						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
 					</svg>
+					<h4>Canvas media element without adjacent alternative</h4>
+					<canvas class="test_canvas">
+			            <!-- Else render the text -->
+			        </canvas>
 				</div>
 
 				<div class="clearfix"></div>
