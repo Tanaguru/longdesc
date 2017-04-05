@@ -2493,6 +2493,17 @@
 	                  <source src="voix1.mp3" type="audio/mpeg" />
 	                    <p>Fallback en cas d'incompatibilité du browser</p>
 	                </audio>
+
+	                <p>The following object element that present an audio and has text transcription</p>
+	                <object type="audio/mpeg" data="voix1.mp3">
+				        <param name="movie" value="voix1.mp3" />
+  						<param name="autoplay" value="false" />
+  						<param name="controller" value="true" />
+  						<param name="autoStart" value="0" />
+				    </object>
+
+	                <p>The following embed element that present a video and has no text transcription</p>
+				    <embed src="voix1.mp3" type="audio/mpeg" autoplay="false" autoStart="0"></embed>
 				</div>
 
 				<div class="clearfix"></div>
