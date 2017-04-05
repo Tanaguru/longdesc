@@ -3164,6 +3164,35 @@
 			</div>
 		</div>
 
+		<div id="crit-4-16">
+
+			<h2>Criterion 4.16 - Does each non time-based media have, if necessary, an alternative (except in particular cases)?</h2>
+
+			<div id="test-4-16-1">
+				<h3>Test 4.16.1: Does each non time-based media meet, if necessary, one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<h4>SVG media element with adjacent alternative</p>
+					<svg>
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+					<p id="test-4-16-1_alt01" style="display:none;">Red circle</p>
+					<p><a href="#test-4-16-1" onclick="javascript:document.getElementById('test-4-16-1_alt01').style.display='block';">show alternative</a></p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<h4>SVG media element without adjacent alternative</p>
+					<svg>
+						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+					</svg>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-5-1">
 
 			<h2>Criterion 5.1 - Does each complex data table have a summary?</h2>
