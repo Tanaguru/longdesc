@@ -3509,117 +3509,82 @@
 			<div class="clearfix"></div>
 		</div>
 
-			<table> 
-				<tr> 
-					<th scope="col" width="25%">Ce tableau de mise en page pose des</th> 
-					<th scope="col" width="25%">problèmes quand il est linéarisé. </th>  
-					<th scope="col" width="25%">problèmes. </th>  
-					<th scope="col" width="25%">linéarisé. </th> 
-				</tr> 
-				<tr> 
-					<th scope="row" width="25%">Le contenu n'est donc pas cohérent</th> 
-					<th scope="row" width="25%">pour certains utilisateurs.</th> 
-					<td width="25%">test 1.</td> 
-					<td width="25%">test 2.</td> 
-				</tr> 
-			</table>
+		<div id="crit-5-4">
 
-			<table class="presentation"> 
-				<tr> 
-					<td width="25%" >Ce tableau de mise en page pose des</td> 
-					<td width="25%" >problèmes quand il est linéarisé. </td> 
-				</tr> 
-				<tr> 
-					<td width="25%">Le contenu n'est donc pas cohérent</td> 
-					<td width="25%">pour certains utilisateurs.</td> 
-				</tr> 
-			</table>
-			<table class="data" summary="température des 5 premiers jours de la semaine pour 3 villes"> 
-				<caption>températures de la semaine en fonction de la ville</caption> 
-				<!-- ligne 1: entête des colonnes, ville + les 5 premiers jours --> 
-				<thead> 
-					<tr> 
-						<th id="ville">ville</th> 
-						<th id="lundi">lundi</th> 
-						<th id="mardi">mardi</th> 
-						<th id="mercredi">mercredi</th> 
-						<th id="jeudi">jeudi</th> 
-						<th id="vendredi">vendredi</th> 
-					</tr> 
-				</thead> 
-				<tbody> 
-					<!-- ligne 2: nom de la ville, données corespondantes --> 
-					<tr> 
-						<td>paris</td> 
-						<td>10c°</td> 
-						<td>8c°</td> 
-						<td>10c°</td> 
-						<td>12c°</td> 
-						<td>10c°</td> 
-					</tr> 
-					<!-- ligne 3: nom de la ville, données corespondantes --> 
-					<tr> 
-						<td headers="ville" id="toulouse">toulouse</td> 
-						<td headers="toulouse lundi">13c°</td> 
-						<td headers="toulouse mardi">11c°</td> 
-						<td headers="toulouse mercredi">12c°</td> 
-						<td headers="toulouse jeudi">14c°</td> 
-						<td headers="toulouse vendredi">12c°</td> 
-					</tr> 
-					<!-- ligne 4: nom de la ville, données corespondantes --> 
-					<tr> 
-						<td headers="ville" id="strasbourg">strasbourg</td> 
-						<td headers="strasbourg lundi">7c°</td> 
-						<td headers="strasbourg mardi">5c°</td> 
-						<td headers="strasbourg mercredi">6c°</td> 
-						<td headers="strasbourg jeudi">8c°</td> 
-						<td headers="strasbourg vendredi">7c°</td> 
-					</tr> 
-				</tbody> 
-			</table>
-			<table class="complexe	" summary="température des 5 premiers jours de la semaine pour 3 villes"> 
-				<caption>températures de la semaine en fonction de la ville</caption> 
-				<!-- ligne 1: entête des colonnes, ville + les 5 premiers jours --> 
-				<thead> 
-					<tr> 
-						<th id="ville">ville</th> 
-						<th id="lundi">lundi</th> 
-						<th id="mardi">mardi</th> 
-						<th id="mercredi">mercredi</th> 
-						<th id="jeudi">jeudi</th> 
-						<th id="vendredi">vendredi</th> 
-					</tr> 
-				</thead> 
-				<tbody> 
-					<!-- ligne 2: nom de la ville, données corespondantes --> 
-					<tr> 
-						<td>paris</td> 
-						<td>10c°</td> 
-						<td>8c°</td> 
-						<td>10c°</td> 
-						<td>12c°</td> 
-						<td>10c°</td> 
-					</tr> 
-					<!-- ligne 3: nom de la ville, données corespondantes --> 
-					<tr> 
-						<td headers="ville" id="toulouse">toulouse</td> 
-						<td headers="toulouse lundi">13c°</td> 
-						<td headers="toulouse mardi">11c°</td> 
-						<td headers="toulouse mercredi">12c°</td> 
-						<td headers="toulouse jeudi">14c°</td> 
-						<td headers="toulouse vendredi">12c°</td> 
-					</tr> 
-					<!-- ligne 4: nom de la ville, données corespondantes --> 
-					<tr> 
-						<td headers="ville" id="strasbourg">strasbourg</td> 
-						<td headers="strasbourg lundi">7c°</td> 
-						<td headers="strasbourg mardi">5c°</td> 
-						<td headers="strasbourg mercredi">6c°</td> 
-						<td headers="strasbourg jeudi">8c°</td> 
-						<td headers="strasbourg vendredi">7c°</td> 
-					</tr> 
-				</tbody> 
-			</table>
+			<h2>Criterion 5.4 - Does each data table have a title?</h2>
+
+			<div id="test-5-4-1">
+				<h3>Test 5.4.1: Does each data table (table tag) have a caption tag? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following board has a caption</p>
+	                <table class="support data-table">
+						<caption>Opening hours of the communal house and the CPAS</caption>
+						<tr>
+							<td></td>
+							<th colspan="2" scope="col">Communal house</th>
+							<th colspan="2" scope="col">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th scope="col">Morning</th>
+							<th scope="col">Afternoon</th>
+							<th scope="col">Morning</th>
+							<th scope="col">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th scope="row">Monday</th>
+							<td>8h-12h</td>
+							<td>Close</td>
+							<td>Close</td>
+							<td>14h-18h</td>  
+						</tr>  
+						<tr>    
+							<th scope="row">tuesday</th>
+							<td>8h-12h</td>
+							<td>Close</td>
+							<td>Close</td>
+							<td>14h-18h</td>  
+						</tr>
+					</table>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>the following board has no caption</p>
+	                <table class="support data-table">
+						<tr>
+							<td></td>
+							<th colspan="2" scope="col">Communal house</th>
+							<th colspan="2" scope="col">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th scope="col">Morning</th>
+							<th scope="col">Afternoon</th>
+							<th scope="col">Morning</th>
+							<th scope="col">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th scope="row">Monday</th>
+							<td>8h-12h</td>
+							<td>Close</td>
+							<td>Close</td>
+							<td>14h-18h</td>  
+						</tr>  
+						<tr>    
+							<th scope="row">tuesday</th>
+							<td>8h-12h</td>
+							<td>Close</td>
+							<td>Close</td>
+							<td>14h-18h</td>  
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
 
 		<div id="crit-7-3">
 
