@@ -4014,7 +4014,7 @@
 				<div class="sample test_false">
 					<span></span>
 					<p>The following board has scope attribute for each column and row header but not with col or raw value</p>
-	                <table class="support data-table complex-data-table">
+	                <table class="support data-table">
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
@@ -4080,7 +4080,7 @@
 				<div class="sample test_false">
 					<span></span>
 					<p>The following board has id attribute for each column and row header but not unique</p>
-	                <table class="support data-table complex-data-table">
+	                <table class="support complex-data-table">
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
@@ -4131,6 +4131,89 @@
 							<td headers="mc mc-pm lu">Close</td>
 							<td headers="cp cp-am lu">Close</td>
 							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="test-5-7-4">
+				<h3>Test 5.7.4: Does each cell (td or th tag) associated with one or several headers with an id attribute meet the following conditions: </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following board has an id attribute for each column and row header and an headers attribute for each cell</p>
+	                <table class="support complex-data-table">
+						<caption>Opening hours of the communal house and the CPAS</caption>
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="mc mc-am lu">8h-12h</td>
+							<td headers="mc mc-pm lu">Close</td>
+							<td headers="cp cp-am lu">Close</td>
+							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following board has an id attribute for each column and row header but not an headers attribute for each cell</p>
+	                <table class="support complex-data-table">
+						<caption>Opening hours of the communal house and the CPAS</caption>
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td>8h-12h</td>
+							<td>Close</td>
+							<td>Close</td>
+							<td>14h-18h</td>  
+						</tr>
+					</table>
+
+					<p>The following board has id and scope attribute for each column and row header and an headers attribute for each cell but not with relevant value</p>
+	                <table class="support complex-data-table">
+						<caption>Opening hours of the communal house and the CPAS</caption>
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="">8h-12h</td>
+							<td headers="">Close</td>
+							<td headers="test">Close</td>
+							<td headers=":)">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
