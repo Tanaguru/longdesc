@@ -3280,7 +3280,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>the following board has a caption</p>
-	                <table class="support">
+	                <table class="support complex-data-table">
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
@@ -3307,7 +3307,44 @@
 				<div class="sample test_false">
 					<span></span>
 					<p>the following board has no caption</p>
-	                <table class="support">
+	                <table class="support complex-data-table">
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="mc mc-am lu">8h-12h</td>
+							<td headers="mc mc-pm lu">Close</td>
+							<td headers="cp cp-am lu">Close</td>
+							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		<div id="crit-5-2">
+
+			<h2>Criterion 5.2 - For each complex data table with a summar, is this summary relevant?</h2>
+
+			<div id="test-5-2-1">
+				<h3>Test 5.2.1: For each complex data table (table tag) with a summary, is this summary relevant? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>the following board has a caption</p>
+	                <table class="support complex-data-table">
+						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
 							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
@@ -3330,8 +3367,83 @@
 					</table>
 				</div>
 
-				<div class="clearfix"></div>
+				<div class="sample test_false">
+					<span></span>
+					<p>the following board has caption not relevant</p>
+	                <table class="support complex-data-table">
+						<caption>^_^ ;-)</caption>
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="mc mc-am lu">8h-12h</td>
+							<td headers="mc mc-pm lu">Close</td>
+							<td headers="cp cp-am lu">Close</td>
+							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+
+					<p>the following board has caption not relevant</p>
+	                <table class="support complex-data-table">
+						<caption>a board</caption>
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="mc mc-am lu">8h-12h</td>
+							<td headers="mc mc-pm lu">Close</td>
+							<td headers="cp cp-am lu">Close</td>
+							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+
+					<p>the following board has caption not relevant</p>
+	                <table class="support complex-data-table">
+						<caption></caption>
+						<tr>
+							<td></td>
+							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+						</tr>  
+						<tr>
+							<td></td>
+							<th id="mc-am" abbr="Morning">Morning</th>
+							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am" abbr="Morning">Morning</th>
+							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+						</tr>  
+						<tr>    
+							<th id="lu" abbr="monday">Monday</th>
+							<td headers="mc mc-am lu">8h-12h</td>
+							<td headers="mc mc-pm lu">Close</td>
+							<td headers="cp cp-am lu">Close</td>
+							<td headers="cp cp-pm lu">14h-18h</td>  
+						</tr>
+					</table>
+				</div>
 			</div>
+			<div class="clearfix"></div>
+		</div>
 
 			<table> 
 				<tr> 
@@ -3444,8 +3556,6 @@
 					</tr> 
 				</tbody> 
 			</table>
-			<div class="clearfix"></div>
-		</div>
 
 		<div id="crit-7-3">
 
