@@ -3208,6 +3208,62 @@
 					<canvas class="test_canvas">
 			            <!-- Else render the text -->
 			        </canvas>
+
+					<h4>Object media element without adjacent alternative</h4>
+					<object type="image/svg+xml" data="data/test.svg" width="320" height="240">
+					  <param name="src" value="data/test.svg">
+					</object>
+
+					<h4>Embed media element without adjacent alternative</h4>
+					<embed type="image/svg+xml" src="data/test.svg" width="320" height="240"></embed>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-4-18">
+
+			<h2>Criterion 4.18 - Can each autoplaying sound be controlled by the user?</h2>
+
+			<div id="test-4-18-1">
+				<h3>Test 4.18.1: Does each audio sequence played automatically via an object, video, audio, embed tag, a JavaScript code or bgsound property meet one of the following conditions? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<h4>Short audio voice in audio tag</h4>
+	                <audio controls autoplay="true">
+	                  <source src="voix1.mp3" type="audio/mpeg" />
+	                </audio>
+
+					<h4>Short audio voice in video tag</h4>
+	                <video controls autoplay="true" style="width:200px;">
+						<source src="voix1.mp3" type="audio/mpeg">
+					</video>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<h4>Short audio voice in audio tag without controls</h4>
+	                <audio autoplay="true">
+	                  <source src="voix1.mp3" type="audio/mpeg" />
+	                </audio>
+
+					<h4>Short audio voice in video tag without controls</h4>
+	                <video autoplay="true" style="width:200px;">
+						<source src="voix1.mp3" type="video/ogg">
+					</video>
+
+	                <h4>Short audio voice in object tag without controls</h4>
+	                <object type="audio/mpeg" data="voix1.mp3">
+				        <param name="movie" value="voix1.mp3" />
+  						<param name="autoplay" value="false" />
+  						<param name="controller" value="true" />
+  						<param name="autoStart" value="0" />
+				    </object>
+
+	                <h4>Short audio voice in embed tag without controls</h4>
+				    <embed src="voix1.mp3" type="audio/mpeg" autoplay="false" autoStart="0"></embed>
 				</div>
 
 				<div class="clearfix"></div>
