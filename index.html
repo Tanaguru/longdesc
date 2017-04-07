@@ -4361,6 +4361,32 @@
 			<div class="clearfix"></div>
 		</div>
 
+		<div id="crit-6-2">
+
+			<h2>Criterion 6.2 - For each link with a link title, is this title relevant?</h2>
+
+			<div id="test-6-2-1">
+				<h3>Test 6.2.1: For each text link with a link title (title attribute), is the content of this attribute relevant? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following link has a relevant title attribute</p>
+					<a href="#" title="Retour en haut de page">Retour</a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following links have no relevant title attribute</p>
+					<ul>
+						<li><a href="#" title="">Retour</a></li>
+						<li><a href="#" title="Retour">Retour</a></li>
+						<li><a href="#" title="en haut de page">Retour</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-7-3">
 
 			<h2>Criterion 7.3 - Can each script be controlled by keyboard and mouse (except in particular cases)?</h2>
