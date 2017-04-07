@@ -4221,6 +4221,55 @@
 			<div class="clearfix"></div>
 		</div>
 
+		<div id="crit-5-8">
+
+			<h2>Criterion 5.8 - Each layout table must not use elements intended for data tables. Has this rule been followed?</h2>
+
+			<div id="test-5-8-1">
+				<h3>Test 5.8.1: Does each layout table (table tag) meet the following conditions: </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following presentation boards are correctly implemented</p>
+					<table class="presentation-table"> 
+						<tr> 
+							<td>Ce tableau </td> 
+							<td>de mise en page </td>  
+						</tr> 
+						<tr> 
+							<td>est correctement </td> 
+							<td>linéarisé. </td> 
+						</tr> 
+					</table>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following presentation boards are not correctly linearized</p>
+					<table class="presentation-table">
+						<caption>Presentation board</caption> 
+						<colgroup>
+							<col span="2" style="background-color:red">
+							<col style="background-color:yellow">
+						</colgroup>	
+						<thead>
+							<tr> 
+								<th axis="text" scope="col">Ce tableau </th> 
+								<th axis="text" scope="col">de mise en page </th>  
+							</tr>
+						</thead> 
+						<tfoot>
+							<tr> 
+								<td axis="text" headers="test">est correctement </td> 
+								<td axis="text" headers="test">linéarisé. </td> 
+							</tr>
+						</tfoot> 
+					</table>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
 		<div id="crit-7-3">
 
 			<h2>Criterion 7.3 - Can each script be controlled by keyboard and mouse (except in particular cases)?</h2>
