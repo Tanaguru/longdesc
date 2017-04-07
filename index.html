@@ -4385,6 +4385,27 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+
+			<div id="test-6-2-2">
+				<h3>Test 6.2.2: For each image link with a link title (title attribute), is the content of this attribute relevant? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following link has a relevant title attribute</p>
+					<a href="#" title="Retour en haut de page"><img src="img/haut.png" alt="Retour" /></a>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following links have no relevant title attribute</p>
+					<ul>
+						<li><a href="#" title=""><img src="img/haut.png" alt="Retour" /></a></li>
+						<li><a href="#" title="Retour"><img src="img/haut.png" alt="Retour" /></a></li>
+						<li><a href="#" title="en haut de page"><img src="img/haut.png" alt="Retour" /></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 		</div>
 
 		<div id="crit-7-3">
