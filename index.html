@@ -4429,6 +4429,91 @@
 			</div>
 		</div>
 
+		<div id="crit-6-3">
+
+			<h2>Criterion 6.3 - Is each link text alone explicit out of context (except in particular cases)?</h2>
+
+			<div id="test-6-3-1">
+				<h3>Test 6.3.1: Does each text link meet one of the following conditions (except in particular cases)? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following links are explicits alone and out of context</p>
+					<ul>
+						<li>
+							<a href="#">
+								Retour en haut de page
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Retour en haut de page">
+								Retour
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following links are not explicits alone and out of context</p>
+					<ul>
+						<li>
+							<a href="#">
+								Retour
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Retour à la vie">
+								Retour
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-6-3-2">
+				<h3>Test 6.3.2: Is each text for an image link explicit out of context (except in particular cases)? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following images links are explicits alone and out of context</p>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/haut.png" alt="Retour en haut de page" />
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Retour en haut de page">
+								<img src="img/haut.png" alt="Retour" />
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following links are not explicits alone and out of context</p>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/haut.png" alt="Retour" />
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Retour à la vie">
+								<img src="img/haut.png" alt="Retour" />
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-7-3">
 
 			<h2>Criterion 7.3 - Can each script be controlled by keyboard and mouse (except in particular cases)?</h2>
