@@ -4245,7 +4245,7 @@
 
 				<div class="sample test_false">
 					<span></span>
-					<p>The following presentation boards are not correctly linearized</p>
+					<p>The following presentation boards are not correctly implemented</p>
 					<table class="presentation-table">
 						<caption>Presentation board</caption> 
 						<colgroup>
@@ -4265,6 +4265,36 @@
 							</tr>
 						</tfoot> 
 					</table>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		<div id="crit-6-1">
+
+			<h2>Criterion 6.1 - Is each link explicit (except in particular cases)?</h2>
+
+			<div id="test-6-1-1">
+				<h3>Test 6.1.1: Does each link context meet one of the following conditions (except in particular cases)? </h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following links are explicits alone or in the context</p>
+					<ul>
+						<li><a href="#">Retour en haut de page</a></li>
+						<li><p>Pour retourner en haut de page, <a href="#">Cliquez ici</a><p></li>
+					</ul>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following links are not explicits alone or in the context</p>
+					<ul>
+						<li><a href="#">;-) ^_^</a></li>
+						<li><a href="#">toto</a></li>
+						<li><a href="#">Cliquez ici</a></li>
+						<li><p>Pour retourner en haut de page, <a href="#crit-13-14">Cliquez sur le lien suivant</a>, <a href="#">lien suivant</a><p></li>
+					</ul>
 				</div>
 			</div>
 			<div class="clearfix"></div>
