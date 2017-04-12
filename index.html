@@ -6,10 +6,11 @@
 -->
 <html>
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="video.css">
-  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="video.css" />
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style type="text/css"> 
 	   .px_html{ 
 	      font-size:12px; 
@@ -155,13 +156,13 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>Input type image with alternative</p>
-                	<input type="image" value="Send" alt="Send" src="img/send.png" /> 
+                	<input type="image" alt="Send" src="img/send.png" /> 
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
 					<p>Input type image without alternative</p>
-                	<input type="image" value="Send" src="img/send.png" /> 
+                	<input type="image" src="img/send.png" /> 
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -212,9 +213,9 @@
 					<p>Image with empty alternative</p>
                 	<img src="img/Image_with_empty_alternative.png" alt="" /> 
 					<p>Image indentified as decorative (the "id" attribute has value "decorative-image") with empty alternative</p>
-                	<img id="decorative-image" src="img/Image_identified_as_decorative_and_with_empty_alternative.png" alt="" /> 
+                	<img class="decorative-image" src="img/Image_identified_as_decorative_and_with_empty_alternative.png" alt="" /> 
 					<p>Image indentified as decorative (the "class" attribute has value "decorative-image") with empty alternative</p>
-                	<img id="decorative-image" src="img/Image_identified_as_decorative_and_with_empty_alternative.png" alt="" /> 
+                	<img class="decorative-image" src="img/Image_identified_as_decorative_and_with_empty_alternative.png" alt="" /> 
 					<p>Image with empty alternative and a role="presentation" attribute</p>
                 	<img src="img/Image_with_empty_alternative_and_role_presentation.png" alt="" role="presentation" />
 
@@ -225,7 +226,7 @@
 					<p>Image with not empty alternative</p>
                 	<img src="img/Image_with_not_empty_alternative.png" alt="Not empty alt" /> 
 					<p>Image indentified as decorative (the "id" attribute has value "decorative-image") with not empty alternative</p>
-                	<img id="decorative-image" src="img/Image_indentified_as_decorative_and_with_not_empty_alternative.png" alt="Not empty alt" /> 
+                	<img class="decorative-image" src="img/Image_indentified_as_decorative_and_with_not_empty_alternative.png" alt="Not empty alt" /> 
 					<p>Image with not empty alternative and a role="presentation" attribute</p>
                 	<img src="img/Image_with_not_empty_alternative_and_role_presentation_attribute.png" alt="Not empty alt" role="presentation" />
 					<p>Image with empty alternative, but a not empty "title" attribute</p>
@@ -344,7 +345,7 @@
 			            <!-- Else render the text -->
 			            <param name="" value="" aria-describedby="test1-2-3_not_empty_alt">
 			        </object>
-			        <caption id="test1-2-3_not_empty_alt">Illustration of diversity</caption>
+			        <div id="test1-2-3_not_empty_alt">Illustration of diversity</div>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -427,7 +428,7 @@
 						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" aria-describedby="test1-2-4_not_empty_alt" />
 					</svg>
 					<div class="clearfix"></div>
-			        <caption id="test1-2-4_not_empty_alt">Some text</caption>
+			        <div id="test1-2-4_not_empty_alt">Some text</div>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -477,7 +478,7 @@
 			            <!-- Else render the text -->
 			            <span aria-describedby="test1-2-5_not_empty_alt"></span>
 			        </canvas>
-			        <caption id="test1-2-5_not_empty_alt">Illustration of diversity</caption>
+			        <div id="test1-2-5_not_empty_alt">Illustration of diversity</div>
 				</div>
 			</div>
 
@@ -492,11 +493,11 @@
 					<h4>Good samples</h4>
 					<p>Image embed</p>
 					<embed src="img/diversite_embed_001.png" aria-hidden="true" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 					<p>Image embed identified as decorative</p>
 					<embed src="img/diversite_embed_002.png" class="decorative-image" aria-hidden="true" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 				</div>
 				<div class="sample test_false">
@@ -504,26 +505,26 @@
 					<h4>Bad samples</h4>
 					<p>Image embed identified as decorative and without "aria-hidden" attribute</p>
 					<embed src="img/diversite_embed_004.png" class="decorative-image" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 					<p>Image embed identified as decorative and with an aria-label attribute</p>
 					<embed src="img/diversite_embed_005.png" class="decorative-image" aria-hidden="true" aria-label="Illustration of diversity" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 					<p>Image embed identified as decorative and with an aria-labelledby attribute</p>
 					<embed src="img/diversite_embed_007.png" class="decorative-image" aria-hidden="true" aria-labelledby="test1-2-6_not_empty_alt" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 					<p>Image embed identified as decorative and with an aria-describedby attribute</p>
 					<embed src="img/diversite_embed_008.png" class="decorative-image" aria-hidden="true" aria-describedby="test1-2-6_not_empty_alt" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 					<p>Image embed identified as decorative and with an aria-describedby attribute in a child tag</p>
 					<embed src="img/diversite_embed_009.png" class="decorative-image" aria-hidden="true" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			            <param name="" value="" aria-describedby="test1-2-6_not_empty_alt">
 			        </embed>
-			        <caption id="test1-2-6_not_empty_alt">Illustration of diversity</caption>
+			        <div id="test1-2-6_not_empty_alt">Illustration of diversity</div>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -554,7 +555,7 @@
                 	<p>Image in figure and caption with an aria-labelledby attribute that text associated is equal to the alt attribute</p>
                 	<figure>
                 		<img src="img/informative_006.png" class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-1_alt_02" />
-                		<caption id="test_1-3-1_alt_01">Not empty alt</caption>
+                		<caption id="test_1-3-1_alt_02">Not empty alt</caption>
                 	</figure>
 				</div>
 				<div class="sample test_false">
@@ -567,12 +568,12 @@
 					<p>Image identified as informative with an aria-label attribute differente to the alt attribute</p>
                 	<img src="img/informative_009.png" class="informative-image" alt="Not empty alt" aria-label="a other text" />
 					<p>Image identified as informative with an aria-labelledby attribute that text associated is differente to the alt attribute</p>
-                	<img src="img/informative_010.png" class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-1_alt_01" />
-                	<span id="test_1-3-1_alt_01">a other text</span>
+                	<img src="img/informative_010.png" class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-1_alt_03" />
+                	<span id="test_1-3-1_alt_03">a other text</span>
                 	<p>Image in figure and caption with an aria-labelledby attribute that text associated is differente to the alt attribute</p>
                 	<figure>
-                		<img src="img/informative_011.png" class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-1_alt_02" />
-                		<caption id="test_1-3-1_alt_01">a other text</caption>
+                		<img src="img/informative_011.png" class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-1_alt_04" />
+                		<caption id="test_1-3-1_alt_04">a other text</caption>
                 	</figure>
 				</div>
 			</div>
@@ -586,32 +587,32 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>Area tag Image clickable with not empty alternative</p>
-	                <img src="img/informative_012.png" alt="Not empty alt" usemap="#map_test1-2-2_01" /> 
-	                <map id="map_test1-2-2_01" name="map_test1-2-2_01"> 
+	                <img src="img/informative_012.png" alt="Not empty alt" usemap="#map_test1-3-2_01" /> 
+	                <map id="map_test1-3-2_01" name="map_test1-3-2_01"> 
 	                	<area alt="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area alt="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map> 
 					<p>Area tag Image clickable identified as informative with empty alternative</p>
-	                <img src="img/informative_013.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
-	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                <img src="img/informative_013.png" alt="Not empty alt" usemap="#map_test1-3-2_02" /> 
+	                <map id="map_test1-3-2_02" name="map_test1-3-2_02"> 
 	                	<area class="informative-image" alt="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map> 
 					<p>Area tag Image clickable identified as informative that title is equal to the alt</p>
-	                <img src="img/informative_014.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
-	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                <img src="img/informative_014.png" alt="Not empty alt" usemap="#map_test1-3-2_03" /> 
+	                <map id="map_test1-3-2_03" name="map_test1-2-2_03"> 
 	                	<area class="informative-image" alt="Not empty alt" title="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="Not empty alt" title="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map> 
 					<p>Area tag Image clickable identified as informative that aria-label is equal to the alt</p>
-	                <img src="img/informative_015.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
-	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                <img src="img/informative_015.png" alt="Not empty alt" usemap="#map_test1-3-2_04" /> 
+	                <map id="map_test1-3-2_04" name="map_test1-3-2_04"> 
 	                	<area class="informative-image" alt="Not empty alt" aria-label="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="Not empty alt" aria-label="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map> 
 					<p>Area tag Image clickable identified as informative that aria-labelledby is equal to the alt</p>
-	                <img src="img/informative_016.png" alt="Not empty alt" usemap="#map_test1-2-2_02" /> 
-	                <map id="map_test1-2-2_02" name="map_test1-2-2_02"> 
+	                <img src="img/informative_016.png" alt="Not empty alt" usemap="#map_test1-3-2_05" /> 
+	                <map id="map_test1-3-2_05" name="map_test1-3-2_05"> 
 	                	<area class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-2_alt_01" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="Not empty alt" aria-labelledby="test_1-3-2_alt_01" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map>
@@ -621,26 +622,26 @@
 					<span></span>
 					<h4>Bad samples</h4>
 					<p>Area tag Image clickable identified as informative with empty alternative</p>
-	                <img src="img/informative_017.png" alt="" usemap="#map_test1-2-2_03" /> 
-	                <map id="map_test1-2-2_03" name="map_test1-2-2_03"> 
+	                <img src="img/informative_017.png" alt="" usemap="#map_test1-3-2_06" /> 
+	                <map id="map_test1-3-2_06" name="map_test1-3-2_06"> 
 	                	<area class="informative-image" alt="" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map> 
 					<p>Area tag Image clickable identified as informative with title attribute different than alt attribute</p>
-	                <img src="img/informative_018.png" alt="Not empty alt" usemap="#map_test1-2-2_04" /> 
-	                <map id="map_test1-2-2_04" name="map_test1-2-2_04"> 
+	                <img src="img/informative_018.png" alt="Not empty alt" usemap="#map_test1-3-2_07" /> 
+	                <map id="map_test1-3-2_07" name="map_test1-3-2_07"> 
 	                	<area class="informative-image" alt="Not empty alt" title="" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="Not empty alt" title="Not empty title" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map> 
 					<p>Area tag Image clickable identified as informative with aria-label attribute different than alt attribute</p>
-	                <img src="img/informative_019.png" alt="Not empty alt" usemap="#map_test1-2-2_05" /> 
-	                <map id="map_test1-2-2_05" name="map_test1-2-2_05"> 
+	                <img src="img/informative_019.png" alt="Not empty alt" usemap="#map_test1-3-2_08" /> 
+	                <map id="map_test1-3-2_08" name="map_test1-3-2_08"> 
 	                	<area class="informative-image" alt="Not empty alt" aria-label="Not empty aria-label" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="Not empty alt" aria-label="Not empty aria-label" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map> 
 					<p>Area tag Image clickable identified as informative with aria-labelledby attribute different than alt attribute</p>
-	                <img src="img/informative_020.png" alt="Not empty alt" usemap="#map_test1-2-2_06" /> 
-	                <map id="map_test1-2-2_06" name="map_test1-2-2_06"> 
+	                <img src="img/informative_020.png" alt="Not empty alt" usemap="#map_test1-3-2_09" /> 
+	                <map id="map_test1-3-2_09" name="map_test1-3-2_09"> 
 	                	<area class="informative-image" alt="Not empty alt" aria-labelledby="test1-3-2_not_empty_alt" shape="rect" coords="0,0,150,80" href="#test-1-3-2">
 						<area class="informative-image" alt="Not empty alt" aria-labelledby="test1-3-2_not_empty_alt" shape="rect" coords="150,0,300,80" href="#test-1-3-2">
 	                </map>
@@ -657,26 +658,26 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>Input type image with alternative</p>
-                	<input type="image" value="Send" alt="Send" src="img/send.png" /> 
+                	<input type="image" alt="Send" src="img/send.png" /> 
 					<p>Input type image with a title equal to the alt</p>
-                	<input type="image" value="Send" alt="Send" title="Send" src="img/send.png" /> 
+                	<input type="image" alt="Send" title="Send" src="img/send.png" /> 
 					<p>Input type image with a aria-label equal to the alt</p>
-                	<input type="image" value="Send" alt="Send" aria-label="Send" src="img/send.png" /> 
+                	<input type="image" alt="Send" aria-label="Send" src="img/send.png" /> 
 					<p>Input type image with a aria-label equal to the alt</p>
-                	<input type="image" value="Send" alt="Send" aria-labelledy="test1-3-3_not_empty_alt" src="img/send.png" /> 
+                	<input type="image" alt="Send" aria-labelledy="test1-3-3_not_empty_alt" src="img/send.png" /> 
                 	<p id="test1-3-3_not_empty_alt">Send</p>
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
 					<p>Input type image with empty alternative</p>
-                	<input type="image" value="Send" alt="" src="img/send.png" /> 
+                	<input type="image" alt="" src="img/send.png" /> 
 					<p>Input type image with a title not equal to the alt</p>
-                	<input type="image" value="Send" alt="Send" title="Not empty alternative" src="img/send.png" /> 
+                	<input type="image" alt="Send" title="Not empty alternative" src="img/send.png" /> 
 					<p>Input type image with a aria-label not equal to the alt</p>
-                	<input type="image" value="Send" alt="Send" aria-label="Not empty alternative" src="img/send.png" /> 
+                	<input type="image" alt="Send" aria-label="Not empty alternative" src="img/send.png" /> 
 					<p>Input type image with a aria-label not equal to the alt</p>
-                	<input type="image" value="Send" alt="Send" aria-labelledy="test1-3-3_not_empty_alt_bad" src="img/send.png" /> 
+                	<input type="image" alt="Send" aria-labelledy="test1-3-3_not_empty_alt_bad" src="img/send.png" /> 
                 	<p id="test1-3-3_not_empty_alt_bad">Not empty alternative</p>
 				</div>
 			</div>
@@ -766,19 +767,19 @@
 					<h4>Good samples</h4>
 					<p>Image embed identified as informative and with hidden alternative</p>
 					<embed src="img/diversite_embed_010.png" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 			        <p><a href="#test-1-3-4" onclick="javascript:document.getElementById('hidden_test-1-3-6_not_empty_alt_01').style.display='block';">Show alternative</a></p>
 			        <p id="hidden_test-1-3-6_not_empty_alt_01" style="display:none;">Not empty alt</p>
 					<p>Image embed identified as informative and with a replacement mechanism</p>
 					<embed src="img/diversite_embed_011.png" id="embed_test-1-3-6_not_empty_alt_02" class="informative-image" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 			        <p id="hidden_test-1-3-6_not_empty_alt_02" style="display:none;">Not empty alt</p>
 			        <p><a href="#hidden_test-1-3-6_not_empty_alt_02" onclick="javascript:document.getElementById('hidden_test-1-3-6_not_empty_alt_02').style.display='block';javascript:document.getElementById('embed_test-1-3-6_not_empty_alt_02').style.display='none';">Show alternative</a></p>
 					<p>Image embed identified as informative and with a replacement mechanism</p>
 					<embed src="img/diversite_embed_011.png" id="embed_test-1-3-6_not_empty_alt_03" class="informative-image" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 			        <p id="hidden_test-1-3-6_not_empty_alt_03" style="display:none;"><img src="img/diversite_embed_012.png" alt="Not empty alt" /></p>
 			        <p><a href="#hidden_test-1-3-6_not_empty_alt_03" onclick="javascript:document.getElementById('hidden_test-1-3-6_not_empty_alt_03').style.display='block';javascript:document.getElementById('embed_test-1-3-6_not_empty_alt_03').style.display='none';">Show alternative</a></p>
@@ -788,12 +789,12 @@
 					<h4>Bad samples</h4>
 					<p>Image embed identified as informative and with some text between embed tags</p>
 					<embed src="img/diversite_embed_003.png" class="informative-image" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			            Illustration of diversity.
 			        </embed>
 					<p>Image embed identified as informative and without replacement mechanism</p>
 					<embed src="img/diversite_embed_013.png" class="informative-image" type="image/gif">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 				</div>
 			</div>
@@ -808,11 +809,11 @@
 					<h4>Good samples</h4>
 					<p>Image embed identified as informative and with identical title and aria-label attribute</p>
 					<embed class="informative-image" src="img/diversite_018.png" type="image/gif" title="Not empty alt" aria-label="Not empty alt">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 					<p>Image embed identified as informative and with identical title and content associated with aria-labelledby attribute</p>
 					<embed src="img/diversite_019.png" class="informative-image" type="image/gif" title="Not empty alt" aria-labelledby="test1-3-7_not_empty_alt_good">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 			        <span id="test1-3-7_not_empty_alt_good">Not empty alt</span>
 				</div>
@@ -821,11 +822,11 @@
 					<h4>Bad samples</h4>
 					<p>Image embed identified as informative and with different title and aria-label attribute</p>
 					<embed class="informative-image" src="img/diversite_020.png" type="image/gif" title="Not empty alt" aria-label="Not empty alt">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 					<p>Image embed identified as informative and with different title and content associated with aria-labelledby attribute</p>
 					<embed src="img/diversite_021.png" class="informative-image" type="image/gif" title="A other not empty alt" aria-labelledby="test1-3-7_not_empty_alt_bad">
-			            <!-- Else render the text -->
+			            
 			        </embed>
 			        <span id="test1-3-7_not_empty_alt_bad">A other not empty alt</span>
 				</div>
@@ -1048,10 +1049,10 @@
 					<p>Image canvas identified as informative with a title not equal to the aria-label attribute</p>
 					c
 					<p>Image canvas identified as informative with a title not equal to the passage of text associated with the aria-labelledby attribute</p>
-					<canvas id="test-1-3-11_canvas_05" class="test_canvas informative-image" aria-labelledby="test-1-3-11_alternative" title="Some other alternative">
+					<canvas id="test-1-3-11_canvas_05" class="test_canvas informative-image" aria-labelledby="test-1-3-11_alternative_02" title="Some other alternative">
 			            <!-- Else render the text -->
 			        </canvas>
-			        <span id="test-1-3-11_alternative">Alternative</span>
+			        <span id="test-1-3-11_alternative_02">Alternative</span>
 					<p>Image canvas identified as informative with a title not equal to the aria-label attribute present in the child tag</p>
 					<canvas id="test-1-3-11_canvas_06" class="test_canvas informative-image" title="Some other alternative">
 			            <!-- Else render the text -->
@@ -1219,14 +1220,14 @@
 	                    <area alt="Illustration of diversity." shape="rect" coords="150,0,300,80" href="#test-1-3-13">
 	                </map>
 	                <p>Input image with a short alternative</p>
-                	<input type="image" value="Send" alt="Send" title="Send" src="img/send.png" /> 
+                	<input type="image" alt="Send" title="Send" src="img/send.png" /> 
 					<p>Object image with a short alternative with aria-label propertie</p>
 					<object class="informative-image" data="img/diversite_014.png" type="image/gif" aria-label="Not empty alt">
 			            <!-- Else render the text -->
 			        </object>
 					<p>Embed image with a short alternative with aria-labelledby propertie</p>
 					<embed src="img/diversite_019.png" class="informative-image" type="image/gif" aria-labelledby="test1-3-13_not_empty_alt_good">
-			            <!-- Else render the text -->
+
 			        </embed>
 			        <span id="test1-3-13_not_empty_alt_good">Not empty alt</span>
 					<p>Svg image with a short alternative with aria-label propertie and text associated with desc tag</p>
@@ -1252,14 +1253,14 @@
 	                    <area alt="Informative image alternative and some other information that not util to describe the information in the image." shape="rect" coords="150,0,300,80" href="#test-1-3-13">
 	                </map>
 	                <p>Input image with a long alternative</p>
-                	<input type="image" value="Send" alt="Informative image alternative and some other information that not util to describe the information in the image." src="img/send.png" /> 
+                	<input type="image" alt="Informative image alternative and some other information that not util to describe the information in the image." src="img/send.png" /> 
 					<p>Object image with a long alternative with aria-label propertie</p>
 					<object class="informative-image" data="img/diversite_014.png" type="image/gif" aria-label="Informative image alternative and some other information that not util to describe the information in the image.">
 			            <!-- Else render the text -->
 			        </object>
 					<p>Embed image with a long alternative with aria-labelledby propertie</p>
 					<embed src="img/diversite_019.png" class="informative-image" type="image/gif" aria-labelledby="test1-3-13_not_empty_alt_bad">
-			            <!-- Else render the text -->
+
 			        </embed>
 			        <span id="test1-3-13_not_empty_alt_bad">Informative image alternative and some other information that not util to describe the information in the image.</span>
 					<p>Svg image with a long alternative with aria-label propertie and text associated with desc tag</p>
@@ -2500,7 +2501,7 @@
 	                <p>You did accessible content</p>
 
 	                <p>The following embed element that present a video and has no text transcription</p>
-				    <embed src="voix1.mp3" type="audio/mpeg" autoplay="false" autoStart="0"></embed>
+				    <embed src="voix1.mp3" type="audio/mpeg" autoStart="0"></embed>
 	                <h4>Text transcription</h4>
 	                <p>You did accessible content</p>
 				</div>
@@ -2522,7 +2523,7 @@
 				    </object>
 
 	                <p>The following embed element that present a video and has no text transcription</p>
-				    <embed src="voix1.mp3" type="audio/mpeg" autoplay="false" autoStart="0"></embed>
+				    <embed src="voix1.mp3" type="audio/mpeg" autoStart="0"></embed>
 				</div>
 
 				<div class="clearfix"></div>
@@ -3221,7 +3222,7 @@
 
 				<div class="sample test_false">
 					<span></span>
-					<h4>SVG media element without adjacent alternative</p>
+					<h4>SVG media element without adjacent alternative</h4>
 					<svg>
 						<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
 					</svg>
@@ -3253,12 +3254,12 @@
 				<div class="sample test_true">
 					<span></span>
 					<h4>Short audio voice in audio tag</h4>
-	                <audio controls autoplay="true">
+	                <audio controls autoplay>
 	                  <source src="voix1.mp3" type="audio/mpeg" />
 	                </audio>
 
 					<h4>Short audio voice in video tag</h4>
-	                <video controls autoplay="true" style="width:200px;">
+	                <video controls autoplay style="width:200px;">
 						<source src="voix1.mp3" type="audio/mpeg">
 					</video>
 				</div>
@@ -3266,12 +3267,12 @@
 				<div class="sample test_false">
 					<span></span>
 					<h4>Short audio voice in audio tag without controls</h4>
-	                <audio autoplay="true">
+	                <audio autoplay>
 	                  <source src="voix1.mp3" type="audio/mpeg" />
 	                </audio>
 
 					<h4>Short audio voice in video tag without controls</h4>
-	                <video autoplay="true" style="width:200px;">
+	                <video autoplay style="width:200px;">
 						<source src="voix1.mp3" type="video/ogg">
 					</video>
 
@@ -3284,7 +3285,7 @@
 				    </object>
 
 	                <h4>Short audio voice in embed tag without controls</h4>
-				    <embed src="voix1.mp3" type="audio/mpeg" autoplay="false" autoStart="0"></embed>
+				    <embed src="voix1.mp3" type="audio/mpeg" autoStart="0"></embed>
 				</div>
 
 				<div class="clearfix"></div>
@@ -3305,22 +3306,22 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_01" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_01" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_01" abbr="Morning">Morning</th>
+							<th id="mc-pm_01" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_01" abbr="Morning">Morning</th>
+							<th id="cpas-pm_01" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_01" abbr="monday">Monday</th>
+							<td headers="mc_01 mc-am_01 lu_01">8h-12h</td>
+							<td headers="mc_01 mc-pm_01 lu_01">Close</td>
+							<td headers="cp_01 cp-am_01 lu_01">Close</td>
+							<td headers="cp_01 cp-pm_01 lu_01">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -3331,22 +3332,22 @@
 	                <table class="support complex-data-table">
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_02" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_02" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_02" abbr="Morning">Morning</th>
+							<th id="mc-pm_02" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_02" abbr="Morning">Morning</th>
+							<th id="cpas-pm_02" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_02" abbr="monday">Monday</th>
+							<td headers="mc_02 mc-am_02 lu_02">8h-12h</td>
+							<td headers="mc_02 mc-pm_02 lu_02">Close</td>
+							<td headers="cp_02 cp-am_02 lu_02">Close</td>
+							<td headers="cp_02 cp-pm_02 lu_02">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -3368,22 +3369,22 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_03" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_03" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_03" abbr="Morning">Morning</th>
+							<th id="mc-pm_03" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_03" abbr="Morning">Morning</th>
+							<th id="cpas-pm_03" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_03" abbr="monday">Monday</th>
+							<td headers="mc_03 mc-am_03 lu_03">8h-12h</td>
+							<td headers="mc_03 mc-pm_03 lu_03">Close</td>
+							<td headers="cp_03 cp-am_03 lu_03">Close</td>
+							<td headers="cp_03 cp-pm_03 lu_03">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -3395,22 +3396,22 @@
 						<caption>^_^ ;-)</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_04" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_04" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_04" abbr="Morning">Morning</th>
+							<th id="mc-pm_04" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_04" abbr="Morning">Morning</th>
+							<th id="cpas-pm_04" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_04" abbr="monday">Monday</th>
+							<td headers="mc_04 mc-am_04 lu_04">8h-12h</td>
+							<td headers="mc_04 mc-pm_04 lu_04">Close</td>
+							<td headers="cp_04 cp-am_04 lu_04">Close</td>
+							<td headers="cp_04 cp-pm_04 lu_04">14h-18h</td>  
 						</tr>
 					</table>
 
@@ -3419,22 +3420,22 @@
 						<caption>a board</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_05" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_05" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_05" abbr="Morning">Morning</th>
+							<th id="mc-pm_05" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_05" abbr="Morning">Morning</th>
+							<th id="cpas-pm_05" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_05" abbr="monday">Monday</th>
+							<td headers="mc_05 mc-am_05 lu_05">8h-12h</td>
+							<td headers="mc_05 mc-pm_05 lu_05">Close</td>
+							<td headers="cp_05 cp-am_05 lu_05">Close</td>
+							<td headers="cp_05 cp-pm_05 lu_05">14h-18h</td>  
 						</tr>
 					</table>
 
@@ -3443,22 +3444,22 @@
 						<caption></caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_06" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_06" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_06" abbr="Morning">Morning</th>
+							<th id="mc-pm_06" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_06" abbr="Morning">Morning</th>
+							<th id="cpas-pm_06" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_06" abbr="monday">Monday</th>
+							<td headers="mc_06 mc-am_06 lu_06">8h-12h</td>
+							<td headers="mc_06 mc-pm_06 lu_06">Close</td>
+							<td headers="cp_06 cp-am_06 lu_06">Close</td>
+							<td headers="cp_06 cp-pm_06 lu_06">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -3939,22 +3940,22 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_07" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_07" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_07" abbr="Morning">Morning</th>
+							<th id="mc-pm_07" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_07" abbr="Morning">Morning</th>
+							<th id="cpas-pm_07" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_07" abbr="monday">Monday</th>
+							<td headers="mc_07 mc-am_07 lu_07">8h-12h</td>
+							<td headers="mc_07 mc-pm_07 lu_07">Close</td>
+							<td headers="cp_07 cp-am_07 lu_07">Close</td>
+							<td headers="cp_07 cp-pm_07 lu_07">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -4078,22 +4079,22 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_08" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_08" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_08" abbr="Morning">Morning</th>
+							<th id="mc-pm_08" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_08" abbr="Morning">Morning</th>
+							<th id="cpas-pm_08" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_08" abbr="monday">Monday</th>
+							<td headers="mc_08 mc-am_08 lu_08">8h-12h</td>
+							<td headers="mc_08 mc-pm_08 lu_08">Close</td>
+							<td headers="cp_08 cp-am_08 lu_08">Close</td>
+							<td headers="cp_08 cp-pm_08 lu_08">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -4136,22 +4137,22 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th scope="col" colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th scope="col" colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th scope="col" colspan="2" id="mc_09" abbr="Communal house">Communal house</th>
+							<th scope="col" colspan="2" id="cp_09" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th scope="col" id="mc-am" abbr="Morning">Morning</th>
-							<th scope="col" id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th scope="col" id="cpas-am" abbr="Morning">Morning</th>
-							<th scope="col" id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th scope="col" id="mc-am_09" abbr="Morning">Morning</th>
+							<th scope="col" id="mc-pm_09" abbr="Afternoon">Afternoon</th>
+							<th scope="col" id="cpas-am_09" abbr="Morning">Morning</th>
+							<th scope="col" id="cpas-pm_09" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th scope="row" id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th scope="row" id="lu_09" abbr="monday">Monday</th>
+							<td headers="mc_09 mc-am_09 lu_09">8h-12h</td>
+							<td headers="mc_09 mc-pm_09 lu_09">Close</td>
+							<td headers="cp_09 cp-am_09 lu_09">Close</td>
+							<td headers="cp_09 cp-pm_09 lu_09">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -4168,22 +4169,22 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_10" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_10" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_10" abbr="Morning">Morning</th>
+							<th id="mc-pm_10" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_10" abbr="Morning">Morning</th>
+							<th id="cpas-pm_10" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
-							<td headers="mc mc-am lu">8h-12h</td>
-							<td headers="mc mc-pm lu">Close</td>
-							<td headers="cp cp-am lu">Close</td>
-							<td headers="cp cp-pm lu">14h-18h</td>  
+							<th id="lu_10" abbr="monday">Monday</th>
+							<td headers="mc_10 mc-am_10 lu_10">8h-12h</td>
+							<td headers="mc_10 mc-pm_10 lu_10">Close</td>
+							<td headers="cp_10 cp-am_10 lu_10">Close</td>
+							<td headers="cp_10 cp-pm_10 lu_10">14h-18h</td>  
 						</tr>
 					</table>
 				</div>
@@ -4195,18 +4196,18 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_11" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_11" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_11" abbr="Morning">Morning</th>
+							<th id="mc-pm_11" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_11" abbr="Morning">Morning</th>
+							<th id="cpas-pm_11" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
+							<th id="lu_11" abbr="monday">Monday</th>
 							<td>8h-12h</td>
 							<td>Close</td>
 							<td>Close</td>
@@ -4219,18 +4220,18 @@
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
-							<th colspan="2" id="mc" abbr="Communal house">Communal house</th>
-							<th colspan="2" id="cp" abbr="CPAS">CPAS</th>
+							<th colspan="2" id="mc_12" abbr="Communal house">Communal house</th>
+							<th colspan="2" id="cp_12" abbr="CPAS">CPAS</th>
 						</tr>  
 						<tr>
 							<td></td>
-							<th id="mc-am" abbr="Morning">Morning</th>
-							<th id="mc-pm" abbr="Afternoon">Afternoon</th>
-							<th id="cpas-am" abbr="Morning">Morning</th>
-							<th id="cpas-pm" abbr="Afternoon">Afternoon</th>
+							<th id="mc-am_12" abbr="Morning">Morning</th>
+							<th id="mc-pm_12" abbr="Afternoon">Afternoon</th>
+							<th id="cpas-am_12" abbr="Morning">Morning</th>
+							<th id="cpas-pm_12" abbr="Afternoon">Afternoon</th>
 						</tr>  
 						<tr>    
-							<th id="lu" abbr="monday">Monday</th>
+							<th id="lu_12" abbr="monday">Monday</th>
 							<td headers="">8h-12h</td>
 							<td headers="">Close</td>
 							<td headers="test">Close</td>
@@ -5789,8 +5790,8 @@
 
 			        <p>
 			        	The form field has an id attribute, which is unique and matches the value of a for attribute of a label :<br>
-			        	<label id="label_01_test-11-1-2">Field 11-1-2</label>
-		                <input id="input_01_test-11-1-2=" name="input_01_test-11-1-1" for="label_01_test-11-1-2" />
+			        	<label for="label_01_test-11-1-2">Field 11-1-2</label>
+		                <input id="input_01_test-11-1-2=" name="input_01_test-11-1-1" />
 		            </p>
 				</div>
 
@@ -5800,7 +5801,7 @@
 
 					<p>
 			        	The id of the form field isn't unique:<br>
-			        	<label id="label_02_test-11-1-1" for="input_04_test-11-1-1">Field</label>
+			        	<label for="input_04_test-11-1-1">Field</label>
 		                <input id="input_02_test-11-1-1" name="input_02_test-11-1-1" />
 		                <input id="input_02_test-11-1-1" name="input_02_test-11-1-1" />
 		            </p>
@@ -5899,7 +5900,7 @@
 
 			        <p>
 			        	The following input has a label with the "aria-label" attribute, but it has not a text passage just behind :<br />
-		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" aria-label="Some label" />
+		                <input id="input_02_test-11-1-4" name="input_01_test-11-1-4" aria-label="Some label" />
 		            </p>
 				</div>
 				<div class="clearfix"></div>
@@ -5915,12 +5916,12 @@
 
 			        <p>
 			        	The following input has a label with the "title" attribute and has no "placeholder" attribute :<br />
-		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" title="Some label" />
+		                <input id="input_01_test-11-1-5" name="input_01_test-11-1-5" title="Some label" />
 		            </p>
 
 			        <p>
 			        	The following input has a label with the "title" attribute and its "placeholder" attribute is equal to the "title" attribute :<br />
-		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" title="Some label" placeholder="Some label" />
+		                <input id="input_02_test-11-1-5" name="input_02_test-11-1-5" title="Some label" placeholder="Some label" />
 		            </p>
 				</div>
 				<div class="sample test_false">
@@ -5929,7 +5930,7 @@
 
 			        <p>
 			        	The following input has a label with the "title" attribute and its "placeholder" attribute is not equal to the "title" attribute :<br />
-		                <input id="input_01_test-11-1-4" name="input_01_test-11-1-4" title="Some label" placeholder="Sample" />
+		                <input id="input_03_test-11-1-5" name="input_03_test-11-1-5" title="Some label" placeholder="Sample" />
 		            </p>
 				</div>
 				<div class="clearfix"></div>
@@ -6078,12 +6079,12 @@
 	                <p>The following input have the same label with a different context</p>
 	                <form> 
 	                	<fieldset>
-	                		<caption>First person</caption>
+	                		<legend>First person</legend>
 		                    <label for="test-11-3-1_field1">Name</label> 
 		                    <input type="radio" name="test-11-3-1_field1" id="test-11-3-1_field1" />
 	                	</fieldset>
 	                	<fieldset>
-	                		<caption>Second person</caption>
+	                		<legend>Second person</legend>
 		                    <label for="test-11-3-1_field2">Name</label>
 	                      	<input type="radio" name="test-11-3-1_field2" id="test-11-3-1_field2" />
 	                	</fieldset>	                     
@@ -6246,8 +6247,8 @@
 	                <form action="mock_action"> 
 	                    <fieldset> 
 	                        <legend>Gender</legend>
-	                        <label for="test-11-6-1_field1">Male</label> <input type="radio" name="gender" id="test-11-6-1_field1" /> <br /> 
-	                        <label for="test-11-6-1_field2">Female</label> <input type="radio" name="gender" id="test-11-6-1_field2" /> 
+	                        <label for="test-11-7-1_field1">Male</label> <input type="radio" name="gender" id="test-11-7-1_field1" /> <br /> 
+	                        <label for="test-11-7-1_field2">Female</label> <input type="radio" name="gender" id="test-11-7-1_field2" /> 
 	                    </fieldset> 
 	                </form> 
 				</div>
@@ -6258,16 +6259,16 @@
 	                <form action="mock_action"> 
 	                    <fieldset> 
 	                        <legend></legend>
-	                        <label for="test-11-6-1_field3">Male</label> <input type="radio" name="gender" id="test-11-6-1_field3" /> <br /> 
-	                        <label for="test-11-6-1_field4">Female</label> <input type="radio" name="gender" id="test-11-6-1_field4" /> 
+	                        <label for="test-11-7-1_field3">Male</label> <input type="radio" name="gender" id="test-11-7-1_field3" /> <br /> 
+	                        <label for="test-11-7-1_field4">Female</label> <input type="radio" name="gender" id="test-11-7-1_field4" /> 
 	                    </fieldset> 
 	                </form> 
 	                <p>The following group of fields has a not relevant legend tag</p>
 	                <form action="mock_action"> 
 	                    <fieldset> 
 	                        <legend>;-) <3</legend>
-	                        <label for="test-11-6-1_field5">Male</label> <input type="radio" name="gender" id="test-11-6-1_field5" /> <br /> 
-	                        <label for="test-11-6-1_field6">Female</label> <input type="radio" name="gender" id="test-11-6-1_field6" /> 
+	                        <label for="test-11-7-1_field5">Male</label> <input type="radio" name="gender" id="test-11-7-1_field5" /> <br /> 
+	                        <label for="test-11-7-1_field6">Female</label> <input type="radio" name="gender" id="test-11-7-1_field6" /> 
 	                    </fieldset> 
 	                </form> 
 				</div>
@@ -6435,16 +6436,16 @@
 					<span></span>
 					<h4>Good samples</h4>
 	                <form action="mock_action" method="get"> 
-	                    <div id="selectElement">
-	                    	<label for="select">Sélection</label> 
-	                        <select id="select"> 
+	                    <div id="selectElement_test-11-9-1_01">
+	                    	<label for="select_test-11-9-1_01">Sélection</label> 
+	                        <select id="select_test-11-9-1_01"> 
 	                        	<option value="Value1">Value1</option> 
 	                        	<option value="Value2">Value2</option> 
 	                        	<option value="Value3">Value3</option> 
 	                        	<option value="Value4">Value4</option> 
 	                        </select> 
 	                    </div> 
-	                    <div id="submitElement"> 
+	                    <div id="submitElement_test-11-9-1_01"> 
                         	<input type="reset" value="Reset" /> 
 	                        <input type="submit" value="Submit" /> 
                        	 	<input type="button" value="Send" /> 
@@ -6457,16 +6458,16 @@
 					<span></span>
 					<h4>Bad samples</h4>
 	                <form action="mock_action" method="get"> 
-	                    <div id="selectElement">
-	                    	<label for="select">Sélection</label> 
-	                        <select id="select"> 
+	                    <div id="selectElement_test-11-9-1_02">
+	                    	<label for="select_test-11-9-1_02">Sélection</label> 
+	                        <select id="select_test-11-9-1_02"> 
 	                        	<option value="Value1">Value1</option> 
 	                        	<option value="Value2">Value2</option> 
 	                        	<option value="Value3">Value3</option> 
 	                        	<option value="Value4">Value4</option> 
 	                        </select> 
 	                    </div> 
-	                    <div id="submitElement"> 
+	                    <div id="submitElement_test-11-9-1_02"> 
                         	<input type="reset" value="" /> 
 	                        <input type="submit" value="" /> 
                        	 	<input type="button" value="" /> 
@@ -6485,20 +6486,20 @@
 					<span></span>
 					<h4>Good samples</h4>
 	                <form action="mock_action"> 
-	                    <label for="field1">Field1</label> <input type="text" name="field1" id="field1" /> <br /> 
-	                    <label for="field2">Field2</label> <input type="text" name="field2" id="field2" />
+	                    <label for="field1_test-11-9-2_01">Field1</label> <input type="text" name="field1_test-11-9-2_01" id="field1_test-11-9-2_01" /> <br /> 
+	                    <label for="field2_test-11-9-2_01">Field2</label> <input type="text" name="field2_test-11-9-2_01" id="field2_test-11-9-2_01" />
 
 	                    <input type="submit" aria-labelledby="button-label" value="" />
 
-	                    <p id="button-label">Send</p>
+	                    <p id="button-label_test-11-9-2_01">Send</p>
 	                </form> 
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
 	                <form action="mock_action" method="get"> 
-	                    <label for="field1">Field1</label> <input type="text" name="field1" id="field1" /> <br /> 
-	                    <label for="field2">Field2</label> <input type="text" name="field2" id="field2" />
+	                    <label for="field1_test-11-9-2_02">Field1</label> <input type="text" name="field1_test-11-9-2_02" id="field1_test-11-9-2_02" /> <br /> 
+	                    <label for="field2_test-11-9-2_02">Field2</label> <input type="text" name="field2_test-11-9-2_02" id="field2_test-11-9-2_02" />
 
 	                    <input type="submit" aria-labelledby="" value="" />
 
@@ -6506,8 +6507,8 @@
 
 	                    <input type="submit" aria-labelledby="button-label" value="" />
 
-	                    <p id="button-label">Send</p>
-	                    <p id="button-label">Other send</p>
+	                    <p id="button-label_test-11-9-2_02">Send</p>
+	                    <p id="button-label_test-11-9-2_03">Other send</p>
 	                </form> 
 				</div>
 			</div>
@@ -6534,7 +6535,7 @@
 						</p>
 						<p>
 							<label for="crit1110-good-test2">Field with required attribut *</label>
-							<input id="crit1110-good-test2" type="text" value="" required="true" />
+							<input id="crit1110-good-test2" type="text" value="" required />
 						</p>
 					</form>
 				</div>
@@ -6543,12 +6544,12 @@
 					<h4>Bad samples</h4>
 					<form>
 						<p>
-							<label for="crit1110-bad-test1">Field with bad implementation</label>
-							<input id="crit1110-bad-test1" type="text" value="" aria-required />
+							<label for="crit1110-bad-test3">Field with bad implementation</label>
+							<input id="crit1110-bad-test3" type="text" value="" aria-required />
 						</p>
 						<p>
-							<label for="crit1110-bad-test2">Field without visually indication</label>
-							<input id="crit1110-bad-test2" type="text" value="" required />
+							<label for="crit1110-bad-test4">Field without visually indication</label>
+							<input id="crit1110-bad-test4" type="text" value="" required />
 						</p>
 					</form>
 				</div>
@@ -6564,10 +6565,10 @@
 					<form>	
 						<p>Fields marked with (*) are mandatory.</p>			
 	                    <p> 
-	                        <label for="field1">Field1 * : </label> <input required type="text" name="field1" id="field1" /> <br /> 
-	                        <label for="field2">Field2 * : </label> <input aria-required="true" type="text" name="field2" id="field2" /> <br />
-	                        <label id="field3">Field3 (mandatory) : </label> <input type="text" name="field3" aria-labelledby="field3" /> <br />
-	                        <label id="field4">Field4 (required) : </label> <input type="text" name="field4" aria-describedby="field4" /> <br />
+	                        <label for="field1_test-11-10-2">Field1 * : </label> <input required type="text" name="field1" id="field1_test-11-10-2" /> <br /> 
+	                        <label for="field2_test-11-10-2">Field2 * : </label> <input aria-required="true" type="text" name="field2" id="field2_test-11-10-2" /> <br />
+	                        <label id="field3_test-11-10-2">Field3 (mandatory) : </label> <input type="text" name="field3" aria-labelledby="field3_test-11-10-2" /> <br />
+	                        <label id="field4_test-11-10-2">Field4 (required) : </label> <input type="text" name="field4" aria-describedby="field4_test-11-10-2" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6576,10 +6577,10 @@
 					<h4>Bad samples</h4>
 					<form>				
 	                    <p> 
-	                        <label for="field5">Field5: </label> <input required type="text" name="field5" id="field5" /> <br /> 
-	                        <label for="field6">Field6: </label> <input aria-required="true" type="text" name="field6" id="field6" /> <br />
-	                        <label id="field7">Field7: </label> <input type="text" name="field7" aria-labelledby="field7" /> <br />
-	                        <label id="field8">Field8: </label> <input type="text" name="field8" aria-describedby="field8" /> <br />
+	                        <label for="field5_test-11-10-2">Field5: </label> <input required type="text" name="field5" id="field5_test-11-10-2" /> <br /> 
+	                        <label for="field6_test-11-10-2">Field6: </label> <input aria-required="true" type="text" name="field6" id="field6_test-11-10-2" /> <br />
+	                        <label id="field7_test-11-10-2">Field7: </label> <input type="text" name="field7" aria-labelledby="field7_test-11-10-2" /> <br />
+	                        <label id="field8_test-11-10-2">Field8: </label> <input type="text" name="field8" aria-describedby="field8_test-11-10-2" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6596,8 +6597,8 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <label id="field1">Field1 (mandatory) : </label> <input type="text" name="field1" aria-labelledby="field1" /> <br />
-	                        <label id="field2">Field2 (required) : </label> <input type="text" name="field2" aria-describedby="field2" /> <br />
+	                        <label id="field1_test-11-10-3">Field1 (mandatory) : </label> <input type="text" name="field1" aria-labelledby="field1_test-11-10-3" /> <br />
+	                        <label id="field2_test-11-10-3">Field2 (required) : </label> <input type="text" name="field2" aria-describedby="field2_test-11-10-3" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6607,8 +6608,8 @@
 					<form>					
 	                    <p> 
 	                        <label>Field3: </label> <input type="text" name="field3" aria-labelledby="" /> <br />
-	                        <label id="field4">Field4: </label> <input type="text" name="field4" aria-describedby="field4" /> <br />
-	                        <label id="field4">Field5: </label> <input type="text" name="field5" aria-labelledby="field5" /> <br />
+	                        <label id="field4_test-11-10-3">Field4: </label> <input type="text" name="field4" aria-describedby="field4_test-11-10-3" /> <br />
+	                        <label id="field4_test-11-10-3">Field5: </label> <input type="text" name="field5" aria-labelledby="field5_test-11-10-3" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6634,7 +6635,7 @@
 					<form>					
 	                    <p> 
 	                        <label id="test-11-10-4_field3">Your name * <em class="error"></em>: </label> <input required type="text" name="test-11-10-4_field3" /> <br />
-	                        <label id="test-11-10-4_field4">Field2 : </label> <input type="email" name="test-11-10-4_field4" value="mymail.com" aria-describedby="test-11-10-4_error2" /><em role="log" id="test-11-10-4_error2"></em> <br />
+	                        <label id="test-11-10-4_field4">Field2 : </label> <input type="email" name="test-11-10-4_field4" value="mymail.com" aria-describedby="test-11-10-4_error3" /><em role="log" id="test-11-10-4_error3"></em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6659,8 +6660,8 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <label id="test-11-10-5_field1">Your name * : </label> <input aria-invalid="true" required type="text" name="test-11-10-5_field1" /> <br />
-	                        <input aria-label="Your email" type="email" name="test-11-10-5_field2" value="mymail.com" /> <br />
+	                        <label id="test-11-10-5_field3">Your name * : </label> <input aria-invalid="true" required type="text" name="test-11-10-5_field3" /> <br />
+	                        <input aria-label="Your email" type="email" name="test-11-10-5_field3" value="mymail.com" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6745,12 +6746,12 @@
 						<p>Fields marked with (*) are mandatory.</p>
 						<p>For each mandatory field, a mention of the data type of the field is made visually and textually.</p>
 						<p>
-							<label for="crit1110-good-test1">Field with aria-required attribut * and an example (ex: example@mail.com)</label>
-							<input id="crit1110-good-test1" type="email" value="" aria-required="true" />
+							<label for="crit11107-good-test1">Field with aria-required attribut * and an example (ex: example@mail.com)</label>
+							<input id="crit11107-good-test1" type="email" value="" aria-required="true" />
 						</p>
 						<p>
-							<label for="crit1110-good-test2">Field with required attribut * and an example (ex: 0123456789)</label>
-							<input id="crit1110-good-test2" type="tel" value="" required="true" />
+							<label for="crit11107-good-test2">Field with required attribut * and an example (ex: 0123456789)</label>
+							<input id="crit11107-good-test2" type="tel" value="" required="true" />
 						</p>
 					</form>
 				</div>
@@ -6759,12 +6760,12 @@
 					<h4>Bad samples</h4>
 					<form>
 						<p>
-							<label for="crit1110-bad-test1">Mandatory field without data type</label>
-							<input id="crit1110-bad-test1" type="email" value="" aria-required="true" />
+							<label for="crit11107-bad-test1">Mandatory field without data type</label>
+							<input id="crit11107-bad-test1" type="email" value="" aria-required="true" />
 						</p>
 						<p>
-							<label for="crit1110-bad-test2">Mandatory field without data type</label>
-							<input id="crit1110-bad-test2" type="tel" value="" required />
+							<label for="crit11107-bad-test2">Mandatory field without data type</label>
+							<input id="crit11107-bad-test2" type="tel" value="" required />
 						</p>
 					</form>
 				</div>
@@ -6779,8 +6780,8 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <input aria-label="Your email" type="email" name="test-11-10-5_field2" value="" aria-describedby="test-11-10-5_erreur2" />
-	                        <img style="width:20px;height:20px;" src="img/false.png" id="test-11-10-5_erreur2" alt="example@email.com"> <br />
+	                        <input aria-label="Your email" type="email" name="test-11-10-8_field2" value="" aria-describedby="test-11-10-8_erreur2" />
+	                        <img style="width:20px;height:20px;" src="img/false.png" id="test-11-10-8_erreur2" alt="example@email.com"> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6789,7 +6790,7 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <input aria-label="Your email" type="email" name="test-11-10-5_field2" value="mymail.com" /> <br />
+	                        <input aria-label="Your email" type="email" name="test-11-10-8_field2" value="mymail.com" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -6907,7 +6908,7 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <label id="test-11-11-1_field2">Field2 : </label> <input type="tel" name="test-11-11-1_field2" value="mymail.com" aria-describedby="test-11-11-1_error2" /><em role="log" id="test-11-11-1_error2">(This is not correct. The value expected is in number like "0123456789")</em> <br />
+	                        <label id="test-11-11-1_field2">Field2 : </label> <input type="tel" name="test-11-11-1_field2" value="mymail.com" aria-describedby="test-11-11-1_error1" /><em role="log" id="test-11-11-1_error1">(This is not correct. The value expected is in number like "0123456789")</em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7363,7 +7364,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>A pagination correctly implemented</p>
-	                <div id="pagination">
+	                <div id="pagination_01">
 	                    <ul>
 	                        <li style="display:inline;"><a href="#previous"> Previous page </a></li>
 	                        <li style="display:inline;"><a href="#page1"> Page 1 </a></li>
@@ -7378,7 +7379,7 @@
 				<div class="sample test_false">
 					<span></span>
 					<p>A pagination not correctly implemented</p>
-	                <div id="pagination">
+	                <div id="pagination_02">
 	                    <ul>
 	                        <li style="display:inline;"><a href="#page1"> Page 1 </a></li>
 	                        <li style="display:inline;"><a href="#page2"> Page 2 </a></li>
@@ -7461,7 +7462,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>A menu of navigation</p>
-					<nav id="menu" role="navigation">
+					<nav id="menu_test-12-10-1" role="navigation">
 	                    <ul>
 	                        <li><a href="http://www.longdesc.fr/">Home</a></li>
 	                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
@@ -7489,7 +7490,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>A menu of navigation that the tag that groups the links is implemented with an id</p>
-					<nav id="menu" role="navigation">
+					<nav id="menu_test-12-10-2" role="navigation">
 	                    <ul>
 	                        <li><a href="http://www.longdesc.fr/">Home</a></li>
 	                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
@@ -7497,7 +7498,7 @@
 	                    </ul>
 	                </nav>
 					<p>A group of links that the tag that groups the links is preceded by an anchor</p>
-					<a name="group-links" id="group-links"></a>
+					<a name="group-links" id="group-links_test-12-10-2_01"></a>
                     <ul>
                         <li><a href="http://www.longdesc.fr/">Home</a></li>
                         <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
@@ -7505,7 +7506,7 @@
                     </ul>
                     <p>A group of links that the first tag is an anchor</p>
                     <div class="group-links">
-						<a name="group-links" id="group-links"></a>
+						<a name="group-links" id="group-links_test-12-10-2_02"></a>
                         <a href="http://www.longdesc.fr/">Home</a>
                         <a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a>
                         <a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
