@@ -4134,7 +4134,7 @@
 					</table>
 
 					<p>The following board has id and scope attribute for each column and row header</p>
-	                <table class="support complex-data-table">
+	                <table class="support F1complex-data-table">
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
@@ -5161,6 +5161,43 @@
 		<div id="crit-9-1">
 
 			<h2>Criterion 9.1 - In the Web site, are style sheets used to control information presentation?</h2>
+
+			<div id="test-9-1-1">
+
+				<h3>Test 9.1.1 - Is there a level 1 heading (h1 tag or a tag with an ARIA role="heading" associated to an aria-level="1" property) on each web page? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>This following link brings you to a page that has a relevant level 1 heading</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>This following page has no level 1 heading</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-9-1-2">
+
+				<h3>Test 9.1.2 - On each web page, is the hierarchy between the headings (h1 to h6 tags or tags with an ARIA role="heading" associated to an aria-level property) relevant? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>This following link brings you to a page that has a relevant hierarchy of heading</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<h6>This following page has a not relevant hierarchy of heading</h6>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
 			<div id="test-9-1-3">
 
 				<h3>Test 9.1.3 - On each web page, tags used for information presentation must not be available in the source code. Has this rule been followed?</h3>
@@ -5175,6 +5212,24 @@
 					<span></span>
 					<h4>Bad samples</h4>
 					<div class="heading-4">This title is not implemented with a correct tag</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-9-1-4">
+
+				<h3>Test 9.1.4 - On each web page, is each heading (h1 to h6 tag or a tag with an ARIA role="heading" associated to an aria-level property) relevant?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>This following link brings you to a page that has a relevant hierarchy of heading</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<h5>This heading is not relevant</h5>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -7815,14 +7870,23 @@
 
 		</div>
 
-		
+		<h2>Liste des pages</h2>
+		<ul>
+			<li>
+				<a href="#">Index</a>
+			</li>
+			<li>
+				<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+			</li>
+		</ul>
 
 		<table class="occurrences">
 			<caption><h2>Occurrences</h2></caption>
 			<thead>
 				<tr>
 					<th scope="col">Test</th>
-					<th scope="col"  style="width: 14rem;">Sample code</th>
+					<th scope="col">Page</th>
+					<th scope="col" style="width: 14rem;">Sample code</th>
 					<th scope="col">Present</th>
 					<th scope="col">Tested</th>
 					<th scope="col">Not applicable</th>
@@ -7835,7 +7899,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th scope="row">1.1.1</th>
+					<th rowspan="2" scope="row">1.1.1</th>
+					<th scope="row">Index</th>
 					<td>&lt;img src="[source]" <strong>alt=""</strong>&gt;</td>
 					<td>62</td>
 					<td>62</td>
@@ -7847,7 +7912,20 @@
 					<td>0</td>
 				</tr>
 				<tr>
+					<th scope="row">Structured page</th>
+					<td>&lt;img src="[source]" <strong>alt=""</strong>&gt;</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
 					<th scope="row">1.1.2</th>
+					<th scope="row">Index</th>
 					<td>&lt;area <strong>alt=""</strong> shape="[...]" coords="[...]">&gt;</td>
 					<td>50</td>
 					<td>50</td>
@@ -7861,7 +7939,20 @@
 			</tbody>
 			<tfoot>
 				<tr>
-					<th scope="row"><strong>Total</strong></th>
+					<th rowspan="2" scope="row"><strong>Total</strong></th>
+					<th scope="row">Index</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Structured page</th>
 					<td></td>
 					<td></td>
 					<td></td>
