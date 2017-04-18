@@ -221,3 +221,6 @@ table.occurrences tfoot tr {
 .coffee-cut {
     fill: #60544F;
 }
+.test-10-2-1_css_content::after {
+	content: "with information not still available when style sheets are disabled.";
+}

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="video.css" />
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <style type="text/css"> 
 	   .px_html{ 
 	      font-size:12px; 
@@ -5445,7 +5446,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<h4>Good samples</h4>
-					<blockquote>Putting the web and its services available to all individuals, whatever their hardware, software, network infrastructure, mother tongue, culture, geographical location and their physical or mental capacities.</blockquote> 
+					<blockquote><span class="fa fa-quote-left"></span>Putting the web and its services available to all individuals, whatever their hardware, software, network infrastructure, mother tongue, culture, geographical location and their physical or mental capacities.<span class="fa fa-quote-right"></span></blockquote> 
 					<p>by Tim Berners-Lee</p>
 				</div>
 				<div class="sample test_false">
@@ -5486,6 +5487,7 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+
 			<div id="test-10-1-2">			
 
 				<h3>Test 10.1.2 - On each web page, attributes used for information presentation must not be available in the source code. Has this rule been followed? </h3>
@@ -5498,7 +5500,54 @@
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
-					<p align="right">Paragraph normaly implement with a &lt;p&gt; tag.</p>
+					<p align="right">Paragraph implement with a &lt;p&gt; tag and align in right by an attribute.</p>
+					<p border="1">Paragraph implement with a &lt;p&gt; tag and with a border attribute.</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-10-1-3">			
+
+				<h3>Test 10.1.3 - On each web page, does the use of white spaces meet the following conditions: </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>Paragraph normaly implement without white space.</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>Paragraph implement with white spaces characters are used to control spacing within a w&nbsp;o&nbsp;r&nbsp;d.</p>
+					<p>Paragraph implement with white spaces characters are used to format tables in plain text content.</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Fruits</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Vegetable</b></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Banana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salad</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Straberry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tomato</p>
+					<p>Paragraph implement with &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multiple columns in plain white spaces characters &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text content.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are used to create </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+		<div id="crit-10-2">
+
+			<h2>Criterion 10.2 - On each web page, is visible content still available when style sheets or images are disabled?</h2>
+			<div id="test-10-2-1">
+
+				<h3>Test 10.2.1 - On each web page, is visible content still available when style sheets are disabled? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>Paragraph normaly implement with all information still available when style sheets are disabled.</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p class="test-10-2-1_css_content">Paragraph not normaly implement </p>
+					<p>The following informative image is implemented with css</p>
+					<span style="background:url('img/informative_001.png') transparent no-repeat"></span>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -5571,6 +5620,7 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+
 			<div id="test-10-4-2">
 
 				<h3>Test 10.4.2 - In the style sheets of the website, for the media types screen, tv, handheld, projection, do font sizes use relative units only?</h3>
@@ -5591,6 +5641,24 @@
 					<p class="px">Paragraph with px fontsize - extern CSS</p>
 					<p class="px_html">Paragraph with px fontsize - tag style</p>
 					<p style="font-size:12px">Paragraph with px fontsize - attr style</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-10-4-3">
+
+				<h3>Test 10.4.3 - On each web page, increasing the character size up to 200% must not cause loss of information. Has this rule been followed?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>Paragraph normaly implement that increasing the character size up to 200% not cause loss of information.</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p style="height:60px;">Paragraph that increasing the character size up to 200% cause loss of information.</p>
+					<p style="height:60px;overflow:hidden;">Paragraph that increasing the character size up to 200% cause loss of information.</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
