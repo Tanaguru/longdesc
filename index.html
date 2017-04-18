@@ -53,8 +53,6 @@
 <body onload="DrawCaptcha();">
 	<header>
 
-	</header>
-
 	<main class="sample-container">
 		<h2>Site Longdesc</h2>
 
@@ -5154,6 +5152,7 @@
 						<td><span class="good-support"></span><span class="sr-only">Non supporté</span></td>
 					</tr>
 				</table>
+				<div class="clearfix"></div>
 			</div>
 
 		</div>
@@ -5236,6 +5235,59 @@
 
 		</div>
 
+		<div id="crit-9-2">
+
+			<h2>Criterion 9.2 - On each web page, is the document outline coherent?</h2>
+
+			<div id="test-9-2-1">
+
+				<h3>Test 9.2.1 - On each web page, does the document outline meet the following conditions: </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>This following link brings you to a page that is structured</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>This following page is not structured</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-9-2-2">
+
+				<h3>Test 9.2.2 - On each web page, is the document outline coherent?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>This following link brings you to a page that is structured</p>
+					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>This following page has no coherent document outline. </p>
+					<ul>
+						<li>The heading hierarchy is not relevant ;</li>
+						<li>The HTML5 document outline is not declared but used ; </li>
+						<li>The &lt;main&gt; tag is in the &lt;header&gt; tag ;</li>
+						<li>The following bloc section is not relevant without content.</li>
+					</ul>
+					<section>
+						<section>
+							<section></section>
+						</section>
+					</section>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
 		<div id="crit-9-3">
 
 			<h2>Criterion 9.3 - On each web page, is each list structured appropriately?</h2>
@@ -5263,6 +5315,12 @@
 						* Raspberry<br />
 						* Banana<br />
 						* Kiwi
+					<p>
+					<p>
+						- Strawberry<br />
+						- Raspberry<br />
+						- Banana<br />
+						- Kiwi
 					<p>
 				</div>
 				<div class="clearfix"></div>
@@ -5320,6 +5378,81 @@
 					Raspberry : Small red fruit <br />
 					Banana : long yellow fruit <br />
 					Kiwi : small green fruit <br />
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+		<div id="crit-9-4">
+
+			<h2>Criterion 9.4 - On each web page, does the first occurence of each abbreviation help to know its meaning?</h2>
+
+			<div id="test-9-4-1">
+
+				<h3>Test 9.4.1 - On each web page, does the first occurence of each abbreviation meet one of the following conditions? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>All the first occurence of each abbreviation have its meaning nearby</p>
+					<p><abbr>WCAG</abbr> (Web Content Accessible Guideline) is developed through the <abbr>W3C</abbr> (World Wide Web Consortium).</p>
+					<p>All the first occurence of each abbreviation is associated with a link to the glossary</p>
+					<p><a href="glossary.html#wcag"><abbr>WCAG</abbr></a> is developed through the <a href="glossary.html#w3c"><abbr>W3C</abbr></a>.</p>
+					<p>All the first occurence of each abbreviation is associated with a link that have a title that value is composed with link text and meaning of the abbreviation</p>
+					<p><a href="glossary.html#wcag" title="WCAG (Web Content Accessible Guideline)"><abbr>WCAG</abbr></a> is developed through the <a href="glossary.html#w3c" title="W3C (World Wide Web Consortium)"><abbr>W3C</abbr></a>.</p>
+					<p>All the first occurence of each abbreviation is associated with an abbr tag that have a title that value is the meaning of the abbreviation</p>
+					<p><abbr title="WCAG (Web Content Accessible Guideline)">WCAG</abbr> is developed through the <abbr title="W3C (World Wide Web Consortium)">W3C</abbr>.</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>All the first occurence of each abbreviation not have its meaning</p>
+					<p><abbr>WCAG</abbr> is developed through the <abbr>W3C</abbr>.</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
+		<div id="crit-9-6">
+
+			<h2>Criterion 9.6 - On each web page, is each quotation identified properly?</h2>
+
+			<div id="test-9-6-1">
+
+				<h3>Test 9.6.1 - On each web page, does each short quotation use a q tag?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<q>Putting the web and its services available to all individuals, whatever their hardware, software, network infrastructure, mother tongue, culture, geographical location and their physical or mental capacities.</q> 
+					<p>by Tim Berners-Lee</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>"Putting the web and its services available to all individuals, whatever their hardware, software, network infrastructure, mother tongue, culture, geographical location and their physical or mental capacities."</p>
+					<p>by Tim Berners-Lee</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-9-6-2">
+
+				<h3>Test 9.6.2 - On each web page, does each long quotation use a blockquote tag? </h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<blockquote>Putting the web and its services available to all individuals, whatever their hardware, software, network infrastructure, mother tongue, culture, geographical location and their physical or mental capacities.</blockquote> 
+					<p>by Tim Berners-Lee</p>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>"Putting the web and its services available to all individuals, whatever their hardware, software, network infrastructure, mother tongue, culture, geographical location and their physical or mental capacities."</p>
+					<p>by Tim Berners-Lee</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -7967,6 +8100,8 @@
 		</table>
 		
 	</main>
+
+	</header>
 
 	<footer>
 		<a href="https://my.tanaguru.com/">Tanaguru.com</a>
