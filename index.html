@@ -2474,6 +2474,31 @@
 			</div>
 		</div>
 
+		<div id="crit-3-1">
+
+			<h2>Criterion 3.1 - On each web page, information must not be conveyed only through color. Has this rule been followed?</h2>
+
+			<div id="test-3-1-4">
+				<h3>Test 3.1.4: For each CSS property defining a color and conveying information, information must not be conveyed only through color. Has this rule been followed?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>In this formular, the required field is indicated with the label and its color</p>
+					<label for="field-3-1-4">Prénom (obligatoire)</label>
+					<input type="text" required aria-required="true" style="border: solid 1px #f00">
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>In this formular, the required field is indicated only by its border's color</p>
+					<label for="field-3-1-4">Prénom</label>
+					<input type="text" required  aria-required="true" style="border: solid 1px #f00">
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-4-1">
 
 			<h2>Criterion 4.1 - Does each prerecorded time-based media have a text transcript or an audio description if necessary (except in particular cases)?</h2>
