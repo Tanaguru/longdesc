@@ -64,6 +64,9 @@
 	    .justify_html{ 
 	      text-align:justify; 
 	   }
+	   .bg-black {
+			background-color: #000;
+	   }
    </style> 
   <link rel="stylesheet" href="bootstrap-3-glyphicon.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -2524,13 +2527,13 @@
 				
 				<div class="sample test_true">
 					<span></span>
-					<p>The paragraph has a font size equal to 150% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.51).</p>
+					<p>The paragraph has a font size equal to 150% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
 					<p class="font-size-150 alert-success">Nom</p>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
-					<p>The paragraph has a font size equal to 150% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.51).</p>
+					<p>The paragraph has a font size equal to 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
 					<p class="font-size-150 bg-success">Nom</p>
 				</div>
 
@@ -2542,13 +2545,13 @@
 				
 				<div class="sample test_true">
 					<span></span>
-					<p>The paragraph has a font size equal to 120% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.51).</p>
+					<p>The paragraph has a font size equal to 120% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
 					<p class="font-size-120 alert-success">Nom</p>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
-					<p>The paragraph has a font size equal to 120% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.51).</p>
+					<p>The paragraph has a font size equal to 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
 					<p class="font-size-120 bg-success">Nom</p>
 				</div>
 
@@ -2560,13 +2563,13 @@
 
 				<div class="sample test_true">
 					<span></span>
-					<p>The paragraph has a font size larger than 150% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3.1).</p>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3).</p>
 					<p class="font-size-170 alert-success">Nom</p>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
-					<p>The paragraph has a font size larger than 150% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3.1).</p>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3).</p>
 					<p class="font-size-170 bg-success">Nom</p>
 				</div>
 
@@ -2578,13 +2581,90 @@
 				
 				<div class="sample test_true">
 					<span></span>
-					<p>The paragraph has a font size larger than 120% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3.1).</p>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3).</p>
 					<p class="font-size-130 alert-success">Nom</p>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
-					<p>The paragraph has a font size larger than 120% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3.1).</p>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3).</p>
+					<p class="font-size-130 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-3-4">
+
+			<h2>Criterion 3.3 - On each web page, is the contrast between the text and background colors sufficient (except in particular cases)?</h2>
+
+			<div id="test-3-4-1">
+				<h3>Test 3.4.1:  On each web page, do non-bold texts and images of non-bold text with font sizes smaller than or equal to 150% of the default font size (or 1.5em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default font-size. The contrast color is sufficient here (>= 7).</p>
+					<p class="font-size-150 bg-black">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 7).</p>
+					<p class="font-size-150 bg-primary">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-4-2">
+				<h3>Test 3.4.2: On each web page, do bold texts and images of bold text with font sizes smaller than or equal to 120% of the default font size (or 1.2em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default font-size. The contrast color is sufficient here (>= 7).</p>
+					<p class="font-size-120 bg-black">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 7).</p>
+					<p class="font-size-120 bg-primary">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-4-3">
+				<h3>Test 3.4.3: On each web page, do non-bold texts and images of non-bold text with font sizes larger than 150% of the default font size (or 1.5em), meet one of the following conditions (except in particular cases)?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "bg-primary" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
+					<p class="font-size-170 bg-primary">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
+					<p class="font-size-170 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-3-4-4">
+				<h3>Test 3.4.4: On each web page, do bold texts and images of bold text with font sizes larger than 120% of the default font size (or 1.2em), meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "bg-primary" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
+					<p class="font-size-130 bg-primary">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
 					<p class="font-size-130 bg-success">Nom</p>
 				</div>
 
