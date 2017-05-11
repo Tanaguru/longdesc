@@ -10,8 +10,6 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="video.css" />
-  <link rel="stylesheet" href="bootstrap-3-glyphicon.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <style type="text/css"> 
 	   .px_html{ 
@@ -47,10 +45,28 @@
 	      .relativeUnitesEm_html {
 		  width:12em;
 	   }
+	   .font-size-170 {
+	   	font-size: 1.7rem;
+	   	color: #fff;
+	   }
+	   .font-size-150 {
+	   	font-size: 1.5rem;
+	   	color: #fff;
+	   }
+	  .font-size-130 {
+	   	font-size: 1.3rem;
+	   	color: #fff;
+	   }
+	   .font-size-120 {
+	   	font-size: 1.2rem;
+	   	color: #fff;
+	   }
 	    .justify_html{ 
 	      text-align:justify; 
 	   }
    </style> 
+  <link rel="stylesheet" href="bootstrap-3-glyphicon.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body onload="DrawCaptcha();">
 	<header>
@@ -2493,6 +2509,83 @@
 					<p>In this formular, the required field is indicated only by its border's color</p>
 					<label for="field-3-1-4">Prénom</label>
 					<input type="text" required  aria-required="true" style="border: solid 1px #f00">
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-3-3">
+
+			<h2>Criterion 3.3 - On each web page, is the contrast between the text and background colors sufficient (except in particular cases)?</h2>
+
+			<div id="test-3-3-1">
+				<h3>Test 3.3.1:  On each web page, do non-bold texts and images of non-bold text with font sizes smaller than or equal to 150% of the default font size (or 1.5em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.51).</p>
+					<p class="font-size-150 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.51).</p>
+					<p class="font-size-150 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-3-2">
+				<h3>Test 3.3.2: On each web page, do bold texts and images of bold text with font sizes smaller than or equal to 120% of the default font size (or 1.2em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.51).</p>
+					<p class="font-size-120 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.51).</p>
+					<p class="font-size-120 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-3-3">
+				<h3>Test 3.3.3: On each web page, do non-bold texts and images of non-bold text with font sizes larger than 150% of the default font size (or 1.5em), meet one of the following conditions (except in particular cases)?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3.1).</p>
+					<p class="font-size-170 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3.1).</p>
+					<p class="font-size-170 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-3-3-4">
+				<h3>Test 3.3.4: On each web page, do bold texts and images of bold text with font sizes larger than 120% of the default font size (or 1.2em), meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3.1).</p>
+					<p class="font-size-130 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3.1).</p>
+					<p class="font-size-130 bg-success">Nom</p>
 				</div>
 
 				<div class="clearfix"></div>
