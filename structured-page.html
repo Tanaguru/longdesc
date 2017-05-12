@@ -3,18 +3,27 @@
     <head> 
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
         <title>Structured Page</title> 
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="video.css" />
+        <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     </head> 
     <body> 
         <div> 
             <div class="skip-link">
-                <a href="#main">go to content</a>
-                <a href="#menu">go to menu</a>
+                <a href="#main" class="sr-only sr-only-focusable">go to content</a>
+                <a href="#menu" class="sr-only sr-only-focusable">go to menu</a>
             </div>
+            
             <header id="header" role="banner">
                 logo
                 <div role="search">
-                    <form>
-                        test
+                    <form action="" method="GET">
+                        <label for="input-search">
+                            Research : 
+                            <input type="text" id="input-search" name="input-search" />
+                        </label>
+                        <input type="submit" value="Search" class="btn-primary" />
                     </form>
                 </div>
                 <nav id="menu" role="navigation">
@@ -27,7 +36,23 @@
                 </nav>
             </header>
             <main id="main" role="main">
-                <h1>Structured Page</h1> 
+                <h1>Structured Page</h1>
+
+                <h2>Recall Tanaguru Marker</h2>
+                <p><a href="http://tanaguru.readthedocs.io/en/develop/userdoc-HTML-markers/">See Tanaguru read the doc about marker</a></p>
+                <dl>
+                    <dt>data-table</dt>
+                    <dd>identified data table</dd>
+                    <dt>presentation-table</dt>
+                    <dd>identified presentation table</dd>
+                    <dt>complex-data-table</dt>
+                    <dd>identified complex data table</dd>
+                    <dt>decorative-image</dt>
+                    <dd>identified decorative image</dd>
+                    <dt>informative-image</dt>
+                    <dd>identified informative image</dd>
+                </dl> 
+
                 <div class="test-detail" lang="fr"> Dans chaque page Web, la structure du document vérifie-t-elle ces conditions ? 
                     <ul class="ssTests"> 
                         <li>La <a href="http://references.modernisation.gouv.fr/referentiel-technique-0#mZoneHeader">zone d&apos;en-tête de la page</a> possède un rôle ARIA <code>banner</code></li> 
