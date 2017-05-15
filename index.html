@@ -5003,6 +5003,69 @@
 			</div>
 		</div>
 
+		<div id="crit-7-4">
+
+			<h2>Criterion 7.4 - For each script that initiates a change of context, is the user warned or can he control it?</h2>
+
+			<div id="test-7-4-1">
+				<h3>Test 7.4.1: Does each script initiating a change of context meet one of the following conditions?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following button warns the user it opens a popup in a hidden text (with a script from Bootstrap).</p>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login<span class="sr-only">(opens a popup)</span></button>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					       Lorem ipsum
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following button doesn't warn the user of the opening of a popup (with a script from Bootstrap).</p>
+       		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login <span class="sr-only">(opens a popup)</span></button>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					       Lorem ipsum
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-8-1">
 
 			<h2>Criterion 8.1 - Is each web page defined by a document type?</h2>
@@ -8418,8 +8481,13 @@
 	<footer>
 		<a href="https://my.tanaguru.com/">Tanaguru.com</a>
 	</footer>
-
-
+	
+	<!-- JS libraries -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<!-- /JS libraries -->
+	
 	<script type="text/javascript">
 		var c = document.getElementsByClassName('test_canvas');
 		cLen = c.length;
@@ -8486,6 +8554,5 @@
 
 		
 	</script>
-	
 </body>
 </html>
