@@ -10,7 +10,6 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="video.css" />
-  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <style type="text/css"> 
 	   .px_html{ 
@@ -46,10 +45,31 @@
 	      .relativeUnitesEm_html {
 		  width:12em;
 	   }
+	   .font-size-170 {
+	   	font-size: 1.7rem;
+	   	color: #fff;
+	   }
+	   .font-size-150 {
+	   	font-size: 1.5rem;
+	   	color: #fff;
+	   }
+	  .font-size-130 {
+	   	font-size: 1.3rem;
+	   	color: #fff;
+	   }
+	   .font-size-120 {
+	   	font-size: 1.2rem;
+	   	color: #fff;
+	   }
 	    .justify_html{ 
 	      text-align:justify; 
 	   }
+	   .bg-black {
+			background-color: #000;
+	   }
    </style> 
+  <link rel="stylesheet" href="bootstrap-3-glyphicon.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body onload="DrawCaptcha();">
 	<header>
@@ -2481,6 +2501,185 @@
 			</div>
 		</div>
 
+		<div id="crit-3-1">
+
+			<h2>Criterion 3.1 - On each web page, information must not be conveyed only through color. Has this rule been followed?</h2>
+
+			<div id="test-3-1-4">
+				<h3>Test 3.1.4: For each CSS property defining a color and conveying information, information must not be conveyed only through color. Has this rule been followed?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>In this formular, the required field is indicated with the label and its color</p>
+					<label for="field-3-1-4">Prénom (obligatoire)</label>
+					<input type="text" required aria-required="true" style="border: solid 1px #f00">
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>In this formular, the required field is indicated only by its border's color</p>
+					<label for="field-3-1-4">Prénom</label>
+					<input type="text" required  aria-required="true" style="border: solid 1px #f00">
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-3-3">
+
+			<h2>Criterion 3.3 - On each web page, is the contrast between the text and background colors sufficient (except in particular cases)?</h2>
+
+			<div id="test-3-3-1">
+				<h3>Test 3.3.1:  On each web page, do non-bold texts and images of non-bold text with font sizes smaller than or equal to 150% of the default font size (or 1.5em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
+					<p class="font-size-150 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
+					<p class="font-size-150 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-3-2">
+				<h3>Test 3.3.2: On each web page, do bold texts and images of bold text with font sizes smaller than or equal to 120% of the default font size (or 1.2em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
+					<p class="font-size-120 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
+					<p class="font-size-120 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-3-3">
+				<h3>Test 3.3.3: On each web page, do non-bold texts and images of non-bold text with font sizes larger than 150% of the default font size (or 1.5em), meet one of the following conditions (except in particular cases)?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3).</p>
+					<p class="font-size-170 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3).</p>
+					<p class="font-size-170 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-3-3-4">
+				<h3>Test 3.3.4: On each web page, do bold texts and images of bold text with font sizes larger than 120% of the default font size (or 1.2em), meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "alert-success" from Bootstrap. The contrast color is sufficient here (>= 3).</p>
+					<p class="font-size-130 alert-success">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 3).</p>
+					<p class="font-size-130 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div id="crit-3-4">
+
+			<h2>Criterion 3.3 - On each web page, is the contrast between the text and background colors sufficient (except in particular cases)?</h2>
+
+			<div id="test-3-4-1">
+				<h3>Test 3.4.1:  On each web page, do non-bold texts and images of non-bold text with font sizes smaller than or equal to 150% of the default font size (or 1.5em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default font-size. The contrast color is sufficient here (>= 7).</p>
+					<p class="font-size-150 bg-black">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 7).</p>
+					<p class="font-size-150 bg-primary">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-4-2">
+				<h3>Test 3.4.2: On each web page, do bold texts and images of bold text with font sizes smaller than or equal to 120% of the default font size (or 1.2em) meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default font-size. The contrast color is sufficient here (>= 7).</p>
+					<p class="font-size-120 bg-black">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size equal to 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 7).</p>
+					<p class="font-size-120 bg-primary">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			
+			<div id="test-3-4-3">
+				<h3>Test 3.4.3: On each web page, do non-bold texts and images of non-bold text with font sizes larger than 150% of the default font size (or 1.5em), meet one of the following conditions (except in particular cases)?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "bg-primary" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
+					<p class="font-size-170 bg-primary">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 150% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
+					<p class="font-size-170 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<div id="test-3-4-4">
+				<h3>Test 3.4.4: On each web page, do bold texts and images of bold text with font sizes larger than 120% of the default font size (or 1.2em), meet one of the following conditions (except in particular cases)?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "bg-primary" from Bootstrap. The contrast color is sufficient here (>= 4.5).</p>
+					<p class="font-size-130 bg-primary">Nom</p>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The paragraph has a font size larger than 120% of the default font size and uses the CSS class "bg-success" from Bootstrap. The contrast color isn't sufficient here (< 4.5).</p>
+					<p class="font-size-130 bg-success">Nom</p>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-4-1">
 
 			<h2>Criterion 4.1 - Does each prerecorded time-based media have a text transcript or an audio description if necessary (except in particular cases)?</h2>
@@ -4812,6 +5011,69 @@
 			</div>
 		</div>
 
+		<div id="crit-7-4">
+
+			<h2>Criterion 7.4 - For each script that initiates a change of context, is the user warned or can he control it?</h2>
+
+			<div id="test-7-4-1">
+				<h3>Test 7.4.1: Does each script initiating a change of context meet one of the following conditions?</h3>
+				
+				<div class="sample test_true">
+					<span></span>
+					<p>The following button warns the user it opens a popup in a hidden text (with a script from Bootstrap).</p>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login<span class="sr-only">(opens a popup)</span></button>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					       Lorem ipsum
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="sample test_false">
+					<span></span>
+					<p>The following button doesn't warn the user of the opening of a popup (with a script from Bootstrap).</p>
+       		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login <span class="sr-only">(opens a popup)</span></button>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					       Lorem ipsum
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 		<div id="crit-8-1">
 
 			<h2>Criterion 8.1 - Is each web page defined by a document type?</h2>
@@ -5314,11 +5576,19 @@
 						<li>Banana</li>
 						<li>Kiwi</li>
 					</ul>
+					<p>The following element is a list from Bootstrap correctly implemented</p>
+				<ul class="list-group">
+				  <li class="list-group-item active">Cras justo odio</li>
+				  <li class="list-group-item">Dapibus ac facilisis in</li>
+				  <li class="list-group-item">Morbi leo risus</li>
+				  <li class="list-group-item">Porta ac consectetur ac</li>
+				  <li class="list-group-item">Vestibulum at eros</li>
+				</ul>
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
-					<p>The following list of elements is a list of fruit but not implemented in list</p>
+					<p>The following list of elements is an ordered list of fruit but not implemented in list</p>
 					<p>
 						* Strawberry<br />
 						* Raspberry<br />
@@ -5331,6 +5601,16 @@
 						- Banana<br />
 						- Kiwi
 					<p>
+					<p>The following element is an ordered list from Bootstrap not correctly implemented</p>
+					<div class="list-group">
+					  <a href="#" class="list-group-item active">
+					    Cras justo odio
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+					  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+					  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+					  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -5342,24 +5622,42 @@
 				<div class="sample test_true">
 					<span></span>
 					<h4>Good samples</h4>
-					<p>The following element is an order list of fruit correctly implemented</p>
+					<p>The following element is an unordered list of fruit correctly implemented</p>
 					<ol>
 						<li>Strawberry</li>
 						<li>Raspberry</li>
 						<li>Banana</li>
 						<li>Kiwi</li>
 					</ol>
+					<p>The following element is a unordered list from Bootstrap correctly implemented</p>
+					<ol class="list-group">
+					  <li class="list-group-item active">Cras justo odio</li>
+					  <li class="list-group-item">Dapibus ac facilisis in</li>
+					  <li class="list-group-item">Morbi leo risus</li>
+					  <li class="list-group-item">Porta ac consectetur ac</li>
+					  <li class="list-group-item">Vestibulum at eros</li>
+					</ol>
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
-					<p>The following list of elements is an order list of fruit but not implemented in order list</p>
+					<p>The following list of elements is an ordered list of fruit but not implemented in ordered list</p>
 					<p>
 						1 Strawberry<br />
 						2 Raspberry<br />
 						3 Banana<br />
 						4 Kiwi
 					<p>
+					<p>The following element is an unordered list from Bootstrap not correctly implemented</p>
+					<div class="list-group">
+					  <a href="#" class="list-group-item active">
+					    Cras justo odio
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+					  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+					  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+					  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -6587,6 +6885,7 @@
 	                    </select> 
 	                </form>
 				</div>
+				<div class="clearfix"></div>
 			</div>
 			
 			<div id="test-11-8-2">
@@ -6636,6 +6935,7 @@
 	                    </select> 
 	                </form>
 				</div>
+				<div class="clearfix"></div>
 			</div>
 			
 			<div id="test-11-8-3">
@@ -7370,13 +7670,16 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page set with an identical menu on each page</p>
-					<a href="\Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
+					<a href="Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
+					<br/><br/>
+					<p>This following link brings you to a page set with an identical menu (styled with Bootstrap) on each page</p>
+					<a href="Passed-12-02-01\Passed-12-02-01-A-bootstrap.html">Page set with an identical menu</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
-					<p>This following link brings you to a page set with an identical menu on each page</p>
-					<a href="\Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
+					<p>This following link brings you to a page set with an different menu on each page</p>
+					<a href="Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -7388,13 +7691,13 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page set with an identical menu on each page</p>
-					<a href="\Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
+					<a href="Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
 					<p>This following link brings you to a page set with an identical menu on each page</p>
-					<a href="\Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
+					<a href="Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -7675,6 +7978,13 @@
 	                        <li style="display:inline;">Titre de la page </li>
 	                    </ul>
                 	</div>
+
+          <p>Breadcrumb from Bootstrap:</p>
+          <ol class="breadcrumb">
+					  <li class="breadcrumb-item"><a href="#">Home</a></li>
+					  <li class="breadcrumb-item"><a href="#">Library</a></li>
+					  <li class="breadcrumb-item active">Data</li>
+					</ol>
 				</div>
 
 				<div class="sample test_false">
@@ -8442,8 +8752,13 @@
 	<footer>
 		<a href="https://my.tanaguru.com/">Tanaguru.com</a>
 	</footer>
-
-
+	
+	<!-- JS libraries -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<!-- /JS libraries -->
+	
 	<script type="text/javascript">
 		var c = document.getElementsByClassName('test_canvas');
 		cLen = c.length;
@@ -8525,6 +8840,5 @@
 
 		
 	</script>
-	
 </body>
 </html>
