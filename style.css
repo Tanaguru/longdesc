@@ -86,7 +86,7 @@ table.occurrences th {
 	background: #d2eaff;
 	padding:0.3rem;
 	text-align: center;
-	font-size: 1.2rem;
+	font-size: 0.8rem;
     font-weight: bold;
 }
 table.occurrences td {
@@ -94,6 +94,9 @@ table.occurrences td {
 	padding:0.3rem;
 	text-align: center;
 	font-size: 1.2rem;
+}
+.occurrences tr td:nth-child(3), .occurrences tr td:nth-child(2) {
+	font-size: 0.8rem;
 }
 table.occurrences tr:nth-child(odd){
   background-color:#EFF8FF;
