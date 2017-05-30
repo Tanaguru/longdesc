@@ -3858,8 +3858,8 @@
 
 				<div class="sample test_false">
 					<span></span>
-					<p>the following board has not relevant caption</p>
-	                <table class="support data-table">
+					<p>the following board has no relevant caption</p>
+	        <table class="support data-table">
 						<caption>^_^ ;-)</caption>
 						<tr>
 							<td></td>
@@ -3888,7 +3888,7 @@
 							<td>14h-18h</td>  
 						</tr>
 					</table>
-	                <table class="support data-table">
+	        <table class="support data-table">
 						<caption>A board</caption>
 						<tr>
 							<td></td>
@@ -3917,7 +3917,7 @@
 							<td>14h-18h</td>  
 						</tr>
 					</table>
-	                <table class="support data-table">
+	        <table class="support data-table">
 						<caption></caption>
 						<tr>
 							<td></td>
@@ -3946,6 +3946,74 @@
 							<td>14h-18h</td>  
 						</tr>
 					</table>
+					<br><br>
+					<p>The following table (styled with Bootstrap) has no relevant caption</p>
+					<table class="table">
+				    <thead>
+				      <tr>
+				        <th>#</th>
+				        <th>Column heading</th>
+				        <th>Column heading</th>
+				        <th>Column heading</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr class="table-active">
+				        <th scope="row">1</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr>
+				        <th scope="row">2</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr class="table-success">
+				        <th scope="row">3</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr>
+				        <th scope="row">4</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr class="table-info">
+				        <th scope="row">5</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr>
+				        <th scope="row">6</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr class="table-warning">
+				        <th scope="row">7</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr>
+				        <th scope="row">8</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				      <tr class="table-danger">
+				        <th scope="row">9</th>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				        <td>Column content</td>
+				      </tr>
+				    </tbody>
+				  </table>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -4995,16 +5063,50 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a structured page, which it is possible to reach all the interactive elements in the order expected</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
+					<br><br>
+					<p>The following button opens a "dropdown" list, whose options are accessible with the keyboard.</p>
+					<div class="dropdown">
+					  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Dropdown button
+					  </button>
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					    <a class="dropdown-item" href="#">Action</a>
+					    <a class="dropdown-item" href="#">Another action</a>
+					    <a class="dropdown-item" href="#">Something else here</a>
+					  </div>
+					</div>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
-                	<p>It is not possible to reach the following elements</p>
-                	<div onclick="javascript:someAction();">Some action</div><br />
+        	<p>It is not possible to reach the following elements</p>
+        	<div onclick="javascript:someAction();">Some action</div><br />
 					<div onclick="javascript:someAction();" tabindex="-1">Some action</div><br />
 					<button onclick="javascript:someAction();" tabindex="-1">Some action</button><br />
-					<a href="#" tabindex="-1">Some action</a><br />
+					<a href="#" tabindex="-1">Some action</a><br><br>
+
+					<p>The following carrousel from Bootstrap is accessible with the keyboard, but the outline has been deactivated and li elements are used instead of buttons.</p>
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					  <ol class="carousel-indicators">
+					    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					  </ol>
+					  <div class="carousel-inner" role="listbox">
+					    <div class="carousel-item active"><img class="d-block img-fluid" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15c3aa82f62%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15c3aa82f62%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.9140625%22%20y%3D%22217.90625%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"></div>
+					    <div class="carousel-item"><img class="d-block img-fluid" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15c3aa82f63%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15c3aa82f63%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3125%22%20y%3D%22217.90625%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"></div>
+					    <div class="carousel-item"><img class="d-block img-fluid" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Third slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15c3aa82f64%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15c3aa82f64%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22217.90625%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"></div>
+					  </div>
+					  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					</div>
 				</div>
 
 				<div class="clearfix"></div>
@@ -5084,7 +5186,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page that has an available document type</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
@@ -5101,13 +5203,13 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page that has a valid document type</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
 					<p>This following link brings you to a page that has an invalid document type</p>
-					<a href="http://www.longdesc.fr/Failed-8-1-2.html">Page with invalid document type</a>
+					<a href="Failed-8-1-2.html">Page with invalid document type</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -5119,13 +5221,13 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page that has a document type before the HTML tag</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
 					<p>This following link brings you to a page that has a document type not before the HTML tag</p>
-					<a href="http://www.longdesc.fr/Failed-8-1-3.html">Page with document type not before HTML tag</a>
+					<a href="Failed-8-1-3.html">Page with document type not before HTML tag</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -5144,7 +5246,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>The following link provides access to a page that respects the W3C standard and an other link to the W3C evaluation of this page : </p>
-					<a href="http://www.longdesc.fr/Passed-8-2-1.html">The page that respects the W3C standard</a> and 
+					<a href="Passed-8-2-1.html">The page that respects the W3C standard</a> and 
 					<a href="https://validator.w3.org/check?verbose=1&uri=http%3A%2F%2Fwww.longdesc.fr%2FPassed-8-2-1.html">W3C validator of this page</a>
 
 				</div>
@@ -5165,7 +5267,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>The following link provides access to a page that has no obsolete element : </p>
-					<a href="http://www.longdesc.fr/Passed-8-2-2.html">The page that has no obsolete element</a> and 
+					<a href="Passed-8-2-2.html">The page that has no obsolete element</a> and 
 					<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.longdesc.fr%2FPassed-8-2-2.html">W3C validator of this page</a>
 
 				</div>
@@ -5173,7 +5275,7 @@
 					<span></span>
 					<h4>Bad samples</h4>
 					<p>The following link provides access to a page that has obsolete elements : </p>
-					<a href="http://www.longdesc.fr/Failed-8-2-2.html">The page that has no obsolete element</a> and 
+					<a href="Failed-8-2-2.html">The page that has no obsolete element</a> and 
 					<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.longdesc.fr%2FFailed-8-2-2.html">W3C validator of this page</a>
 				</div>
 				<div class="clearfix"></div>
@@ -5192,7 +5294,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that has a default human language identification</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 
 				</div>
 				<div class="sample test_false">
@@ -5216,14 +5318,14 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that has a relevant default human language identification</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
 					<p>This following link brings you to a page that has a not relevant default human language identification</p>
-					<a href="http://www.longdesc.fr/Failed-8-4-1.html">Page with not relevant default human language identification</a>
+					<a href="Failed-8-4-1.html">Page with not relevant default human language identification</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -5241,7 +5343,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that has a page title</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 
 				</div>
 				<div class="sample test_false">
@@ -5265,15 +5367,15 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that has a relevant page title</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
 					<p>This following links brings you to pages that have a not relevant page title</p>
-					<a href="http://www.longdesc.fr/Failed-8-6-1_01.html">Page with not relevant page title</a>
-					<a href="http://www.longdesc.fr/Failed-8-6-1_02.html">An other page with not relevant page title</a>
+					<a href="Failed-8-6-1_01.html">Page with not relevant page title</a>
+					<a href="Failed-8-6-1_02.html">An other page with not relevant page title</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -5440,7 +5542,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that has a relevant level 1 heading</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 				<div class="sample test_false">
 					<span></span>
@@ -5458,7 +5560,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that has a relevant hierarchy of heading</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 				<div class="sample test_false">
 					<span></span>
@@ -5494,7 +5596,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that has a relevant hierarchy of heading</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 				<div class="sample test_false">
 					<span></span>
@@ -5518,7 +5620,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that is structured</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 				<div class="sample test_false">
 					<span></span>
@@ -5536,7 +5638,7 @@
 					<span></span>
 					<h4>Good samples</h4>
 					<p>This following link brings you to a page that is structured</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 				<div class="sample test_false">
 					<span></span>
@@ -6682,7 +6784,7 @@
 					<h4>Bad samples</h4>
 
 	                <p>This following link brings you to an other page that has the same input than in test 11.3.1 and it is not coherent</p>
-					<a href="http://www.longdesc.fr/Failed-11-3-2.html">An other page with same input fields</a>
+					<a href="Failed-11-3-2.html">An other page with same input fields</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -6944,24 +7046,43 @@
 				<div class="sample test_true">
 					<span></span>
 					<h4>Good samples</h4>
-	                <p>The following select field has grouped options correctly implemented with label relevant</p>
-	                <form action="mock_action"> 
-                        <label for="test-11-8-3_field1">Animals :</label> 
-                        <select name="animal" id="test-11-8-3_field1"> 
-                        	<optgroup label="Mammal">
-                        		<option value="cat">Cat</option>
-                        		<option value="dog">Dog</option>
-                        	</optgroup>
-                        	<optgroup label="bird">
-                        		<option value="pigeon">Pigeon</option>
-                        		<option value="parrot">Parrot</option>
-                        	</optgroup>
-                        	<optgroup label="fish">
-                        		<option value="salmon">Salmon</option>
-                        		<option value="Tuna">Tuna</option>
-                        	</optgroup>
-	                    </select> 
-	                </form> 
+          <p>The following select field has grouped options correctly implemented with label relevant</p>
+          <form action="mock_action"> 
+                <label for="test-11-8-3_field1">Animals :</label> 
+                <select name="animal" id="test-11-8-3_field1"> 
+                	<optgroup label="Mammal">
+                		<option value="cat">Cat</option>
+                		<option value="dog">Dog</option>
+                	</optgroup>
+                	<optgroup label="bird">
+                		<option value="pigeon">Pigeon</option>
+                		<option value="parrot">Parrot</option>
+                	</optgroup>
+                	<optgroup label="fish">
+                		<option value="salmon">Salmon</option>
+                		<option value="Tuna">Tuna</option>
+                	</optgroup>
+              </select> 
+          </form> 
+          <br><br>
+          <p>The following select field (styled with Bootstrap) has grouped options correctly implemented with label relevant</p>
+          <form action="mock_action"> 
+                <label for="test-11-8-3_field2">Animals :</label> 
+                <select class="custom-select" name="animal" id="test-11-8-3_field2"> 
+                	<optgroup label="Mammal">
+                		<option value="cat">Cat</option>
+                		<option value="dog">Dog</option>
+                	</optgroup>
+                	<optgroup label="bird">
+                		<option value="pigeon">Pigeon</option>
+                		<option value="parrot">Parrot</option>
+                	</optgroup>
+                	<optgroup label="fish">
+                		<option value="salmon">Salmon</option>
+                		<option value="Tuna">Tuna</option>
+                	</optgroup>
+              </select> 
+          </form> 
 				</div>
 				<div class="sample test_false">
 					<span></span>
@@ -7165,6 +7286,11 @@
 	                        <label id="field1_test-11-10-3">Field1 (mandatory) : </label> <input type="text" name="field1" aria-labelledby="field1_test-11-10-3" /> <br />
 	                        <label id="field2_test-11-10-3">Field2 (required) : </label> <input type="text" name="field2" aria-describedby="field2_test-11-10-3" /> <br />
 	                    </p> 
+											<br><br>
+	                    <p>Example with Bootstrap:</p>
+	                    <div class="input-group">
+											  <label class="input-group-addon" id="description">Username: </label><input type="text" class="form-control" aria-labelledby="description">
+											</div>
 					</form>
 				</div>
 				<div class="sample test_false">
@@ -7671,9 +7797,8 @@
 					<span></span>
 					<p>This following link brings you to a page set with an identical menu on each page</p>
 					<a href="Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
-					<br/><br/>
-					<p>This following link brings you to a page set with an identical menu (styled with Bootstrap) on each page</p>
-					<a href="Passed-12-02-01\Passed-12-02-01-A-bootstrap.html">Page set with an identical menu</a>
+					<br/><br/>f
+					<a href="Passed-12-02-01\Passed-12-02-01-A-bootstrap.html">Page set with an identical menu (styled with Bootstrap)</a>
 				</div>
 
 				<div class="sample test_false">
@@ -7691,7 +7816,8 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page set with an identical menu on each page</p>
-					<a href="Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
+					<a href="Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a><br/><br/>
+					<a href="Passed-12-02-02\Passed-12-02-02-A-bootstrap.html">Page set with an identical menu (designed by Bootstrap)</a>
 				</div>
 
 				<div class="sample test_false">
@@ -7714,13 +7840,13 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page set with an identical presentation of menu on each page</p>
-					<a href="\Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
+					<a href="Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
 					<p>This following link brings you to a page set with an identical presentation of menu on each page</p>
-					<a href="\Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
+					<a href="Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -7732,13 +7858,13 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page set with an identical presentation of menu on each page</p>
-					<a href="\Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
+					<a href="Passed-12-02-01\Passed-12-02-01-A.html">Page set with an identical menu</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
 					<p>This following link brings you to a page set with an identical presentation of menu on each page</p>
-					<a href="\Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
+					<a href="Failed-12-02-01\Failed-12-02-01-A.html">Page set with a different menu</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -7932,16 +8058,28 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>A pagination correctly implemented</p>
-	                <div id="pagination_01">
-	                    <ul>
-	                        <li style="display:inline;"><a href="#previous"> Previous page </a></li>
-	                        <li style="display:inline;"><a href="#page1"> Page 1 </a></li>
-	                        <li style="display:inline;"><a href="#page2"> Page 2 </a></li>
-	                        <li style="display:inline;"><a href="#page3"> Page 3 </a></li>
-	                        <li style="display:inline;"><a href="#page4"> Page 4 </a></li>
-	                        <li style="display:inline;"><a href="#next"> Next page </a></li>
-	                    </ul>
-	                </div>
+          <div id="pagination_01">
+              <ul>
+                  <li style="display:inline;"><a href="#previous"> Previous page </a></li>
+                  <li style="display:inline;"><a href="#page1"> Page 1 </a></li>
+                  <li style="display:inline;"><a href="#page2"> Page 2 </a></li>
+                  <li style="display:inline;"><a href="#page3"> Page 3 </a></li>
+                  <li style="display:inline;"><a href="#page4"> Page 4 </a></li>
+                  <li style="display:inline;"><a href="#next"> Next page </a></li>
+              </ul>
+          </div>
+          <br><br>
+          <p>A pagination styled with bootstrap</p>
+          <nav aria-label="Pagination">
+					  <ul class="pagination">
+					    <li class="page-item"><a class="page-link" href="#previous">Previous <span class="sr-only">page</span></a></li>
+					    <li class="page-item"><a class="page-link" href="#page1"><span class="sr-only">Page </span>1</a></li>
+					    <li class="page-item"><a class="page-link" href="#page2"><span class="sr-only">Page </span>2</a></li>
+					    <li class="page-item"><a class="page-link" href="#page3"><span class="sr-only">Page </span>3</a></li>
+					    <li class="page-item"><a class="page-link" href="#page4"><span class="sr-only">Page </span>4</a></li>
+					    <li class="page-item"><a class="page-link" href="#next">Next <span class="sr-only">page</span></a></li>
+					  </ul>
+					</nav>
 				</div>
 
 				<div class="sample test_false">
@@ -8039,9 +8177,9 @@
 					<p>A menu of navigation</p>
 					<nav id="menu_test-12-10-1" role="navigation">
 	                    <ul>
-	                        <li><a href="http://www.longdesc.fr/">Home</a></li>
-	                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
-	                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+	                        <li><a href="./">Home</a></li>
+	                        <li><a href="Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+	                        <li><a href="Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
 	                    </ul>
 	                </nav>
 				</div>
@@ -8051,8 +8189,8 @@
 					<p>Some links that follow</p>
 	                <a href="#">Home</a>
 	                <a href="#">Rubrique</a>
-	                <a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a> 
-	                <a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
+	                <a href="Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a> 
+	                <a href="Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
                 	</div>
 				</div>
 
@@ -8067,24 +8205,24 @@
 					<p>A menu of navigation that the tag that groups the links is implemented with an id</p>
 					<nav id="menu_test-12-10-2" role="navigation">
 	                    <ul>
-	                        <li><a href="http://www.longdesc.fr/">Home</a></li>
-	                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
-	                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+	                        <li><a href="./">Home</a></li>
+	                        <li><a href="Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+	                        <li><a href="Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
 	                    </ul>
 	                </nav>
 					<p>A group of links that the tag that groups the links is preceded by an anchor</p>
 					<a name="group-links" id="group-links_test-12-10-2_01"></a>
                     <ul>
-                        <li><a href="http://www.longdesc.fr/">Home</a></li>
-                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
-                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+                        <li><a href="Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
                     </ul>
                     <p>A group of links that the first tag is an anchor</p>
                     <div class="group-links">
 						<a name="group-links" id="group-links_test-12-10-2_02"></a>
-                        <a href="http://www.longdesc.fr/">Home</a>
-                        <a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a>
-                        <a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
+                        <a href="./">Home</a>
+                        <a href="Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a>
+                        <a href="Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
                     </div>
 				</div>
 
@@ -8093,13 +8231,13 @@
 					<p>Some links that follow</p>
 	                <a href="#">Home</a>
 	                <a href="#">Rubrique</a>
-	                <a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a> 
-	                <a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
+	                <a href="Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a> 
+	                <a href="Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a>
 					<p>A group of links</p>
                     <ul>
-                        <li><a href="http://www.longdesc.fr/">Home</a></li>
-                        <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
-                        <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+                        <li><a href="Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
                     </ul>
 				</div>
 
@@ -8112,18 +8250,18 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a page that the main content is implemented with a main tag and an id attribute</p>
-					<a href="http://www.longdesc.fr/Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-01.html">Page with main content and an id attribute</a>
+					<a href="Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-01.html">Page with main content and an id attribute</a>
 					<p>This following link brings you to a page that the main content is implemented with an anchor</p>
-					<a href="http://www.longdesc.fr/Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-02.html">Page with main content and anchor</a>
+					<a href="Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-02.html">Page with main content and anchor</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
 					<p>Some links that follow</p>
 					<p>This following link brings you to a page that the main content is implemented twice</p>
-					<a href="http://www.longdesc.fr/Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-01.html">Page with main content and an id attribute</a>
+					<a href="Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-01.html">Page with main content and an id attribute</a>
 					<p>This following link brings you to a page that the main content is implemented without id attribute or an anchor</p>
-					<a href="http://www.longdesc.fr/Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-02.html">Page with main content and anchor</a>
+					<a href="Passed-12-10-03/Rgaa32016.Test.12.10.3-1Passed-02.html">Page with main content and anchor</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -8135,7 +8273,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a structured page</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
@@ -8158,13 +8296,13 @@
 					<span></span>
 					<p>This page has no skip link, but this may be correct since there is no menu</p>
 					<p>This following link brings you to a structured page, that has skip links</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
                 	<p>This following link brings you to a page that has a navigation, but no skip link</p>
-					<a href="http://www.longdesc.fr/noskiplink-page.html">Page without skip link</a>
+					<a href="noskiplink-page.html">Page without skip link</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -8177,13 +8315,13 @@
 					<span></span>
 					<p>This page has no skip link, but this may be correct since there is no menu</p>
 					<p>This following link brings you to a structured page, that has skip links</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
 					<span></span>
                 	<p>This following link brings you to a page that has a main content, but no skip link</p>
-					<a href="http://www.longdesc.fr/noskiplink-page.html">Page without skip link</a>
+					<a href="noskiplink-page.html">Page without skip link</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -8195,7 +8333,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a structured page, that has skip links functional</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
@@ -8235,7 +8373,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a structured page, that has a navigation menu that indicate the current page</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
@@ -8257,7 +8395,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>This following link brings you to a structured page, that has no tabindex attribute or element with float:right property</p>
-					<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+					<a href="structured-page.html">Structured page</a>
 				</div>
 
 				<div class="sample test_false">
@@ -8395,10 +8533,10 @@
 				<a href="#">Index</a>
 			</li>
 			<li>
-				<a href="http://www.longdesc.fr/structured-page.html">Structured page</a>
+				<a href="structured-page.html">Structured page</a>
 			</li>
 			<li>
-				<a href="http://www.longdesc.fr/invalided-page.html">Invalided page</a>
+				<a href="invalided-page.html">Invalided page</a>
 			</li>
 		</ul>
 
