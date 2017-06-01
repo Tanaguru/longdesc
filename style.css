@@ -95,7 +95,7 @@ table.occurrences td {
 	text-align: center;
 	font-size: 1.2rem;
 }
-.occurrences tr td:nth-child(3), .occurrences tr td:nth-child(2) {
+table.occurrences tr td:nth-child(3), .occurrences tr td:nth-child(2) {
 	font-size: 0.8rem;
 }
 table.occurrences tr:nth-child(odd){
