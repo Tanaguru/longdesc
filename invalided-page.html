@@ -1,4 +1,4 @@
-<!DOCTYPE html "-//W3CC//EDTD XHTML 18.0 Strict//toto" >
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="toto" xml:lang="toto">
     <head> 
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -10,8 +10,19 @@
         <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     </head> 
     <body> 
-        <div> 
-            <h1>Invalided Page</h1>
+        <div role="main"> 
+            <div role="banner">
+                <h1>Invalided Page</h1>
+            </div>
+
+            <div role="navigation">
+                <ul>
+                    <li><a href="http://www.longdesc.fr/">Home</a></li>
+                    <li><a href="http://www.longdesc.fr/structured-page.html" title="Structured page (current)">Structured page</a></li>
+                    <li><a href="http://www.longdesc.fr/Passed-12-02-01/Passed-12-02-01-A.html">Set of pages with navigation</a></li>
+                    <li><a href="http://www.longdesc.fr/Failed-12-02-01/Failed-12-02-01-A.html">Set of pages with navigation different in each page</a></li>
+                </ul>
+            </div>
 
             <h2>Recall Tanaguru Marker</h2>
             <p><a href="http://tanaguru.readthedocs.io/en/develop/userdoc-HTML-markers/">See Tanaguru read the doc about marker</a></p>
@@ -45,9 +56,9 @@
             </div> 
             <div class="testcase"> 
             </div> 
-            <div class="test-explanation">
-                 Failed. 
-            </div> 
         </div>  
+        <div class="test-explanation" role="contentinfo">
+             Failed. 
+        </div> 
     </body>
 </html>

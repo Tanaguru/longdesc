@@ -3712,7 +3712,7 @@
 					<span></span>
 					<p>The following presentation boards are not correctly linearized</p>
 
-					<table class="presentation-table"> 
+					<table class="presentation-table" role="presentation"> 
 						<tr> 
 							<td style="width:50%;">Ce tableau de mise en page pose des</td> 
 							<td style="width:50%;">Le contenu n'est donc pas cohérent</td> 
@@ -4408,7 +4408,7 @@
 					</table>
 
 					<p>The following board has id and scope attribute for each column and row header</p>
-	                <table class="support complex-data-table">
+	                <table class="support F1complex-data-table">
 						<caption>Opening hours of the communal house and the CPAS</caption>
 						<tr>
 							<td></td>
@@ -4528,7 +4528,7 @@
 				<div class="sample test_true">
 					<span></span>
 					<p>The following presentation boards are correctly implemented</p>
-					<table class="presentation-table"> 
+					<table class="presentation-table" role="presentation"> 
 						<tr> 
 							<td>Ce tableau </td> 
 							<td>de mise en page </td>  
@@ -4543,7 +4543,7 @@
 				<div class="sample test_false">
 					<span></span>
 					<p>The following presentation boards are not correctly implemented</p>
-					<table class="presentation-table">
+					<table class="presentation-table" role="presentation">
 						<caption>Presentation board</caption> 
 						<colgroup>
 							<col span="2" style="background-color:red">
@@ -5625,7 +5625,19 @@
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
-					<p>This following page is not structured</p>
+					<p>This present page is not applicable, because it has no &lt;doctype&gt;</p>
+					<p>This following link brings you to a page that has a HTML5 &lt;doctype&gt; but it has some issues :</p>
+					<ul>
+						<li>The page has no &lt;main&gt; tag</li>
+						<li>The page has a tag with role="main" attribute but not into &lt;main&gt; tag</li>
+						<li>The page has a tag with role="banner" attribute but not into &lt;header&gt; tag</li>
+						<li>The page has a tag with role="contentinfo" attribute but into &lt;footer&gt; tag</li>
+						<li>The page has a tag with role="navigation" attribute but into &lt;nav&gt; tag</li>
+					</ul>
+					<a href="invalided-page.html">Structured page</a>
+
+					<p>This following link brings you to a page that has a HTML5 &lt;doctype&gt; but it has two &lt;main&gt; tag</p>
+					<a href="invalided-page_2.html">Structured page</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -9458,7 +9470,7 @@
 					<th rowspan="3" scope="row">4.16.1</th>
 					<th scope="row">Index</th>
 					<td>&lt;video controls &gt;&lt;source src="[source]" type="video/ogg" /&gt;&lt;/video&gt;</td>
-					<td>8</td>	<td>8</td>	<td>0</td>	<td>4</td>	<td>4</td>	<td>0</td>	<td>99</td>	<td>0</td>
+					<td>8</td>	<td>8</td>	<td>0</td>	<td>4</td>	<td>4</td>	<td>0</td>	<td>8</td>	<td>0</td>
 				</tr>
 				<tr>
 					<th scope="row">Structured page</th>
@@ -9477,7 +9489,7 @@
 					<th rowspan="3" scope="row">4.18.1</th>
 					<th scope="row">Index</th>
 					<td>&lt;video controls &gt;&lt;source src="[source]" type="video/ogg" /&gt;&lt;/video&gt;</td>
-					<td>15</td>	<td>15</td>	<td>6</td>	<td>7</td>	<td>2</td>	<td>0</td>	<td>99</td>	<td>0</td>
+					<td>15</td>	<td>15</td>	<td>6</td>	<td>7</td>	<td>2</td>	<td>0</td>	<td>15</td>	<td>0</td>
 				</tr>
 				<tr>
 					<th scope="row">Structured page</th>
@@ -9487,6 +9499,63 @@
 				<tr>
 					<th scope="row">Invalided page</th>
 					<td>&lt;embed src="[video source]" type="application/x-shockwave-flash" /&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+
+				<!-- //////////////////////////////// -->
+
+				<tr style="border-top: 4px solid rgb(0, 67, 123);">
+					<th rowspan="3" scope="row">5.1.1</th>
+					<th scope="row">Index</th>
+					<td>&lt;table <strong>class="complex-data-table"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>14</td>	<td>14</td>	<td>0</td>	<td>1</td>	<td>13</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Structured page</th>
+					<td>&lt;table <strong>class="complex-data-table"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Invalided page</th>
+					<td>&lt;table <strong>class="complex-data-table"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+
+				<!-- //////////////////////////////// -->
+
+				<tr style="border-top: 4px solid rgb(0, 67, 123);">
+					<th rowspan="3" scope="row">5.2.1</th>
+					<th scope="row">Index</th>
+					<td>&lt;table <strong>class="complex-data-table"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>13</td>	<td>13</td>	<td>0</td>	<td>3</td>	<td>10</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Structured page</th>
+					<td>&lt;table <strong>class="complex-data-table"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Invalided page</th>
+					<td>&lt;table <strong>class="complex-data-table"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+
+				<!-- //////////////////////////////// -->
+
+				<tr style="border-top: 4px solid rgb(0, 67, 123);">
+					<th rowspan="3" scope="row">5.3.1</th>
+					<th scope="row">Index</th>
+					<td>&lt;table <strong>class="presentation-table" role="presentation"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>6</td>	<td>6</td>	<td>0</td>	<td>2</td>	<td>4</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Structured page</th>
+					<td>&lt;table <strong>class="presentation-table" role="presentation"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Invalided page</th>
+					<td>&lt;table <strong>class="presentation-table" role="presentation"</strong> &gt;&lt;[...]&gt;&lt;/table&gt;</td>
 					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
 				</tr>
 
