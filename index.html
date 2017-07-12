@@ -6445,19 +6445,40 @@
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
+					<form>
+
+					<p>
+			        	The following field as no id attribut:<br>
+			        	<label for="input_02_test-11-1-2">Field</label>
+		                <input type="text" name="input_02_test-11-1-2" />
+		            </p>
 
 					<p>
 			        	The id of the form field isn't unique:<br>
-			        	<label for="input_04_test-11-1-1">Field</label>
-		                <input type="text" id="input_02_test-11-1-1" name="input_02_test-11-1-1" />
-		                <input type="text" id="input_02_test-11-1-1" name="input_02_test-11-1-1" />
+			        	<label for="input_03_test-11-1-2">Field</label>
+		                <input type="text" id="input_03_test-11-1-2" name="input_03_test-11-1-2" />
+		                <input type="text" id="input_03_test-11-1-2" name="input_04_test-11-1-2" />
 		            </p>
 
 			        <p>
-			        	The label is associating with a non-existing field:<br>
-			        	<label id="label_07_test-11-1-1" for="input_07_test-11-1-1">;-)</label>
-		                <input type="text" id="input_07_test-11-1-1" name="input_07_test-11-1-1" />
+			        	The label isn't associate with a field:<br>
+			        	<label>Field</label>
+		                <input type="text" id="input_04_test-11-1-2" name="input_04_test-11-1-2" />
 		            </p>
+
+			        <p>
+			        	The for attribute of the label isn't same as the field:<br>
+			        	<label for="input_05_test-11-1-2_dif">Field</label>
+		                <input type="text" id="input_05_test-11-1-2" name="input_05_test-11-1-2" />
+		            </p>
+
+					<p>
+			        	The id of the form field isn't unique:<br>
+			        	<label>Field
+		                	<input type="text" id="input_06_test-11-1-2" name="input_06_test-11-1-2" />
+		                </label>
+		            </p>
+		        </form>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -7067,8 +7088,8 @@
           <br><br>
           <p>The following select field (styled with Bootstrap) has grouped options correctly implemented with label relevant</p>
           <form action="mock_action"> 
-                <label for="test-11-8-3_field2">Animals :</label> 
-                <select class="custom-select" name="animal" id="test-11-8-3_field2"> 
+                <label for="test-11-8-3_field3">Animals :</label> 
+                <select class="custom-select" name="animal" id="test-11-8-3_field3"> 
                 	<optgroup label="Mammal">
                 		<option value="cat">Cat</option>
                 		<option value="dog">Dog</option>
@@ -7293,9 +7314,9 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <label>Field3: </label> <input type="text" name="field3" aria-labelledby="" /> <br />
+	                        <label id="field3_test-11-10-3">Field3: </label> <input for="field3_test-11-10-3" type="text" name="field3" aria-labelledby="" /> <br />
 	                        <label for="field4_test-11-10-3">Field4: </label> <input id="field4_test-11-10-3" type="text" name="field4" aria-describedby="field4_test-11-10-3_desc" /> <span id="field4_test-11-10-3_desc"></span> <br />
-	                        <label id="field4_test-11-10-3">Field5: </label> <input type="text" name="field5" aria-labelledby="field5_test-11-10-3" /> <br />
+	                        <label id="field5_test-11-10-3">Field5: </label> <input for="field5_test-11-10-3" type="text" name="field5" aria-labelledby="field5_test-11-10-3" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7363,29 +7384,32 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute :<br />
+		                <label for="input_01_test-11-10-6">Your email : </label>
 		                <strong id="label_01_test-11-10-6">  
 		                        Some hidden label
 		                </strong> 
-		                <input id="input_01_test-11-10-6" name="input_01_test-11-10-6" aria-describedby="label_01_test-11-10-6" />
+		                <input type="email" id="input_01_test-11-10-6" name="input_01_test-11-10-6" aria-describedby="label_01_test-11-10-6" />
 		            </p>
 
 			        <p>
 			        	The following input has labels associated with it by the "aria-describedby" attribute :<br />
+		                <label for="input_02_test-11-10-6">Your email : </label>
 		                <strong id="label_02_test-11-10-6">  
 		                        Some 
 		                </strong> 
 		                <strong id="label_03_test-11-10-6">  
 		                         hidden label
 		                </strong> 
-		                <input id="input_02_test-11-10-6" name="input_02_test-11-10-6" aria-describedby="label_02_test-11-10-6 label_03_test-11-10-6" />
+		                <input type="email" id="input_02_test-11-10-6" name="input_02_test-11-10-6" aria-describedby="label_02_test-11-10-6 label_03_test-11-10-6" />
 		            </p>
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute and show on focus :<br />
+		                <label for="input_04_test-11-10-6">Your email : </label>
 		                <strong id="label_04_test-11-10-6" class="sr-only">  
 		                        Some hidden label
 		                </strong> 
-		                <input id="input_04_test-11-10-6" onfocus="javascript:document.getElementById('label_04_test-11-10-6').setAttribute('class', '');" name="input_04_test-11-10-6" aria-describedby="label_04_test-11-10-6" />
+		                <input type="email" id="input_04_test-11-10-6" onfocus="javascript:document.getElementById('label_04_test-11-10-6').setAttribute('class', '');" name="input_04_test-11-10-6" aria-describedby="label_04_test-11-10-6" />
 		            </p>
 				</div>
 				<div class="sample test_false">
@@ -7394,29 +7418,32 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute, but two contains have the same "id":<br />
+		                <label for="input_05_test-11-10-6">Your email : </label>
 		                <strong id="label_05_test-11-10-6">  
 		                        Some hidden label
 		                </strong> 
-		                <input id="input_05_test-11-10-6" name="input_05_test-11-10-6" aria-describedby="label_05_test-11-10-6" />
+		                <input type="email" id="input_05_test-11-10-6" name="input_05_test-11-10-6" aria-describedby="label_05_test-11-10-6" />
 		            </p>
 
 			        <p>
 			        	The following input has labels associated with it by the "aria-describedby" attribute. Some part of the label not has an "id" attribute :<br />
+		                <label for="input_06_test-11-10-6">Your email : </label>
 		                <strong id="label_05_test-11-10-6">  
 		                        Some 
 		                </strong> 
 		                <strong id="">  
 		                         hidden label
 		                </strong> 
-		                <input id="input_06_test-11-10-6" name="input_06_test-11-10-6" aria-describedby="label_06_test-11-10-6" />
+		                <input type="email" id="input_06_test-11-10-6" name="input_06_test-11-10-6" aria-describedby="label_06_test-11-10-6" />
 		            </p>
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute, but only the user use an assistive technology can read it :<br />
+		                <label for="input_07_test-11-10-6">Your email : </label>
 		                <strong id="label_07_test-11-10-6" class="sr-only">  
 		                        Some hidden label
 		                </strong> 
-		                <input id="input_07_test-11-10-6" name="input_07_test-11-10-6" aria-describedby="label_07_test-11-10-6" />
+		                <input type="email" id="input_07_test-11-10-6" name="input_07_test-11-10-6" aria-describedby="label_07_test-11-10-6" />
 		            </p>
 				</div>
 				<div class="clearfix"></div>
@@ -11592,17 +11619,17 @@
 				<tr style="border-top: 4px solid rgb(0, 67, 123);">
 					<th rowspan="4" scope="row">11.1.1</th>
 					<th scope="row">Index</th>
-					<td></td>
-					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+					<td>&lt;input type="[...]" id="[...]" name="[...]" /&gt;</td>
+					<td>183</td>	<td>183</td>	<td>0</td>	<td>5</td>	<td>178</td>	<td>0</td>	<td>0</td>	<td>0</td>
 				</tr>
 				<tr>
 					<th scope="row">Structured page</th>
-					<td></td>
+					<td>&lt;select id="[...]" name="[...]" /&gt;</td>
 					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
 				</tr>
 				<tr>
 					<th scope="row">Invalided page</th>
-					<td></td>
+					<td>&lt;textarea id="[...]" name="[...]" /&gt;</td>
 					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
 				</tr>
 				<tr>
@@ -11612,6 +11639,33 @@
 				</tr>
 
 				<!-- //////////////////////////////// -->
+
+				<tr style="border-top: 4px solid rgb(0, 67, 123);">
+					<th rowspan="4" scope="row">11.1.2</th>
+					<th scope="row">Index</th>
+					<td>&lt;label for="unique"&gt;</td>
+					<td>79</td>	<td>79</td>	<td>0</td>	<td>6</td>	<td>73</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Structured page</th>
+					<td>&lt;input type="[...]" id="unique" name="[...]" /&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Invalided page</th>
+					<td>&lt;/label&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Invalided page 2</th>
+					<td></td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+
+				<!-- //////////////////////////////// 
+					getAllElementsWithAttribute('input','src'); 
+					document.querySelectorAll('img.classname').length;
+				-->
 
 			</tbody>
 			<tfoot>
