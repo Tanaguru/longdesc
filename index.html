@@ -6437,7 +6437,7 @@
 
 			        <p>
 			        	The form field has an id attribute, which is unique and matches the value of a for attribute of a label :<br>
-			        	<label for="label_01_test-11-1-2">Field 11-1-2</label>
+			        	<label for="label_01_test-11-1-2">Field 1 test 11-1-2</label>
 		                <input type="text" id="label_01_test-11-1-2" name="input_01_test-11-1-1" />
 		            </p>
 				</div>
@@ -6449,32 +6449,32 @@
 
 					<p>
 			        	The following field as no id attribut:<br>
-			        	<label for="input_02_test-11-1-2">Field</label>
+			        	<label for="input_02_test-11-1-2">Field 2 test 11.1.2</label>
 		                <input type="text" name="input_02_test-11-1-2" />
 		            </p>
 
 					<p>
 			        	The id of the form field isn't unique:<br>
-			        	<label for="input_03_test-11-1-2">Field</label>
+			        	<label for="input_03_test-11-1-2">Field 3 test 11.1.2</label>
 		                <input type="text" id="input_03_test-11-1-2" name="input_03_test-11-1-2" />
 		                <input type="text" id="input_03_test-11-1-2" name="input_04_test-11-1-2" />
 		            </p>
 
 			        <p>
 			        	The label isn't associate with a field:<br>
-			        	<label>Field</label>
+			        	<label>Field 4 test 11.1.2</label>
 		                <input type="text" id="input_04_test-11-1-2" name="input_04_test-11-1-2" />
 		            </p>
 
 			        <p>
 			        	The for attribute of the label isn't same as the field:<br>
-			        	<label for="input_05_test-11-1-2_dif">Field</label>
+			        	<label for="input_05_test-11-1-2_dif">Field 5 test 11.1.2</label>
 		                <input type="text" id="input_05_test-11-1-2" name="input_05_test-11-1-2" />
 		            </p>
 
 					<p>
 			        	The id of the form field isn't unique:<br>
-			        	<label>Field
+			        	<label>Field 6 test 11.1.2
 		                	<input type="text" id="input_06_test-11-1-2" name="input_06_test-11-1-2" />
 		                </label>
 		            </p>
@@ -6767,12 +6767,12 @@
 	                	<fieldset>
 	                		<legend>First person</legend>
 		                    <label for="test-11-3-1_field1">Name</label> 
-		                    <input type="radio" name="test-11-3-1_field1" id="test-11-3-1_field1" />
+		                    <input type="text" name="test-11-3-1_field1" id="test-11-3-1_field1" />
 	                	</fieldset>
 	                	<fieldset>
 	                		<legend>Second person</legend>
 		                    <label for="test-11-3-1_field2">Name</label>
-	                      	<input type="radio" name="test-11-3-1_field2" id="test-11-3-1_field2" />
+	                      	<input type="text" name="test-11-3-1_field2" id="test-11-3-1_field2" />
 	                	</fieldset>	                     
 	                </form>
 				</div>
@@ -6783,9 +6783,9 @@
 	                <p>The following input have the same label without a different context</p>
 	                <form> 
 	                    <label for="test-11-3-1_field3">Name</label> 
-	                    <input type="radio" name="test-11-3-1_field3" id="test-11-3-1_field3" />
+	                    <input type="text" name="test-11-3-1_field3" id="test-11-3-1_field3" />
 	                    <label for="test-11-3-1_field4">Name</label>
-                      	<input type="radio" name="test-11-3-1_field4" id="test-11-3-1_field4" />                   
+                      	<input type="text" name="test-11-3-1_field4" id="test-11-3-1_field4" />                   
 	                </form>
 				</div>
 				<div class="clearfix"></div>
@@ -6824,7 +6824,7 @@
 
 	                <p>The following input has a label is next to the field</p>
 	                <form> 
-		                    <label for="test-11-4-1_field1">A field</label> 
+		                    <label for="test-11-4-1_field1">A field 1 test 11.4.1</label> 
 		                    <input type="text" name="test-11-4-1_field1" id="test-11-4-1_field1" />                    
 	                </form>
 				</div>
@@ -6835,7 +6835,7 @@
 	                <p>The following input has a label is not next to the field</p>
 	                <form> 
 	                	<p>
-	                		<label for="test-11-4-1_field3">A other field</label> 
+	                		<label for="test-11-4-1_field3">A field 3 test 11.4.1</label> 
 	                    	<input style="float:right;" type="text" name="test-11-4-1_field3" id="test-11-4-1_field3" />
 	                    </p>
 	                </form>
@@ -6858,7 +6858,7 @@
 	                <p>The following fields are grouped with the fieldset tag</p>
 	                <form action="mock_action"> 
 	                    <fieldset> 
-	                        <legend>Gender</legend>
+	                        <legend>Gender test 11.5.1</legend>
 	                        <label for="test-11-5-1_field1">Male</label> <input type="radio" name="gender" id="test-11-5-1_field1" /> <br /> 
 	                        <label for="test-11-5-1_field2">Female</label> <input type="radio" name="gender" id="test-11-5-1_field2" /> 
 	                    </fieldset> 
@@ -6889,7 +6889,7 @@
 	                <p>The following fields are grouped with the fieldset tag and the first child is a legend tag</p>
 	                <form action="mock_action"> 
 	                    <fieldset> 
-	                        <legend>Gender</legend>
+	                        <legend>Gender test 11.6.1</legend>
 	                        <label for="test-11-6-1_field1">Male</label> <input type="radio" name="gender" id="test-11-6-1_field1" /> <br /> 
 	                        <label for="test-11-6-1_field2">Female</label> <input type="radio" name="gender" id="test-11-6-1_field2" /> 
 	                    </fieldset> 
@@ -6932,7 +6932,7 @@
 	                <p>The following group of fields has a relevant legend tag</p>
 	                <form action="mock_action"> 
 	                    <fieldset> 
-	                        <legend>Gender</legend>
+	                        <legend>Gender test 11.7.1</legend>
 	                        <label for="test-11-7-1_field1">Male</label> <input type="radio" name="gender" id="test-11-7-1_field1" /> <br /> 
 	                        <label for="test-11-7-1_field2">Female</label> <input type="radio" name="gender" id="test-11-7-1_field2" /> 
 	                    </fieldset> 
@@ -6997,14 +6997,14 @@
 					<h4>Bad samples</h4>
 	                <p>The following select field has options not correctly grouped with optgroup tag</p>
 	                <form action="mock_action"> 
-                        <label for="test-11-8-1_field2">Animals</label> 
+                        <label for="test-11-8-1_field2">Animals 2</label> 
                         <select name="animals" id="test-11-8-1_field2"> 
                         	<option role="separator">Mammal</option>
-                        		<option value="Cat">Cat</option>
-                        		<option value="Dog">Dog</option>
-                        	<option role="separator">bird</option>
-                        		<option value="Pigeon">Pigeon</option>
-                        		<option value="Parrot">Parrot</option>
+                        		<option value="Cat">Kitten</option>
+                        		<option value="Dog">Monkey</option>
+                        	<option role="separator">Bird</option>
+                        		<option value="Pigeon">Duck</option>
+                        		<option value="Parrot">Chicken</option>
 	                    </select> 
 	                </form>
 				</div>
@@ -7019,19 +7019,19 @@
 					<h4>Good samples</h4>
 	                <p>The following select field has grouped options correctly implemented with label</p>
 	                <form action="mock_action"> 
-                        <label for="test-11-8-2_field1">Animals :</label> 
+                        <label for="test-11-8-2_field1">Animals 3 :</label> 
                         <select name="animal" id="test-11-8-2_field1"> 
                         	<optgroup label="Mammal">
-                        		<option value="cat">Cat</option>
-                        		<option value="dog">Dog</option>
+                        		<option value="cat">Donkey</option>
+                        		<option value="dog">Pig</option>
                         	</optgroup>
                         	<optgroup label="bird">
-                        		<option value="pigeon">Pigeon</option>
-                        		<option value="parrot">Parrot</option>
+                        		<option value="pigeon">Goose</option>
+                        		<option value="parrot">Robin</option>
                         	</optgroup>
                         	<optgroup label="fish">
-                        		<option value="salmon">Salmon</option>
-                        		<option value="Tuna">Tuna</option>
+                        		<option value="salmon">Shark</option>
+                        		<option value="Tuna">Whale</option>
                         	</optgroup>
 	                    </select> 
 	                </form> 
@@ -7041,19 +7041,19 @@
 					<h4>Bad samples</h4>
 	                <p>The following select field has grouped options not correctly implemented with label</p>
 	                <form action="mock_action"> 
-                        <label for="test-11-8-2_field2">Animals :</label> 
+                        <label for="test-11-8-2_field2">Animals 4 :</label> 
                         <select name="animal" id="test-11-8-2_field2"> 
                         	<optgroup>
-                        		<option value="cat">Cat</option>
-                        		<option value="dog">Dog</option>
+                        		<option value="cat">Sheep</option>
+                        		<option value="dog">Cow</option>
                         	</optgroup>
                         	<optgroup>
-                        		<option value="pigeon">Pigeon</option>
-                        		<option value="parrot">Parrot</option>
+                        		<option value="pigeon">Ostrich</option>
+                        		<option value="parrot">Goeland</option>
                         	</optgroup>
                         	<optgroup>
-                        		<option value="salmon">Salmon</option>
-                        		<option value="Tuna">Tuna</option>
+                        		<option value="salmon">Bream</option>
+                        		<option value="Tuna">Catfish</option>
                         	</optgroup>
 	                    </select> 
 	                </form>
@@ -7069,38 +7069,38 @@
 					<h4>Good samples</h4>
           <p>The following select field has grouped options correctly implemented with label relevant</p>
           <form action="mock_action"> 
-                <label for="test-11-8-3_field1">Animals :</label> 
+                <label for="test-11-8-3_field1">Animals 5 :</label> 
                 <select name="animal" id="test-11-8-3_field1"> 
                 	<optgroup label="Mammal">
-                		<option value="cat">Cat</option>
-                		<option value="dog">Dog</option>
+                		<option value="cat">Hourse</option>
+                		<option value="dog">Giraffe</option>
                 	</optgroup>
                 	<optgroup label="bird">
-                		<option value="pigeon">Pigeon</option>
-                		<option value="parrot">Parrot</option>
+                		<option value="pigeon">Flamingo</option>
+                		<option value="parrot">Stork</option>
                 	</optgroup>
                 	<optgroup label="fish">
-                		<option value="salmon">Salmon</option>
-                		<option value="Tuna">Tuna</option>
+                		<option value="salmon">Goldfish</option>
+                		<option value="Tuna">Carp</option>
                 	</optgroup>
               </select> 
           </form> 
           <br><br>
           <p>The following select field (styled with Bootstrap) has grouped options correctly implemented with label relevant</p>
           <form action="mock_action"> 
-                <label for="test-11-8-3_field3">Animals :</label> 
+                <label for="test-11-8-3_field3">Animals 6 :</label> 
                 <select class="custom-select" name="animal" id="test-11-8-3_field3"> 
                 	<optgroup label="Mammal">
-                		<option value="cat">Cat</option>
-                		<option value="dog">Dog</option>
+                		<option value="cat">Elephant</option>
+                		<option value="dog">Boar</option>
                 	</optgroup>
                 	<optgroup label="bird">
-                		<option value="pigeon">Pigeon</option>
-                		<option value="parrot">Parrot</option>
+                		<option value="pigeon">Hummingbird</option>
+                		<option value="parrot">Tit</option>
                 	</optgroup>
                 	<optgroup label="fish">
-                		<option value="salmon">Salmon</option>
-                		<option value="Tuna">Tuna</option>
+                		<option value="salmon">Trout</option>
+                		<option value="Tuna">Ray</option>
                 	</optgroup>
               </select> 
           </form> 
@@ -7110,19 +7110,19 @@
 					<h4>Bad samples</h4>
 	                <p>The following select field has grouped options implemented with label not relevant</p>
 	                <form action="mock_action"> 
-                        <label for="test-11-8-3_field2">Animals :</label> 
+                        <label for="test-11-8-3_field2">Animals 7 :</label> 
                         <select name="animal" id="test-11-8-3_field2"> 
                         	<optgroup label="">
-                        		<option value="cat">Cat</option>
-                        		<option value="dog">Dog</option>
+                        		<option value="cat">Lion</option>
+                        		<option value="dog">Antelope</option>
                         	</optgroup>
                         	<optgroup label=";-) <3">
-                        		<option value="pigeon">Pigeon</option>
-                        		<option value="parrot">Parrot</option>
+                        		<option value="pigeon">Blackbird</option>
+                        		<option value="parrot">Raven</option>
                         	</optgroup>
                         	<optgroup label="fish">
-                        		<option value="salmon">Salmon</option>
-                        		<option value="Tuna">Tuna</option>
+                        		<option value="salmon">Orc</option>
+                        		<option value="Tuna">Dolphin</option>
                         	</optgroup>
 	                    </select> 
 	                </form>
@@ -7144,7 +7144,7 @@
 					<h4>Good samples</h4>
 	                <form action="mock_action" method="get"> 
 	                    <div id="selectElement_test-11-9-1_01">
-	                    	<label for="select_test-11-9-1_01">Sélection</label> 
+	                    	<label for="select_test-11-9-1_01">Sélection 1</label> 
 	                        <select id="select_test-11-9-1_01"> 
 	                        	<option value="Value1">Value1</option> 
 	                        	<option value="Value2">Value2</option> 
@@ -7166,12 +7166,12 @@
 					<h4>Bad samples</h4>
 	                <form action="mock_action" method="get"> 
 	                    <div id="selectElement_test-11-9-1_02">
-	                    	<label for="select_test-11-9-1_02">Sélection</label> 
+	                    	<label for="select_test-11-9-1_02">Sélection 2</label> 
 	                        <select id="select_test-11-9-1_02"> 
-	                        	<option value="Value1">Value1</option> 
-	                        	<option value="Value2">Value2</option> 
-	                        	<option value="Value3">Value3</option> 
-	                        	<option value="Value4">Value4</option> 
+	                        	<option value="Value1">Value5</option> 
+	                        	<option value="Value2">Value6</option> 
+	                        	<option value="Value3">Value7</option> 
+	                        	<option value="Value4">Value8</option> 
 	                        </select> 
 	                    </div> 
 	                    <div id="submitElement_test-11-9-1_02"> 
@@ -7193,8 +7193,8 @@
 					<span></span>
 					<h4>Good samples</h4>
 	                <form action="mock_action"> 
-	                    <label for="field1_test-11-9-2_01">Field1</label> <input type="text" name="field1_test-11-9-2_01" id="field1_test-11-9-2_01" /> <br /> 
-	                    <label for="field2_test-11-9-2_01">Field2</label> <input type="text" name="field2_test-11-9-2_01" id="field2_test-11-9-2_01" />
+	                    <label for="field1_test-11-9-2_01">Field 1 test 11.9.2</label> <input type="text" name="field1_test-11-9-2_01" id="field1_test-11-9-2_01" /> <br /> 
+	                    <label for="field2_test-11-9-2_01">Field 2 test 11.9.2</label> <input type="text" name="field2_test-11-9-2_01" id="field2_test-11-9-2_01" />
 
 	                    <input type="submit" aria-labelledby="button-label" value="" />
 
@@ -7205,8 +7205,8 @@
 					<span></span>
 					<h4>Bad samples</h4>
 	                <form action="mock_action" method="get"> 
-	                    <label for="field1_test-11-9-2_02">Field1</label> <input type="text" name="field1_test-11-9-2_02" id="field1_test-11-9-2_02" /> <br /> 
-	                    <label for="field2_test-11-9-2_02">Field2</label> <input type="text" name="field2_test-11-9-2_02" id="field2_test-11-9-2_02" />
+	                    <label for="field1_test-11-9-2_02">Field 3 test 11.9.2</label> <input type="text" name="field1_test-11-9-2_02" id="field1_test-11-9-2_02" /> <br /> 
+	                    <label for="field2_test-11-9-2_02">Field 4 test 11.9.2</label> <input type="text" name="field2_test-11-9-2_02" id="field2_test-11-9-2_02" />
 
 	                    <input type="submit" aria-labelledby="" value="" />
 
@@ -7272,10 +7272,10 @@
 					<form>	
 						<p>Fields marked with (*) are mandatory.</p>			
 	                    <p> 
-	                        <label for="field1_test-11-10-2">Field1 * : </label> <input required type="text" name="field1" id="field1_test-11-10-2" /> <br /> 
-	                        <label for="field2_test-11-10-2">Field2 * : </label> <input aria-required="true" type="text" name="field2" id="field2_test-11-10-2" /> <br />
-	                        <label id="field3_test-11-10-2">Field3 (mandatory) : </label> <input type="text" name="field3" aria-labelledby="field3_test-11-10-2" /> <br />
-	                        <label for="field4_test-11-10-2">Field4 : </label> <input id="field4_test-11-10-2" type="text" name="field4" aria-describedby="field4_test-11-10-2_desc" /> <span id="field4_test-11-10-2_desc">(required)</span><br />
+	                        <label for="field1_test-11-10-2">Field 1 test 11.10.2 * : </label> <input required type="text" name="field1" id="field1_test-11-10-2" /> <br /> 
+	                        <label for="field2_test-11-10-2">Field 2 test 11.10.2 * : </label> <input aria-required="true" type="text" name="field2" id="field2_test-11-10-2" /> <br />
+	                        <label id="field3_test-11-10-2">Field 3 test 11.10.2 (mandatory) : </label> <input type="text" name="field3" aria-labelledby="field3_test-11-10-2" /> <br />
+	                        <label for="field4_test-11-10-2">Field 4 test 11.10.2 : </label> <input id="field4_test-11-10-2" type="text" name="field4" aria-describedby="field4_test-11-10-2_desc" /> <span id="field4_test-11-10-2_desc">(required)</span><br />
 	                    </p> 
 					</form>
 				</div>
@@ -7284,10 +7284,10 @@
 					<h4>Bad samples</h4>
 					<form>				
 	                    <p> 
-	                        <label for="field5_test-11-10-2">Field5: </label> <input required type="text" name="field5" id="field5_test-11-10-2" /> <br /> 
-	                        <label for="field6_test-11-10-2">Field6: </label> <input aria-required="true" type="text" name="field6" id="field6_test-11-10-2" /> <br />
-	                        <label id="field7_test-11-10-2">Field7: </label> <input type="text" name="field7" aria-labelledby="field7_test-11-10-2" /> <br />
-	                        <label for="field8_test-11-10-2">Field8: </label> <input id="field8_test-11-10-2" type="text" name="field8" aria-describedby="field8_test-11-10-2_desc" /> <span id="field8_test-11-10-2_desc"></span><br />
+	                        <label for="field5_test-11-10-2">Field 5 test 11.10.2: </label> <input required type="text" name="field5" id="field5_test-11-10-2" /> <br /> 
+	                        <label for="field6_test-11-10-2">Field 6 test 11.10.2: </label> <input aria-required="true" type="text" name="field6" id="field6_test-11-10-2" /> <br />
+	                        <label id="field7_test-11-10-2">Field 7 test 11.10.2: </label> <input type="text" name="field7" aria-labelledby="field7_test-11-10-2" /> <br />
+	                        <label for="field8_test-11-10-2">Field 8 test 11.10.2: </label> <input id="field8_test-11-10-2" type="text" name="field8" aria-describedby="field8_test-11-10-2_desc" /> <span id="field8_test-11-10-2_desc"></span><br />
 	                    </p> 
 					</form>
 				</div>
@@ -7304,8 +7304,8 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <label id="field1_test-11-10-3">Field1 (mandatory) : </label> <input type="text" name="field1" aria-labelledby="field1_test-11-10-3" /> <br />
-	                        <label for="field2_test-11-10-3">Field2 : </label> <input id="field2_test-11-10-3" type="text" name="field2" aria-describedby="field2_test-11-10-3_desc" /> <span id="field2_test-11-10-3_desc"> (required) </span><br />
+	                        <label id="field1_test-11-10-3">Field 1 test 11.10.3 (mandatory) : </label> <input type="text" name="field1" aria-labelledby="field1_test-11-10-3" /> <br />
+	                        <label for="field2_test-11-10-3">Field 2 test 11.10.3 : </label> <input id="field2_test-11-10-3" type="text" name="field2" aria-describedby="field2_test-11-10-3_desc" /> <span id="field2_test-11-10-3_desc"> (required) </span><br />
 	                    </p> 
 					</form>
 				</div>
@@ -7314,9 +7314,9 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <label id="field3_test-11-10-3">Field3: </label> <input for="field3_test-11-10-3" type="text" name="field3" aria-labelledby="" /> <br />
-	                        <label for="field4_test-11-10-3">Field4: </label> <input id="field4_test-11-10-3" type="text" name="field4" aria-describedby="field4_test-11-10-3_desc" /> <span id="field4_test-11-10-3_desc"></span> <br />
-	                        <label id="field5_test-11-10-3">Field5: </label> <input for="field5_test-11-10-3" type="text" name="field5" aria-labelledby="field5_test-11-10-3" /> <br />
+	                        <label id="field3_test-11-10-3">Field 3 test 11.10.3: </label> <input for="field3_test-11-10-3" type="text" name="field3" aria-labelledby="" /> <br />
+	                        <label for="field4_test-11-10-3">Field 4 test 11.10.3: </label> <input id="field4_test-11-10-3" type="text" name="field4" aria-describedby="field4_test-11-10-3_desc" /> <span id="field4_test-11-10-3_desc"></span> <br />
+	                        <label id="field5_test-11-10-3">Field 5 test 11.10.3: </label> <input for="field5_test-11-10-3" type="text" name="field5" aria-labelledby="field5_test-11-10-3" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7331,8 +7331,8 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-10-4_field1">Your name * <em class="error">(this field is mandatory)</em>: </label> <input required type="text" name="test-11-10-4_field1" id="test-11-10-4_field1" /> <br />
-	                        <label for="test-11-10-4_field2">Field2 : </label> <input id="test-11-10-4_field2" type="email" name="test-11-10-4_field2" value="mymail.com" aria-describedby="test-11-10-4_error2" /><em role="log" id="test-11-10-4_error2">(This is not correct. The value expected is seems like "example@mail.com")</em> <br />
+	                        <label for="test-11-10-4_field1">Your name test 11.10.4 * <em class="error">(this field is mandatory)</em>: </label> <input required type="text" name="test-11-10-4_field1" id="test-11-10-4_field1" /> <br />
+	                        <label for="test-11-10-4_field2">Field 2 test 11.10.4 : </label> <input id="test-11-10-4_field2" type="email" name="test-11-10-4_field2" value="mymail.com" aria-describedby="test-11-10-4_error2" /><em role="log" id="test-11-10-4_error2">(This is not correct. The value expected is seems like "example@mail.com")</em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7341,8 +7341,8 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <label for="test-11-10-4_field3">Your name * <em class="error"></em>: </label> <input required type="text" name="test-11-10-4_field3" id="test-11-10-4_field3" /> <br />
-	                        <label for="test-11-10-4_field4">Field2 : </label> <input id="test-11-10-4_field4" type="email" name="test-11-10-4_field4" value="mymail.com" aria-describedby="test-11-10-4_error3" /><em role="log" id="test-11-10-4_error3"></em> <br />
+	                        <label for="test-11-10-4_field3">Your name 2 test 11.10.4 * <em class="error"></em>: </label> <input required type="text" name="test-11-10-4_field3" id="test-11-10-4_field3" /> <br />
+	                        <label for="test-11-10-4_field4">Field 4 test 11.10.4 : </label> <input id="test-11-10-4_field4" type="email" name="test-11-10-4_field4" value="mymail.com" aria-describedby="test-11-10-4_error3" /><em role="log" id="test-11-10-4_error3"></em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7357,8 +7357,8 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-10-5_field1">Your name * : <img style="width:20px;height:20px;" src="img/false.png" alt="invalid"></label> <input id="test-11-10-5_field1" aria-invalid="true" required type="text" name="test-11-10-5_field1" /> <br />
-	                        <input aria-label="Your email" type="email" name="test-11-10-5_field2" value="" aria-describedby="test-11-10-5_erreur2" /><img style="width:20px;height:20px;" src="img/false.png" id="test-11-10-5_erreur2" alt="invalid"> <br />
+	                        <label for="test-11-10-5_field1">Your name 1 test 11.10.5 * : <img style="width:20px;height:20px;" src="img/false.png" alt="invalid"></label> <input id="test-11-10-5_field1" aria-invalid="true" required type="text" name="test-11-10-5_field1" /> <br />
+	                        <input aria-label="Your email 2 test 11.10.5" type="email" name="test-11-10-5_field2" value="" aria-describedby="test-11-10-5_erreur2" /><img style="width:20px;height:20px;" src="img/false.png" id="test-11-10-5_erreur2" alt="invalid"> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7367,8 +7367,8 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <label for="test-11-10-5_field3">Your name * : </label> <input id="test-11-10-5_field3" aria-invalid="true" required type="text" name="test-11-10-5_field3" /> <br />
-	                        <input aria-label="Your email" type="email" name="test-11-10-5_field3" value="mymail.com" /> <br />
+	                        <label for="test-11-10-5_field3">Your name 3 test 11.10.5 * : </label> <input id="test-11-10-5_field3" aria-invalid="true" required type="text" name="test-11-10-5_field3" /> <br />
+	                        <input aria-label="Your email 4 test 11.10.5" type="email" name="test-11-10-5_field3" value="mymail.com" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7384,7 +7384,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute :<br />
-		                <label for="input_01_test-11-10-6">Your email : </label>
+		                <label for="input_01_test-11-10-6">Your email 1 test 11.10.6 : </label>
 		                <strong id="label_01_test-11-10-6">  
 		                        Some hidden label
 		                </strong> 
@@ -7393,7 +7393,7 @@
 
 			        <p>
 			        	The following input has labels associated with it by the "aria-describedby" attribute :<br />
-		                <label for="input_02_test-11-10-6">Your email : </label>
+		                <label for="input_02_test-11-10-6">Your email 2 test 11.10.6 : </label>
 		                <strong id="label_02_test-11-10-6">  
 		                        Some 
 		                </strong> 
@@ -7405,7 +7405,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute and show on focus :<br />
-		                <label for="input_04_test-11-10-6">Your email : </label>
+		                <label for="input_04_test-11-10-6">Your email 3 test 11.10.6 : </label>
 		                <strong id="label_04_test-11-10-6" class="sr-only">  
 		                        Some hidden label
 		                </strong> 
@@ -7418,7 +7418,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute, but two contains have the same "id":<br />
-		                <label for="input_05_test-11-10-6">Your email : </label>
+		                <label for="input_05_test-11-10-6">Your email 4 test 11.10.6 : </label>
 		                <strong id="label_05_test-11-10-6">  
 		                        Some hidden label
 		                </strong> 
@@ -7427,7 +7427,7 @@
 
 			        <p>
 			        	The following input has labels associated with it by the "aria-describedby" attribute. Some part of the label not has an "id" attribute :<br />
-		                <label for="input_06_test-11-10-6">Your email : </label>
+		                <label for="input_06_test-11-10-6">Your email 5 test 11.10.6 : </label>
 		                <strong id="label_05_test-11-10-6">  
 		                        Some 
 		                </strong> 
@@ -7439,7 +7439,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute, but only the user use an assistive technology can read it :<br />
-		                <label for="input_07_test-11-10-6">Your email : </label>
+		                <label for="input_07_test-11-10-6">Your email 6 test 11.10.6 : </label>
 		                <strong id="label_07_test-11-10-6" class="sr-only">  
 		                        Some hidden label
 		                </strong> 
@@ -7493,7 +7493,7 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <input aria-label="Your email" type="email" name="test-11-10-8_field2" value="" aria-describedby="test-11-10-8_erreur2" />
+	                        <input aria-label="Your email 1 test 11.10.8" type="email" name="test-11-10-8_field2" value="" aria-describedby="test-11-10-8_erreur2" />
 	                        <img style="width:20px;height:20px;" src="img/false.png" id="test-11-10-8_erreur2" alt="example@email.com"> <br />
 	                    </p> 
 					</form>
@@ -7503,7 +7503,7 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <input aria-label="Your email" type="email" name="test-11-10-8_field2" value="mymail.com" /> <br />
+	                        <input aria-label="Your email 2 test 11.10.8" type="email" name="test-11-10-8_field2" value="mymail.com" /> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7519,7 +7519,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute :<br />
-		                <label for="input_01_test-11-10-9">Your email : </label>
+		                <label for="input_01_test-11-10-9">Your email 1 test 11.10.9: </label>
 		                <strong id="help_01_test-11-10-9">  
 		                        Some hidden label (ex: example@email.com)
 		                </strong> 
@@ -7528,7 +7528,7 @@
 
 			        <p>
 			        	The following input has labels associated with it by the "aria-describedby" attribute :<br />
-		                <label for="input_02_test-11-10-9">Your email : </label>
+		                <label for="input_02_test-11-10-9">Your email 2 test 11.10.9: </label>
 		                <strong id="help_02_test-11-10-9">  
 		                        Some 
 		                </strong> 
@@ -7540,7 +7540,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute and show on focus :<br />
-		                <label for="input_04_test-11-10-9">Your email : </label>
+		                <label for="input_04_test-11-10-9">Your email 3 test 11.10.9: </label>
 		                <strong id="help_04_test-11-10-9" class="sr-only">  
 		                        Some hidden label (ex: example@email.com)
 		                </strong> 
@@ -7553,7 +7553,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute, but two contains have the same "id":<br />
-		                <label for="input_05_test-11-10-9">Your email : </label>
+		                <label for="input_05_test-11-10-9">Your email 4 test 11.10.9: </label>
 		                <strong id="help_05_test-11-10-9">  
 		                        Some hidden label (ex: example@email.com)
 		                </strong> 
@@ -7562,7 +7562,7 @@
 
 			        <p>
 			        	The following input has labels associated with it by the "aria-describedby" attribute. Some part of the label not has an "id" attribute :<br />
-		                <label for="input_06_test-11-10-9">Your email : </label>
+		                <label for="input_06_test-11-10-9">Your email 5 test 11.10.9: </label>
 		                <strong id="help_05_test-11-10-9">  
 		                        Some 
 		                </strong> 
@@ -7574,7 +7574,7 @@
 
 			        <p>
 			        	The following input has a label associated with it by the "aria-describedby" attribute, but only the user use an assistive technology can read it :<br />
-		                <label for="input_07_test-11-10-9">Your email : </label>
+		                <label for="input_07_test-11-10-9">Your email  6 test 11.10.9: </label>
 		                <strong id="help_07_test-11-10-9" class="sr-only">  
 		                        Some hidden label (ex: example@email.com)
 		                </strong> 
@@ -7593,12 +7593,12 @@
 
 			        <p>
 			        	The following input has a label with the "title" attribute and has no "placeholder" attribute :<br />
-		                <input id="input_01_test-11-10-10" type="email" name="input_01_test-11-10-10" title="Some label (sample@mail.com)" />
+		                <input id="input_01_test-11-10-10" type="email" name="input_01_test-11-10-10" title="Some label 1 test 11.10.10 (sample@mail.com)" />
 		            </p>
 
 			        <p>
 			        	The following input has a label with the "title" attribute and its "placeholder" attribute is equal to the "title" attribute :<br />
-		                <input id="input_02_test-11-10-10" type="email" name="input_02_test-11-10-10" title="Some label (sample@mail.com)" placeholder="Some label (sample@mail.com)" />
+		                <input id="input_02_test-11-10-10" type="email" name="input_02_test-11-10-10" title="Some label 2 test 11.10.10 (sample@mail.com)" placeholder="Some label (sample@mail.com)" />
 		            </p>
 				</div>
 				<div class="sample test_false">
@@ -7607,7 +7607,7 @@
 
 			        <p>
 			        	The following input has a label with the "title" attribute and its "placeholder" attribute is not equal to the "title" attribute :<br />
-		                <input id="input_03_test-11-10-10" type="email" name="input_03_test-11-10-10" title="Some label (sample@mail.com)" placeholder="sample@mail.com" />
+		                <input id="input_03_test-11-10-10" type="email" name="input_03_test-11-10-10" title="Some label 3 test 11.10.10 (sample@mail.com)" placeholder="sample@mail.com" />
 		            </p>
 				</div>
 			</div>
@@ -7627,7 +7627,7 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-11-1_field2">Field2 : </label> <input type="tel" id="test-11-11-1_field2" name="test-11-11-1_field2" value="mymail.com" aria-describedby="test-11-11-1_error1" /><em role="log" id="test-11-11-1_error1">(This is not correct. The value expected is in number like "0123456789")</em> <br />
+	                        <label for="test-11-11-1_field2">Field 1 test 11.11.1 : </label> <input type="tel" id="test-11-11-1_field2" name="test-11-11-1_field2" value="mymail.com" aria-describedby="test-11-11-1_error1" /><em role="log" id="test-11-11-1_error1">(This is not correct. The value expected is in number like "0123456789")</em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7636,7 +7636,7 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <label for="test-11-11-1_field4">Field2 : </label> <input type="email" id="test-11-11-1_field4" name="test-11-11-1_field4" value="mymail.com" aria-describedby="test-11-11-1_error2" /><em role="log" id="test-11-11-1_error2"></em> <br />
+	                        <label for="test-11-11-1_field4">Field 2 test 11.11.1 : </label> <input type="email" id="test-11-11-1_field4" name="test-11-11-1_field4" value="mymail.com" aria-describedby="test-11-11-1_error2" /><em role="log" id="test-11-11-1_error2"></em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7651,7 +7651,7 @@
 					<h4>Good samples</h4>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-11-2_field2">Field2 : </label> <input type="email" id="test-11-11-2_field2" name="test-11-11-2_field2" value="mymail.com" aria-describedby="test-11-11-2_error2" /><em role="log" id="test-11-11-2_error2">(This is not correct. The value expected is seems like "example@mail.com")</em> <br />
+	                        <label for="test-11-11-2_field2">Field 1 test 11.11.2 : </label> <input type="email" id="test-11-11-2_field2" name="test-11-11-2_field2" value="mymail.com" aria-describedby="test-11-11-2_error2" /><em role="log" id="test-11-11-2_error2">(This is not correct. The value expected is seems like "example@mail.com")</em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7660,7 +7660,7 @@
 					<h4>Bad samples</h4>
 					<form>					
 	                    <p> 
-	                        <label for="test-11-11-2_field4">Field2 : </label> <input type="email" id="test-11-11-2_field4" name="test-11-11-2_field4" value="mymail.com" aria-describedby="test-11-11-2_error2" /><em role="log" id="test-11-11-2_error2"></em> <br />
+	                        <label for="test-11-11-2_field4">Field 2 test 11.11.2 : </label> <input type="email" id="test-11-11-2_field4" name="test-11-11-2_field4" value="mymail.com" aria-describedby="test-11-11-2_error2" /><em role="log" id="test-11-11-2_error2"></em> <br />
 	                    </p> 
 					</form>
 				</div>
@@ -7682,9 +7682,9 @@
 					<form>	
 						<p>The following fields that have the mention (*) are mandatories</p>		
 	                    <p> 
-	                        <label for="test-11-14-1_field1">Name * : </label> 
+	                        <label for="test-11-14-1_field1">Name 1 test 11.14.1* : </label> 
 	                        <input type="text" id="test-11-14-1_field1" name="test-11-14-1_field1" value="" /><br />
-	                        <label for="test-11-14-1_field2">email : </label> 
+	                        <label for="test-11-14-1_field2">email 1 test 11.14.1 : </label> 
 	                        <input type="email" id="test-11-14-1_field2" name="test-11-14-1_field2" value="" /> <br />
 	                    </p> 
 					</form>
@@ -7693,9 +7693,9 @@
 					<form>	
 						<p>You can have an help to answers this form in the following page : <a href="#">Help to this page</a></p>		
 	                    <p> 
-	                        <label for="test-11-14-1_field3">Name * : </label> 
+	                        <label for="test-11-14-1_field3">Name 2 test 11.14.1 * : </label> 
 	                        <input type="text" id="test-11-14-1_field3" name="test-11-14-1_field3" value="" /><br />
-	                        <label for="test-11-14-1_field4">email : </label> 
+	                        <label for="test-11-14-1_field4">email 2 test 11.14.1 : </label> 
 	                        <input type="email" id="test-11-14-1_field4" name="test-11-14-1_field4" value="" /> <br />
 	                    </p> 
 					</form>
@@ -7703,10 +7703,10 @@
 					<p>The following form the field of email has example of the data expected before the label</p>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-14-1_field5">Name * : </label> 
+	                        <label for="test-11-14-1_field5">Name 3 test 11.14.1 * : </label> 
 	                        <input type="text" id="test-11-14-1_field5" name="test-11-14-1_field5" value="" /><br />
 	                        <em>ex: example@mail.com</em>
-	                        <label for="test-11-14-1_field6">email : </label> 
+	                        <label for="test-11-14-1_field6">email 3 test 11.14.1 : </label> 
 	                        <input type="email" id="test-11-14-1_field6" name="test-11-14-1_field6" value="" /> <br />
 	                    </p> 
 					</form>
@@ -7714,9 +7714,9 @@
 					<p>The following form the field of email has example of the data expected in the label</p>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-14-1_field7">Name * : </label> 
+	                        <label for="test-11-14-1_field7">Name 4 test 11.14.1 * : </label> 
 	                        <input type="text" name="test-11-14-1_field7" id="test-11-14-1_field7" value="" /><br />
-	                        <label for="test-11-14-1_field8">email (ex: example@mail.com): </label> 
+	                        <label for="test-11-14-1_field8">email 4 test 11.14.1 (ex: example@mail.com): </label> 
 	                        <input type="email" id="test-11-14-1_field8" name="test-11-14-1_field8" value="" /> <br />
 	                    </p> 
 					</form>
@@ -7724,9 +7724,9 @@
 					<p>The following form the field of email has example of the data expected in a description associated with aria-describedby attribute</p>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-14-1_field9">Name * : </label> 
+	                        <label for="test-11-14-1_field9">Name 5 test 11.14.1 * : </label> 
 	                        <input type="text" name="test-11-14-1_field9" id="test-11-14-1_field9" value="" /><br />
-	                        <label for="test-11-14-1_field10">email: </label> 
+	                        <label for="test-11-14-1_field10">email 5 test 11.14.1: </label> 
 	                        <input type="email" name="test-11-14-1_field10" id="test-11-14-1_field10" value="" aria-describedby="test-11-14-1_field10_desc" /> <br />
 	                        <em id="test-11-14-1_field10_desc">(ex: example@mail.com)</em>
 	                    </p> 
@@ -7738,9 +7738,9 @@
 					<p>The following form has no indication to help users</p>
 					<form>			
 	                    <p> 
-	                        <label for="test-11-14-1_field11">Name * : </label> 
+	                        <label for="test-11-14-1_field11">Name 6 test 11.14.1 * : </label> 
 	                        <input type="text" name="test-11-14-1_field11" id="test-11-14-1_field11" value="" /><br />
-	                        <label for="test-11-14-1_field12">email : </label> 
+	                        <label for="test-11-14-1_field12">email 6 test 11.14.1 : </label> 
 	                        <input type="email" name="test-11-14-1_field12" id="test-11-14-1_field12" value="" /> <br />
 	                    </p> 
 					</form>
@@ -7758,8 +7758,8 @@
 					<form>			
 	                    <p> 
 	                        <em>Name: </em> 
-	                        <input type="text" name="test-11-14-2_field1" value="" aria-label="Name" /><br />
-	                        <label for="test-11-14-2_field2">email : </label> 
+	                        <input type="text" name="test-11-14-2_field1" value="" aria-label="Name 1 test 11.14.2" /><br />
+	                        <label for="test-11-14-2_field2">email 1 test 11.14.2 : </label> 
 	                        <input type="email" name="test-11-14-2_field2" id="test-11-14-2_field2" value="" /> <br />
 	                    </p> 
 					</form>
@@ -7770,8 +7770,8 @@
 					<p>The following form has a field that label is with an aria-label attribute without an equal passage of text</p>
 					<form>			
 	                    <p> 
-	                        <input type="text" name="test-11-14-2_field3" value="" aria-label="Name" /><br />
-	                        <label for="test-11-14-2_field4">email : </label> 
+	                        <input type="text" name="test-11-14-2_field3" value="" aria-label="Name 2 test 11.14.2" /><br />
+	                        <label for="test-11-14-2_field4">email 2 test 11.14.2 : </label> 
 	                        <input type="email" name="test-11-14-2_field4" id="test-11-14-2_field4" value="" /> <br />
 	                    </p> 
 					</form>
@@ -11810,6 +11810,30 @@
 
 				<tr style="border-top: 4px solid rgb(0, 67, 123);">
 					<th rowspan="4" scope="row">11.2.4</th>
+					<th scope="row">Index</th>
+					<td>&lt;tag id="tag_unique"&gt;</td>
+					<td>17</td>	<td>17</td>	<td>0</td>	<td>2</td>	<td>0</td>	<td>0</td>	<td>15</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Structured page</th>
+					<td>&lt;input type="[...]" id="input_unique" name="[...]" aria-labelledby="tag_unique" /&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Invalided page</th>
+					<td>&lt;/tag&gt;</td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Invalided page 2</th>
+					<td></td>
+					<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>	<td>0</td>
+				</tr>
+
+				<!-- //////////////////////////////// -->
+
+				<tr style="border-top: 4px solid rgb(0, 67, 123);">
+					<th rowspan="4" scope="row">11.3.1</th>
 					<th scope="row">Index</th>
 					<td>&lt;tag id="tag_unique"&gt;</td>
 					<td>17</td>	<td>17</td>	<td>0</td>	<td>2</td>	<td>0</td>	<td>0</td>	<td>15</td>	<td>0</td>
