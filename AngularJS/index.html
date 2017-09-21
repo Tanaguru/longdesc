@@ -1,0 +1,180 @@
+<!--
+  Site longdesc
+  Version 0.72
+  Date 07/19/2017
+  Test your automated accessibility tool with this site
+-->
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+    <script src="https://unpkg.com/systemjs@0.19.38/dist/system.src.js"></script>
+    <script src="https://unpkg.com/typescript@2.0.3"></script>
+    <script src="system.config.js"></script>
+    <script src="https://unpkg.com/zone.js@0.6.25"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="video.css" />
+  <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <style type="text/css"> 
+     .px_html{ 
+        font-size:12px; 
+     }
+     .pourcent_html{ 
+        font-size:100%; 
+     }
+     .em_html{ 
+        font-size:1em; 
+     }
+     .relativeUnitesPx_html {
+      width:260px;
+     }
+     .relativeUnitesPt_html {
+      width:200pt;
+     }
+      .relativeUnitesMm_html {
+      width:80mm;
+      }
+        .relativeUnitesCm_html {
+      width:8cm;
+     }
+         .relativeUnitesPc_html {
+      width:20pc;
+     }
+        .relativeUnitesIm_html {
+      width:3in;
+     }
+         .relativeUnitesPourcent_html {
+      width:80%;
+     }
+        .relativeUnitesEm_html {
+      width:12em;
+     }
+     .font-size-170 {
+      font-size: 1.7rem;
+      color: #fff;
+     }
+     .font-size-150 {
+      font-size: 1.5rem;
+      color: #fff;
+     }
+    .font-size-130 {
+      font-size: 1.3rem;
+      color: #fff;
+     }
+     .font-size-120 {
+      font-size: 1.2rem;
+      color: #fff;
+     }
+      .justify_html{ 
+        text-align:justify; 
+     }
+     .bg-black {
+      background-color: #000;
+     }
+   </style> 
+  <link rel="stylesheet" href="bootstrap-3-glyphicon.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body aria-live="polite">
+    <header>
+      <h2>Site Longdesc</h2>
+      <ngc2-app>Loading...</ngc2-app>
+      
+      <script>
+        System.import('app');
+      </script>
+
+      <!-- JS libraries -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <!-- /JS libraries -->
+  
+  <script type="text/javascript">
+    var c = document.getElementsByClassName('test_canvas');
+    cLen = c.length;
+    for (i = 0; i < cLen; i++) {
+      var ctx = c[i].getContext("2d");
+
+      // Cette fois on ajoute les deux propriétés pour le style de ligne
+      // et qui prévalent pour tous les tracés
+      ctx.lineJoin = "round";
+      ctx.lineCap = "round";
+
+      // Voile du bateau
+      ctx.beginPath();      // Début du chemin
+      ctx.moveTo(150,80);   // Le tracé part du point 150,80
+      ctx.lineTo(300,230);  // Un segment est ajouté vers 300,230
+      ctx.lineTo(150,230);  // Un segment est ajouté vers 150,230
+      ctx.closePath();      // Fermeture du chemin
+      ctx.fillStyle = "lightblue"; // Définition de la couleur de remplissage
+      ctx.fill();           // Remplissage du dernier chemin tracé
+
+      // Coque du bâteau
+      ctx.beginPath();      // Début d'un autre chemin
+      ctx.moveTo(50,250);
+      ctx.lineTo(100,300);
+      ctx.lineTo(250,300);
+      ctx.lineTo(300,250);
+      ctx.fillStyle = "peru";
+      ctx.strokeStyle = "sienna"; // Définition de la couleur de contour
+      ctx.lineWidth = 5;         // Définition de la largeur de ligne
+      ctx.fill();            // Application du remplissage
+      ctx.stroke();          // Application du contour
+
+      // Mât
+      ctx.beginPath();
+      ctx.moveTo(140,50);
+      ctx.lineTo(140,250);
+      ctx.lineWidth = 10;
+      ctx.stroke();
+    }
+
+    var ready = function ( fn ) {
+
+        // Sanity check
+        if ( typeof fn !== 'function' ) return;
+
+        // If document is already loaded, run method
+        if ( document.readyState === 'complete'  ) {
+            return fn();
+        }
+
+        // Otherwise, wait until document is loaded
+        // The document has finished loading and the document has been parsed but sub-resources such as images, stylesheets and frames are still loading. The state indicates that the DOMContentLoaded event has been fired.
+        document.addEventListener( 'interactive', fn, false );
+
+        // Alternative: The document and all sub-resources have finished loading. The state indicates that the load event has been fired.
+        // document.addEventListener( 'complete', fn, false );
+
+    };
+
+    // Example
+    ready(function() {
+        document.getElementsByClassName('vjs-icon-audio-description').innerHTML = "<span class='vjs-control-text'>audio description</span>";
+    });
+
+    function getAllElementsWithAttribute(tag, attribute)
+    {
+      var matchingElements = 0;
+      var allElements = document.getElementsByTagName(tag);
+      for (var i = 0, n = allElements.length; i < n; i++)
+      {
+        if (allElements[i].getAttribute(attribute) !== null)
+        {
+          // Element exists with attribute. Add to array.
+          matchingElements++;
+        }
+      }
+      return matchingElements;
+    }
+
+    
+  </script>
+  
+
+    </header>
+  </body>
+
+</html>

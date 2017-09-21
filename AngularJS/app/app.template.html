@@ -1,0 +1,149 @@
+	<main class="sample-container">
+
+		<p>Dernière version du site à date du 12 mai 2017</p>
+
+		<h2>Tanaguru Marker</h2>
+		<p><a href="http://tanaguru.readthedocs.io/en/develop/userdoc-HTML-markers/">See Tanaguru read the doc about marker</a></p>
+		<dl>
+			<dt>data-table</dt>
+			<dd>identified data table</dd>
+			<dt>presentation-table</dt>
+			<dd>identified presentation table</dd>
+			<dt>complex-data-table</dt>
+			<dd>identified complex data table</dd>
+			<dt>decorative-image</dt>
+			<dd>identified decorative image</dd>
+			<dt>informative-image</dt>
+			<dd>identified informative image</dd>
+		</dl>
+
+		<h4>Good and bad samples of implementation of the rules of the RGAA 3</h4>
+
+		<div id="crit-1-1">
+			<h2>Criterion 1.1 - Does each image have a text alternative?</h2>
+
+			<div id="test-1-1-1">
+
+				<h3>Test 1.1.1 - Does each image (img tag) have an alt attribute?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>Image with empty alternative</p>
+                	<img src="img/Image_with_empty_alternative.png" alt="" /> 
+					<p>Image with not empty alternative</p>
+                	<img src="img/Image_with_not_empty_alternative.png" alt="Not empty alt" /> 
+					<p>Image with an alternative equal to src</p>
+                	<img src="img/Image_with_alternative_equal_to_src.png" alt="img/Image_with_alternative_equal_to_src.png" /> 
+
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>Image without alternative</p>
+                	<img src="img/Image_without_alternative.png" /> 
+					<p>Image link without alternative</p>
+                	<a href="#"><img src="img/Image_Link_without_alternative.png" /> </a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="test-1-1-2">
+
+				<h3>Test 1.1.2 - Does each area (area tag) of an image map have an alt attribute?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>Area tag Image non clickable with empty alternative</p>
+	                <img src="img/right-wrong_001.png" alt="" usemap="#map_test1-1-2_01" /> 
+	                <map id="map_test1-1-2_01" name="map_test1-1-2_01"> 
+	                	<area alt="" shape="rect" coords="0,0,150,80">
+						<area alt="" shape="rect" coords="150,0,300,80">
+	                </map> 
+					<p>Area tag Image non clickable with not empty alternative</p>
+	                <img src="img/right-wrong_003.png" alt="" usemap="#map_test1-1-2_02" /> 
+	                <map id="map_test1-1-2_02" name="map_test1-1-2_02"> 
+	                	<area alt="Not empty alt" shape="rect" coords="0,0,150,80">
+						<area alt="Not empty alt" shape="rect" coords="150,0,300,80">
+	                </map> 
+					<p>Area tag Image clickable with not empty alternative</p>
+	                <img src="img/right-wrong_004.png" alt="" usemap="#map_test1-1-2_03" /> 
+	                <map id="map_test1-1-2_03" name="map_test1-1-2_03"> 
+	                	<area alt="Not empty alt" shape="rect" coords="0,0,150,80" href="#test-1-1-2">
+						<area alt="Not empty alt" shape="rect" coords="150,0,300,80" href="#test-1-1-2"> 
+	                </map> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>Area tag Image non clickable without alternative</p>
+	                <img src="img/right-wrong_005.png" alt="" usemap="#map_test1-1-2_04" /> 
+	                <map id="map_test1-1-2_04" name="map_test1-1-2_04"> 
+	                	<area shape="rect" coords="0,0,150,80">
+						<area shape="rect" coords="150,0,300,80">
+	                </map> 
+					<p>Area tag Image clickable without alternative</p>
+	                <img src="img/right-wrong_006.png" alt="" usemap="#map_test1-1-2_05" /> 
+	                <map id="map_test1-1-2_05" name="map_test1-1-2_05"> 
+	                	<area shape="rect" coords="0,0,150,80" href="#test-1-1-2">
+						<area shape="rect" coords="150,0,300,80" href="#test-1-1-2"> 
+	                </map> 
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="test-1-1-3">
+
+				<h3>Test 1.1.3 - Does each form button (input tag with the type="image" attribute) have an alt attribute?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4>
+					<p>Input type image with alternative</p>
+                	<input type="image" alt="Send" src="img/send.png" /> 
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>Input type image without alternative</p>
+                	<input type="image" src="img/send.png" /> 
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div id="test-1-1-4">
+
+				<h3>Test 1.1.4 - Does each clickable area (area tag) of a server-side image map have an equivalent link in the page?</h3>
+
+				<div class="sample test_true">
+					<span></span>
+					<h4>Good samples</h4> 
+					<p>Area tag Image clickable of a server-side with link alternative</p>
+	                <img src="img/right-wrong_007.png" alt="" usemap="#map_test1-1-4_01" ismap /> 
+	                <map id="map_test1-1-4_01" name="map_test1-1-4_01"> 
+	                	<area alt="First link" shape="rect" coords="0,0,150,80" href="#test-1-1-4" /> 
+	                	<area alt="Second link" shape="rect" coords="150,0,300,80" href="#test-1-1-4" /> 
+	                </map> <br />
+					<a href="#test-1-1-4">First alternative link</a><br />
+					<a href="#test-1-1-4">Second alternative link</a>
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<h4>Bad samples</h4>
+					<p>Area tag Image clickable of a server-side without link alternative</p>
+	                <img src="img/right-wrong_008.png" alt="" usemap="#map_test1-1-4_02" ismap /> 
+	                <map id="map_test1-1-4_02" name="map_test1-1-4_02"> 
+	                	<area shape="First link" coords="0,0,150,80" href="#test-1-1-4" /> 
+	                	<area shape="Second link" coords="150,0,300,80" href="#test-1-1-4" /> 
+	                </map>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		
+	</main>
+
+	<footer>
+		<a href="https://my.tanaguru.com/">Tanaguru.com</a>
+	</footer>

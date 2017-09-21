@@ -1,0 +1,247 @@
+body {
+	width: 100%;
+	margin:0;
+}
+h3 {
+	padding-left: 1rem;
+}
+img, object, canvas, embed {
+	max-width: 80%;
+}
+.clearfix::before, .clearfix::after {
+    content: " ";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.sample-container {
+	width: 1024px;
+	margin: auto;
+}
+.sample {
+	float: left;
+	width: calc(42% - 4rem);
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+}
+.test_true {
+	border: 2px solid #008200;
+}
+.test_true > span:first-child {
+	background: url('img/valid.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    float: right;
+    height: 4rem;
+    position: relative;
+    right: -50px;
+    top: -4rem;
+    width: 4rem;
+}
+.test_false {
+	border: 2px solid #e60000;
+}
+.test_false > span:first-child {
+	background: url('img/false.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    float: right;
+    height: 4rem;
+    position: relative;
+    right: -50px;
+    top: -4rem;
+    width: 4rem;
+}
+table.support {
+	border: 1px solid #00437b;
+	min-width: 50%;
+	margin-bottom: 1rem;
+	max-width: 100%;
+}
+table.support th {
+	border: 1px solid #00437b;
+	background: #d2eaff;
+	padding:0.3rem;
+	text-align: center;
+}
+table.support td {
+	border: 1px solid #00437b;
+	padding:0.3rem;
+	text-align: center;
+}
+table.occurrences {
+	border: 1px solid #00437b;
+	min-width: 50%;
+	margin-bottom: 1rem;
+	max-width: 100%;
+	border-collapse: collapse;
+	border-spacing : 0;
+	display: block;
+}
+table.occurrences caption {
+	position: absolute;
+	left: -9999px;
+}
+table.occurrences th {
+	border: 1px solid #00437b;
+	background: #d2eaff;
+	padding:0.3rem;
+	text-align: center;
+	font-size: 0.8rem;
+    font-weight: bold;
+}
+table.occurrences thead {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+thead, tbody, tfoot {
+  display: table;
+  width: 100%;
+}
+table.occurrences td {
+	border: 1px solid #00437b;
+	padding:0.3rem;
+	text-align: center;
+	font-size: 1.2rem;
+}
+table.occurrences tr td.sample-code {
+	font-size: 0.8rem;
+}
+table.occurrences tr:nth-child(odd){
+  background-color:#EFF8FF;
+}
+table.occurrences tfoot tr {
+  background-color:#d2eaff !important;
+}
+.sr-only {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.good-support {
+	background: url('img/valid.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    height: 2rem;
+    width: 2rem;
+}
+.bad-support {
+	background: url('img/false.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    height: 2rem;
+    width: 2rem;
+}
+.na-support {
+	background: url('img/na.png') transparent no-repeat;
+	background-size: 100%;
+	display: block;
+    height: 2rem;
+    width: 2rem;
+}
+	
+.px {
+	font-size:15px;
+}
+
+.pourcent {
+	font-size:100%;
+}
+
+.em {
+	font-size:1em;
+}
+
+.relativeUnitesPx {
+	width:260px;
+}
+
+.relativeUnitesPt {
+	width:200pt;
+}
+
+.relativeUnitesPc {
+	width:20pc;
+}
+
+.relativeUnitesMm {
+	width:80mm;
+}
+
+.relativeUnitesCm {
+	width:8cm;
+}
+
+.relativeUnitesIm {
+	width:3in;	
+}
+.relativeUnitesPourcent {
+	width:80%;
+}
+.relativeUnitesEm {
+	width:12em;
+}
+
+.contrastKo {
+	color:#FFF;
+	background-color:#f47920;
+}
+
+.noFocus {
+	outline:none;
+}
+
+.justify {
+	text-align:justify;
+}
+
+#hidden_content_02_test-10-13-1:focus {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: auto;
+    margin: 0;
+    overflow: none;
+    padding: 0;
+    position: inherit;
+    width: auto;	
+}
+.doors {
+    fill: #F4EEE6;
+    stroke: #60544F;
+    stroke-width: 2pt;
+}
+.water {
+    fill: #D6EDEE;
+    stroke: #60544F;
+}
+.water-cut {
+    fill: #B4D6DB;
+}
+.milk {
+    fill: #fff;
+    stroke: #60544F;
+}
+.milk-cut {
+    fill: #F4EEE6;
+}
+.coffee {
+    fill: #60544F;
+    stroke: #60544F;
+}
+.coffee-cut {
+    fill: #60544F;
+}
+.test-10-2-1_css_content::after {
+	content: "with information not still available when style sheets are disabled.";
+}
