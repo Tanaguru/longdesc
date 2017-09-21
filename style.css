@@ -2,6 +2,9 @@ body {
 	width: 100%;
 	margin:0;
 }
+dl {
+	font-size: 12pt;
+}
 h3 {
 	padding-left: 1rem;
 }
@@ -80,6 +83,11 @@ table.occurrences {
 	max-width: 100%;
 	border-collapse: collapse;
 	border-spacing : 0;
+	display: block;
+}
+table.occurrences caption {
+	position: absolute;
+	left: -9999px;
 }
 table.occurrences th {
 	border: 1px solid #00437b;
@@ -89,13 +97,23 @@ table.occurrences th {
 	font-size: 0.8rem;
     font-weight: bold;
 }
+table.occurrences thead {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+thead, tbody, tfoot {
+  display: table;
+  width: 100%;
+}
 table.occurrences td {
 	border: 1px solid #00437b;
 	padding:0.3rem;
 	text-align: center;
 	font-size: 1.2rem;
 }
-table.occurrences tr td:nth-child(3), .occurrences tr td:nth-child(2) {
+table.occurrences tr td.sample-code {
 	font-size: 0.8rem;
 }
 table.occurrences tr:nth-child(odd){
