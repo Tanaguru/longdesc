@@ -10,12 +10,11 @@ pipeline {
       }
       steps {
         echo 'deploy...'
-        sh 'ftp ls'
-        sh '''
-ftp cd /www'''
-        sh 'git ftp init'
+        sh '''withCredentials([usernamePassword(credentialsId: \'ftp-longdesc\', passwordVariable: \'FTP_PASSWORD\', usernameVariable: \'FTP_USERNAME\')]) {
+  sh(\'git ftp catchup --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://ftp.longdesc.fr/www\')
+}'''
+        }
       }
-    }
 
+    }
   }
-}
