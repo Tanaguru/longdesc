@@ -206,29 +206,24 @@
 
 			<div id="test-1-1-4">
 
-				<h3>Test 1.1.4 - Does each clickable area (area tag) of a server-side image map have an equivalent link in the page?</h3>
+				<h3>Test 1.1.4 - Does each clickable area of a server-side image map have an equivalent link in the page?</h3>
 
 				<div class="sample test_true">
 					<span></span>
 					<h4>Good samples</h4> 
 					<p>Area tag Image clickable of a server-side with link alternative</p>
-	                <img src="img/right-wrong_007.png" alt="" usemap="#map_test1-1-4_01" ismap /> 
-	                <map id="map_test1-1-4_01" name="map_test1-1-4_01"> 
-	                	<area alt="First link" shape="rect" coords="0,0,150,80" href="#test-1-1-4" /> 
-	                	<area alt="Second link" shape="rect" coords="150,0,300,80" href="#test-1-1-4" /> 
-	                </map> <br />
-					<a href="#test-1-1-4">First alternative link</a><br />
-					<a href="#test-1-1-4">Second alternative link</a>
+					<a href="#test-1-1-4">1.1.4 good sample</a>
+					<a href="#test-1-1-4">
+						<img src="img/right-wrong_007.png" alt="1.1.4 good sample" ismap>
+					</a>
 				</div>
 				<div class="sample test_false">
 					<span></span>
 					<h4>Bad samples</h4>
 					<p>Area tag Image clickable of a server-side without link alternative</p>
-	                <img src="img/right-wrong_008.png" alt="" usemap="#map_test1-1-4_02" ismap /> 
-	                <map id="map_test1-1-4_02" name="map_test1-1-4_02"> 
-	                	<area shape="First link" coords="0,0,150,80" href="#test-1-1-4" /> 
-	                	<area shape="Second link" coords="150,0,300,80" href="#test-1-1-4" /> 
-	                </map>
+					<a href="#toto">
+						<img src="img/right-wrong_008.png" alt="1.1.4 bad sample" ismap>
+					</a>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -339,8 +334,8 @@
 					<p>Area tag Image non clickable identified as decorative with not empty alternative</p>
 	                <img src="img/right-wrong_009.png" alt="" usemap="#map_test1-2-2_03" /> 
 	                <map id="map_test1-2-2_03" name="map_test1-2-2_03"> 
-	                	<area class="decorative-image" alt="Not empty alt" shape="rect" coords="0,0,150,80">
-						<area class="decorative-image" alt="Not empty alt" shape="rect" coords="150,0,300,80">
+	                	<area class="decorative-image" alt=" " shape="rect" coords="0,0,150,80">
+						<area class="decorative-image" alt=" " shape="rect" coords="150,0,300,80">
 	                </map> 
 					<p>Area tag Image non clickable identified as decorative with title attribute</p>
 	                <img src="img/right-wrong_010.png" alt="" usemap="#map_test1-2-2_04" /> 
