@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WCAG test Frames</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="video.css" />
+  <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <script src="script.js"></script>
+    <link rel="stylesheet" href="bootstrap-3-glyphicon.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="css/checkbox-1.css" rel="stylesheet">
+	<script src="js/checkbox-1.js" type="text/javascript"></script>
+</head>
+<body>
+<main role="main" class="sample-container">
+		<h1>Site Longdesc - images</h2>
+
+			<div id="crit-2-1">
+
+				<h2>Criterion 2.1 - Does each iframe have a frame title?</h2>
+	
+				<div id="test-2-1-1">
+					<h3>Test 2.1.1: Does each iframe (iframe tag) have a title attribute? </h3>
+					
+					<div class="sample test_true">
+						<span></span>
+						<p>the following iframe is a frame of the Oceane Consulting Web site with a title</p>
+						<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px" title="Océane Consulting Web site"></iframe>
+					</div>
+	
+					<div class="sample test_false">
+						<span></span>
+						<p>the following iframe is a frame of the Oceane Consulting Web site without a title</p>
+						<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px"></iframe>
+						<span></span>
+						<p>the following iframe is a hidden frame of the Oceane Consulting Web site without a title</p>
+						<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px;display:none"></iframe>
+					</div>
+	
+					<div class="clearfix"></div>
+				</div>
+	
+			</div>
+	
+			<div id="crit-2-2">
+	
+				<h2>Criterion 2.2 - For each iframe with a frame title, is this frame title relevant?</h2>
+	
+				<div id="test-2-2-1">
+					<h3>Test 2.2.1: For each iframe (iframe tag) with a title attribute, is the content of this attribute relevant? </h3>
+					
+					<div class="sample test_true">
+						<span></span>
+						<p>the following iframe is a frame of the Oceane Consulting Web site with a relevante title </p>
+						<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px" title="Océane Consulting Web site"></iframe>
+					</div>
+	
+					<div class="sample test_false">
+						<span></span>
+						<p>the following iframe is a frame of the Oceane Consulting Web site with a title not relevante</p>
+						<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px" title="http://www.oceaneconsulting.com/"></iframe>
+						<p>the following iframe is a frame of the Oceane Consulting Web site with a empty title not relevante</p>
+						<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px" title=""></iframe>
+						<span></span>
+						<p>the following hidden iframe is a frame of the Oceane Consulting Web site with a title not relevante</p>
+						<iframe src="http://www.oceaneconsulting.com/" style="width:200px;height:300px;display:none" title="http://www.oceaneconsulting.com/"></iframe>
+						<p>the following hidden iframe is a frame of the Oceane Consulting Web site with a empty title not relevante</p>
+						<iframe aria-hidden="true" src="http://www.oceaneconsulting.com/" style="width:200px;height:300px" title=""></iframe>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		<div class="clearfix"></div>
+</body>
+</html>

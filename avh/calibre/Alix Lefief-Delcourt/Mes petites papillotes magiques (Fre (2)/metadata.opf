@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">2</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">cf68f32f-d31d-4dac-8131-82ea3ff7a5c9</dc:identifier>
+        <dc:title>Mes petites papillotes magiques (French Edition)</dc:title>
+        <dc:creator opf:file-as="Lefief-Delcourt, Alix" opf:role="aut">Alix Lefief-Delcourt</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (2.82.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2010-11-16T00:00:00+00:00</dc:date>
+        <dc:publisher>LEDUC.S</dc:publisher>
+        <dc:identifier opf:scheme="AMAZON">2848994126</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">2848994126</dc:identifier>
+        <dc:language>fra</dc:language>
+        <meta content="{&quot;Alix Lefief-Delcourt&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2017-03-24T13:01:27.994000+00:00" name="calibre:timestamp"/>
+        <meta content="Mes petites papillotes magiques (French Edition)" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="cover.jpg" title="Couverture" type="cover"/>
+    </guide>
+</package>

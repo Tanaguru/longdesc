@@ -1,0 +1,40 @@
+.tanaguru {
+	position: fixed;
+    top: 36px;
+    right: 3em;
+    width: 300px;
+    overflow: hidden;
+    background-color: #2B2B2B;
+    border: 1px solid #2B2B2B;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 1px 0 #555555 inset;
+    color: #2B2B2B;
+    text-shadow: 0 1px 0 #FFFFFF;
+    border-radius: 0.8em 0.8em 0.8em 0.8em;
+    font-family: Arial,Sans Serif;
+    font-size: 9px;
+    z-index: 100000;
+}
+
+table.CSSTableTanaguru {
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+	border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.CSSTableTanaguru th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #D90A0B;
+    color: white;
+}
+
+.CSSTableTanaguru td, .CSSTableTanaguru th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}

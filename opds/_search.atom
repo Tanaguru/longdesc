@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:odl="http://opds-spec.org/odl" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:opds="http://opds-spec.org/2010/catalog" xmlns:app="http://www.w3.org/2007/app" xmlns:dcterms="http://purl.org/dc/terms/" xml:lang="fr" xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schema="http://schema.org">
+
+	 <!-- Description du fichier : id (obligatoire), titre, date de mise à jour, icône-->
+	 <id>http://eole2.avh.asso.fr/opds/catalog.atom</id>
+	 <title>Bibliothèque Eole</title>
+	 <updated>2017-07-06T07:29:11Z</updated>
+   <icon>http://eole2.avh.asso.fr/sites/all/themes/avh-mediatheque/favicon.ico</icon>
+
+   <!-- Informations sur la bibliothèque -->
+   <author>
+    <name>AVH</name>
+    <uri>http://eole2.avh.asso.fr/</uri>
+    <email>mediatheque@avh.asso.fr</email>
+  </author>
+	
+	<!-- Lien vers le fichier actuel -->
+  <link type="application/atom+xml;profile=opds-catalog; kind=navigation" href="http://eole2.avh.asso.fr/opds/catalog.atom" rel="self"/>
+  <!-- Lien vers la page d'accueil -->
+  <link type="application/atom+xml;profile=opds-catalog;kind=navigation" href="http://eole2.avh.asso.fr/opds/catalog.atom" rel="start" title="Accueil"/>
+	
+	<!-- Fonctionnalité de recherche -->
+  <link type="application/opensearchdescription+xml" href="http://eole2.avh.asso.fr/opds/opensearch.xml" rel="search" title="Rechercher sur Éole"/>
+
+	<!-- Onglets affichant le contenu d'un fichier .atom -->
+	<!-- Onglet "Audio" -->
+	<link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/audio.atom" rel="http://opds-spec.org/featured" title="Audio"/>
+	<!-- Onglet "Braille" -->	
+	<link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/braille.atom" rel="http://opds-spec.org/featured" title="Braille"/>
+	<!-- Onglet "Jeunesse" -->
+	<link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/jeunesse.atom" rel="http://opds-spec.org/featured" title="Jeunesse"/>
+	<!-- Onglet "Langues etrangères" -->	
+	<link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/languesetr.atom" rel="http://opds-spec.org/featured" title="Langues etrangères"/>
+
+	<!-- Liste de catégories -->
+
+	<entry>
+	  <title>Livres audio</title>
+	  <link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/audio.atom" rel="http://opds-spec.org/sort/popular"/>
+	  <updated>2017-07-06T07:29:11Z</updated>
+	  <!-- ID obligatoire -->
+	  <id>http://eole2.avh.asso.fr/audio.atom</id> 
+	  <content type="text">Tous les livres audio</content>
+	</entry>
+
+	<entry>
+	  <title>Livres braille</title>
+	  <link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/braille.atom" rel="http://opds-spec.org/sort/popular"/>
+	  <updated>2017-07-06T07:29:11Z</updated>
+	  <!-- ID obligatoire -->
+	  <id>http://eole2.avh.asso.fr/braille.atom</id> 
+	  <content type="text">Tous les livres braille</content>
+	</entry>
+
+	<entry>
+	  <title>Livres jeunesse</title>
+	  <link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/jeunesse.atom" rel="http://opds-spec.org/sort/popular"/>
+	  <updated>2017-07-06T07:29:11Z</updated>
+	  <!-- ID obligatoire -->
+	  <id>http://eole2.avh.asso.fr/jeunesse.atom</id> 
+	  <content type="text">Tous les livres jeunesse</content>
+	</entry>
+
+	<entry>
+	  <title>Livres langues étrangères</title>
+	  <link type="application/atom+xml;profile=opds-catalog;kind=acquisition" href="http://eole2.avh.asso.fr/opds/languesetr.atom" rel="http://opds-spec.org/sort/popular"/>
+	  <updated>2017-07-06T07:29:11Z</updated>
+	  <!-- ID obligatoire -->
+	  <id>http://eole2.avh.asso.fr/languesetr.atom</id> 
+	  <content type="text">Tous les livres langues étrangères</content>
+	</entry>
+
+	
+
+
+</feed>

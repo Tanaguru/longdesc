@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+
+	# Tell PHP that the mod_rewrite module is ENABLED.
+    SetEnv HTTP_MOD_REWRITE On
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+# protect database
+<FilesMatch data.db>
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# protect schema
+<FilesMatch schema.sql>
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns:opds="http://opds-spec.org/2010/catalog" xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schema="http://schema.org/">
+    <id>91925</id>
+    <title>Against a darkening sky</title>
+    <link type="application/atom+xml;type=entry;profile=opds-catalog" href="http://longdesc.fr/opds/catalog/against-darkening-sky-0.atom" rel="self" />
+    <link type="text/html" href="http://eole2.avh.asso.fr/against-darkening-sky-0" rel="alternate" title="Voir sur Eole" />
+    <author>
+        <name>Davis, Lauren B.</name>
+        <uri>http://eole2.avh.asso.fr/auteur/Davis, Lauren B.</uri>
+    </author>
+    <published>2017-02-25T17:09:10Z</published>
+    <updated>2017-09-23T20:38:27Z</updated>
+    <link type="image/jpeg" href="http://eole.oceaneconsulting.com/sites/all/themes/avh-mediatheque/images/livre_image_decorative_full.png" rel="http://opds-spec.org/image" />
+    <link type="image/jpeg" href="http://eole.oceaneconsulting.com/sites/all/themes/avh-mediatheque/images/livre_image_decorative_full.png" rel="http://opds-spec.org/image/thumbnail" />
+    <dcterms:identifier xsi:type="dcterms:URI">urn:ISBN:9780616847459</dcterms:identifier>
+    <dcterms:language>eng</dcterms:language>
+    <dcterms:issued>2017-02-25T17:09:10Z</dcterms:issued>
+    <dcterms:publisher>Toronto, Ontario, Canada : HarperCollins Canada, 2015</dcterms:publisher>
+    <dcterms:extent>(13 hrs., 16 min.)</dcterms:extent>
+    <category scheme="http://eole2.avh.asso.fr/moteur-de-recherche/audio" label="Livre audio" term="FBFIC000000" />
+    <summary>In 7th-century England, Wilona, the lone survivor of a plague that has wiped out her people, makes her way across the moors to a new life in the village of Ad Gefrin, where she is apprenticed to Touilt, a revered healer and seeress. She blossoms under Touilt's tutelage and will one day take her place, but as an outsider, she is viewed with suspicion by all except Margawn, a warrior in the lord's hall. When the king proclaims a conversion to the new Christian religion, Ad Gefrin becomes a dangerous place for Wilona and Touilt. Their very lives are at risk as the villagers embrace the new faith and turn against the old ways, even as Wilona's relationship with Margawn grows. Wilona's fate becomes intertwined with that of Egan, a monk sent to Ad Gefrin as part of the Christian mission; both will see their faith and their loyalties tested. 2015.</summary>
+    <content type="html">In 7th-century England, Wilona, the lone survivor of a plague that has wiped out her people, makes her way across the moors to a new life in the village of Ad Gefrin, where she is apprenticed to Touilt, a revered healer and seeress. She blossoms under Touilt&#x2019;s tutelage and will one day take her place, but as an outsider, she is viewed with suspicion by all except Margawn, a warrior in the lord&#x2019;s hall. When the king proclaims a conversion to the new Christian religion, Ad Gefrin becomes a dangerous place for Wilona and Touilt. Their very lives are at risk as the villagers embrace the new faith and turn against the old ways, even as Wilona&#x2019;s relationship with Margawn grows. Wilona&#x2019;s fate becomes intertwined with that of Egan, a monk sent to Ad Gefrin as part of the Christian mission; both will see their faith and their loyalties tested. 2015.</content>
+</entry>

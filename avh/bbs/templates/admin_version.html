@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block pid %}id="padmin_version"{%endblock%}
+{% block content %}
+
+<h1>{{ page.glob.l10n.admin_check_version }}</h1>
+{% include "flash_messages.html" %}
+
+<p {% if versionClass != '' %}class="{{versionClass}}"{% endif %}>
+	{{versionAnswer|raw}}.
+</p>
+
+{% endblock %}

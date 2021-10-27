@@ -1,0 +1,12 @@
+﻿<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+	<ShortName>Éole</ShortName>
+	<Description>Moteur de recherche Éole</Description>
+	<InputEncoding>UTF-8</InputEncoding>
+	<OutputEncoding>UTF-8</OutputEncoding>
+	<Image type="image/x-icon" width="16" height="16">http://eole2.avh.asso.fr/sites/all/themes/avh-mediatheque/favicon.ico</Image>
+
+	<Url type="application/atom+xml" template="http://eole.oceaneconsulting.com/searchopds?query={searchTerms}"/>
+	<Url type="application/atom+xml;profile=opds-catalog;kind=acquisition" template="http://eole.oceaneconsulting.com/searchopds?query={searchTerms}"/>
+	
+	<Query role="example" searchTerms="maison"/>
+</OpenSearchDescription>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns:opds="http://opds-spec.org/2010/catalog" xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schema="http://schema.org/">
+    <id>94484</id>
+    <title>Aussi loin que possible</title>
+    <link type="application/atom+xml;type=entry;profile=opds-catalog" href="http:/longdesc.fr/opds/catalog/aussi-loin-que-possible-0.atom" rel="self" />
+    <link type="text/html" href="http://eole2.avh.asso.fr/aussi-loin-que-possible-0" rel="alternate" title="Voir sur Eole" />
+    <author>
+        <name>Pessan, Éric</name>
+        <uri>http://eole2.avh.asso.fr/auteur/Pessan, Éric</uri>
+    </author>
+    <published>2017-02-25T17:33:00Z</published>
+    <updated>2017-09-23T21:09:50Z</updated>
+    <link type="image/jpeg" href="https://images-eu.ssl-images-amazon.com/images/I/51sJPPVf0AL._SL200_.jpg" rel="http://opds-spec.org/image" />
+    <link type="image/jpeg" href="https://images-eu.ssl-images-amazon.com/images/I/51sJPPVf0AL._SL200_.jpg" rel="http://opds-spec.org/image/thumbnail" />
+    <dcterms:identifier xsi:type="dcterms:URI">urn:ISBN:9782211108317</dcterms:identifier>
+    <dcterms:language>fr</dcterms:language>
+    <dcterms:issued>2017-02-25T17:33:00Z</dcterms:issued>
+    <dcterms:publisher>Paris : Ecole des Loisirs, 2015</dcterms:publisher>
+    <dcterms:extent>03 h 00 mn</dcterms:extent>
+    <category scheme="http://eole2.avh.asso.fr/moteur-de-recherche/audio" label="Livre audio" term="FBFIC000000" />
+    <summary>Antoine et Tony font parfois la course en allant au collège, mais un matin, ils ne se sont pas arrêtés. Ils sont sortis de la ville, ils ont laissé derrière eux leurs peurs : celle d'être battu par son père pour Antoine, celle d'être expulsé vers l'Ukraine pour Tony. Sans un mot, ils décident de courir tant qu'ils auront encore un peu d'énergie. ©Electre 2016</summary>
+    <content type="html">Antoine et Tony font parfois la course en allant au collège, mais un matin, ils ne se sont pas arrêtés. Ils sont sortis de la ville, ils ont laissé derrière eux leurs peurs : celle d&#x2019;être battu par son père pour Antoine, celle d&#x2019;être expulsé vers l&#x2019;Ukraine pour Tony. Sans un mot, ils décident de courir tant qu&#x2019;ils auront encore un peu d&#x2019;énergie. ©Electre 2016</content>
+</entry>

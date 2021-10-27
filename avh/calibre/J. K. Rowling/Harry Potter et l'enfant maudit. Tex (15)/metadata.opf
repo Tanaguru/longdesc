@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">15</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">62858fb1-0104-4a57-89d0-a62108632e91</dc:identifier>
+        <dc:title>Harry Potter et l'enfant maudit. Texte intégral de la pièce de théâtre Parties 1 et 2</dc:title>
+        <dc:creator opf:file-as="Rowling, J. K. &amp; Thorne, Jack &amp; Tiffany, John" opf:role="aut">J. K. Rowling</dc:creator>
+        <dc:creator opf:file-as="Rowling, J. K. &amp; Thorne, Jack &amp; Tiffany, John" opf:role="aut">Jack Thorne</dc:creator>
+        <dc:creator opf:file-as="Rowling, J. K. &amp; Thorne, Jack &amp; Tiffany, John" opf:role="aut">John Tiffany</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (2.82.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-03-15T13:14:52.841000+00:00</dc:date>
+        <dc:description>Nous retrouverons Harry, Hermione, Ron et les autres héros à l’âge adulte, tels que nous les avons quittés à l’épilogue deHarry Potter et les Reliques de la Mort, qui se situe dix-neuf ans après le dénouement du combat de Harry contre Voldemort et les forces du Mal. L’enfant maudit est Albus Severus, le cadet des trois enfants de Harry et Ginny Potter.Être Harry Potter n’a jamais été facile et ne l’est pas davantage depuis qu’il est un employé surmené du ministère de la Magie, marié et père de trois enfants. Tandis que Harry se débat avec un passé qui refuse de le laisser en paix, son plus jeune fils, Albus Severus, doit lutter avec le poids d’un héritage familial dont il n’a jamais voulu. Le destin vient fusionner passé et présent. Père et fils se retrouvent face à une dure vérité : parfois, les ténèbres surviennent des endroits les plus inattendus.Conception originale de J. K. Rowling, en collaboration avec le metteur en scène John Tiffany et le dramaturge Jack Thorne, cette pièce épique signée par Jack Thorne est la huitième histoire de Harry Potter, dix-neuf ans plus tard.</dc:description>
+        <dc:publisher>Gallimard</dc:publisher>
+        <dc:identifier opf:scheme="AMAZON">2075074208</dc:identifier>
+        <dc:identifier opf:scheme="GOOGLE">I14HvgAACAAJ</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9782075074209</dc:identifier>
+        <dc:language>fra</dc:language>
+        <dc:subject>Juvenile Fiction</dc:subject>
+        <dc:subject>Fantasy &amp; Magic</dc:subject>
+        <meta content="{&quot;Jack Thorne&quot;: &quot;&quot;, &quot;J. K. Rowling&quot;: &quot;&quot;, &quot;John Tiffany&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="8" name="calibre:rating"/>
+        <meta content="2017-03-24T13:14:45.985000+00:00" name="calibre:timestamp"/>
+        <meta content="Harry Potter et l'enfant maudit. Texte intégral de la pièce de théâtre Parties 1 et 2" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="cover.jpg" title="Couverture" type="cover"/>
+    </guide>
+</package>

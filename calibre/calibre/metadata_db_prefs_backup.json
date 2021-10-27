@@ -1,0 +1,566 @@
+{
+  "grouped_search_terms": {}, 
+  "library_view books view state": {
+    "sort_history": [
+      [
+        "timestamp", 
+        false
+      ]
+    ], 
+    "column_positions": {
+      "rating": 5, 
+      "series": 7, 
+      "last_modified": 10, 
+      "timestamp": 3, 
+      "tags": 6, 
+      "ondevice": 0, 
+      "publisher": 8, 
+      "size": 4, 
+      "languages": 11, 
+      "authors": 2, 
+      "pubdate": 9, 
+      "title": 1
+    }, 
+    "languages_injected": true, 
+    "column_sizes": {
+      "rating": 57, 
+      "series": 60, 
+      "last_modified": 0, 
+      "timestamp": 70, 
+      "tags": 94, 
+      "authors": 92, 
+      "publisher": 73, 
+      "size": 94, 
+      "languages": 0, 
+      "pubdate": 65, 
+      "title": 147
+    }, 
+    "hidden_columns": [
+      "last_modified", 
+      "languages"
+    ], 
+    "column_alignment": {
+      "size": "center", 
+      "pubdate": "center", 
+      "timestamp": "center"
+    }, 
+    "last_modified_injected": true
+  }, 
+  "saved_searches": {}, 
+  "user_categories": {}, 
+  "field_metadata": {
+    "cover": {
+      "is_category": false, 
+      "rec_index": 17, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "int", 
+      "label": "cover", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "cover"
+      ], 
+      "name": "Couverture", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "id": {
+      "is_category": false, 
+      "rec_index": 0, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "int", 
+      "label": "id", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "id"
+      ], 
+      "name": null, 
+      "kind": "field", 
+      "column": null
+    }, 
+    "comments": {
+      "is_category": false, 
+      "rec_index": 7, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "comments", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "comments", 
+        "comment"
+      ], 
+      "name": "Commentaires", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "sort": {
+      "is_category": false, 
+      "rec_index": 11, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "sort", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "title_sort"
+      ], 
+      "name": "Tri par titre", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "path": {
+      "is_category": false, 
+      "rec_index": 14, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "path", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [], 
+      "name": "Chemin", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "series": {
+      "is_category": true, 
+      "rec_index": 8, 
+      "is_custom": false, 
+      "table": "series", 
+      "datatype": "series", 
+      "link_column": "series", 
+      "label": "series", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "series"
+      ], 
+      "name": "S\u00e9rie", 
+      "category_sort": "(title_sort(name))", 
+      "kind": "field", 
+      "column": "name"
+    }, 
+    "publisher": {
+      "is_category": true, 
+      "rec_index": 9, 
+      "is_custom": false, 
+      "table": "publishers", 
+      "datatype": "text", 
+      "link_column": "publisher", 
+      "label": "publisher", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "publisher"
+      ], 
+      "name": "\u00c9diteur", 
+      "category_sort": "name", 
+      "kind": "field", 
+      "column": "name"
+    }, 
+    "series_index": {
+      "is_category": false, 
+      "rec_index": 10, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "float", 
+      "label": "series_index", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "series_index"
+      ], 
+      "name": null, 
+      "kind": "field", 
+      "column": null
+    }, 
+    "author_sort": {
+      "is_category": false, 
+      "rec_index": 12, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "author_sort", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "author_sort"
+      ], 
+      "name": "Tri par auteur", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "ondevice": {
+      "is_category": false, 
+      "rec_index": 22, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "ondevice", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "ondevice"
+      ], 
+      "name": "Sur le dispositif", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "timestamp": {
+      "is_category": false, 
+      "rec_index": 3, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "datetime", 
+      "label": "timestamp", 
+      "is_csp": false, 
+      "display": {
+        "date_format": "dd MMM yyyy"
+      }, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "date"
+      ], 
+      "name": "Date", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "pubdate": {
+      "is_category": false, 
+      "rec_index": 15, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "datetime", 
+      "label": "pubdate", 
+      "is_csp": false, 
+      "display": {
+        "date_format": "MMM yyyy"
+      }, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "pubdate"
+      ], 
+      "name": "Publi\u00e9", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "title": {
+      "is_category": false, 
+      "rec_index": 1, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "title", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "title"
+      ], 
+      "name": "Titre", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "last_modified": {
+      "is_category": false, 
+      "rec_index": 19, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "datetime", 
+      "label": "last_modified", 
+      "is_csp": false, 
+      "display": {
+        "date_format": "dd MMM yyyy"
+      }, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "last_modified"
+      ], 
+      "name": "Modifi\u00e9", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "size": {
+      "is_category": false, 
+      "rec_index": 4, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "float", 
+      "label": "size", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "size"
+      ], 
+      "name": "Taille", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "news": {
+      "is_category": true, 
+      "is_custom": false, 
+      "table": "news", 
+      "datatype": null, 
+      "label": "news", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [], 
+      "name": "Actualit\u00e9s", 
+      "category_sort": "name", 
+      "kind": "category", 
+      "column": "name"
+    }, 
+    "marked": {
+      "is_category": false, 
+      "rec_index": 23, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "marked", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "marked"
+      ], 
+      "name": null, 
+      "kind": "field", 
+      "column": null
+    }, 
+    "formats": {
+      "is_category": true, 
+      "rec_index": 13, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "formats", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {
+        "ui_to_list": ",", 
+        "cache_to_list": ",", 
+        "list_to_ui": ", "
+      }, 
+      "is_editable": true, 
+      "search_terms": [
+        "formats", 
+        "format"
+      ], 
+      "name": "Formats", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "au_map": {
+      "is_category": false, 
+      "rec_index": 18, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "au_map", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {
+        "ui_to_list": null, 
+        "cache_to_list": ",", 
+        "list_to_ui": null
+      }, 
+      "is_editable": true, 
+      "search_terms": [], 
+      "name": null, 
+      "kind": "field", 
+      "column": null
+    }, 
+    "series_sort": {
+      "is_category": false, 
+      "rec_index": 24, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "series_sort", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "series_sort"
+      ], 
+      "name": "Tri par s\u00e9rie", 
+      "kind": "field", 
+      "column": null
+    }, 
+    "rating": {
+      "is_category": true, 
+      "rec_index": 5, 
+      "is_custom": false, 
+      "table": "ratings", 
+      "datatype": "rating", 
+      "link_column": "rating", 
+      "label": "rating", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "rating"
+      ], 
+      "name": "Note", 
+      "category_sort": "rating", 
+      "kind": "field", 
+      "column": "rating"
+    }, 
+    "languages": {
+      "is_category": true, 
+      "rec_index": 21, 
+      "is_custom": false, 
+      "table": "languages", 
+      "datatype": "text", 
+      "link_column": "lang_code", 
+      "label": "languages", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {
+        "ui_to_list": ",", 
+        "cache_to_list": ",", 
+        "list_to_ui": ", "
+      }, 
+      "is_editable": true, 
+      "search_terms": [
+        "languages", 
+        "language"
+      ], 
+      "name": "Langues", 
+      "category_sort": "lang_code", 
+      "kind": "field", 
+      "column": "lang_code"
+    }, 
+    "tags": {
+      "is_category": true, 
+      "rec_index": 6, 
+      "is_custom": false, 
+      "table": "tags", 
+      "datatype": "text", 
+      "link_column": "tag", 
+      "label": "tags", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {
+        "ui_to_list": ",", 
+        "cache_to_list": ",", 
+        "list_to_ui": ", "
+      }, 
+      "is_editable": true, 
+      "search_terms": [
+        "tags", 
+        "tag"
+      ], 
+      "name": "\u00c9tiquettes", 
+      "category_sort": "name", 
+      "kind": "field", 
+      "column": "name"
+    }, 
+    "uuid": {
+      "is_category": false, 
+      "rec_index": 16, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "uuid", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {}, 
+      "is_editable": true, 
+      "search_terms": [
+        "uuid"
+      ], 
+      "name": null, 
+      "kind": "field", 
+      "column": null
+    }, 
+    "authors": {
+      "is_category": true, 
+      "rec_index": 2, 
+      "is_custom": false, 
+      "table": "authors", 
+      "datatype": "text", 
+      "link_column": "author", 
+      "label": "authors", 
+      "is_csp": false, 
+      "display": {}, 
+      "is_multiple": {
+        "ui_to_list": "&", 
+        "cache_to_list": ",", 
+        "list_to_ui": " & "
+      }, 
+      "is_editable": true, 
+      "search_terms": [
+        "authors", 
+        "author"
+      ], 
+      "name": "Auteurs", 
+      "category_sort": "sort", 
+      "kind": "field", 
+      "column": "name"
+    }, 
+    "identifiers": {
+      "is_category": true, 
+      "rec_index": 20, 
+      "is_custom": false, 
+      "table": null, 
+      "datatype": "text", 
+      "label": "identifiers", 
+      "is_csp": true, 
+      "display": {}, 
+      "is_multiple": {
+        "ui_to_list": ",", 
+        "cache_to_list": ",", 
+        "list_to_ui": ", "
+      }, 
+      "is_editable": true, 
+      "search_terms": [
+        "identifiers", 
+        "identifier", 
+        "isbn"
+      ], 
+      "name": "Identifiants", 
+      "kind": "field", 
+      "column": null
+    }
+  }, 
+  "bools_are_tristate": true, 
+  "tag_browser_hidden_categories": []
+}

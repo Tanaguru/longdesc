@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WCAG test Images</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="video.css" />
+  <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <script src="script.js"></script>
+    <link rel="stylesheet" href="bootstrap-3-glyphicon.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="css/checkbox-1.css" rel="stylesheet">
+	<script src="js/checkbox-1.js" type="text/javascript"></script>
+</head>
+<body>
+<main role="main" class="sample-container">
+
+
+		<p>Dernière version du site à date du 12 mai 2017</p>
+
+		<h2>Tanaguru Marker</h2>
+		<p><a href="http://tanaguru.readthedocs.io/en/develop/userdoc-HTML-markers/">See Tanaguru read the doc about marker</a></p>
+		<dl style="font-size:12pt;">
+			<dt>data-table</dt>
+			<dd>identified data table</dd>
+			<dt>presentation-table</dt>
+			<dd>identified presentation table</dd>
+			<dt>complex-data-table</dt>
+			<dd>identified complex data table</dd>
+			<dt>decorative-image</dt>
+			<dd>identified decorative image</dd>
+			<dt>informative-image</dt>
+			<dd>identified informative image</dd>
+		</dl>
+
+
+		<div id="WCAG-4-1-2">
+
+				<div class="sample test_true">
+					<span></span>
+					<p>Image with empty alternative</p>
+                	<img src="img/Image_with_empty_alternative.png" alt="" /> 
+					<p>Image with not empty alternative</p>
+                	<img src="img/Image_with_not_empty_alternative.png" alt="Not empty alt" /> 
+					<p>Image button with not empty alternative</p>
+					<input type="image" src="img/Image_with_empty_alternative.png" alt="Not empty alt" />
+				</div>
+				<div class="sample test_false">
+					<span></span>
+					<p>Image without alternative</p>
+                	<img src="img/Image_without_alternative.png" /> 
+					<p>Image link without alternative</p>
+					<a href="#"><img src="img/Image_Link_without_alternative.png" /> </a>
+					<p>Image button without alternative</p>
+					<input type="image" src="img/Image_with_empty_alternative.png" />
+					<p>Image with an alternative equal to src</p>
+					<img src="img/Image_with_alternative_equal_to_src.png" alt="img/Image_with_alternative_equal_to_src.png" />
+					<p>Hidden Image without alternative</p>
+                	<img src="img/Image_without_alternative.png" aria-hidden="true"/> 
+					<p>Hidden Image link without alternative</p>
+                	<a href="#"><img src="img/Image_Link_without_alternative.png" aria-hidden="true"/> </a>
+				</div>
+		</div>
+		<div class="clearfix"></div>
+</body>
+</html>

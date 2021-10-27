@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">9</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">9353e0f7-ee5b-4498-927d-1a3ba791d3c7</dc:identifier>
+        <dc:title>Stévia et autres sucres naturels: Un concentré de bienfaits pour votre santé et votre beauté</dc:title>
+        <dc:creator opf:file-as="Lévy-Dutel, Laurence &amp; Pinson, Claire" opf:role="aut">Laurence Lévy-Dutel</dc:creator>
+        <dc:creator opf:file-as="Lévy-Dutel, Laurence &amp; Pinson, Claire" opf:role="aut">Claire Pinson</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (2.82.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-09-27T13:05:33.851000+00:00</dc:date>
+        <dc:description>La stévia et les autres sucres naturels (miel, sirop d'érable, sirop d'agave, inuline, xylitol et d'autres sucres moins connus) ont de nombreuses vertus que vous pouvez mettre à profit. Pour votre santé : utiliser, même par les diabétiques, des substances à l'impact faible sur la glycémie, peu caloriques mais aux pouvoirs sucrants puissants, profiter de leurs effets antioxydants (protection cardiovosculaire et contre le cancer) et prébiotiques (bénéfices digestifs, défenses immunitaires...). Pour votre minceur : disposer d'une alternative saine aux édulcorants de synthèse, bénéficier d'un goût sucré sans apports caloriques, se sevrer ainsi du sucre traditionnel... Pour votre beauté : embellir votre visage ou vos cheveux grâce à des masques gourmands, prendre soin de votre corps avec des baumes et des gommages, réaliser des dentifrices "maison" à la stévia ou au xylitol... Cet ouvrage combine astuces, conseils, recettes gourmandes et modes d'emploi testés et validés.</dc:description>
+        <dc:publisher>Editions Eyrolles</dc:publisher>
+        <dc:identifier opf:scheme="GOOGLE">8rEpNy5HBEMC</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9782212554205</dc:identifier>
+        <dc:language>fra</dc:language>
+        <meta content="{&quot;Laurence Lévy-Dutel&quot;: &quot;&quot;, &quot;Claire Pinson&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2017-03-24T13:05:00.473000+00:00" name="calibre:timestamp"/>
+        <meta content="Stévia et autres sucres naturels: Un concentré de bienfaits pour votre santé et votre beauté" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="cover.jpg" title="Couverture" type="cover"/>
+    </guide>
+</package>
