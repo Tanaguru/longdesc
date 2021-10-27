@@ -10,11 +10,10 @@ pipeline {
       }
       steps {
         echo 'deploy...'
+        sh 'ls'
         sh '''
-
-cd www
-
-git init'''
+cd /www'''
+        sh 'git init'
       }
     }
 
