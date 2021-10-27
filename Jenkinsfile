@@ -2,19 +2,23 @@ pipeline {
   agent any
   stages {
     stage('deploy') {
-      when {
-        anyOf {
-          branch 'master'
-        }
-
-      }
+		when {
+			anyOf {
+				branch 'master'
+			}
+		}
       steps {
         echo 'deploy...'
-        sh '''withCredentials([usernamePassword(credentialsId: \'ftp-longdesc\', passwordVariable: \'FTP_PASSWORD\', usernameVariable: \'FTP_USERNAME\')]) {
-  sh(\'git ftp catchup --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://ftp.longdesc.fr/www\')
-}'''
+        withCredentials([usernamePassword(credentialsId: 'ftp-longdesc', passwordVariable: 'FTP_PASSWORD', usernameVariable: 'FTP_USERNAME')]) {
+          sh '''
+            git config git-ftp.url ftp.longdesc.fr/www
+            git config git-ftp.user $FTP_USERNAME
+            git config git-ftp.password $FTP_PASSWORD
+            git ftp catchup
+          '''
         }
       }
-
     }
+
   }
+}
