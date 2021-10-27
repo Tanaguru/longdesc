@@ -10,10 +10,10 @@ pipeline {
       }
       steps {
         echo 'deploy...'
-        sh 'ls'
+        sh 'ftp ls'
         sh '''
-cd /www'''
-        sh 'git init'
+ftp cd /www'''
+        sh 'git ftp init'
       }
     }
 
