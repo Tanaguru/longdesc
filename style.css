@@ -65,19 +65,29 @@ code {
     top: -4rem;
     width: 4rem;
 }
-table.support {
+table.support, [role="table"].support {
 	border: 1px solid #00437b;
 	min-width: 50%;
 	margin-bottom: 1rem;
 	max-width: 100%;
 }
-table.support th {
+table.support th, [role="table"].support [role="cell"][id], [role="table"].support [role="columnheader"], [role="table"].support [role="rowheader"] {
 	border: 1px solid #00437b;
 	background: #d2eaff;
 	padding:0.3rem;
 	text-align: center;
 }
-table.support td {
+
+[role="row"] {
+	display: flex;
+	justify-content: stretch;
+}
+
+[role="cell"], [role="columnheader"], [role="rowheader"] {
+	flex: 1;
+}
+
+table.support td, [role="table"].support [role="cell"]:not([id]) {
 	border: 1px solid #00437b;
 	padding:0.3rem;
 	text-align: center;
