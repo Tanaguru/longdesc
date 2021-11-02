@@ -7268,6 +7268,9 @@
 								onblur="blurCheckbox(event)"><img src="img/checkbox-unchecked-black.png"
 									aria-label="text"> </div>
 						</div>
+
+						<h4>Bouton visible avec un nom accessible</h4>
+						<button role="button">bouton test 7.1.1</button>
 					</div>
 
 					<div class="sample test_false">
@@ -7305,6 +7308,8 @@
 								onblur="blurCheckbox(event)" aria-labelledby="idEmpty"></div>
 							<div id="idEmpty"></div>
 						</div>
+						<h4>Bouton visible sans nom accessible</h4>
+						<button role="button" style="background-image: url('./img/false.png'); background-size: cover;"></button>
 					</div>
 
 					<div class="clearfix"></div>
@@ -7857,10 +7862,12 @@
 						<p>This following paragraphes are not implemented with relevant tag</p>
 						<i class="glyphicon glyphicon-send"></i>
 						<b class="glyphicon glyphicon-send"></b>
-						<p></p>
 						<u>The previous tag is use to create a margin</u>
 						<a>Link without any attribute</a>
 						<fieldset>Fieldset without form or input element</fieldset>
+						<p>Deux balises br utilisées</p>
+						<br><br>
+						<p>pour creer un espace</p>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -8091,6 +8098,11 @@
 						<p>This following link brings you to a page that has a HTML5 &lt;doctype&gt; but it has two
 							&lt;main&gt; tag</p>
 						<a href="invalided-page_2.html">Invalided page 2</a>
+
+						<main>
+							<p>La structure du document utilise une balise <code>&lt;main></code> visible unique.</p>
+						</main>
+						
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -9951,13 +9963,13 @@
 						<span></span>
 						<h4>Good samples</h4>
 						<form action="mock_action">
-							<label for="field1_test-11-9-2_01">Field 1 test 11.9.2</label> <input type="text"
-								name="field1_test-11-9-2_01" id="field1_test-11-9-2_01" /> <br />
-							<label for="field2_test-11-9-2_01">Field 2 test 11.9.2</label> <input type="text"
-								name="field2_test-11-9-2_01" id="field2_test-11-9-2_01" />
+							<label for="field1_test-11-9-2_01">Field 1 test 11.9.2</label>
+							<input type="text" name="field1_test-11-9-2_01" id="field1_test-11-9-2_01" />
+							<br>
+							<label for="field2_test-11-9-2_01">Field 2 test 11.9.2</label>
+							<input type="text" name="field2_test-11-9-2_01" id="field2_test-11-9-2_01" />
 
-							<input type="submit" aria-labelledby="button-label" value="" />
-
+							<input type="submit" aria-labelledby="button-label_test-11-9-2_01" value="send">
 							<p id="button-label_test-11-9-2_01">Send</p>
 						</form>
 					</div>
@@ -9970,18 +9982,17 @@
 							<label for="field2_test-11-9-2_02">Field 4 test 11.9.2</label> <input type="text"
 								name="field2_test-11-9-2_02" id="field2_test-11-9-2_02" />
 
-							<input type="submit" aria-labelledby="" value="" />
+							<input type="button" aria-label="send" value="click" />
 
-							<input type="submit" aria-labelledby="submit-label" value="" />
+							<input type="reset" aria-labelledby="reset-label_test-11-9-2_02" value="reset">
 
-							<input type="submit" aria-labelledby="button-label" value="" />
+							<input type="submit" aria-labelledby="button-label_test-11-9-2_03">
 
-							<p id="button-label_test-11-9-2_02">Send</p>
+							<p id="reset-label_test-11-9-2_02">Send</p>
 							<p id="button-label_test-11-9-2_03">Other send</p>
 						</form>
 					</div>
 				</div>
-
 				<div class="clearfix"></div>
 			</div>
 
@@ -10537,6 +10548,42 @@
 									id="test-11-11-2_field4" name="test-11-11-2_field4" value="mymail.com"
 									aria-describedby="test-11-11-2_error2" /><em role="log"
 									id="test-11-11-2_error2"></em> <br />
+							</p>
+						</form>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+			<div id="crit-11-13">
+
+				<h2>Criterion 11.13 - La finalité d'un champ de saisie peut-elle être déduite pour faciliter le remplissage automatique des champs avec les données de l'utilisateur ?</h2>
+
+				<div id="test-11-13-1">
+					<h3>Test 11.13.1 - Chaque champ de formulaire dont l'objet se rapporte à une information concernant l'utilisateur vérifie-t-il ces conditions ?</h3>
+
+					<div class="sample test_true">
+						<span></span>
+						<h4>Good samples</h4>
+						<form>
+							<p>
+								<label for="test-11-13-1_field1">Votre numéro de téléphone</label>
+								<input autocomplete="tel" type="tel" id="test-11-13-1_field1" value="0123456789">
+							</p>
+						</form>
+					</div>
+					<div class="sample test_false">
+						<span></span>
+						<h4>Bad samples</h4>
+						<form>
+							<p>
+								<label for="test-11-13-1_field2">Votre email</label>
+								<input autocomplete="tel" type="email" id="test-11-13-1_field2" value="mymail@mail.com">
+							</p>
+
+							<p>
+								<label for="test-11-13-1_field3">Votre email</label>
+								<input autocomplete="mail" type="email" id="test-11-13-1_field3" value="mymail@mail.com">
 							</p>
 						</form>
 					</div>
@@ -11581,6 +11628,9 @@
 				</li>
 				<li>
 					<a href="Failed-refresh.html">Failed-refresh</a>
+				</li>
+				<li>
+					<a href="Failed-redirect.html">Failed-redirect</a>
 				</li>
 				<li>
 					<a href="frames.html">frames</a>
