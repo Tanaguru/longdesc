@@ -55,7 +55,6 @@ class BicBucStriim {
 			mkdir($this->authors_dir);	
 		if (file_exists($rp) && is_writeable($rp)) {
 			$this->mydb = new PDO('sqlite:'.$rp, NULL, NULL, array());
-			$this->mydb->setAttribute(1002, 'SET NAMES utf8');
 			$this->mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$this->mydb->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 			$this->last_error = $this->mydb->errorCode();

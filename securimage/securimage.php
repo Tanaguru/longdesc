@@ -941,6 +941,8 @@ class Securimage
      */
     protected $gdlinecolor;
 
+    protected $gdnoisecolor;
+
     /**
      * The GD color for the signature text color
      *
@@ -1516,7 +1518,7 @@ class Securimage
                 require_once dirname(__FILE__) . '/WavFile.php';
                 $audio = $this->getAudibleCode();
 
-                if (strtolower($format) == 'mp3') {
+                if (strtolower((string)$format) == 'mp3') {
                     $audio = $this->wavToMp3($audio);
                 }
 
@@ -1643,7 +1645,7 @@ class Securimage
         $time = 0;
         $disp = 'error';
 
-        if ($returnExisting && strlen($this->code) > 0) {
+        if ($returnExisting && strlen((string)$this->code) > 0) {
             if ($array) {
                 return array(
                     'code'         => $this->code,
@@ -1983,9 +1985,9 @@ class Securimage
         $numpoles = 3; // distortion factor
         // make array of poles AKA attractor points
         for ($i = 0; $i < $numpoles; ++ $i) {
-            $px[$i]  = mt_rand($this->image_width  * 0.2, $this->image_width  * 0.8);
-            $py[$i]  = mt_rand($this->image_height * 0.2, $this->image_height * 0.8);
-            $rad[$i] = mt_rand($this->image_height * 0.2, $this->image_height * 0.8);
+            $px[$i]  = mt_rand((int)($this->image_width  * 0.2), (int)($this->image_width  * 0.8));
+            $py[$i]  = mt_rand((int)($this->image_height * 0.2), (int)($this->image_height * 0.8));
+            $rad[$i] = mt_rand((int)($this->image_height * 0.2), (int)($this->image_height * 0.8));
             $tmp     = ((- $this->frand()) * 0.15) - .15;
             $amp[$i] = $this->perturbation * $tmp;
         }
@@ -2017,7 +2019,7 @@ class Securimage
                 $x *= $this->iscale;
                 $y *= $this->iscale;
                 if ($x >= 0 && $x < $width2 && $y >= 0 && $y < $height2) {
-                    $c = imagecolorat($this->tmpimg, $x, $y);
+                    $c = imagecolorat($this->tmpimg, (int)$x, (int)$y);
                 }
                 if ($c != $bgCol) { // only copy pixels of letters to preserve any background image
                     imagesetpixel($this->im, $ix, $iy, $c);
@@ -2034,11 +2036,11 @@ class Securimage
         for ($line = 0; $line < $this->num_lines; ++ $line) {
             $x = $this->image_width * (1 + $line) / ($this->num_lines + 1);
             $x += (0.5 - $this->frand()) * $this->image_width / $this->num_lines;
-            $y = mt_rand($this->image_height * 0.1, $this->image_height * 0.9);
+            $y = mt_rand((int)($this->image_height * 0.1), (int)($this->image_height * 0.9));
 
             $theta = ($this->frand() - 0.5) * M_PI * 0.7;
             $w = $this->image_width;
-            $len = mt_rand($w * 0.4, $w * 0.7);
+            $len = mt_rand((int)($w * 0.4), (int)($w * 0.7));
             $lwid = mt_rand(0, 2);
 
             $k = $this->frand() * 0.6 + 0.2;
@@ -2058,7 +2060,7 @@ class Securimage
             for ($i = 0; $i < $n; ++ $i) {
                 $x = $x0 + $i * $dx + $amp * $dy * sin($k * $i * $step + $phi);
                 $y = $y0 + $i * $dy - $amp * $dx * sin($k * $i * $step + $phi);
-                imagefilledrectangle($this->im, $x, $y, $x + $lwid, $y + $lwid, $this->gdlinecolor);
+                imagefilledrectangle($this->im, (int)$x, (int)$y, (int)($x + $lwid), (int)($y + $lwid), $this->gdlinecolor);
             }
         }
     }
@@ -2171,7 +2173,7 @@ class Securimage
         $code    = $this->getCode(true, true);
 
         if (empty($code) || $code['code'] == '') {
-            if (strlen($this->display_value) > 0) {
+            if (strlen((string)$this->display_value) > 0) {
                 $code = array('code' => $this->display_value, 'display' => $this->display_value);
             } else {
                 $this->createCode();
@@ -2199,7 +2201,7 @@ class Securimage
             $length = strlen($code['display']);
 
             for($i = 0; $i < $length; ++$i) {
-                $letter    = $code['display']{$i};
+                $letter    = $code['display'][$i];
                 $letters[] = $letter;
             }
         }

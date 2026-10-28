@@ -1372,7 +1372,8 @@ class Slim
      */
     public static function handleErrors($errno, $errstr = '', $errfile = '', $errline = '')
     {
-        if (!($errno & error_reporting())) {
+        // Les dépréciations (PHP 8.x) ne doivent pas interrompre l'application
+        if (!($errno & error_reporting()) || ($errno & (E_DEPRECATED | E_USER_DEPRECATED))) {
             return;
         }
 

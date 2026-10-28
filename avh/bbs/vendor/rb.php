@@ -183,7 +183,7 @@ class RedBean_Driver_PDO implements RedBean_Driver {
 					  $this->dsn,
 					  $user,
 					  $pass,
-					  array(1002 => 'SET NAMES utf8',
+					  (strpos($this->dsn, 'mysql') === 0 ? array(1002 => 'SET NAMES utf8') : array()) + array(
 								 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 								 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 					  )
@@ -523,6 +523,7 @@ class RedBean_OODBBean implements IteratorAggregate, ArrayAccess, Countable {
 	 *
 	 * @return ArrayIterator $arrayIt an array iterator instance with $properties
 	 */
+	#[\ReturnTypeWillChange]
 	public function getIterator() {
 		return new ArrayIterator($this->properties);
 	}
@@ -1015,6 +1016,7 @@ class RedBean_OODBBean implements IteratorAggregate, ArrayAccess, Countable {
 	 *
 	 * @return void
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetSet($offset, $value) {
 		$this->__set($offset, $value);
 	}
@@ -1026,6 +1028,7 @@ class RedBean_OODBBean implements IteratorAggregate, ArrayAccess, Countable {
 	 *
 	 * @return
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetExists($offset) {
 		return isset($this->properties[$offset]);
 	}
@@ -1038,6 +1041,7 @@ class RedBean_OODBBean implements IteratorAggregate, ArrayAccess, Countable {
 	 *
 	 * @return
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetUnset($offset) {
 		unset($this->properties[$offset]);
 	}
@@ -1050,6 +1054,7 @@ class RedBean_OODBBean implements IteratorAggregate, ArrayAccess, Countable {
 	 *
 	 * @return
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetGet($offset) {
 		return $this->__get($offset);
 	}
@@ -1084,6 +1089,7 @@ class RedBean_OODBBean implements IteratorAggregate, ArrayAccess, Countable {
 	 * 
 	 * @return integer $numberOfProperties number of properties in the bean. 
 	 */
+	#[\ReturnTypeWillChange]
 	public function count() {
 		return count($this->properties);
 	}
@@ -1672,6 +1678,7 @@ interface RedBean_QueryWriter {
 	 *
 	 * @return integer $numOfBeans number of beans found
 	 */
+	#[\ReturnTypeWillChange]
 	public function count($type);
 	/**
 	 * This method will add a constraint. If one of the beans gets trashed
@@ -1941,6 +1948,7 @@ abstract class RedBean_QueryWriter_AQueryWriter {
 	/**
 	 * @see RedBean_QueryWriter::count
 	 */
+	#[\ReturnTypeWillChange]
 	public function count($beanType, $addSQL = '', $params = array()) {
 		$sql = "SELECT count(*) FROM {$this->esc($beanType)} ";
 		if ($addSQL != '') $addSQL = ' WHERE '.$addSQL; 
@@ -2344,6 +2352,7 @@ class RedBean_QueryWriter_MySQL extends RedBean_QueryWriter_AQueryWriter impleme
 }
 
 class RedBean_QueryWriter_SQLiteT extends RedBean_QueryWriter_AQueryWriter implements RedBean_QueryWriter {
+	protected $sqltype_typeno;
 	/**
 	 * @var RedBean_Adapter_DBAdapter
 	 */
@@ -4070,6 +4079,7 @@ class RedBean_OODB extends RedBean_Observable {
 	 *
 	 * @return integer $num number of beans found
 	 */
+	#[\ReturnTypeWillChange]
 	public function count($type, $addSQL = '', $params = array()) {
 		try {
 			return (int) $this->writer->count($type, $addSQL, $params);
@@ -4349,6 +4359,7 @@ class RedBean_ToolBox {
 }
 
 class RedBean_AssociationManager extends RedBean_Observable {
+	protected $toolbox;
 	/**
 	 * @var RedBean_OODB
 	 */
@@ -6272,6 +6283,7 @@ class RedBean_Facade {
 	 *
 	 * @return integer $numOfBeans
 	 */
+	#[\ReturnTypeWillChange]
 	public static function count($beanType, $addSQL = '', $params = array()) {
 		return RedBean_Facade::$redbean->count($beanType, $addSQL, $params);
 	}

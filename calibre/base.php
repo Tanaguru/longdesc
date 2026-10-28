@@ -96,10 +96,10 @@ function getUrlWithVersion ($url) {
 }
 
 function xml2xhtml($xml) {
-    return preg_replace_callback('#<(\w+)([^>]*)\s*/>#s', create_function('$m', '
+    return preg_replace_callback('#<(\w+)([^>]*)\s*/>#s', function ($m) {
         $xhtml_tags = array("br", "hr", "input", "frame", "img", "area", "link", "col", "base", "basefont", "param");
         return in_array($m[1], $xhtml_tags) ? "<$m[1]$m[2] />" : "<$m[1]$m[2]></$m[1]>";
-    '), $xml);
+    }, $xml);
 }
 
 function display_xml_error($error)
@@ -588,7 +588,7 @@ class Page
         $this->query = $pquery;
         $this->n = $pn;
         $this->favicon = $config['cops_icon'];
-        $this->authorName = empty($config['cops_author_name']) ? utf8_encode('Sébastien Lucas') : $config['cops_author_name'];
+        $this->authorName = empty($config['cops_author_name']) ? 'Sébastien Lucas' : $config['cops_author_name'];
         $this->authorUri = empty($config['cops_author_uri']) ? 'http://blog.slucas.fr' : $config['cops_author_uri'];
         $this->authorEmail = empty($config['cops_author_email']) ? 'sebastien@slucas.fr' : $config['cops_author_email'];
     }

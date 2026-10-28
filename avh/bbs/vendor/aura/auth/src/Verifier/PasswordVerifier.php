@@ -55,7 +55,8 @@ class PasswordVerifier implements VerifierInterface
      */
     public function verify($plaintext, $hashvalue, array $extra = array())
     {
-        if (is_string($this->algo)) {
+        // depuis PHP 7.4, PASSWORD_BCRYPT vaut '2y' (chaîne) : ne pas le confondre avec un algo de hash()
+        if (is_string($this->algo) && in_array($this->algo, hash_algos(), true)) {
             return hash($this->algo, $plaintext) === $hashvalue;
         } else {
             return password_verify($plaintext, $hashvalue);

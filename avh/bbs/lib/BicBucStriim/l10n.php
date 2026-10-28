@@ -52,6 +52,7 @@ class L10n extends ArrayObject {
 	 * Always return true, because then ::message will return an
 	 * error string for undefined IDs.
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetExists($id) {
 		return true;
 	}
@@ -62,6 +63,7 @@ class L10n extends ArrayObject {
 	 *
 	 * Just call ::message.
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetGet($id) {
 		return $this->message($id);
 	}

@@ -645,7 +645,7 @@ class clsTbsZip {
 			} else {
 				header ('Pragma: no-cache');
 				if ($ContentType!='') header ('Content-Type: '.$ContentType);
-				if (strlen($File) != strlen(utf8_decode($File))) {
+				if (preg_match('/[\x80-\xFF]/', $File)) {
 					header('Content-Disposition: attachment; filename="book.epub"; filename*=utf-8\'\'' . rawurlencode($File));
 				} else {
 					header('Content-Disposition: attachment; filename="'.$File.'"');

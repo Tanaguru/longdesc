@@ -440,6 +440,7 @@ class Response implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Array Access: Offset Exists
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->headers[$offset]);
@@ -448,6 +449,7 @@ class Response implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Array Access: Offset Get
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->headers[$offset];
@@ -456,6 +458,7 @@ class Response implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Array Access: Offset Set
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->headers[$offset] = $value;
@@ -464,6 +467,7 @@ class Response implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Array Access: Offset Unset
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->headers[$offset]);
@@ -475,6 +479,7 @@ class Response implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * Countable: Count
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->headers);
@@ -491,6 +496,7 @@ class Response implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @return \Slim\Http\Headers
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return $this->headers->getIterator();

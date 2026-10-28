@@ -24,7 +24,7 @@ class SegmentFactory extends \Aura\Session\SegmentFactory
      *
      * @return Segment
      */
-    public function newInstance(Session $session, $name)
+    public function newInstance(\Aura\Session\Session $session, $name)
     {
         return new Segment($session, $name);
     }

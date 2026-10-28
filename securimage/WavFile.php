@@ -1566,7 +1566,7 @@ class WavFile
         } else {
             // replace
             for ($i = 0; $i < $sampleBytes; ++$i) {
-                $this->_samples{$offset + $i} = $sampleBinary{$i};
+                $this->_samples[$offset + $i] = $sampleBinary[$i];
             }
         }
 
@@ -1701,7 +1701,7 @@ class WavFile
 
                 /************* DEGRADE FILTER *******************/
                 if ($filter_degrade) {
-                    $sampleFloat += rand(1000000 * ($degrade_quality - 1), 1000000 * (1 - $degrade_quality)) / 1000000;
+                    $sampleFloat += rand((int)(1000000 * ($degrade_quality - 1)), (int)(1000000 * (1 - $degrade_quality))) / 1000000;
                 }
 
                 /************* VOLUME FILTER *******************/

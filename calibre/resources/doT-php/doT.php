@@ -91,7 +91,8 @@ class doT {
 
         $this->functionBody = $func;
 
-        return create_function ('$it', $func);
+        // create_function() n'existe plus en PHP 8 : closure équivalente
+        return eval ('return function ($it) { ' . $func . ' };');
     }
 
     public function execute ($data) {
